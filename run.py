@@ -1,73 +1,82 @@
-import importlib
 import os
 from app.plug import *  
-import dataset
 import flet as ft
-from time import sleep
-import functools
 from functools import partial
+from app.build_in import *
+
 
 plugin_dir = os.sep.join([os.curdir,"app", "plugins"])
+ENV['plugin_dir'] = os.path.abspath(plugin_dir)
+ENV['update_dir'] = os.path.abspath(os.sep.join([os.curdir, "app"]))
+ENV['app_dir'] = os.path.abspath(os.curdir)
 
-# provide a global db
-db_name = "sqlite:///plug.db"
-ENV['db'] = dataset.connect(db_name)
+db = PlugManager.run(plugins=("_setDB",), data="sqlite:///plug.db")
+PlugManager.run(plugins=("_preload_plugin",), data="load plugins success")
 
-def load_plugins(plugin_dir):
-    """
-    load all module files in the app/plugins
-    """
-    plugins_files = os.listdir(plugin_dir)
-    for files in plugins_files:
-        plug_path = plugin_dir + os.sep + files.split(".")[0]
-        import_path = os.path.relpath(plug_path, os.path.curdir).replace(os.sep, ".")
-        plug = importlib.import_module(import_path, package="app")
 
-load_plugins(plugin_dir)
-
-processor = PlugManager()
-ENV['processor'] = processor
-
-def main(page):
-    key_word = ft.TextField(hint_text="Search Plugins")
-    container = ft.Container(expand=1)
-
-    def item_on_click(e):
-        plugin_name = e.control.content.controls[0].title.value
-        processor.run(plugins=(plugin_name,), 
-                      data=key_word.value,
-                      page=page,
-                      container=container)
-        page.update()
-
-    def search(e):
-        processed = processor.run(plugins=("_search_plugin", "_build_show_cards"), 
-                                item_on_click=item_on_click,
-                                data=key_word.value,
-                                page=page,
-                                container=container)
-        container.content = list_ui(processed)
-        # key_word.value = ""
-        key_word.focus()
-        key_word.update()
-        page.update()
-
-    page.add(ft.ResponsiveRow([
-        ft.Container(
+def main(page: ft.Page):
+    search_feild = ft.TextField(hint_text="Search Plugins", border_radius=40)
+    search_btn = ft.Container(
             ft.Icon(name=ft.icons.SEARCH),
             col={"xs":2, "sm": 1, "md": 1, "xl": 1},
             alignment=ft.alignment.center,
             height=60,
-            on_click=search,
+        )
+    container = ft.Container(PlugManager.run(plugins=("_mainshow",),data=""),expand=1)
+    func = partial(PlugManager.run, 
+                   page=page,
+                   container=container,
+                   search_btn=search_btn,
+                   search_feild=search_feild)
+
+    def load_plugin(e):
+        plugin_name = e.control.title.value
+        container.content = func(plugins=("_load_plugin",),
+                                 data=plugin_name,
+                                 search=search)
+        container.update()
+        search_feild.update()
+        page.update()
+    
+    def back_to_home(e):
+        container.content = PlugManager.run(plugins=("_exit_plugin",),data="",
+                        search_feild=search_feild,
+                        search_btn=search_btn,
+                        search=search)
+        search_feild.value = ""
+        container.update()
+        search_feild.update()
+        search_btn.update()
+        page.update()
+
+    def search(e):
+        container.content = func(plugins=("_plugin_search_stream",),
+                                 data=search_feild.value,
+                                 search=search,
+                                 item_on_click=load_plugin)
+        search_feild.focus()
+        search_feild.update()
+        page.update()
+
+    page.add(ft.ResponsiveRow([
+        ft.Container(
+            ft.Icon(name=ft.icons.HOME),
+            col={"xs":2, "sm": 1, "md": 1, "xl": 1},
+            alignment=ft.alignment.center,
+            height=60,
+            on_click=back_to_home,
         ),
         ft.Container(
-            key_word, 
+            search_feild, 
             padding=5,
-            col={"xs":10, "sm": 11, "md": 11, "xl": 11},
+            col={"xs":8, "sm": 10, "md": 10, "xl": 10},
         ),
+        search_btn
     ]))
     page.add(container)
-    key_word.on_change = search
-    key_word.focus()
+    search_feild.on_change = search
+    search_feild.focus()
+    
 
+# ft.app(target=main, view=ft.AppView.WEB_BROWSER)
 ft.app(target=main)

@@ -1,10 +1,13 @@
-from functools import wraps
 import flet as ft
+import pypinyin 
+import inspect
 
 """
 a global environment
 """
-ENV = {}
+ENV = {
+    'initial_plugin_subtitle': "THIS IS A USEFUL PLUGIN"
+}
 
 class PlugManager(object):
     """
@@ -14,20 +17,22 @@ class PlugManager(object):
     """
     PLUGINS = {}
 
-    def run(self, plugins=(), data="", **kwargs):
+    @classmethod
+    def run(icls, plugins=(), data="", **kwargs):
         for plugin_name in plugins:
-            plugin = self.PLUGINS[plugin_name]()
-            data = self._run_plugin(plugin, data, **kwargs)
+            plugin = icls.PLUGINS[plugin_name]
+            data = icls._run_plugin(plugin, data, **kwargs)
         return data
     
-    def _run_plugin(self, plugin, data, **kwargs):
+    @classmethod
+    def _run_plugin(cls, plugin, data, **kwargs):
         """
         run single plugin
         """
         if hasattr(plugin, 'process_list'):
-            process_list = plugin.process_list()
+            process_list = plugin.process_list(data, **kwargs)
             for p_name in process_list:
-                data = self._run_plugin(self.PLUGINS[p_name](), data, **kwargs)
+                data = cls._run_plugin(cls.PLUGINS[p_name], data, **kwargs)
         elif hasattr(plugin, 'process'):
             data = plugin.process(data, **kwargs)
         return data 
@@ -35,28 +40,21 @@ class PlugManager(object):
     @classmethod
     def register(cls, plugin_name):
         def wrapper(plugin):
-            cls.PLUGINS.update({plugin_name:plugin})
+            first_letters = "".join(pypinyin.lazy_pinyin(plugin_name, pypinyin.Style.FIRST_LETTER)).lower()
+            full_pinyin = "".join(pypinyin.lazy_pinyin(plugin_name)).lower()
+            matchs=[plugin_name.lower(), first_letters, full_pinyin]
+            plugin.MATCHS = [*list(set(matchs)), plugin.MATCHS]
+            desc = inspect.getdoc(plugin)
+            plugin.DESC = ENV['initial_plugin_subtitle'] if desc == None  else desc
+            cls.PLUGINS.update({plugin_name:plugin()})
             return plugin
         return wrapper
     
-
-
-def to_list(fn):
-    @wraps(fn)
-    def wrapper(*args, **kwargs):
-        # fn.__annotations__['type'] = to_list.__name__
-        print("before")
-        data = fn(*args, **kwargs)
-        print(data)
-        print("after")
+class Plugin(object):
+    ICON = ft.icons.SETTINGS
+    MATCHS = []
+    def process(self, data, **kwargs):
         return data
-    return wrapper
 
-
-def list_ui(data: list):
-    lv =ft.ListView(expand=1)
-    lv.controls = data
-    return lv
-
-def toc_ui(data: dict):
+class UIPlugin(Plugin):
     pass
