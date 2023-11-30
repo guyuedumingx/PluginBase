@@ -9,7 +9,6 @@ ENV = {
     'initial_plugin_subtitle': "THIS IS A USEFUL PLUGIN"
 }
 
-
 class PlugManager(object):
     """
     插件管理器
@@ -17,13 +16,12 @@ class PlugManager(object):
     ENV: a global environment
     """
     PLUGINS = {}
-    context = {}
 
     @classmethod
-    def run(icls, plugins: tuple, data="", **kwargs):
+    def run(icls, plugins=(), data="", **kwargs):
         for plugin_name in plugins:
             plugin = icls.PLUGINS[plugin_name]
-            data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+            data = icls._run_plugin(plugin, data, **kwargs)
         return data
     
     @classmethod
@@ -42,30 +40,15 @@ class PlugManager(object):
     @classmethod
     def register(cls, plugin_name):
         def wrapper(plugin):
-            cls.PLUGINS.update({plugin_name:cls._build(plugin_name, plugin)})
+            first_letters = "".join(pypinyin.lazy_pinyin(plugin_name, pypinyin.Style.FIRST_LETTER)).lower()
+            full_pinyin = "".join(pypinyin.lazy_pinyin(plugin_name)).lower()
+            matchs=[plugin_name.lower(), first_letters, full_pinyin]
+            plugin.MATCHS = [*list(set(matchs)), plugin.MATCHS]
+            desc = inspect.getdoc(plugin)
+            plugin.DESC = ENV['initial_plugin_subtitle'] if desc == None  else desc
+            cls.PLUGINS.update({plugin_name:plugin()})
             return plugin
         return wrapper
-    
-    @classmethod
-    def _build(cls, plugin_name: str, plugin):
-        first_letters = "".join(pypinyin.lazy_pinyin(plugin_name, pypinyin.Style.FIRST_LETTER)).lower()
-        full_pinyin = "".join(pypinyin.lazy_pinyin(plugin_name)).lower()
-        matchs=[plugin_name.lower(), first_letters, full_pinyin]
-        plugin.MATCHS = list(set([*matchs, *plugin.MATCHS]))
-        plugin.SOURCEFILE = inspect.getsourcefile(plugin)
-        plugin.SOURCE = inspect.getsourcelines(plugin)
-        desc = inspect.getdoc(plugin)
-        plugin.DESC = ENV['initial_plugin_subtitle'] if desc == None else desc
-        return plugin()
-    
-    @classmethod
-    def setState(cls, **kwargs):
-        cls.context = {**cls.context, **kwargs}
-
-
-class UIManager:
-    def build(cls, plugin_name):
-        pass
     
 class Plugin(object):
     ICON = ft.icons.SETTINGS
@@ -73,5 +56,5 @@ class Plugin(object):
     def process(self, data, **kwargs):
         return data
 
-class UIPlugin(Plugin, ft.UserControl):
+class UIPlugin(Plugin):
     pass

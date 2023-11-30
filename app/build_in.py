@@ -8,6 +8,9 @@ from functools import partial
 
 @PlugManager.register('_search_plugin')
 class SearchPlugin(Plugin):
+    """
+    data: word: the search key word
+    """
     def process(self, word, **kwargs):
         plugins = PlugManager.PLUGINS
         func = partial(self.match_rules, word=word)
@@ -20,44 +23,52 @@ class SearchPlugin(Plugin):
         for item in matchs:
             if(word in item): return True
 
-@PlugManager.register('_build_show_cards')
+@PlugManager.register('_plugin_cards')
 class BuildShowCards(Plugin):
-    def process(self, plugin_dict, item_on_click, **kwargs):
+    def process(self, plugin_dict: dict, plugin_onclick: lambda e:e, **kwargs):
         return [ft.ListTile(
                 leading=ft.Icon(item[1].ICON),
                 title=ft.Text(item[0], weight=ft.FontWeight.W_700),
                 subtitle=ft.Text(
                     item[1].DESC[0:31].strip()
                 ),
-                on_click=item_on_click,
+                on_click=plugin_onclick,
                 ) for item in plugin_dict.items()]
         
-@PlugManager.register('_mainshow')
+@PlugManager.register('_mainbackground')
 class MainShowBackground(UIPlugin):
     """
     显示在主页的初始背景
     """
-    def process(self, data, **kwargs):
-        return ft.Container(content=ft.Icon(ft.icons.SETTINGS, 
-            size=300, 
-            color=ft.colors.GREY_200),
-        expand=1,
-        alignment=ft.alignment.center)
+    # def process(self, data, **kwargs):
+    #     return ft.Container(content=ft.Icon(ft.icons.SETTINGS, 
+    #         size=300, 
+    #         color=ft.colors.GREY_200),
+    #     expand=1,
+    #     alignment=ft.alignment.center)
+
+    def process_list(self, data,**kwargs):
+        return ("_plugin_search_stream",)
 
 @PlugManager.register('_plugin_search_stream')
 class PluginSearchStream(UIPlugin):
     """
     主页搜索插件流
+    data: word: the search key word
     """
     def process_list(self, key_word, **kwargs):
-        if(key_word == ""): return ("_mainshow",)
-        return ("_search_plugin", "_build_show_cards", "_listUI")
+        return ("_search_plugin", "_plugin_cards", "_listUI")
 
 @PlugManager.register('_setDB')
 class SetGlobalDatabase(Plugin):
-   def process(self, url, **kwargs):
+    """
+    加载程序数据库
+    Load Default Database
+    data: url : the url to connect database would be like: sqlite:///plug.db
+    """
+    def process(self, url, **kwargs):
         db = dataset.connect(url)
-        ENV['db'] = db
+        PlugManager.setState(db=db)
         return db 
 
 @PlugManager.register('安装插件')
@@ -170,18 +181,29 @@ class MarkdownTocUI(UIPlugin):
 
 @PlugManager.register('_load_plugin')
 class LoadPlugin(Plugin):
-    def process_list(self, data, search_feild, search, **kwargs):
+    def process_list(self, data, search_feild, search, search_btn, **kwargs):
+        self.outer_search = search
         search_feild.prefix_icon = PlugManager.PLUGINS[data].ICON
         search_feild.label = data
         search_feild.value = ""
-        search_feild.on_submit = search
+        search_feild.on_submit = self.plugin_inner_search
+        search_btn.on_click = self.plugin_inner_search
         search_feild.on_change = None
         return (data,)
+
+    def plugin_inner_search(self, e):
+        self.container.content = PlugManager.run(plugins=("_reset_search","_plugin_search_stream",),
+                                 data=self.search_feild.value,
+                                 search=self.outer_search,
+                                 plugin_onclick=self.load_plugin)
+        self.search_feild.focus()
+        self.search_feild.update()
+        self.page.update()
 
 @PlugManager.register('_exit_plugin')
 class ExitPlugin(UIPlugin):
     def process_list(self, data, search_feild, search, search_btn,**kwargs):
-        return ("_reset_search","_mainshow",)
+        return ("_reset_search","_mainbackground",)
 
 @PlugManager.register('_reset_search')
 class ResetSearch(Plugin):
@@ -191,18 +213,21 @@ class ResetSearch(Plugin):
         search_feild.on_change = search
         search_feild.on_submit = search
         search_btn.on_click = search
+        search_feild.update()
+        search_btn.update()
         return data
 
 @PlugManager.register('_preload_plugin')
 class PreLoadPlugin(Plugin):
     """
     Reload all module files in the app/plugins
+    加载插件库中的所有插件
     """
-    def process(self, data, **kwargs):
-        plugins_files = os.listdir(ENV['plugin_dir'])
+    def process(self, plugin_dir, **kwargs):
+        plugins_files = os.listdir(plugin_dir)
         for files in plugins_files:
             if not files.endswith(".py"): continue
-            plug_path = ENV['plugin_dir'] + os.sep + files.split(".")[0]
+            plug_path = plugin_dir + os.sep + files.split(".")[0]
             import_path = os.path.relpath(plug_path, ENV['app_dir']).replace(os.sep, ".")
             importlib.import_module(import_path, package="app")
 
@@ -212,16 +237,15 @@ class TestTocUI(Plugin):
     查看ENV中的所有信息
     """
     def process(self, data, **kwargs):
-        return PlugManager.run(plugins=("_markdown_tocUI",),
+        return PlugManager.run(plugins=("_dictUI",),
                                data=ENV,
                                mode="edit",
                                **kwargs)
 
 @PlugManager.register('键值对数据库')
 class KeyValueDatabase(Plugin):
-    def process(self, search_feild:ft.TextField, search_btn:ft.Container, 
-                container, **kwargs):
-        db = ENV['db']
+    def process(self, data, search_feild:ft.TextField, search_btn:ft.Container, 
+                container, db, **kwargs):
         def search_handler(e):
             key_word = search_feild.value
             if(key_word == ''): return
@@ -235,3 +259,81 @@ class KeyValueDatabase(Plugin):
         search_btn.on_click = search_handler
         return ft.Text("Enter a database")
         
+
+@PlugManager.register('_index')
+class IndexPlugin(UIPlugin):
+    """
+    首页插件：项目起始页
+    page: the page to load in
+    search_feild: the search area showed in all page
+    search_btn: search btn what would be clicked to search plugin
+                the action same as the search_feild changed
+    container: the main container that developer can change and also
+                the main area to show all information of the plugin
+    """
+    def process(self, page, **kwargs):
+        self.page = page
+        self.search_feild = ft.TextField(hint_text="Search Plugins", border_radius=40)
+        self.search_btn = ft.Container(
+                ft.Icon(name=ft.icons.SEARCH),
+                col={"xs":2, "sm": 1, "md": 1, "xl": 1},
+                alignment=ft.alignment.center,
+                height=60,
+            )
+        self.container = ft.Container(PlugManager.run(plugins=("_mainbackground",),
+                                                      data="",
+                                                      plugin_onclick=self.load_plugin),
+                                                      expand=1)
+        # 构造全局上下文
+        PlugManager.setState(page=page,
+                                search_feild=self.search_feild,
+                                search_btn = self.search_btn,
+                                container=self.container)
+
+        page.add(ft.ResponsiveRow([
+            ft.Container(
+                ft.Icon(name=ft.icons.HOME),
+                col={"xs":2, "sm": 1, "md": 1, "xl": 1},
+                alignment=ft.alignment.center,
+                height=60,
+                on_click=self.back_to_home,
+            ),
+            ft.Container(
+                self.search_feild, 
+                padding=5,
+                col={"xs":8, "sm": 10, "md": 10, "xl": 10},
+            ),
+            self.search_btn
+        ]))
+        page.add(self.container)
+        self.search_feild.on_change = self.search
+        self.search_feild.focus()
+        return page
+
+    def load_plugin(self, e):
+        plugin_name = e.control.title.value
+        self.container.content = PlugManager.run(plugins=("_load_plugin",),
+                                 data=plugin_name,
+                                 search=self.search)
+        self.container.update()
+        self.search_feild.update()
+        self.page.update()
+    
+    def back_to_home(self, e):
+        self.container.content = PlugManager.run(plugins=("_exit_plugin",),data="",
+                        plugin_onclick=self.load_plugin,
+                        search=self.search)
+        self.search_feild.value = ""
+        self.container.update()
+        self.search_feild.update()
+        self.search_btn.update()
+        self.page.update()
+
+    def search(self, e):
+        self.container.content = PlugManager.run(plugins=("_plugin_search_stream",),
+                                 data=self.search_feild.value,
+                                 search=self.search,
+                                 plugin_onclick=self.load_plugin)
+        self.search_feild.focus()
+        self.search_feild.update()
+        self.page.update()

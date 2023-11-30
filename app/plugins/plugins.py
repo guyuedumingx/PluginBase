@@ -59,14 +59,6 @@ class TestTableUI(Plugin):
         return PlugManager.run(plugins=("_tableUI",),data=rows, columns=columns, **kwargs)
     
 
-@PlugManager.register('_plugin_search_stream')
-class PluginSearchStream(Plugin):
-    """
-    主页搜索插件流
-    """
-    def process_list(self, key_word, **kwargs):
-        return ("_search_plugin", "_build_show_cards", "_listUI")
-
 @PlugManager.register('_pandas_show')
 class PandasShow(Plugin):
     """
