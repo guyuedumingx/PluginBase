@@ -31,13 +31,7 @@ class PlugManager(object):
         """
         run single plugin
         """
-        if hasattr(plugin, 'process_list'):
-            process_list = plugin.process_list(data, **kwargs)
-            for p_name in process_list:
-                data = cls._run_plugin(cls.PLUGINS[p_name], data, **kwargs)
-        elif hasattr(plugin, 'process'):
-            data = plugin.process(data, **kwargs)
-        return data 
+        return plugin.process(data, **kwargs)
 
     @classmethod
     def register(cls, plugin_name):
@@ -61,6 +55,10 @@ class PlugManager(object):
     @classmethod
     def setState(cls, **kwargs):
         cls.context = {**cls.context, **kwargs}
+        
+    @classmethod
+    def getPlugin(cls, plugin_name):
+        return cls.PLUGINS[plugin_name]
 
 
 class UIManager:
