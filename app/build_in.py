@@ -43,7 +43,7 @@ class PluginSearchStream(UIPlugin):
     """
     def process(self, key_word, **kwargs):
         indexPlugin = PlugManager.getPlugin("_index")
-        return PlugManager.run(plugins=("_search_plugin", "_plugin_cards", "_listUI"),
+        return PlugManager.run(plugins=("_search_plugin", "_plugin_cards", "_flowUI"),
                                data=key_word,
                                plugin_onclick=indexPlugin.load_plugin)
 
@@ -115,15 +115,23 @@ class Notice(Plugin):
 @PlugManager.register('_listUI')
 class ListUI(UIPlugin):
     def process(self, data: list, **kwargs):
-        return ft.ListView(controls=data,expand=1)
+        return ft.ListView(controls=data, expand=1)
 
 @PlugManager.register('_gridUI')
 class GridUI(UIPlugin):
     def process(self, data: list, **kwargs):
         return ft.GridView(controls=data,
-                           runs_count=2,
                            child_aspect_ratio=1,
+                           height=60,
+                           max_extent=160,
                            )
+
+@PlugManager.register('_flowUI')
+class FlowUI(UIPlugin):
+    def process(self, data: list, counts_per_row=2, **kwargs):
+        for item in data:
+            item.col = {"sm": 12 / counts_per_row, "xs": 12}
+        return ft.ResponsiveRow(controls=data, expand=1)
 
 @PlugManager.register('_tableUI')
 class TableUI(UIPlugin):
@@ -281,7 +289,7 @@ class IndexPlugin(UIPlugin):
     page: the page to load in
     search_feild: the search area showed in all page
     container: the main container that developer can change and also
-                the main area to show all information of the plugin
+               the main area to show all information of the plugin
     """
     # ICON = ft.icons.MORE_VERT_SHARP
     ICON = ft.icons.SEARCH
@@ -292,6 +300,7 @@ class IndexPlugin(UIPlugin):
         self.container = ft.Container(PlugManager.run(
                         plugins=("_mainbackground",),data=""),
                         expand=1)
+
         # 构造全局上下文
         PlugManager.setState(page=page,
                              search_feild=self.search_feild,
@@ -309,7 +318,7 @@ class IndexPlugin(UIPlugin):
                 self.search_feild, 
                 padding=5,
                 col={"xs":10, "sm": 11, "md": 11, "xl": 11},
-            ),
+            )
         ]))
         page.add(self.container)
         self.search_feild.on_change = self.search_func

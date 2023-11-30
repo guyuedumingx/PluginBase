@@ -14,5 +14,5 @@ db = PlugManager.run(plugins=("_setDB",), data="sqlite:///plug.db")
 PlugManager.run(plugins=("_preload_plugin",), data=ENV['plugin_dir'])
 
 
-# ft.app(target=main, view=ft.AppView.WEB_BROWSER)
+# ft.app(target=lambda page:PlugManager.run(plugins=("_index",), data=page, view=ft.AppView.WEB_BROWSER))
 ft.app(target=lambda page:PlugManager.run(plugins=("_index",), data=page))
