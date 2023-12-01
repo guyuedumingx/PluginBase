@@ -5,3 +5,5 @@ venv/
 build/
 plugin-base-env/
 *.spec
+*.exe
+run
