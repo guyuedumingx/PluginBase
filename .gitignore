@@ -1,6 +1,7 @@
 __pycache__/
 .vscode/
 dist/
+venv/
 build/
 plugin-base-env/
 *.spec
