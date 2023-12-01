@@ -359,6 +359,10 @@ class IndexPlugin(UIPlugin):
     HINT_TEXT = "Search Plugins"
 
     def process(self, page, **kwargs):
+        page.fonts = {
+            "LXGWWenKai-Regular": "fonts/LXGWWenKai-Regular.ttf",
+        }
+        page.theme = ft.Theme(font_family="LXGWWenKai-Regular")
         self.page = page
         self.search_feild = ft.TextField(
             hint_text=self.HINT_TEXT,
