@@ -1,18 +1,16 @@
-import requests
-from bs4 import BeautifulSoup
-import dataset
+import flet as ft
 
-url = "https://www.qqxiuzi.cn/bianma/dianbao.html"
-resp = requests.get(url)
-resp.encoding = resp.apparent_encoding
-soup = BeautifulSoup(resp.content)
-db = dataset.connect("sqlite:///plug.db")
-table = db['中文商用电码表']
+def main(page: ft.Page):
+    page.window_title_bar_hidden = True
+    page.window_title_bar_buttons_hidden = True
 
-res = {}
-for line in soup.find_all("tr"):
-    key = line.td
-    value = key.next_sibling
-    table.insert(dict(key=key.text, value=value.text))
-items = table.all()
-print(items)
+    page.add(
+        ft.Row(
+            [
+                ft.WindowDragArea(ft.Container(ft.Text("Drag this area to move, maximize and restore application window."), bgcolor=ft.colors.AMBER_300, padding=10), expand=True),
+                ft.IconButton(ft.icons.CLOSE, on_click=lambda _: page.window_close())
+            ]
+        )
+    )
+
+ft.app(target=main)

@@ -130,8 +130,8 @@ class GridUI(UIPlugin):
 class FlowUI(UIPlugin):
     def process(self, data: list, counts_per_row=2, **kwargs):
         for item in data:
-            item.col = {"sm": 12 / counts_per_row, "xs": 12}
-        return ft.ResponsiveRow(controls=data, expand=1)
+            item.col = {"sm": 12 / counts_per_row, "xs": 12, "lg": 12 / (counts_per_row*2)}
+        return ft.ListView(controls=[ft.ResponsiveRow(controls=data, expand=1)], expand=1)
 
 @PlugManager.register('_tableUI')
 class TableUI(UIPlugin):
@@ -200,6 +200,7 @@ class LoadPlugin(Plugin):
         search_feild.hint_text = data
         search_feild.on_submit = self.plugin_inner_search
         search_feild.on_change = self.plugin_inner_search
+        PlugManager.setState(curPlugin=data)
         return PlugManager.run(plugins=(data,), data=data,**kwargs)
 
     def plugin_inner_search(self, e):
@@ -219,6 +220,7 @@ class ResetSearch(Plugin):
         search_feild.on_change = search
         search_feild.on_submit = search
         search_feild.focus()
+        PlugManager.setState(curPlugin="_index")
         return data
 
 @PlugManager.register('_preload_plugin')
@@ -304,9 +306,9 @@ class IndexPlugin(UIPlugin):
         # 构造全局上下文
         PlugManager.setState(page=page,
                              search_feild=self.search_feild,
+                             curPlugin="_index",
                              container=self.container)
-
-        page.add(ft.ResponsiveRow([
+        self.ui = ft.ResponsiveRow([
             ft.Container(
                 ft.Icon(name=ft.icons.HOME),
                 col={"xs":2, "sm": 1, "md": 1, "xl": 1},
@@ -319,18 +321,39 @@ class IndexPlugin(UIPlugin):
                 padding=5,
                 col={"xs":10, "sm": 11, "md": 11, "xl": 11},
             )
-        ]))
+        ])
+        page.add(self.ui)
         page.add(self.container)
+        # icon=ft.icons.TIPS_AND_UPDATES,
+        page.floating_action_button = ft.FloatingActionButton(icon=ft.icons.TIPS_AND_UPDATES,
+                                                              scale=0.7,
+                                                              opacity=0.5,
+                                                              bgcolor=ft.colors.WHITE,
+                                                              shape=ft.CircleBorder(),
+                                                              on_click=lambda x: print(PlugManager.getPlugin(PlugManager.context['curPlugin']).SOURCE))
         self.search_feild.on_change = self.search_func
         self.search_feild.focus()
+        page.update()
         return page
 
     def load_plugin(self, e):
         plugin_name = e.control.title.value
-        self.container.content = PlugManager.run(plugins=("_load_plugin",),
-                                 data=plugin_name)
+        # self.container.content = PlugManager.run(plugins=("_load_plugin",),
+                                #  data=plugin_name)
         self.container.update()
-        self.page.update()
+        self.page.views.clear()
+        self.page.views.append(
+            ft.View(
+                "/" + plugin_name,
+                [
+                    self.ui,
+                    PlugManager.run(plugins=("_load_plugin",),
+                                 data=plugin_name)
+                ]
+            )
+        )
+        # self.page.update()
+        self.page.go("/"+plugin_name)
     
     def back_to_home(self, e):
         self.container.content = PlugManager.run(
