@@ -10,6 +10,7 @@ ENV['plugin_dir'] = os.path.abspath(plugin_dir)
 ENV['update_dir'] = os.path.abspath(os.sep.join([os.curdir, "app"]))
 ENV['app_dir'] = os.path.abspath(os.curdir)
 
+# https://dataset.readthedocs.io/en/latest/
 db = PlugManager.run(plugins=("_setDB",), data="sqlite:///plug.db")
 PlugManager.run(plugins=("_preload_plugin",), data=ENV['plugin_dir'])
 

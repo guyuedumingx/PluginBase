@@ -1,4 +1,5 @@
 from .plug import *
+import json
 import importlib
 import flet as ft
 import dataset
@@ -30,7 +31,7 @@ class BuildShowCards(Plugin):
                 leading=ft.Icon(item[1].ICON),
                 title=ft.Text(item[0], weight=ft.FontWeight.W_700),
                 subtitle=ft.Text(
-                    item[1].DESC[0:31].strip()
+                    item[1].DESC.strip().split("\n")[0]
                 ),
                 on_click=plugin_onclick,
                 ) for item in data.items()]
@@ -41,26 +42,34 @@ class PluginSearchStream(UIPlugin):
     主页搜索插件流
     data: word: the search key word
     """
-    def process(self, key_word, **kwargs):
-        indexPlugin = PlugManager.getPlugin("_index")
+    def process(self, key_word, plugin_onclick, **kwargs):
         return PlugManager.run(plugins=("_search_plugin", "_plugin_cards", "_flowUI"),
                                data=key_word,
-                               plugin_onclick=indexPlugin.load_plugin)
+                               plugin_onclick=plugin_onclick,
+                               **kwargs)
 
 @PlugManager.register('_mainbackground')
 class MainShowBackground(UIPlugin):
     """
     显示在主页的初始背景
     """
-    # def process(self, data, **kwargs):
-    #     return ft.Container(content=ft.Icon(ft.icons.SETTINGS, 
-    #         size=300, 
-    #         color=ft.colors.GREY_200),
-    #     expand=1,
-    #     alignment=ft.alignment.center)
-
     def process(self, data, **kwargs):
-        return PlugManager.run(plugins=("_plugin_search_stream",), data=data)
+        return PlugManager.run(plugins=("_plugin_search_stream",),
+                               data=data,
+                               plugin_onclick=PlugManager.getPlugin("_index").load_plugin)
+
+@PlugManager.register('_defaultbackground')
+class DefaultBackground(UIPlugin):
+    """
+    默认背景
+    """
+    def process(self, data, **kwargs):
+        return ft.Container(content=ft.Icon(
+            ft.icons.SETTINGS, 
+            size=300, 
+            color=ft.colors.GREY_200),
+            expand=1,
+            alignment=ft.alignment.center)
 
 @PlugManager.register('_setDB')
 class SetGlobalDatabase(Plugin):
@@ -101,7 +110,7 @@ class InstallPlugin(UIPlugin):
         return ft.Container(ft.Container(
             ft.Icon(name=ft.icons.UPLOAD_FILE, size=250, color=ft.colors.GREY_400),
             on_click=lambda _: file_picker.pick_files(allow_multiple=True)),
-        alignment=ft.alignment.center
+            alignment=ft.alignment.center
         )
 
 @PlugManager.register('_notice')
@@ -116,15 +125,6 @@ class Notice(Plugin):
 class ListUI(UIPlugin):
     def process(self, data: list, **kwargs):
         return ft.ListView(controls=data, expand=1)
-
-@PlugManager.register('_gridUI')
-class GridUI(UIPlugin):
-    def process(self, data: list, **kwargs):
-        return ft.GridView(controls=data,
-                           child_aspect_ratio=1,
-                           height=60,
-                           max_extent=160,
-                           )
 
 @PlugManager.register('_flowUI')
 class FlowUI(UIPlugin):
@@ -150,12 +150,12 @@ class DictUI(UIPlugin):
     mode: show edit
     multiline: enable multiline turn into textarea
     """
-    def process(self, data: dict, mode='edit', multiline=False, **kwargs):
+    def process(self, data: dict, mode='show', multiline=False, **kwargs):
         def on_change(e):
             data[e.control.hint_text] = e.data
         return ft.ListView([ft.ResponsiveRow(
             controls=[
-                ft.ListTile(leading=ft.Icon(ft.icons.SETTINGS), title=ft.Text(item[0],size=ft.FontWeight.W_500), col={"xs":12, "md":3}),
+                ft.ListTile(leading=ft.Icon(ft.icons.KEY), title=ft.Text(item[0],size=ft.FontWeight.W_500), col={"xs":12, "md":3}),
                 ft.TextField(value=item[1],
                             border=ft.InputBorder.UNDERLINE,
                             hint_text=item[0], col={"xs":12, "md":9},
@@ -191,37 +191,14 @@ class MarkdownTocUI(UIPlugin):
         data = {k:ft.Markdown(value=v,col={"xs":12, "md": 9}, expand=1) for k,v in data.items()}
         return PlugManager.run(("_tocUI",), data, **kwargs)
 
-@PlugManager.register('_load_plugin')
-class LoadPlugin(Plugin):
-    def process(self, data, search_feild: ft.TextField, **kwargs):
-        self.indexPlugin = PlugManager.getPlugin("_index")
-        search_feild.prefix_icon = PlugManager.PLUGINS[data].ICON
-        search_feild.value = ""
-        search_feild.hint_text = data
-        search_feild.on_submit = self.plugin_inner_search
-        search_feild.on_change = self.plugin_inner_search
-        PlugManager.setState(curPlugin=data)
-        return PlugManager.run(plugins=(data,), data=data,**kwargs)
-
-    def plugin_inner_search(self, e):
-        self.indexPlugin.container.content = PlugManager.run(plugins=("_reset_search","_plugin_search_stream",),
-                                 data=self.indexPlugin.search_feild.value)
-        self.indexPlugin.page.update()
-
-@PlugManager.register('_reset_search')
-class ResetSearch(Plugin):
+@PlugManager.register('环境信息')
+class ENVInformation(Plugin):
+    """
+    查看ENV中的所有信息
+    """
+    ICON=ft.icons.MISCELLANEOUS_SERVICES
     def process(self, data, **kwargs):
-        indexPlugin = PlugManager.getPlugin("_index")
-        search_feild = indexPlugin.search_feild
-        search = indexPlugin.search_func
-        search_feild.prefix_icon = indexPlugin.ICON
-        search_feild.label = None
-        search_feild.hint_text = indexPlugin.HINT_TEXT
-        search_feild.on_change = search
-        search_feild.on_submit = search
-        search_feild.focus()
-        PlugManager.setState(curPlugin="_index")
-        return data
+        return PlugManager.run(plugins=("_dictUI",), data=ENV, mode="show", **kwargs)
 
 @PlugManager.register('_preload_plugin')
 class PreLoadPlugin(Plugin):
@@ -236,29 +213,18 @@ class PreLoadPlugin(Plugin):
             plug_path = plugin_dir + os.sep + files.split(".")[0]
             import_path = os.path.relpath(plug_path, ENV['app_dir']).replace(os.sep, ".")
             importlib.import_module(import_path, package="app")
-        return f"RELOAD SUCCESS!!!"
+        return f"LOAD SUCCESS!!!"
 
-@PlugManager.register('环境信息')
-class TestTocUI(Plugin):
-    """
-    查看ENV中的所有信息
-    """
-    ICON=ft.icons.MISCELLANEOUS_SERVICES
-    def process(self, data, **kwargs):
-        return PlugManager.run(plugins=("_dictUI",), data=ENV, mode="edit", **kwargs)
-
-@PlugManager.register('_rebind_search_action')
-class RebindSearchAction(Plugin):
-    def process(self, data, search_func, search_feild:ft.TextField, hint_text="", **kwargs):
-        search_feild.label = data
-        search_feild.on_change = search_func
-        search_feild.on_submit = search_func
-        search_feild.label = data
-        search_feild.hint_text = hint_text
-        search_feild.value = ""
-        search_feild.focus()
-        search_feild.update()
-        return data
+@PlugManager.register('_tipsview')
+class TipsView(UIPlugin):
+    def process(self, data, plugin_obj, **kwargs):
+        ui = [
+            ft.Text(data, size=30),
+            ft.Markdown(plugin_obj.DESC),
+            ft.Text("SOURCE", size=30),
+            ft.Text("".join(plugin_obj.SOURCE), size=15)
+        ]
+        return ft.ListView(ui, expand=1, spacing=10)
 
 @PlugManager.register('键值对数据库')
 class KeyValueDatabase(Plugin):
@@ -270,12 +236,26 @@ class KeyValueDatabase(Plugin):
         self.search_feild = search_feild
         self.container = container
         self.db = db
-        PlugManager.run(plugins=("_rebind_search_action",),
-                        data=data,
-                        search_func=self.search_handler,
-                        hint_text="Enter a table name")
-        return ft.Text("Enter a table name")
-        
+        search_feild.hint_text="Enter a table name to fine data"
+        search_feild.on_change = self.search_handler
+        tableNameArea = ft.TextField(hint_text="Choose a table to save")
+        keyArea = ft.TextField(hint_text="Enter key to save", multiline=True, expand=1)
+        valueArea = ft.TextField(hint_text="Enter value to save", multiline=True, expand=1)
+        return ft.Container(ft.ListView([
+            tableNameArea,
+            keyArea,
+            valueArea,
+            ft.OutlinedButton(
+                text = "Save",
+                height=45,
+                on_click= lambda _: db.get_table(tableNameArea.value,primary_id="key").insert(dict(key=keyArea.value, value=valueArea.value))),
+            ft.Text("""If your want to save json value like : {key: 'key', value: 'value'}, paste you json value into value feild and click the button below to save"""),
+            ft.OutlinedButton(
+                text = "Json Save",
+                height=45,
+                on_click= lambda _: db[tableNameArea.value].insert(json.loads(valueArea.value))),
+        ],expand=1, spacing=10), alignment=ft.alignment.top_left,expand=1)
+
     def search_handler(self, e):
         key_word = self.search_feild.value
         if(key_word == ''): return
@@ -283,6 +263,31 @@ class KeyValueDatabase(Plugin):
         data = {item['key']: item['value'] for item in table.all()}
         self.container.content = PlugManager.run(plugins=("_dictUI",),data=data, mode="edit")
         self.container.update()
+
+@PlugManager.register('_search_base')
+class SearchBase(UIPlugin):
+    """
+    基础知识库样式
+    """
+    ICON=ft.icons.BOOKMARKS_OUTLINED
+    def process(self, data, db, search_feild, container, ui_template="_markdown_tocUI",**kwargs):
+        self.db = db
+        self.container = container
+        search_feild.on_change = self.on_change
+        self.table_name = data
+        self.ui_template = ui_template
+        return self.ui("")
+    
+    def on_change(self, e):
+        self.container.content = self.ui(e.data)
+        self.container.update()
+
+    def ui(self, key):
+        data = {}
+        table = self.db.get_table(self.table_name, primary_id="key")
+        for item in table.find(key={'like': f"%{key}%"}):
+            data[item['key']] = item['value']            
+        return PlugManager.run(plugins=(self.ui_template,), data=data)
 
 @PlugManager.register('_index')
 class IndexPlugin(UIPlugin):
@@ -293,76 +298,106 @@ class IndexPlugin(UIPlugin):
     container: the main container that developer can change and also
                the main area to show all information of the plugin
     """
-    # ICON = ft.icons.MORE_VERT_SHARP
     ICON = ft.icons.SEARCH
     HINT_TEXT = "Search Plugins"
     def process(self, page, **kwargs):
         self.page = page
-        self.search_feild = ft.TextField(hint_text=self.HINT_TEXT, prefix_icon=self.ICON, border_radius=40)
-        self.container = ft.Container(PlugManager.run(
-                        plugins=("_mainbackground",),data=""),
-                        expand=1)
-
-        # 构造全局上下文
-        PlugManager.setState(page=page,
-                             search_feild=self.search_feild,
-                             curPlugin="_index",
-                             container=self.container)
-        self.ui = ft.ResponsiveRow([
-            ft.Container(
-                ft.Icon(name=ft.icons.HOME),
-                col={"xs":2, "sm": 1, "md": 1, "xl": 1},
-                alignment=ft.alignment.center,
-                height=60,
-                on_click=self.back_to_home,
-            ),
-            ft.Container(
-                self.search_feild, 
-                padding=5,
-                col={"xs":10, "sm": 11, "md": 11, "xl": 11},
+        self.search_feild = ft.TextField(
+            hint_text=self.HINT_TEXT,
+            prefix_icon=self.ICON,
+            border_radius=40,
+            on_change=self.search_func
             )
-        ])
-        page.add(self.ui)
-        page.add(self.container)
-        # icon=ft.icons.TIPS_AND_UPDATES,
-        page.floating_action_button = ft.FloatingActionButton(icon=ft.icons.TIPS_AND_UPDATES,
-                                                              scale=0.7,
-                                                              opacity=0.5,
-                                                              bgcolor=ft.colors.WHITE,
-                                                              shape=ft.CircleBorder(),
-                                                              on_click=lambda x: print(PlugManager.getPlugin(PlugManager.context['curPlugin']).SOURCE))
-        self.search_feild.on_change = self.search_func
+        self.container = ft.Container(PlugManager.run(plugins=("_plugin_search_stream",),
+                                         plugin_onclick=self.load_plugin),expand=1)
+        self.page.add(
+            ft.ResponsiveRow([ft.Container(self.search_feild, padding=5,)]),
+            self.container
+            )
         self.search_feild.focus()
-        page.update()
+        self.page.update()
         return page
 
     def load_plugin(self, e):
         plugin_name = e.control.title.value
-        # self.container.content = PlugManager.run(plugins=("_load_plugin",),
-                                #  data=plugin_name)
-        self.container.update()
-        self.page.views.clear()
-        self.page.views.append(
+        PlugManager.run(plugins=("_load_plugin",), data=plugin_name, page=self.page)
+    
+    def search_func(self, e):
+        self.search_feild.value = e.data
+        self.container.content= PlugManager.run(
+                                plugins=("_plugin_search_stream",),
+                                plugin_onclick=self.load_plugin,
+                                data=e.data)
+        self.search_feild.focus()
+        self.page.update()
+
+
+@PlugManager.register('_load_plugin')
+class BasePluginView(UIPlugin):
+    def process(self, plugin_name, page, **kwargs):
+        self.plugin_name = plugin_name
+        self.plugin = PlugManager.getPlugin(plugin_name)
+        self.page = page
+        home_btn, search_feild, tips_btn = self.base_ui(page,plugin_name,self.plugin.ICON)
+        self.container = PlugManager.run(plugins=("_defaultbackground",))
+        page.views.append(
             ft.View(
                 "/" + plugin_name,
                 [
-                    self.ui,
-                    PlugManager.run(plugins=("_load_plugin",),
-                                 data=plugin_name)
+                    ft.ResponsiveRow([search_feild, home_btn]),
+                    tips_btn,
+                    self.container
                 ]
             )
         )
-        # self.page.update()
-        self.page.go("/"+plugin_name)
+        page.go("/"+plugin_name)
+        main_item =  PlugManager.run(plugins=(plugin_name,),
+                                    search_feild=search_feild,
+                                    page=page,
+                                    container=self.container,
+                                    data=plugin_name)
+        self.container.content = main_item
+        search_feild.focus()
+        page.update()
+        return plugin_name
     
-    def back_to_home(self, e):
-        self.container.content = PlugManager.run(
-                        plugins=("_reset_search","_mainbackground",))
-        self.search_feild.value = ""
-        self.page.update()
+    def tips_onclick(self, e):
+        back_btn = ft.FloatingActionButton(icon=ft.icons.ARROW_BACK,
+            scale=0.7,
+            opacity=0.5,
+            bgcolor=ft.colors.WHITE,
+            shape=ft.CircleBorder(),
+            on_click= lambda _: self.page.views.pop() and self.page.update()
+            )
+        url = "/" + self.plugin_name+ "/tips"
+        container = PlugManager.run(plugins=("_tipsview",), data=self.plugin_name,plugin_obj=self.plugin)
+        self.page.views.append(ft.View(url, [back_btn,container]))
+        self.page.go(url)
+    
+    def search_feild_onchange(self, e):
+        self.page.views.pop() and self.page.update()
+        PlugManager.getPlugin("_index").search_func(e)
 
-    def search_func(self, e):
-        self.container.content = PlugManager.run(
-                                plugins=("_plugin_search_stream",),
-                                data=self.search_feild.value)
-        self.page.update()
+    def base_ui(self, page, plugin_name, icon=ft.icons.SETTINGS):
+            home_btn = ft.Container(
+                ft.Icon(name=ft.icons.HOME),
+                col={"xs":2, "sm": 1, "md": 1, "xl": 1},
+                alignment=ft.alignment.center,
+                height=60,
+                on_click= lambda _: page.views.pop() and page.update()
+                )
+            search_feild = ft.TextField(
+                hint_text=plugin_name,
+                prefix_icon=icon,
+                border_radius=40,
+                col={"xs":10, "sm": 11, "md": 11, "xl": 11},
+                on_change = self.search_feild_onchange
+                )
+            tips_btn = ft.FloatingActionButton(icon=ft.icons.TIPS_AND_UPDATES,
+                scale=0.7,
+                opacity=0.5,
+                bgcolor=ft.colors.WHITE,
+                shape=ft.CircleBorder(),
+                on_click = self.tips_onclick
+                )
+            return (home_btn, search_feild, tips_btn)

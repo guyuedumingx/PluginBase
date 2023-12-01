@@ -47,7 +47,7 @@ class PlugManager(object):
         matchs=[plugin_name.lower(), first_letters, full_pinyin]
         plugin.MATCHS = list(set([*matchs, *plugin.MATCHS]))
         plugin.SOURCEFILE = inspect.getsourcefile(plugin)
-        plugin.SOURCE = inspect.getsourcelines(plugin)
+        plugin.SOURCE = inspect.getsourcelines(plugin)[0]
         desc = inspect.getdoc(plugin)
         plugin.DESC = ENV['initial_plugin_subtitle'] if desc == None else desc
         return plugin()
@@ -72,4 +72,8 @@ class Plugin(object):
         return data
 
 class UIPlugin(Plugin, ft.UserControl):
-    pass
+    """
+    THIS IS A UI PLUGIN
+    """
+    def process(self, data, **kwargs):
+        return ft.Text(data)
