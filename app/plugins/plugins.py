@@ -1,8 +1,7 @@
 from ..plug import *
 import flet as ft
 import datetime
-import numpy
-import pandas as pd
+# import pandas as pd
 
 @PlugManager.register('计算签证到期日')
 class CleanMarkdownItalic(Plugin):
@@ -68,17 +67,17 @@ class TestTableUI(Plugin):
         rows = [[f"森啦 {i}", str(i), f"内容 {i}"] for i in range(1000)] 
         return PlugManager.run(plugins=("_tableUI",),data=rows, columns=columns, **kwargs)
     
-@PlugManager.register('_pandas_show')
-class PandasShow(Plugin):
-    """
-    显示一个pandas DataFrame
-    data: DataFrame
-    """
-    def process(self, data, **kwargs):
-        return PlugManager.run(plugins=("_tableUI",),
-                               columns=data.columns.values,
-                               data=data.values.tolist(),
-                               **kwargs)
+# @PlugManager.register('_pandas_show')
+# class PandasShow(Plugin):
+#     """
+#     显示一个pandas DataFrame
+#     data: DataFrame
+#     """
+#     def process(self, data, **kwargs):
+#         return PlugManager.run(plugins=("_tableUI",),
+#                                columns=data.columns.values,
+#                                data=data.values.tolist(),
+#                                **kwargs)
 
 @PlugManager.register('加载XLSX')
 class LoadXLSX(Plugin):

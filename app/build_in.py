@@ -4,6 +4,7 @@ import importlib
 import flet as ft
 import dataset
 import os
+import sys
 import shutil
 from functools import partial
 
@@ -95,14 +96,16 @@ class InstallPlugin(UIPlugin):
             if e != None:
                 success = []
                 plugin_dir = ENV['plugin_dir']
+                if not os.path.exists(plugin_dir):
+                    os.makedirs(plugin_dir)
                 try:
                     for f in e.files:
                         if not f.name.endswith(".py"): continue
                         shutil.copyfile(f.path, plugin_dir+os.sep+f.name)
                         success.append(f)
                     PlugManager.run(plugins=("_preload_plugin","_notice"),data=plugin_dir, page=page, **kwargs)
-                except:
-                    PlugManager.run(plugins=("_notice",),data=f"load fails!!!", page=page, **kwargs)
+                except Exception as e:
+                    PlugManager.run(plugins=("_notice",),data=e, page=page, **kwargs)
 
         file_picker = ft.FilePicker(on_result=on_dialog_result)
         page.overlay.append(file_picker)

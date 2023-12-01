@@ -46,9 +46,14 @@ class PlugManager(object):
         full_pinyin = "".join(pypinyin.lazy_pinyin(plugin_name)).lower()
         matchs=[plugin_name.lower(), first_letters, full_pinyin]
         plugin.MATCHS = list(set([*matchs, *plugin.MATCHS]))
-        plugin.SOURCEFILE = inspect.getsourcefile(plugin)
-        plugin.SOURCE = inspect.getsourcelines(plugin)[0]
-        desc = inspect.getdoc(plugin)
+        try:
+            plugin.SOURCEFILE = inspect.getsourcefile(plugin)
+            plugin.SOURCE = inspect.getsourcelines(plugin)[0]
+            desc = inspect.getdoc(plugin)
+        except:
+            plugin.SOURCEFILE = ""
+            plugin.SOURCE = ""
+            desc = ENV['initial_plugin_subtitle']
         plugin.DESC = ENV['initial_plugin_subtitle'] if desc == None else desc
         return plugin()
     

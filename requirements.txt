@@ -1,2 +1,5 @@
 dataset==1.6.2
 flet==0.12.2
+pypinyin
+numpy
+pandas
