@@ -6,3 +6,4 @@ build/
 plugin-base-env/
 *.exe
 run
+*.zip
