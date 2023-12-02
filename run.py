@@ -3,10 +3,13 @@ from app.plug import *
 import flet as ft
 from app.build_in import *
 
-import numpy
-import pandas
-import fastapi
+# import numpy
+# import pandas
+from fastapi import FastAPI
+# import requests
+# import openpyxl
 
+app = FastAPI()
 # curdir = os.path.dirname(__file__)
 curdir = os.curdir
 plugin_dir = os.sep.join([curdir, "app", "plugins"])
