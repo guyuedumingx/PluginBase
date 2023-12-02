@@ -174,7 +174,7 @@ class Knowledge(UIPlugin):
     """
     详解SWIFT报文知识库
     """
-    ICON = ft.icons.BOOKMARKS_OUTLINED
+    ICON = ft.icons.AUTO_STORIES
 
     def process(self, data, **kwargs):
         return PlugManager.run(plugins=("_search_base",), data="knowledge", **kwargs)
@@ -182,7 +182,6 @@ class Knowledge(UIPlugin):
 
 @PlugManager.register('User知识库')
 class UserBase(UIPlugin):
-    ICON = ft.icons.BOOKMARKS_OUTLINED
-
+    ICON = ft.icons.MANAGE_ACCOUNTS
     def process(self, data, **kwargs):
         return PlugManager.run(plugins=("_search_base",), data="user", ui_template="_dictUI", **kwargs)

@@ -1,7 +1,9 @@
 import flet as ft
 import pypinyin 
 import inspect
+from fastapi import FastAPI
 
+app = FastAPI()
 """
 a global environment
 """
@@ -64,14 +66,12 @@ class PlugManager(object):
     @classmethod
     def getPlugin(cls, plugin_name):
         return cls.PLUGINS[plugin_name]
-
-
-class UIManager:
-    def build(cls, plugin_name):
-        pass
     
+
 class Plugin(object):
     ICON = ft.icons.SETTINGS
+    AUTHOR = "YOHOYES"
+    VERSION = "1.0.0"
     MATCHS = []
     def process(self, data, **kwargs):
         return data

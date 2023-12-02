@@ -4,9 +4,12 @@ import importlib
 import flet as ft
 import dataset
 import os
-import sys
 import shutil
 from functools import partial
+from uvicorn.config import Config
+from uvicorn.main import Server
+import asyncio
+import socket
 
 
 @PlugManager.register('_search_plugin')
@@ -15,14 +18,14 @@ class SearchPlugin(Plugin):
     data: word: the search key word
     """
 
-    def process(self, word, **kwargs):
+    def process(self, word, show_build_in=False, **kwargs):
         plugins = PlugManager.PLUGINS
-        func = partial(self.match_rules, word=word)
+        func = partial(self.match_rules, word=word, show_build_in=show_build_in)
         return dict(filter(lambda x: func(x=x), plugins.items()))
 
-    def match_rules(self, word, x):
+    def match_rules(self, word, x, show_build_in=False):
         name, plug = x[0], x[1]
-        if (name.startswith("_")):
+        if (not show_build_in and name.startswith("_")):
             return False
         matchs = plug.MATCHS
         for item in matchs:
@@ -33,7 +36,7 @@ class SearchPlugin(Plugin):
 @PlugManager.register('_plugin_cards')
 class BuildShowCards(Plugin):
     def process(self, data: dict, plugin_onclick: lambda e: e, **kwargs):
-        return [ft.ListTile(
+        tile_lst = [ft.ListTile(
                 leading=ft.Icon(item[1].ICON),
                 title=ft.Text(item[0], weight=ft.FontWeight.W_700),
                 subtitle=ft.Text(
@@ -41,7 +44,7 @@ class BuildShowCards(Plugin):
                 ),
                 on_click=plugin_onclick,
                 ) for item in data.items()]
-
+        return tile_lst
 
 @PlugManager.register('_plugin_search_stream')
 class PluginSearchStream(UIPlugin):
@@ -82,20 +85,6 @@ class DefaultBackground(UIPlugin):
             color=ft.colors.GREY_200),
             expand=1,
             alignment=ft.alignment.center)
-
-
-@PlugManager.register('_setDB')
-class SetGlobalDatabase(Plugin):
-    """
-    加载程序数据库
-    Load Default Database
-    data: url : the url to connect database would be like: sqlite:///plug.db
-    """
-
-    def process(self, url, **kwargs):
-        db = dataset.connect(url)
-        PlugManager.setState(db=db)
-        return db
 
 
 @PlugManager.register('安装插件')
@@ -251,11 +240,6 @@ class PreLoadPlugin(Plugin):
         for files in plugins_files:
             if not files.endswith(".py"):
                 continue
-            # plug_path = plugin_dir + os.sep + files.split(".")[0]
-            # import_path = os.path.relpath(
-            #     plug_path, ENV['app_dir']).replace(os.sep, ".")
-            # module_name = os.path.splitext(file_name)[0]
-            # importlib.import_module(import_path, package="app")
             loader = importlib.machinery.SourceFileLoader(
                 files.split(".")[0], plugin_dir+os.sep+files)
             loader.load_module()
@@ -318,6 +302,66 @@ class KeyValueDatabase(Plugin):
             plugins=("_dictUI",), data=data, mode="edit")
         self.container.update()
 
+@PlugManager.register('_server')
+class FastApiServer(Plugin):
+    def __init__(self):
+        self.is_running = True
+
+    def process(self, data, container, page, port=36909, **kwargs):
+        self.host = "0.0.0.0"
+        self.port = port
+        self.container = container 
+        self.page = page
+        self.container.content = self.ui()
+        self.container.update()
+        if hasattr(self, "server"):
+            if(self.is_running):
+                PlugManager.run(plugins=("_notice",), data="Server has running...", page=page)
+        else:
+            config = Config(app, host=self.host, port=port, loop="asyncio")
+            self.server = Server(config)
+            self.is_running = True
+            asyncio.run(self.start_server())
+        return self.ui()
+    
+    def ui(self):
+        return ft.Container(ft.ListView(controls=[
+            ft.Text(f"Server run on: {self.get_local_ip()}: {self.port}"),
+            ft.Switch(label="Trun on server",
+                      label_position=ft.LabelPosition.LEFT,
+                      value=self.is_running,
+                      on_change=self.on_change
+                      )
+        ], spacing=10), height=80, width=300, alignment=ft.alignment.center)
+
+    def on_change(self, e):
+        print(e.data)
+        if e.data == "true": 
+            self.is_running = True
+            asyncio.run(self.start_server())
+        else: 
+            self.is_running = False
+            asyncio.run(self.stop_server())
+
+    def get_local_ip(self):
+        try:
+            # 获取本机主机名
+            host_name = socket.gethostname()
+            # 通过主机名获取本机 IP 地址列表
+            ip_list = socket.gethostbyname_ex(host_name)[2]
+            # 从 IP 地址列表中选择非回环地址（127.0.0.1）的地址
+            local_ip = next((ip for ip in ip_list if not ip.startswith("127.")), None)
+            return local_ip
+        except Exception as e:
+            PlugManager.run(plugins=("_notice",), data=f"Error: {e}", page=self.page)
+
+    async def start_server(self):
+        await self.server.serve()
+
+    async def stop_server(self):
+        await self.server.shutdown()
+        
+        
 
 @PlugManager.register('_search_base')
 class SearchBase(UIPlugin):
