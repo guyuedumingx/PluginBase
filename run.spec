@@ -5,7 +5,7 @@ a = Analysis(
     ['run.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('assets/', 'assets/')],
     hiddenimports=['pandas', 'numpy', 'openpyxl', 'fastapi', 'requests', 'uvicorn'],
     hookspath=[],
     hooksconfig={},
@@ -34,10 +34,6 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-)
-app = BUNDLE(
-    exe,
-    name='run.app',
-    icon=None,
-    bundle_identifier=None,
+    version='C:\\Users\\11319\\AppData\\Local\\Temp\\3bcf786a-676c-43c4-8d6a-0b3d51465133',
+    icon=['assets\\icons\\BOC.png'],
 )
