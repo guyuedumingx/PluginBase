@@ -62,11 +62,20 @@ class PlugManager(object):
     @classmethod
     def setState(cls, **kwargs):
         cls.context = {**cls.context, **kwargs}
+
+    @classmethod
+    def getState(cls, name):
+        return cls.context[name]
         
     @classmethod
     def getPlugin(cls, plugin_name):
         return cls.PLUGINS[plugin_name]
     
+    @classmethod
+    def getPluginDetail(cls, plugin_name):
+        db = cls.getState('db')
+        table = db.get_table('plugins', primary_id='name')
+        return table.find_one(plugin_name)
 
 class Plugin(object):
     ICON = ft.icons.SETTINGS

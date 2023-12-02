@@ -180,7 +180,7 @@ class Knowledge(UIPlugin):
         return PlugManager.run(plugins=("_search_base",), data="knowledge", **kwargs)
 
 
-@PlugManager.register('User知识库')
+@PlugManager.register('User管理')
 class UserBase(UIPlugin):
     ICON = ft.icons.MANAGE_ACCOUNTS
     def process(self, data, **kwargs):

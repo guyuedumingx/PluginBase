@@ -361,7 +361,6 @@ class FastApiServer(Plugin):
     async def stop_server(self):
         await self.server.shutdown()
         
-        
 
 @PlugManager.register('_search_base')
 class SearchBase(UIPlugin):
@@ -370,7 +369,7 @@ class SearchBase(UIPlugin):
     """
     ICON = ft.icons.BOOKMARKS_OUTLINED
 
-    def process(self, data, db, search_feild, container, ui_template="_markdown_tocUI", **kwargs):
+    def process(self, data: dict, db, search_feild, container, ui_template="_markdown_tocUI", **kwargs):
         self.db = db
         self.container = container
         search_feild.on_change = self.on_change

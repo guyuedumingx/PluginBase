@@ -1,7 +1,6 @@
 from app.plug import *
 import flet as ft
 import requests
-from functools import partial
 
 @PlugManager.register('_plugin_cards_list')
 class BuildShowCards(Plugin):
@@ -22,7 +21,7 @@ class PluginMarket(UIPlugin):
     def process(self, data, db, page, search_feild, container,
                 server_addr="127.0.0.1", server_port=36909, **kwargs):
         self.url_prefix = f"http://{server_addr}:{server_port}"
-        resp = requests.get(f"{self.url_prefix}/plugins/s/a")
+        resp = requests.get(f"{self.url_prefix}/plugins/s/")
         self.data = resp.json()
         self.page = page
         self.container = container
@@ -86,7 +85,7 @@ class PluginMarketServer(Plugin):
         return PlugManager.run(plugins=("_server",), port=36909, **kwargs)
     
     @app.get("/plugins/s/{name}")
-    def find_plugin_by_name(name = ""):
+    def find_plugin_by_name(name :str):
         plugins_dict = PlugManager.run(plugins=("_search_plugin",), data=name)
         res = {}
         for name, plugin in plugins_dict.items():
