@@ -3,7 +3,7 @@ import flet as ft
 import requests
 
 @PlugManager.register('_plugin_cards_list')
-class BuildShowCards(Plugin):
+class BuildShowCards(UIPlugin):
     def process(self, data: list, plugin_onclick: lambda e: e, **kwargs):
         return [ft.ListTile(
                 leading=ft.Icon(item[1].ICON),
@@ -21,7 +21,7 @@ class PluginMarket(UIPlugin):
     def process(self, data, db, page, search_feild, container,
                 server_addr="127.0.0.1", server_port=36909, **kwargs):
         self.url_prefix = f"http://{server_addr}:{server_port}"
-        resp = requests.get(f"{self.url_prefix}/plugins/s/")
+        resp = requests.get(f"{self.url_prefix}/plugins")
         self.data = resp.json()
         self.page = page
         self.container = container
@@ -78,11 +78,25 @@ class PluginMarket(UIPlugin):
 
 
 @PlugManager.register('插件市场服务器')
-class PluginMarketServer(Plugin):
+class PluginMarketServer(UIPlugin):
     ICON = ft.icons.LANGUAGE
     def process(self, data, db, **kwargs):
         self.db = db
         return PlugManager.run(plugins=("_server",), port=36909, **kwargs)
+
+    @app.get("/plugins")
+    def find_plugin_by_name():
+        plugins_dict = PlugManager.run(plugins=("_search_plugin",), data="")
+        res = {}
+        for name, plugin in plugins_dict.items():
+            res[name] = (dict(
+                name=name,
+                author=plugin.AUTHOR,
+                version=plugin.VERSION,
+                desc=plugin.DESC,
+                icon=plugin.ICON
+            ))
+        return res
     
     @app.get("/plugins/s/{name}")
     def find_plugin_by_name(name :str):
@@ -102,12 +116,12 @@ class PluginMarketServer(Plugin):
     def download_plugin_by_name(name = ""):
         plugins_dict = PlugManager.run(plugins=("_search_plugin",), data=name, show_build_in=True)
         res = []
-        # for name, plugin in plugins_dict.items():
-        #     res.append(dict(
-        #         name=name,
-        #         author=plugin.AUTHOR,
-        #         version=plugin.VERSION,
-        #         desc=plugin.DESC,
-        #         source=plugin.SOURCE
-        #     ))
+        for name, plugin in plugins_dict.items():
+            res.append(dict(
+                name=name,
+                author=plugin.AUTHOR,
+                version=plugin.VERSION,
+                desc=plugin.DESC,
+                source=plugin.SOURCE
+            ))
         return res

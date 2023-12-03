@@ -2,10 +2,11 @@ from app.plug import *
 import flet as ft
 import datetime
 import pandas as pd
+from functools import partial
 
 
 @PlugManager.register('计算签证到期日')
-class CleanMarkdownItalic(Plugin):
+class CleanMarkdownItalic(UIPlugin):
     """
     计算签证到期日
     """
@@ -67,11 +68,43 @@ class CleanMarkdownItalic(Plugin):
                           padding=20)], expand=1, spacing=20)
 
 
+@PlugManager.register('_tableUI')
+class TableUI(UIPlugin):
+    def process(self, rows: list, columns=[], **kwargs):
+        rowsUI = []
+        for row in rows:
+            cellsUI = [ft.DataCell(ft.Text(value=i),
+                                   on_tap=self.on_tap
+                                   ) for i in row]
+            rowsUI.append(ft.DataRow(cells=cellsUI))
+        columnsUI = [ft.DataColumn(ft.TextField(
+            value=col,
+            border=ft.InputBorder.NONE,
+            )
+        ) for col in columns]
+        return ft.ListView([ft.DataTable(rows=rowsUI, columns=columnsUI, expand=1)], expand=1)
+    
+    def on_tap(self, e):
+        text = e.control.content.value
+        e.control.content = ft.TextField(
+            value=text,
+            border=ft.InputBorder.NONE,
+            on_blur=partial(self.leave_tap,cell=e.control),
+            on_submit=partial(self.leave_tap,cell=e.control),
+            )
+        e.control.update()
+        
+    def leave_tap(self, e, cell=ft.Text("")):
+        text = e.control.value
+        cell.content = ft.Text(text)
+        cell.update()
+
+
 @PlugManager.register('测试Table')
-class TestTableUI(Plugin):
+class TestTableUI(UIPlugin):
     def process(self, data, **kwargs):
         columns = ["姓名", "编号", "内容的"]
-        rows = [[f"森啦 {i}", str(i), f"内容 {i}"] for i in range(1000)]
+        rows = [[f"森da啦 {i}", str(i), f"内容 {i}"] for i in range(1000)]
         return PlugManager.run(plugins=("_tableUI",), data=rows, columns=columns, **kwargs)
 
 @PlugManager.register('_pandas_show')
@@ -88,7 +121,7 @@ class PandasShow(Plugin):
 
 
 @PlugManager.register('加载XLSX')
-class LoadXLSX(Plugin):
+class LoadXLSX(UIPlugin):
     def process(self, data, page, container, **kwargs):
         def on_dialog_result(e: ft.FilePickerResultEvent):
             if e != None:
@@ -185,3 +218,89 @@ class UserBase(UIPlugin):
     ICON = ft.icons.MANAGE_ACCOUNTS
     def process(self, data, **kwargs):
         return PlugManager.run(plugins=("_search_base",), data="user", ui_template="_dictUI", **kwargs)
+
+
+@PlugManager.register('_tableUI4Database')
+class TableUI(UIPlugin):
+    def process(self, data, **kwargs):
+        rowsUI = []
+        columns = data.keys
+        for row in data:
+            cellsUI = []
+            for i in range(len(columns)):
+                cellsUI.append(
+                    ft.DataCell(
+                        ft.Text(value=row[columns[i]]),
+                        on_tap=self.on_tap,
+                   )
+                )
+            rowsUI.append(ft.DataRow(cells=cellsUI))
+        columnsUI = [ft.DataColumn(
+            ft.Text(value=col),
+        ) for col in columns]
+        return ft.Column([
+            ft.Row(self.build_tips(),alignment=ft.MainAxisAlignment.END,),
+            ft.ListView([ft.DataTable(rows=rowsUI, columns=columnsUI, expand=1)], expand=1)
+            ])
+    
+    def build_tips(self):
+        def amenity_selected(e):
+            print(e) 
+        amenities = ["Washer / Dryer", "Ramp access", "Dogs OK", "Cats OK", "Smoke-free"]
+        amenity_chips = []
+
+        for amenity in amenities:
+            amenity_chips.append(
+                ft.Container(
+                    ft.Row([
+                        ft.Icon(ft.icons.SETTINGS),
+                        ft.Text(amenity),
+                    ]),
+                    on_click=amenity_selected,
+                    scale=0.8,
+                    margin=0,
+                    padding=0
+                )
+            )
+        return amenity_chips
+    
+    def on_tap(self, e):
+        text = e.control.content.value
+        e.control.content = ft.TextField(
+            value=text,
+            border=ft.InputBorder.NONE,
+            multiline=True,
+            on_blur=partial(self.leave_tap,cell=e.control),
+            on_submit=partial(self.leave_tap,cell=e.control),
+            )
+        e.control.update()
+        
+    def leave_tap(self, e, cell=ft.Text("")):
+        text = e.control.value
+        cell.content = ft.Text(text)
+        cell.update()
+
+@PlugManager.register('test数据库')
+class KeyValueDatabase(UIPlugin):
+    """
+    全局内置数据库的查询
+    """
+    ICON = ft.icons.DATA_OBJECT
+
+    def process(self, data, search_feild: ft.TextField, container, db, **kwargs):
+        self.search_feild = search_feild
+        self.container = container
+        self.db = db
+        search_feild.hint_text = "Enter a table name to fine data"
+        search_feild.on_submit = self.search_handler
+        search_feild.on_change = None
+        return ft.Text("Search a Database")
+
+    def search_handler(self, e):
+        key_word = self.search_feild.value
+        if (key_word == ''):
+            return
+        table = self.db[key_word]
+        self.container.content = PlugManager.run(
+            plugins=("_tableUI4Database",), data=table.all())
+        self.container.update()

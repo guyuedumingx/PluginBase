@@ -2,20 +2,28 @@ import os
 from app.plug import *
 import flet as ft
 from app.build_in import *
+import dataset
 
-# import numpy
-# import pandas
-# import requests
-# import openpyxl
+# 配置日志
+logging.basicConfig(filename='plug.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# curdir = os.path.dirname(__file__)
+# 创建一个将控制台输出写入到日志的处理器
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.INFO)
+
+# 创建一个格式化器，并将其添加到处理器
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+console_handler.setFormatter(formatter)
+
+# 获取默认的根日志记录器，并将处理器添加到其中
+root_logger = logging.getLogger()
+root_logger.addHandler(console_handler)
+
 curdir = os.curdir
 plugin_dir = os.sep.join([curdir, "app", "plugins"])
 ENV['plugin_dir'] = os.path.abspath(plugin_dir)
 ENV['update_dir'] = os.path.abspath(os.sep.join([curdir, "app"]))
 ENV['app_dir'] = os.path.abspath(curdir)
-ENV['app_host'] = '0.0.0.0'
-ENV['app_port'] = 36909
 
 # https://dataset.readthedocs.io/en/latest/
 url = "///".join(["sqlite:", "plug.db"])

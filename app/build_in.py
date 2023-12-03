@@ -2,7 +2,6 @@ from .plug import *
 import json
 import importlib
 import flet as ft
-import dataset
 import os
 import shutil
 from functools import partial
@@ -154,10 +153,31 @@ class TableUI(UIPlugin):
     def process(self, rows: list, columns=[], **kwargs):
         rowsUI = []
         for row in rows:
-            cellsUI = [ft.DataCell(ft.Text(i)) for i in row]
+            cellsUI = [ft.DataCell(ft.Text(value=i),
+                                   on_tap=self.on_tap
+                                   ) for i in row]
             rowsUI.append(ft.DataRow(cells=cellsUI))
-        columnsUI = [ft.DataColumn(ft.Text(col)) for col in columns]
+        columnsUI = [ft.DataColumn(ft.TextField(
+            value=col,
+            border=ft.InputBorder.NONE,
+            )
+        ) for col in columns]
         return ft.ListView([ft.DataTable(rows=rowsUI, columns=columnsUI, expand=1)], expand=1)
+    
+    def on_tap(self, e):
+        text = e.control.content.value
+        e.control.content = ft.TextField(
+            value=text,
+            border=ft.InputBorder.NONE,
+            on_blur=partial(self.leave_tap,cell=e.control),
+            on_submit=partial(self.leave_tap,cell=e.control),
+            )
+        e.control.update()
+        
+    def leave_tap(self, e, cell=ft.Text("")):
+        text = e.control.value
+        cell.content = ft.Text(text)
+        cell.update()
 
 
 @PlugManager.register('_dictUI')
@@ -210,13 +230,18 @@ class TocUI(UIPlugin):
 @PlugManager.register('_markdown_tocUI')
 class MarkdownTocUI(UIPlugin):
     def process(self, data: dict, **kwargs):
-        data = {k: ft.Markdown(value=v, col={"xs": 12, "md": 9}, expand=1)
+        data = {k: ft.Markdown(
+                        value=v,
+                        col={"xs": 12, "md": 9},
+                        expand=1,
+                        extension_set=ft.MarkdownExtensionSet.GITHUB_WEB
+                        )
                 for k, v in data.items()}
         return PlugManager.run(("_tocUI",), data, **kwargs)
 
 
 @PlugManager.register('环境信息')
-class ENVInformation(Plugin):
+class ENVInformation(UIPlugin):
     """
     查看ENV中的所有信息
     """
@@ -232,26 +257,35 @@ class PreLoadPlugin(Plugin):
     Reload all module files in the app/plugins
     加载插件库中的所有插件
     """
-
-    def process(self, plugin_dir, **kwargs):
-        if not os.path.exists(plugin_dir):
-            os.makedirs(plugin_dir)
-        plugins_files = os.listdir(plugin_dir)
+    def process(self, data, **kwargs):
+        if not os.path.exists(data):
+            os.makedirs(data)
+        plugins_files = os.listdir(data)
         for files in plugins_files:
             if not files.endswith(".py"):
                 continue
             loader = importlib.machinery.SourceFileLoader(
-                files.split(".")[0], plugin_dir+os.sep+files)
+                files.split(".")[0], data+os.sep+files)
             loader.load_module()
         return f"LOAD SUCCESS!!!"
 
+@PlugManager.register('重新加载')
+class PreLoadPlugin(Plugin):
+    """
+    Reload all module files in the app/plugins
+    加载插件库中的所有插件
+    """
+    ICON=ft.icons.REFRESH
+    def process(self, data, **kwargs):
+        return PlugManager.run(plugins=("_preload_plugin",),data=ENV['plugin_dir'])
 
 @PlugManager.register('_tipsview')
 class TipsView(UIPlugin):
     def process(self, data, plugin_obj, **kwargs):
         ui = [
             ft.Text(data, size=30),
-            ft.Markdown(plugin_obj.DESC),
+            ft.Markdown(plugin_obj.DESC,
+                        extension_set=ft.MarkdownExtensionSet.GITHUB_WEB),
             ft.Text("SOURCE", size=30),
             ft.Text("".join(plugin_obj.SOURCE), size=15)
         ]
@@ -259,7 +293,7 @@ class TipsView(UIPlugin):
 
 
 @PlugManager.register('键值对数据库')
-class KeyValueDatabase(Plugin):
+class KeyValueDatabase(UIPlugin):
     """
     全局内置数据库的查询
     """
@@ -335,7 +369,6 @@ class FastApiServer(Plugin):
         ], spacing=10), height=80, width=300, alignment=ft.alignment.center)
 
     def on_change(self, e):
-        print(e.data)
         if e.data == "true": 
             self.is_running = True
             asyncio.run(self.start_server())
@@ -401,7 +434,9 @@ class IndexPlugin(UIPlugin):
     ICON = ft.icons.SEARCH
     HINT_TEXT = "Search Plugins"
 
-    def process(self, page, **kwargs):
+    def process(self, page: ft.Page, **kwargs):
+        page.window_height = 600
+        page.window_width = 800 
         page.fonts = {
             "LXGWWenKai-Regular": "fonts/LXGWWenKai-Regular.ttf",
         }
@@ -447,6 +482,19 @@ class BasePluginView(UIPlugin):
         home_btn, search_feild, tips_btn = self.base_ui(
             page, plugin_name, self.plugin.ICON)
         self.container = PlugManager.run(plugins=("_defaultbackground",))
+        plugin = PlugManager.getPlugin(plugin_name)
+        func = partial(
+            PlugManager.run,
+            search_feild=search_feild,
+            page=page,
+            container=self.container,
+            data=plugin_name
+            )
+        if(not isinstance(plugin, UIPlugin)):
+            func(plugins=(plugin_name,"_notice"))
+            page.update()
+            return
+
         page.views.append(
             ft.View(
                 "/" + plugin_name,
@@ -458,12 +506,8 @@ class BasePluginView(UIPlugin):
             )
         )
         page.go("/"+plugin_name)
-        main_item = PlugManager.run(plugins=(plugin_name,),
-                                    search_feild=search_feild,
-                                    page=page,
-                                    container=self.container,
-                                    data=plugin_name)
-        self.container.content = main_item
+        page.update()
+        self.container.content = func(plugins=(plugin_name,)) 
         search_feild.focus()
         page.update()
         return plugin_name

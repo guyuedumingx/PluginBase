@@ -2,6 +2,7 @@ import flet as ft
 import pypinyin 
 import inspect
 from fastapi import FastAPI
+import logging
 
 app = FastAPI()
 """
@@ -10,7 +11,6 @@ a global environment
 ENV = {
     'initial_plugin_subtitle': "THIS IS A USEFUL PLUGIN"
 }
-
 
 class PlugManager(object):
     """
@@ -87,7 +87,9 @@ class Plugin(object):
 
 class UIPlugin(Plugin, ft.UserControl):
     """
-    THIS IS A UI PLUGIN
+    THIS IS A UI UIPLUGIN
+    
+    只要涉及UI的更新，都应该继承这个class
     """
     def process(self, data, **kwargs):
         return ft.Text(data)
