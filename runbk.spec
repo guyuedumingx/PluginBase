@@ -5,7 +5,9 @@ a = Analysis(
     ['run.py'],
     pathex=[],
     binaries=[],
-    datas=[('assets/', 'assets/')],
+    datas=[
+        ('assets/fonts/LXGWWenKai-Regular.ttf', 'assets/fonts')
+    ],
     hiddenimports=['pandas', 'numpy', 'openpyxl', 'fastapi', 'requests', 'uvicorn'],
     hookspath=[],
     hooksconfig={},
@@ -21,7 +23,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='run',
+    name='tools',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -34,6 +36,10 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    version='C:\\Users\\11319\\AppData\\Local\\Temp\\3bcf786a-676c-43c4-8d6a-0b3d51465133',
-    icon=['assets\\icons\\BOC.png'],
+)
+app = BUNDLE(
+    exe,
+    name='tools.app',
+    icon='assets/icons/icon.ico',
+    bundle_identifier=None,
 )

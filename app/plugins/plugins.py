@@ -107,12 +107,14 @@ class TestTableUI(UIPlugin):
         rows = [[f"森da啦 {i}", str(i), f"内容 {i}"] for i in range(1000)]
         return PlugManager.run(plugins=("_tableUI",), data=rows, columns=columns, **kwargs)
 
+
 @PlugManager.register('_pandas_show')
 class PandasShow(Plugin):
     """
     显示一个pandas DataFrame
     data: DataFrame
     """
+
     def process(self, data, **kwargs):
         return PlugManager.run(plugins=("_tableUI",),
                                columns=data.columns.values,
@@ -128,13 +130,13 @@ class LoadXLSX(UIPlugin):
                 try:
                     f = e.files[0].path
                     data = None
-                    if (f.endswith(".xlsx") or f.endswith(".xls")):
+                    if (f.endswith(".xlsx") or f.endswith(".xls") or f.endswith(".xlsm")):
                         data = pd.read_excel(f)
                     elif (f.endswith(".csv")):
                         data = pd.read_csv(f)
                     else:
                         PlugManager.run(
-                            plugins=("_notice",), data=f"请选择xlsx xls csv文件", page=page, **kwargs)
+                            plugins=("_notice",), data=f"请选择xlsx xls csv xlsm文件", page=page, **kwargs)
                         return
                     container.content = PlugManager.run(plugins=("_pandas_show",),
                                                         data=data,
@@ -216,6 +218,7 @@ class Knowledge(UIPlugin):
 @PlugManager.register('User管理')
 class UserBase(UIPlugin):
     ICON = ft.icons.MANAGE_ACCOUNTS
+
     def process(self, data, **kwargs):
         return PlugManager.run(plugins=("_search_base",), data="user", ui_template="_dictUI", **kwargs)
 
