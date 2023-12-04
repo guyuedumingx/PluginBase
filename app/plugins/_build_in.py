@@ -1,6 +1,5 @@
-from .plug import *
+from app.plug import *
 import json
-import importlib
 import flet as ft
 import os
 import shutil
@@ -251,24 +250,6 @@ class ENVInformation(UIPlugin):
         return PlugManager.run(plugins=("_dictUI",), data=ENV, mode="show", **kwargs)
 
 
-@PlugManager.register('_preload_plugin')
-class PreLoadPlugin(Plugin):
-    """
-    Reload all module files in the app/plugins
-    加载插件库中的所有插件
-    """
-    def process(self, data, **kwargs):
-        if not os.path.exists(data):
-            os.makedirs(data)
-        plugins_files = os.listdir(data)
-        for files in plugins_files:
-            if not files.endswith(".py"):
-                continue
-            loader = importlib.machinery.SourceFileLoader(
-                files.split(".")[0], data+os.sep+files)
-            loader.load_module()
-        return f"LOAD SUCCESS!!!"
-
 @PlugManager.register('重新加载')
 class PreLoadPlugin(Plugin):
     """
@@ -284,6 +265,7 @@ class TipsView(UIPlugin):
     def process(self, data, plugin_obj, **kwargs):
         ui = [
             ft.Text(data, size=30),
+            ft.Text(plugin_obj.VERSION),
             ft.Markdown(plugin_obj.DESC,
                         extension_set=ft.MarkdownExtensionSet.GITHUB_WEB),
             ft.Text("SOURCE", size=30),

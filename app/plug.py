@@ -3,6 +3,8 @@ import pypinyin
 import inspect
 from fastapi import FastAPI
 import logging
+import os
+import importlib
 
 app = FastAPI()
 """
@@ -38,9 +40,20 @@ class PlugManager(object):
     @classmethod
     def register(cls, plugin_name):
         def wrapper(plugin):
-            cls.PLUGINS.update({plugin_name:cls._build(plugin_name, plugin)})
+            if plugin_name in cls.PLUGINS:
+                current_version = cls.PLUGINS[plugin_name].VERSION
+                new_version = plugin.VERSION
+                if cls.compare_versions(new_version, current_version) > 0:
+                    cls.PLUGINS.update({plugin_name:cls._build(plugin_name, plugin)})
+            else:
+                    cls.PLUGINS.update({plugin_name:cls._build(plugin_name, plugin)})
             return plugin
         return wrapper
+    
+    @classmethod
+    def compare_versions(cls, version1, version2):
+        # 实际的版本号比较可能会更加复杂，这里简化为字符串比较
+        return int(version1.replace('.', '')) - int(version2.replace('.', ''))
     
     @classmethod
     def _build(cls, plugin_name: str, plugin):
@@ -93,3 +106,23 @@ class UIPlugin(Plugin, ft.UserControl):
     """
     def process(self, data, **kwargs):
         return ft.Text(data)
+
+
+@PlugManager.register('_preload_plugin')
+class PreLoadPlugin(Plugin):
+    """
+    Reload all module files in the app/plugins
+    加载插件库中的所有插件
+    """
+    def process(self, data, **kwargs):
+        if not os.path.exists(data):
+            os.makedirs(data)
+        plugins_files = os.listdir(data)
+        plugins_files.sort()
+        for files in plugins_files:
+            if not files.endswith(".py"):
+                continue
+            loader = importlib.machinery.SourceFileLoader(
+                files.split(".")[0], data+os.sep+files)
+            loader.load_module()
+        return f"LOAD SUCCESS!!!"

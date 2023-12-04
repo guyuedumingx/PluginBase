@@ -203,6 +203,10 @@ class Italic(UIPlugin):
 class Italic(UIPlugin):
     pass
 
+@PlugManager.register('货币编码查询')
+class Italic(UIPlugin):
+    VERSION="1.2.1"
+    pass
 
 @PlugManager.register('SWIFT知识库')
 class Knowledge(UIPlugin):

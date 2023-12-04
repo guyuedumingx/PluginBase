@@ -1,7 +1,6 @@
 import os
 from app.plug import *
 import flet as ft
-from app.build_in import *
 import dataset
 
 # 配置日志
