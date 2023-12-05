@@ -131,6 +131,25 @@ class Notice(Plugin):
         page.update()
         return data
 
+@PlugManager.register('_banner')
+class Banner(Plugin):
+    def process(self, data, page: ft.Page, **kwargs):
+        self.page = page 
+        self.page.banner = ft.Banner(
+            bgcolor=ft.colors.AMBER_100,
+            leading=ft.Icon(ft.icons.WARNING_AMBER_ROUNDED, color=ft.colors.AMBER, size=40),
+            content=ft.Text(data),
+            actions=[
+                ft.TextButton("关闭", on_click=self.close_banner),
+            ],
+        )
+        self.page.banner.open = True
+        self.page.update()
+        return data
+    
+    def close_banner(self, e):
+        self.page.banner.open = False
+        self.page.update()
 
 @PlugManager.register('_listUI')
 class ListUI(UIPlugin):

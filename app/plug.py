@@ -25,10 +25,13 @@ class PlugManager(object):
 
     @classmethod
     def run(icls, plugins: tuple, data="", **kwargs):
-        for plugin_name in plugins:
-            plugin = icls.PLUGINS[plugin_name]
-            data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
-        return data
+        try:
+            for plugin_name in plugins:
+                plugin = icls.PLUGINS[plugin_name]
+                data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+            return data
+        except Exception as e:
+            logging.error(e, exc_info=True)
     
     @classmethod
     def _run_plugin(cls, plugin, data, **kwargs):
