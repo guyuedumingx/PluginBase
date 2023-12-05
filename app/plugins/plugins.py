@@ -12,7 +12,7 @@ class CleanMarkdownItalic(UIPlugin):
     """
     ICON = ft.icons.DATE_RANGE_OUTLINED
     time_format = "%y%m%d"
-
+    VERSION="1.2.0"
     def process(self, data, page, search_feild: ft.TextField, **kwargs):
         def pick_time(e):
             start_time.value = date_picker.value.strftime(self.time_format)
@@ -38,7 +38,9 @@ class CleanMarkdownItalic(UIPlugin):
         start_time = search_feild
         start_time.label = "开始日期"
         start_time.on_change = recale
-        start_time.value = datetime.datetime.now().strftime(self.time_format)
+        start_time.input_filter=ft.NumbersOnlyInputFilter()
+        # start_time.value = datetime.datetime.now().strftime(self.time_format)
+        start_time.value = ""
         start_time.suffix_text = "YEAR-MONTH-DAY"
         day_feild = ft.TextField(
             label="可停留天数", on_change=recale, suffix_text="DAYS")

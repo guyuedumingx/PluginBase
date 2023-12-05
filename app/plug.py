@@ -120,12 +120,16 @@ class PreLoadPlugin(Plugin):
     def process(self, data, **kwargs):
         if not os.path.exists(data):
             os.makedirs(data)
-        plugins_files = os.listdir(data)
-        plugins_files.sort()
-        for files in plugins_files:
-            if not files.endswith(".py"):
-                continue
-            loader = importlib.machinery.SourceFileLoader(
-                files.split(".")[0], data+os.sep+files)
-            loader.load_module()
+        self._load("", path=data)
         return f"LOAD SUCCESS!!!"
+    
+    def _load(self, f, path):
+        full_path = path+os.sep+f
+        if os.path.isdir(full_path):
+            for item in os.listdir(full_path):
+                self._load(item, full_path)
+        elif os.path.isfile(full_path) and f.endswith(".py"):
+            loader = importlib.machinery.SourceFileLoader(
+                f.split(".")[0], full_path)
+            loader.load_module()
+

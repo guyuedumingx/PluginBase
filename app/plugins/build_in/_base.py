@@ -1,4 +1,5 @@
 from app.plug import *
+from functools import partial
 import shutil
 
 @PlugManager.register('安装插件')
