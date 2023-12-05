@@ -2,14 +2,13 @@ from app.plug import *
 import flet as ft
 from functools import partial
 
-
-@PlugManager.register('_search_plugin')
+@Plug.register('_search_plugin')
 class SearchPlugin(Plugin):
     """
     data: word: the search key word
     """
     def process(self, word, show_build_in=False, **kwargs):
-        plugins = PlugManager.PLUGINS
+        plugins = Plug.PLUGINS
         func = partial(self.match_rules, word=word, show_build_in=show_build_in)
         return dict(filter(lambda x: func(x=x), plugins.items()))
 
@@ -23,7 +22,7 @@ class SearchPlugin(Plugin):
                 return True
 
 
-@PlugManager.register('_plugin_cards')
+@Plug.register('_plugin_cards')
 class BuildShowCards(Plugin):
     def process(self, data: dict, plugin_onclick: lambda e: e, **kwargs):
         tile_lst = [ft.ListTile(
@@ -37,7 +36,7 @@ class BuildShowCards(Plugin):
         return tile_lst
 
 
-@PlugManager.register('_plugin_search_stream')
+@Plug.register('_plugin_search_stream')
 class PluginSearchStream(UIPlugin):
     """
     主页搜索插件流
@@ -45,25 +44,25 @@ class PluginSearchStream(UIPlugin):
     """
 
     def process(self, key_word, plugin_onclick, **kwargs):
-        return PlugManager.run(plugins=("_search_plugin", "_plugin_cards", "_flowUI"),
+        return Plug.run(plugins=("_search_plugin", "_plugin_cards", "_flowUI"),
                                data=key_word,
                                plugin_onclick=plugin_onclick,
                                **kwargs)
 
 
-@PlugManager.register('_mainbackground')
+@Plug.register('_mainbackground')
 class MainShowBackground(UIPlugin):
     """
     显示在主页的初始背景
     """
 
     def process(self, data, **kwargs):
-        return PlugManager.run(plugins=("_plugin_search_stream",),
+        return Plug.run(plugins=("_plugin_search_stream",),
                                data=data,
-                               plugin_onclick=PlugManager.getPlugin("_index").load_plugin)
+                               plugin_onclick=Plug.getPlugin("_index").load_plugin)
 
 
-@PlugManager.register('_defaultbackground')
+@Plug.register('_defaultbackground')
 class DefaultBackground(UIPlugin):
     """
     默认背景
@@ -78,7 +77,7 @@ class DefaultBackground(UIPlugin):
             alignment=ft.alignment.center)
 
 
-@PlugManager.register('_tipsview')
+@Plug.register('_tipsview')
 class TipsView(UIPlugin):
     def process(self, data, plugin_obj, **kwargs):
         ui = [
@@ -92,7 +91,7 @@ class TipsView(UIPlugin):
         return ft.ListView(ui, expand=1, spacing=10)
 
 
-@PlugManager.register('_index')
+@Plug.register('_index')
 class IndexPlugin(UIPlugin):
     """
     首页插件：项目起始页
@@ -118,7 +117,7 @@ class IndexPlugin(UIPlugin):
             border_radius=40,
             on_change=self.search_func
         )
-        self.container = ft.Container(PlugManager.run(plugins=("_plugin_search_stream",),
+        self.container = ft.Container(Plug.run(plugins=("_plugin_search_stream",),
                                                       plugin_onclick=self.load_plugin), expand=1)
         self.page.add(
             ft.ResponsiveRow([ft.Container(self.search_feild, padding=5,)]),
@@ -130,12 +129,12 @@ class IndexPlugin(UIPlugin):
 
     def load_plugin(self, e):
         plugin_name = e.control.title.value
-        PlugManager.run(plugins=("_load_plugin",),
+        Plug.run(plugins=("_load_plugin",),
                         data=plugin_name, page=self.page)
 
     def search_func(self, e):
         self.search_feild.value = e.data
-        self.container.content = PlugManager.run(
+        self.container.content = Plug.run(
             plugins=("_plugin_search_stream",),
             plugin_onclick=self.load_plugin,
             data=e.data)

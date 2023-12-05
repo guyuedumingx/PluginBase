@@ -1,13 +1,13 @@
 from app.plug import *
 
-@PlugManager.register("_plugin_baseUI")
+@Plug.register("_plugin_baseUI")
 class PluginBaseUI(Plugin):
     """
     插件的详情界面
     """
     def process(self, plugin_name, page, search_onchange=None, **kwargs):
         self.page = page
-        plugin = PlugManager.getPlugin(plugin_name)
+        plugin = Plug.getPlugin(plugin_name)
         home_btn = ft.Container(
             ft.Icon(name=ft.icons.HOME),
             col={"xs": 2, "sm": 1, "md": 1, "xl": 1},
@@ -27,21 +27,21 @@ class PluginBaseUI(Plugin):
                 opacity=0.5,
                 bgcolor=ft.colors.WHITE,
                 shape=ft.CircleBorder(),
-                on_click= lambda _: PlugManager.run(
+                on_click= lambda _: Plug.run(
                     plugins=("_tipsview","_tips_backbtn"),
                     data=plugin_name,
                     plugin_obj=plugin,
                     page=page
                     )
                 )
-        container = PlugManager.run(plugins=("_defaultbackground",))
+        container = Plug.run(plugins=("_defaultbackground",))
         return (home_btn, search_feild, container, tips_btn)
     
     def search_feild_onchange(self, e):
         self.page.views.pop() and self.page.update()
-        PlugManager.getPlugin("_index").search_func(e)
+        Plug.getPlugin("_index").search_func(e)
 
-@PlugManager.register("_tips_backbtn")
+@Plug.register("_tips_backbtn")
 class TipsViewWithBackButton(UIPlugin):
     """
     有返回键的提示界面，传进来的data应该是一个ft的组件
@@ -63,7 +63,7 @@ class TipsViewWithBackButton(UIPlugin):
         page.go(url)
         return data
     
-@PlugManager.register('_notice')
+@Plug.register('_notice')
 class Notice(Plugin):
     """
     底部SnackBar弹出式通知，默认显示5秒
@@ -76,7 +76,7 @@ class Notice(Plugin):
         page.update()
         return data
 
-@PlugManager.register('_banner')
+@Plug.register('_banner')
 class Banner(Plugin):
     """
     顶部确认形通知，点击关闭键才会关闭
@@ -101,13 +101,13 @@ class Banner(Plugin):
         self.page.banner.open = False
         self.page.update()
 
-@PlugManager.register('_listUI')
+@Plug.register('_listUI')
 class ListUI(UIPlugin):
     def process(self, data: list, **kwargs):
         return ft.ListView(controls=data, expand=1)
 
 
-@PlugManager.register('_flowUI')
+@Plug.register('_flowUI')
 class FlowUI(UIPlugin):
     """
     瀑布流显示插件 
@@ -124,7 +124,7 @@ class FlowUI(UIPlugin):
         return ft.ListView(controls=[ft.ResponsiveRow(controls=data, expand=1)], expand=1)
 
 
-@PlugManager.register('_tableUI')
+@Plug.register('_tableUI')
 class TableUI(UIPlugin):
     """
     表格显示插件
@@ -179,7 +179,7 @@ class TableUI(UIPlugin):
         cell.update()
 
 
-@PlugManager.register('_dictUI')
+@Plug.register('_dictUI')
 class DictUI(UIPlugin):
     """
     显示key value 的 dict
@@ -205,7 +205,7 @@ class DictUI(UIPlugin):
         ) for item in data.items()], expand=1, spacing=10)
 
 
-@PlugManager.register('_tocUI')
+@Plug.register('_tocUI')
 class TocUI(UIPlugin):
     def process(self, data: dict, **kwargs):
         def on_click(e):
@@ -227,7 +227,7 @@ class TocUI(UIPlugin):
         )
 
 
-@PlugManager.register('_markdown_tocUI')
+@Plug.register('_markdown_tocUI')
 class MarkdownTocUI(UIPlugin):
     def process(self, data: dict, **kwargs):
         data = {k: ft.Markdown(
@@ -237,10 +237,10 @@ class MarkdownTocUI(UIPlugin):
                         extension_set=ft.MarkdownExtensionSet.GITHUB_WEB
                         )
                 for k, v in data.items()}
-        return PlugManager.run(("_tocUI",), data, **kwargs)
+        return Plug.run(("_tocUI",), data, **kwargs)
 
 
-@PlugManager.register('_search_base')
+@Plug.register('_search_base')
 class SearchBase(UIPlugin):
     """
     基础知识库样式
@@ -258,7 +258,7 @@ class SearchBase(UIPlugin):
     
     def tips_edit(self, e, container:ft.Container, page:ft.Page):
         #TODO 
-        PlugManager.run(
+        Plug.run(
             plugins=("_tips_backbtn",),
             data=container.content, page=page)
 
@@ -271,4 +271,4 @@ class SearchBase(UIPlugin):
         table = self.db.get_table(self.table_name, primary_id="key")
         for item in table.find(key={'like': f"%{key}%"}):
             data[item['key']] = item['value']
-        return PlugManager.run(plugins=(self.ui_template,), data=data)
+        return Plug.run(plugins=(self.ui_template,), data=data)

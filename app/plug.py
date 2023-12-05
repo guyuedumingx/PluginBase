@@ -15,7 +15,7 @@ ENV = {
     'initial_plugin_subtitle': "THIS IS A USEFUL PLUGIN"
 }
 
-class PlugManager(object):
+class Plug(object):
     """
     插件管理器
     PLUGINS: plugin list
@@ -113,7 +113,7 @@ class UIPlugin(Plugin, ft.UserControl):
         return ft.Text(data)
 
 
-@PlugManager.register('_preload_plugin')
+@Plug.register('_preload_plugin')
 class PreLoadPlugin(Plugin):
     """
     Load all modules

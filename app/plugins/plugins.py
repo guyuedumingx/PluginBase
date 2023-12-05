@@ -4,7 +4,7 @@ import datetime
 import pandas as pd
 
 
-@PlugManager.register('计算签证到期日')
+@Plug.register('计算签证到期日')
 class CleanMarkdownItalic(UIPlugin):
     """
     计算签证到期日
@@ -69,7 +69,7 @@ class CleanMarkdownItalic(UIPlugin):
                           padding=20)], expand=1, spacing=20)
 
 
-@PlugManager.register('_tableUI')
+@Plug.register('_tableUI')
 class TableUI(UIPlugin):
     def process(self, rows: list, columns=[], **kwargs):
         rowsUI = []
@@ -101,15 +101,15 @@ class TableUI(UIPlugin):
         cell.update()
 
 
-@PlugManager.register('测试Table')
+@Plug.register('测试Table')
 class TestTableUI(UIPlugin):
     def process(self, data, **kwargs):
         columns = ["姓名", "编号", "内容的"]
         rows = [[f"森da啦 {i}", str(i), f"内容 {i}"] for i in range(1000)]
-        return PlugManager.run(plugins=("_tableUI",), data=rows, columns=columns, **kwargs)
+        return Plug.run(plugins=("_tableUI",), data=rows, columns=columns, **kwargs)
 
 
-@PlugManager.register('_pandas_show')
+@Plug.register('_pandas_show')
 class PandasShow(Plugin):
     """
     显示一个pandas DataFrame
@@ -117,13 +117,13 @@ class PandasShow(Plugin):
     """
 
     def process(self, data, **kwargs):
-        return PlugManager.run(plugins=("_tableUI",),
+        return Plug.run(plugins=("_tableUI",),
                                columns=data.columns.values,
                                data=data.values.tolist(),
                                **kwargs)
 
 
-@PlugManager.register('加载XLSX')
+@Plug.register('加载XLSX')
 class LoadXLSX(UIPlugin):
     def process(self, data, page, container, **kwargs):
         def on_dialog_result(e: ft.FilePickerResultEvent):
@@ -136,15 +136,15 @@ class LoadXLSX(UIPlugin):
                     elif (f.endswith(".csv")):
                         data = pd.read_csv(f)
                     else:
-                        PlugManager.run(
+                        Plug.run(
                             plugins=("_notice",), data=f"请选择xlsx xls csv xlsm文件", page=page, **kwargs)
                         return
-                    container.content = PlugManager.run(plugins=("_pandas_show",),
+                    container.content = Plug.run(plugins=("_pandas_show",),
                                                         data=data,
                                                         page=page, **kwargs)
                     page.update()
                 except Exception as e:
-                    PlugManager.run(plugins=("_notice",),
+                    Plug.run(plugins=("_notice",),
                                     data=e, page=page, **kwargs)
 
         file_picker = ft.FilePicker(on_result=on_dialog_result)
@@ -157,7 +157,7 @@ class LoadXLSX(UIPlugin):
             alignment=ft.alignment.center)
 
 
-@PlugManager.register('明码转换')
+@Plug.register('明码转换')
 class CodeTrans(UIPlugin):
     """
     把四位数字的中文商用电码转换为中文
@@ -190,26 +190,26 @@ class CodeTrans(UIPlugin):
         self.container.update()
 
 
-@PlugManager.register('免签国查询')
+@Plug.register('免签国查询')
 class Italic(UIPlugin):
     pass
 
 
-@PlugManager.register('签证类型查询')
+@Plug.register('签证类型查询')
 class Italic(UIPlugin):
     pass
 
 
-@PlugManager.register('货币编码查询')
+@Plug.register('货币编码查询')
 class Italic(UIPlugin):
     pass
 
-@PlugManager.register('货币编码查询')
+@Plug.register('货币编码查询')
 class Italic(UIPlugin):
     VERSION="1.2.1"
     pass
 
-@PlugManager.register('SWIFT知识库')
+@Plug.register('SWIFT知识库')
 class Knowledge(UIPlugin):
     """
     详解SWIFT报文知识库
@@ -217,17 +217,17 @@ class Knowledge(UIPlugin):
     ICON = ft.icons.AUTO_STORIES
 
     def process(self, data, **kwargs):
-        return PlugManager.run(plugins=("_search_base",), data="knowledge", **kwargs)
+        return Plug.run(plugins=("_search_base",), data="knowledge", **kwargs)
 
 
-@PlugManager.register('User管理')
+@Plug.register('User管理')
 class UserBase(UIPlugin):
     ICON = ft.icons.MANAGE_ACCOUNTS
     def process(self, data, **kwargs):
-        return PlugManager.run(plugins=("_search_base",), data="user", ui_template="_dictUI", **kwargs)
+        return Plug.run(plugins=("_search_base",), data="user", ui_template="_dictUI", **kwargs)
 
 
-@PlugManager.register('_tableUI4Database')
+@Plug.register('_tableUI4Database')
 class TableUI(UIPlugin):
     def process(self, data, **kwargs):
         rowsUI = []
@@ -287,7 +287,7 @@ class TableUI(UIPlugin):
         cell.content = ft.Text(text)
         cell.update()
 
-@PlugManager.register('test数据库')
+@Plug.register('test数据库')
 class KeyValueDatabase(UIPlugin):
     """
     数据库的查询
@@ -308,6 +308,6 @@ class KeyValueDatabase(UIPlugin):
         if (key_word == ''):
             return
         table = self.db[key_word]
-        self.container.content = PlugManager.run(
+        self.container.content = Plug.run(
             plugins=("_tableUI4Database",), data=table.all())
         self.container.update()

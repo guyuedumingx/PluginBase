@@ -27,9 +27,9 @@ ENV['app_dir'] = os.path.abspath(curdir)
 # https://dataset.readthedocs.io/en/latest/
 url = "///".join(["sqlite:", "plug.db"])
 db = dataset.connect(url)
-PlugManager.setState(db=db)
+Plug.setState(db=db)
 
-PlugManager.run(plugins=("_preload_plugin",), data=ENV['plugin_dir'])
+Plug.run(plugins=("_preload_plugin",), data=ENV['plugin_dir'])
 
 # ft.app(target=lambda page:PlugManager.run(plugins=("_index",), data=page, view=ft.AppView.WEB_BROWSER))
-ft.app(target=lambda page: PlugManager.run(plugins=("_index",), data=page), assets_dir="assets")
+ft.app(target=lambda page: Plug.run(plugins=("_index",), data=page), assets_dir="assets")

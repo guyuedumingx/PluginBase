@@ -1,7 +1,7 @@
 from app.plug import *
 import shutil
 
-@PlugManager.register('安装插件')
+@Plug.register('安装插件')
 class InstallPlugin(UIPlugin):
     """
     安装新插件
@@ -22,10 +22,10 @@ class InstallPlugin(UIPlugin):
                             continue
                         shutil.copyfile(f.path, plugin_dir+os.sep+f.name)
                         success.append(f)
-                    PlugManager.run(
+                    Plug.run(
                         plugins=("_preload_plugin", "_notice"), data=plugin_dir, page=page, **kwargs)
                 except Exception as e:
-                    PlugManager.run(plugins=("_notice",),
+                    Plug.run(plugins=("_notice",),
                                     data=e, page=page, **kwargs)
 
         file_picker = ft.FilePicker(on_result=on_dialog_result)
@@ -38,7 +38,7 @@ class InstallPlugin(UIPlugin):
             alignment=ft.alignment.center
         )
 
-@PlugManager.register('环境信息')
+@Plug.register('环境信息')
 class ENVInformation(UIPlugin):
     """
     查看ENV中的所有信息
@@ -46,10 +46,10 @@ class ENVInformation(UIPlugin):
     ICON = ft.icons.MISCELLANEOUS_SERVICES
 
     def process(self, data, **kwargs):
-        return PlugManager.run(plugins=("_dictUI",), data=ENV, mode="show", **kwargs)
+        return Plug.run(plugins=("_dictUI",), data=ENV, mode="show", **kwargs)
 
 
-@PlugManager.register('重新加载')
+@Plug.register('重新加载')
 class PreLoadPlugin(Plugin):
     """
     Reload all module files in the app/plugins
@@ -57,10 +57,10 @@ class PreLoadPlugin(Plugin):
     """
     ICON=ft.icons.REFRESH
     def process(self, data, **kwargs):
-        return PlugManager.run(plugins=("_preload_plugin",),data=ENV['plugin_dir'])
+        return Plug.run(plugins=("_preload_plugin",),data=ENV['plugin_dir'])
     
 
-@PlugManager.register('_load_plugin')
+@Plug.register('_load_plugin')
 class BasePluginView(UIPlugin):
     """
     加载某个指定的插件
@@ -69,12 +69,12 @@ class BasePluginView(UIPlugin):
     """
     def process(self, plugin_name, page, **kwargs):
         self.plugin_name = plugin_name
-        self.plugin = PlugManager.getPlugin(plugin_name)
+        self.plugin = Plug.getPlugin(plugin_name)
         self.page = page
-        home_btn, search_feild, self.container, tips_btn = PlugManager.run(plugins=("_plugin_baseUI",),page=page,data=plugin_name)
-        plugin = PlugManager.getPlugin(plugin_name)
+        home_btn, search_feild, self.container, tips_btn = Plug.run(plugins=("_plugin_baseUI",),page=page,data=plugin_name)
+        plugin = Plug.getPlugin(plugin_name)
         func = partial(
-            PlugManager.run,
+            Plug.run,
             search_feild=search_feild,
             page=page,
             container=self.container,

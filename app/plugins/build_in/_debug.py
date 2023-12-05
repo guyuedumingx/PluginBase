@@ -5,7 +5,7 @@ from uvicorn.config import Config
 from uvicorn.main import Server
 import asyncio
 
-@PlugManager.register('键值对数据库')
+@Plug.register('键值对数据库')
 class KeyValueDatabase(UIPlugin):
     """
     全局内置数据库的查询
@@ -45,11 +45,11 @@ class KeyValueDatabase(UIPlugin):
             return
         table = self.db[key_word]
         data = {item['key']: item['value'] for item in table.all()}
-        self.container.content = PlugManager.run(
+        self.container.content = Plug.run(
             plugins=("_dictUI",), data=data, mode="edit")
         self.container.update()
 
-@PlugManager.register('_server')
+@Plug.register('_server')
 class FastApiServer(Plugin):
     def __init__(self):
         self.is_running = True
@@ -63,7 +63,7 @@ class FastApiServer(Plugin):
         self.container.update()
         if hasattr(self, "server"):
             if(self.is_running):
-                PlugManager.run(plugins=("_notice",), data="Server has running...", page=page)
+                Plug.run(plugins=("_notice",), data="Server has running...", page=page)
         else:
             config = Config(app, host=self.host, port=port, loop="asyncio")
             self.server = Server(config)
@@ -99,7 +99,7 @@ class FastApiServer(Plugin):
             local_ip = next((ip for ip in ip_list if not ip.startswith("127.")), None)
             return local_ip
         except Exception as e:
-            PlugManager.run(plugins=("_notice",), data=f"Error: {e}", page=self.page)
+            Plug.run(plugins=("_notice",), data=f"Error: {e}", page=self.page)
 
     async def start_server(self):
         await self.server.serve()
