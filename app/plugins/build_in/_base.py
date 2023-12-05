@@ -1,5 +1,4 @@
 from app.plug import *
-from functools import partial
 import shutil
 
 @PlugManager.register('安装插件')
@@ -63,13 +62,16 @@ class PreLoadPlugin(Plugin):
 
 @PlugManager.register('_load_plugin')
 class BasePluginView(UIPlugin):
+    """
+    加载某个指定的插件
+    plugin_name: 要加载的插件名
+    page: ft.Page
+    """
     def process(self, plugin_name, page, **kwargs):
         self.plugin_name = plugin_name
         self.plugin = PlugManager.getPlugin(plugin_name)
         self.page = page
-        home_btn, search_feild, tips_btn = self.base_ui(
-            page, plugin_name, self.plugin.ICON)
-        self.container = PlugManager.run(plugins=("_defaultbackground",))
+        home_btn, search_feild, self.container, tips_btn = PlugManager.run(plugins=("_plugin_baseUI",),page=page,data=plugin_name)
         plugin = PlugManager.getPlugin(plugin_name)
         func = partial(
             PlugManager.run,
@@ -101,36 +103,3 @@ class BasePluginView(UIPlugin):
         search_feild.focus()
         page.update()
         return plugin_name
-
-    def search_feild_onchange(self, e):
-        self.page.views.pop() and self.page.update()
-        PlugManager.getPlugin("_index").search_func(e)
-
-    def base_ui(self, page, plugin_name, icon=ft.icons.SETTINGS):
-        home_btn = ft.Container(
-            ft.Icon(name=ft.icons.HOME),
-            col={"xs": 2, "sm": 1, "md": 1, "xl": 1},
-            alignment=ft.alignment.center,
-            height=60,
-            on_click=lambda _: page.views.pop() and page.update()
-        )
-        search_feild = ft.TextField(
-            hint_text=plugin_name,
-            prefix_icon=icon,
-            border_radius=40,
-            col={"xs": 10, "sm": 11, "md": 11, "xl": 11},
-            on_change=self.search_feild_onchange
-        )
-        tips_btn = ft.FloatingActionButton(icon=ft.icons.TIPS_AND_UPDATES,
-                scale=0.7,
-                opacity=0.5,
-                bgcolor=ft.colors.WHITE,
-                shape=ft.CircleBorder(),
-                on_click= lambda _: PlugManager.run(
-                    plugins=("_tipsview","_tips_backbtn"),
-                    data=self.plugin_name,
-                    plugin_obj=self.plugin,
-                    page=self.page
-                    )
-                )
-        return (home_btn, search_feild, tips_btn)

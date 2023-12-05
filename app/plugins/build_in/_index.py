@@ -8,7 +8,6 @@ class SearchPlugin(Plugin):
     """
     data: word: the search key word
     """
-
     def process(self, word, show_build_in=False, **kwargs):
         plugins = PlugManager.PLUGINS
         func = partial(self.match_rules, word=word, show_build_in=show_build_in)
@@ -142,3 +141,4 @@ class IndexPlugin(UIPlugin):
             data=e.data)
         self.search_feild.focus()
         self.page.update()
+        return True

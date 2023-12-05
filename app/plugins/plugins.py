@@ -2,7 +2,6 @@ from app.plug import *
 import flet as ft
 import datetime
 import pandas as pd
-from functools import partial
 
 
 @PlugManager.register('计算签证到期日')
@@ -224,7 +223,7 @@ class Knowledge(UIPlugin):
 @PlugManager.register('User管理')
 class UserBase(UIPlugin):
     ICON = ft.icons.MANAGE_ACCOUNTS
-    def process(self, data, tips_btn,**kwargs):
+    def process(self, data, **kwargs):
         return PlugManager.run(plugins=("_search_base",), data="user", ui_template="_dictUI", **kwargs)
 
 
@@ -238,7 +237,7 @@ class TableUI(UIPlugin):
             for i in range(len(columns)):
                 cellsUI.append(
                     ft.DataCell(
-                        ft.Text(value=row[columns[i]]),
+                        ft.TextField(value=row[columns[i]], border=ft.InputBorder.NONE,multiline=True),
                         on_tap=self.on_tap,
                    )
                 )
@@ -291,7 +290,7 @@ class TableUI(UIPlugin):
 @PlugManager.register('test数据库')
 class KeyValueDatabase(UIPlugin):
     """
-    全局内置数据库的查询
+    数据库的查询
     """
     ICON = ft.icons.DATA_OBJECT
 

@@ -5,6 +5,7 @@ from fastapi import FastAPI
 import logging
 import os
 import importlib
+from functools import partial
 
 app = FastAPI()
 """
@@ -46,7 +47,7 @@ class PlugManager(object):
             if plugin_name in cls.PLUGINS:
                 current_version = cls.PLUGINS[plugin_name].VERSION
                 new_version = plugin.VERSION
-                if cls.compare_versions(new_version, current_version) > 0:
+                if cls.compare_versions(new_version, current_version) >= 0:
                     cls.PLUGINS.update({plugin_name:cls._build(plugin_name, plugin)})
             else:
                     cls.PLUGINS.update({plugin_name:cls._build(plugin_name, plugin)})
@@ -97,6 +98,7 @@ class Plugin(object):
     ICON = ft.icons.SETTINGS
     AUTHOR = "YOHOYES"
     VERSION = "1.0.0"
+    AUTHORITY = "ALL"
     MATCHS = []
     def process(self, data, **kwargs):
         return data
@@ -114,19 +116,21 @@ class UIPlugin(Plugin, ft.UserControl):
 @PlugManager.register('_preload_plugin')
 class PreLoadPlugin(Plugin):
     """
-    Reload all module files in the app/plugins
+    Load all modules
     加载插件库中的所有插件
     """
     def process(self, data, **kwargs):
         if not os.path.exists(data):
             os.makedirs(data)
         self._load("", path=data)
-        return f"LOAD SUCCESS!!!"
+        return f"LOAD COMPLETE!!!"
     
     def _load(self, f, path):
         full_path = path+os.sep+f
         if os.path.isdir(full_path):
-            for item in os.listdir(full_path):
+            files = os.listdir(full_path)
+            files.sort()
+            for item in files: 
                 self._load(item, full_path)
         elif os.path.isfile(full_path) and f.endswith(".py"):
             loader = importlib.machinery.SourceFileLoader(
