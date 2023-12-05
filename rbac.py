@@ -2,7 +2,7 @@ import dataset
 from passlib.hash import pbkdf2_sha256
 
 # 连接到 SQLite 数据库
-db = dataset.connect('sqlite:///rbac_example.db')
+db = dataset.connect('sqlite:///rbac.db')
 
 # 定义用户表模型
 user_table = db['users']

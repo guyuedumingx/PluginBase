@@ -1,0 +1,16 @@
+{
+    "version": 1,
+    "handlers": {
+      "file_handler": {
+        "class": "logging.FileHandler",
+        "filename": "uvicorn.log"  
+      }
+    },
+    "loggers": {
+      "uvicorn": {
+        "handlers": ["file_handler"],
+        "level": "INFO"
+      }
+    }
+  }
+  

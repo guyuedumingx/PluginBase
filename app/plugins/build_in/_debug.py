@@ -65,7 +65,7 @@ class FastApiServer(Plugin):
             if(self.is_running):
                 Plug.run(plugins=("_notice",), data="Server has running...", page=page)
         else:
-            config = Config(app, host=self.host, port=port, loop="asyncio")
+            config = Config(app, host=self.host, port=port, loop="asyncio", log_config="assets/config/uvicorn_log.json")
             self.server = Server(config)
             self.is_running = True
             asyncio.run(self.start_server())
