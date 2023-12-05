@@ -1,0 +1,216 @@
+2023-12-05 17:28:56,607 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-05 17:28:56,608 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/giZYlHwKND
+2023-12-05 17:28:56,608 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/giZYlHwKND
+2023-12-05 17:28:56,608 - INFO - Connected to Flet app and handling user sessions...
+2023-12-05 17:28:56,608 - INFO - Starting Flet View app...
+2023-12-05 17:28:56,608 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-05 17:28:56,809 - INFO - Session started: 
+2023-12-05 17:51:39,002 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-05 17:51:39,003 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/IjSCiOXnjH
+2023-12-05 17:51:39,003 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/IjSCiOXnjH
+2023-12-05 17:51:39,004 - INFO - Connected to Flet app and handling user sessions...
+2023-12-05 17:51:39,004 - INFO - Starting Flet View app...
+2023-12-05 17:51:39,004 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-05 17:51:39,260 - INFO - Session started: 
+2023-12-05 17:51:45,629 - ERROR - TipsViewWithBackButton.process() missing 1 required positional argument: 'page'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 31, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 41, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: TipsViewWithBackButton.process() missing 1 required positional argument: 'page'
+2023-12-05 17:52:06,400 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-05 17:52:06,401 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/RJFSbaMItv
+2023-12-05 17:52:06,401 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/RJFSbaMItv
+2023-12-05 17:52:06,401 - INFO - Connected to Flet app and handling user sessions...
+2023-12-05 17:52:06,401 - INFO - Starting Flet View app...
+2023-12-05 17:52:06,401 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-05 17:52:06,608 - INFO - Session started: 
+2023-12-05 17:52:08,520 - ERROR - Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 31, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 41, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins/plugin_market.py", line 25, in process
+    self.data = resp.json()
+                ^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-12-05 17:52:10,005 - ERROR - unsupported operand type(s) for +: 'View' and 'str'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 31, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 41, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins/_build_in_b.py", line 16, in process
+    url = page.views[-1] + "/tips"
+          ~~~~~~~~~~~~~~~^~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'View' and 'str'
+2023-12-05 17:52:28,074 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-05 17:52:28,075 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/rGWvfCGcDH
+2023-12-05 17:52:28,075 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/rGWvfCGcDH
+2023-12-05 17:52:28,075 - INFO - Connected to Flet app and handling user sessions...
+2023-12-05 17:52:28,075 - INFO - Starting Flet View app...
+2023-12-05 17:52:28,075 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-05 17:52:28,283 - INFO - Session started: 
+2023-12-05 17:52:30,184 - ERROR - Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 31, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 41, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins/plugin_market.py", line 25, in process
+    self.data = resp.json()
+                ^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-12-05 17:53:00,915 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-05 17:53:00,916 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/ZKLEKVwjDK
+2023-12-05 17:53:00,916 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/ZKLEKVwjDK
+2023-12-05 17:53:00,916 - INFO - Connected to Flet app and handling user sessions...
+2023-12-05 17:53:00,917 - INFO - Starting Flet View app...
+2023-12-05 17:53:00,917 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-05 17:53:01,116 - INFO - Session started: 
+2023-12-05 17:55:14,254 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-05 17:55:14,255 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/gbwHaxHTFX
+2023-12-05 17:55:14,255 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/gbwHaxHTFX
+2023-12-05 17:55:14,255 - INFO - Connected to Flet app and handling user sessions...
+2023-12-05 17:55:14,255 - INFO - Starting Flet View app...
+2023-12-05 17:55:14,255 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-05 17:55:14,463 - INFO - Session started: 
+2023-12-05 17:55:16,385 - ERROR - Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 31, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 41, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins/plugin_market.py", line 25, in process
+    self.data = resp.json()
+                ^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-12-05 18:44:20,226 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-05 18:44:20,227 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/envbAGcXrF
+2023-12-05 18:44:20,227 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/envbAGcXrF
+2023-12-05 18:44:20,227 - INFO - Connected to Flet app and handling user sessions...
+2023-12-05 18:44:20,228 - INFO - Starting Flet View app...
+2023-12-05 18:44:20,228 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-05 18:44:20,472 - INFO - Session started: 
+2023-12-05 18:44:48,598 - ERROR - 'list_iterator' object has no attribute 'keys'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 31, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 41, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins/plugins.py", line 234, in process
+    columns = data.keys
+              ^^^^^^^^^
+AttributeError: 'list_iterator' object has no attribute 'keys'
+2023-12-05 18:47:43,619 - ERROR - Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 31, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 41, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins/plugin_market.py", line 25, in process
+    self.data = resp.json()
+                ^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-12-05 18:51:11,797 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-05 18:51:11,798 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/KJeJfAgiqm
+2023-12-05 18:51:11,798 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/KJeJfAgiqm
+2023-12-05 18:51:11,798 - INFO - Connected to Flet app and handling user sessions...
+2023-12-05 18:51:11,798 - INFO - Starting Flet View app...
+2023-12-05 18:51:11,798 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-05 18:51:12,012 - INFO - Session started: 
+2023-12-05 19:05:08,480 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-05 19:05:08,480 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/lczRLYYUjl
+2023-12-05 19:05:08,481 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/lczRLYYUjl
+2023-12-05 19:05:08,481 - INFO - Connected to Flet app and handling user sessions...
+2023-12-05 19:05:08,481 - INFO - Starting Flet View app...
+2023-12-05 19:05:08,481 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-05 19:05:08,708 - INFO - Session started: 

@@ -222,8 +222,7 @@ class Knowledge(UIPlugin):
 @PlugManager.register('User管理')
 class UserBase(UIPlugin):
     ICON = ft.icons.MANAGE_ACCOUNTS
-
-    def process(self, data, **kwargs):
+    def process(self, data, tips_btn,**kwargs):
         return PlugManager.run(plugins=("_search_base",), data="user", ui_template="_dictUI", **kwargs)
 
 
