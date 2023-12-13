@@ -18,8 +18,10 @@ class PluginBaseUI(Plugin):
         search_feild = ft.TextField(
             hint_text=plugin_name,
             prefix_icon=plugin.ICON,
-            border_radius=40,
             col={"xs": 10, "sm": 11, "md": 11, "xl": 11},
+            border_radius=32,
+            scale=ft.Scale(scale_x=1.0, scale_y=0.85),
+            text_size=18,
             on_change= search_onchange if search_onchange!=None else self.search_feild_onchange
         )
         tips_btn = ft.FloatingActionButton(icon=ft.icons.TIPS_AND_UPDATES,
@@ -40,6 +42,7 @@ class PluginBaseUI(Plugin):
     def search_feild_onchange(self, e):
         self.page.views.pop() and self.page.update()
         Plug.getPlugin("_index").search_func(e)
+
 
 @Plug.register("_tips_backbtn")
 class TipsViewWithBackButton(UIPlugin):
@@ -63,6 +66,7 @@ class TipsViewWithBackButton(UIPlugin):
         page.go(url)
         return data
     
+
 @Plug.register('_notice')
 class Notice(Plugin):
     """
@@ -75,6 +79,7 @@ class Notice(Plugin):
         page.snack_bar.open = True
         page.update()
         return data
+
 
 @Plug.register('_banner')
 class Banner(Plugin):
@@ -100,6 +105,7 @@ class Banner(Plugin):
     def close_banner(self, e):
         self.page.banner.open = False
         self.page.update()
+
 
 @Plug.register('_listUI')
 class ListUI(UIPlugin):
@@ -186,12 +192,12 @@ class DictUI(UIPlugin):
     mode: show edit
     multiline: enable multiline turn into textarea
     """
-    def process(self, data: dict, mode='show', multiline=False, **kwargs):
+    def process(self, data: dict, mode='show', multiline=True, key_icon=ft.icons.FIBER_MANUAL_RECORD_OUTLINED,**kwargs):
         def on_change(e):
             data[e.control.hint_text] = e.data
         return ft.ListView([ft.ResponsiveRow(
             controls=[
-                ft.ListTile(leading=ft.Icon(ft.icons.KEY), title=ft.Text(
+                ft.ListTile(leading=ft.Icon(key_icon), title=ft.Text(
                     item[0], size=ft.FontWeight.W_500), col={"xs": 12, "md": 3}),
                 ft.TextField(
                     value=item[1],
@@ -272,3 +278,31 @@ class SearchBase(UIPlugin):
         for item in table.find(key={'like': f"%{key}%"}):
             data[item['key']] = item['value']
         return Plug.run(plugins=(self.ui_template,), data=data)
+
+
+@Plug.register('_pluginUI_with_search')
+class SearchBase(UIPlugin):
+    """
+    带搜索的插件
+    """
+    ICON = ft.icons.BOOKMARKS_OUTLINED
+    def process(self, data: dict, search_feild, page, container, tips_btn, ui_template="_markdown_tocUI", **kwargs):
+        self.container = container
+        search_feild.on_change = self.on_change
+        self.table_name = data
+        self.ui_template = ui_template
+        self.data = data
+        self.kwargs = kwargs
+        return self.ui("")
+    
+    def on_change(self, e):
+        self.container.content = self.ui(e.data)
+        self.container.update()
+
+    def ui(self, key: str):
+        data = {}
+        key = key.lower()
+        for k,v in self.data.items():
+            if key in k.lower() or key in v.lower():
+                data[k] = v
+        return Plug.run(plugins=(self.ui_template,), data=data, **self.kwargs)

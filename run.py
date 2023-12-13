@@ -23,9 +23,10 @@ plugin_dir = os.sep.join([curdir, "app", "plugins"])
 ENV['plugin_dir'] = os.path.abspath(plugin_dir)
 ENV['update_dir'] = os.path.abspath(os.sep.join([curdir, "app"]))
 ENV['app_dir'] = os.path.abspath(curdir)
+ENV['db_name'] = "plug.db"
 
 # https://dataset.readthedocs.io/en/latest/
-url = "///".join(["sqlite:", "plug.db"])
+url = "///".join(["sqlite:", ENV['db_name']])
 db = dataset.connect(url)
 Plug.setState(db=db)
 

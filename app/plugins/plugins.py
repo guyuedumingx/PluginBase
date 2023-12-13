@@ -69,36 +69,36 @@ class CleanMarkdownItalic(UIPlugin):
                           padding=20)], expand=1, spacing=20)
 
 
-@Plug.register('_tableUI')
-class TableUI(UIPlugin):
-    def process(self, rows: list, columns=[], **kwargs):
-        rowsUI = []
-        for row in rows:
-            cellsUI = [ft.DataCell(ft.Text(value=i),
-                                   on_tap=self.on_tap
-                                   ) for i in row]
-            rowsUI.append(ft.DataRow(cells=cellsUI))
-        columnsUI = [ft.DataColumn(ft.TextField(
-            value=col,
-            border=ft.InputBorder.NONE,
-            )
-        ) for col in columns]
-        return ft.ListView([ft.DataTable(rows=rowsUI, columns=columnsUI, expand=1)], expand=1)
+# @Plug.register('_tableUI')
+# class TableUI(UIPlugin):
+#     def process(self, rows: list, columns=[], **kwargs):
+#         rowsUI = []
+#         for row in rows:
+#             cellsUI = [ft.DataCell(ft.Text(value=i),
+#                                    on_tap=self.on_tap
+#                                    ) for i in row]
+#             rowsUI.append(ft.DataRow(cells=cellsUI))
+#         columnsUI = [ft.DataColumn(ft.TextField(
+#             value=col,
+#             border=ft.InputBorder.NONE,
+#             )
+#         ) for col in columns]
+#         return ft.ListView([ft.DataTable(rows=rowsUI, columns=columnsUI, expand=1)], expand=1)
     
-    def on_tap(self, e):
-        text = e.control.content.value
-        e.control.content = ft.TextField(
-            value=text,
-            border=ft.InputBorder.NONE,
-            on_blur=partial(self.leave_tap,cell=e.control),
-            on_submit=partial(self.leave_tap,cell=e.control),
-            )
-        e.control.update()
+#     def on_tap(self, e):
+#         text = e.control.content.value
+#         e.control.content = ft.TextField(
+#             value=text,
+#             border=ft.InputBorder.NONE,
+#             on_blur=partial(self.leave_tap,cell=e.control),
+#             on_submit=partial(self.leave_tap,cell=e.control),
+#             )
+#         e.control.update()
         
-    def leave_tap(self, e, cell=ft.Text("")):
-        text = e.control.value
-        cell.content = ft.Text(text)
-        cell.update()
+#     def leave_tap(self, e, cell=ft.Text("")):
+#         text = e.control.value
+#         cell.content = ft.Text(text)
+#         cell.update()
 
 
 @Plug.register('测试Table')
@@ -190,25 +190,6 @@ class CodeTrans(UIPlugin):
         self.container.update()
 
 
-@Plug.register('免签国查询')
-class Italic(UIPlugin):
-    pass
-
-
-@Plug.register('签证类型查询')
-class Italic(UIPlugin):
-    pass
-
-
-@Plug.register('货币编码查询')
-class Italic(UIPlugin):
-    pass
-
-@Plug.register('货币编码查询')
-class Italic(UIPlugin):
-    VERSION="1.2.1"
-    pass
-
 @Plug.register('SWIFT知识库')
 class Knowledge(UIPlugin):
     """
@@ -229,63 +210,84 @@ class UserBase(UIPlugin):
 
 @Plug.register('_tableUI4Database')
 class TableUI(UIPlugin):
-    def process(self, data, **kwargs):
-        rowsUI = []
+    def process(self, data, page, container, **kwargs):
+        self.container = container
+        self.page = page
+        self.rowsUI = []
         columns = data.keys
         for row in data:
             cellsUI = []
             for i in range(len(columns)):
-                cellsUI.append(
-                    ft.DataCell(
-                        ft.TextField(value=row[columns[i]], border=ft.InputBorder.NONE,multiline=True),
-                        on_tap=self.on_tap,
-                   )
-                )
-            rowsUI.append(ft.DataRow(cells=cellsUI))
-        columnsUI = [ft.DataColumn(
-            ft.Text(value=col),
-        ) for col in columns]
-        return ft.Column([
-            ft.Row(self.build_tips(),alignment=ft.MainAxisAlignment.END,),
-            ft.ListView([ft.DataTable(rows=rowsUI, columns=columnsUI, expand=1)], expand=1)
-            ])
+                cellsUI.append(self.build_cell(row[columns[i]]))
+            self.rowsUI.append(ft.DataRow(cells=cellsUI))
+        self.columnsUI = [ft.DataColumn(
+            ft.TextField(value=col, border=ft.InputBorder.NONE)) 
+            for col in columns]
+        self.operators = [ft.Container(
+            ft.Text("加一列"),
+            bgcolor=ft.colors.AMBER_400,
+            on_click=self.add_row,
+            ) for i in range(5)]
+        return self.build()
     
-    def build_tips(self):
-        def amenity_selected(e):
-            print(e) 
-        amenities = ["Washer / Dryer", "Ramp access", "Dogs OK", "Cats OK", "Smoke-free"]
-        amenity_chips = []
-
-        for amenity in amenities:
-            amenity_chips.append(
-                ft.Container(
-                    ft.Row([
-                        ft.Icon(ft.icons.SETTINGS),
-                        ft.Text(amenity),
-                    ]),
-                    on_click=amenity_selected,
-                    scale=0.8,
-                    margin=0,
-                    padding=0
-                )
-            )
-        return amenity_chips
+    def add_column(self, e):
+        self.columnsUI.append(ft.DataColumn(
+            ft.TextField(
+                value=f"Column{len(self.columnsUI)}",
+                border=ft.InputBorder.NONE)))
+        for row in self.rowsUI:
+            row.cells.append(self.build_cell())
+        self.container.content = self.build()
+        self.container.update()
     
-    def on_tap(self, e):
-        text = e.control.content.value
-        e.control.content = ft.TextField(
-            value=text,
-            border=ft.InputBorder.NONE,
-            multiline=True,
-            on_blur=partial(self.leave_tap,cell=e.control),
-            on_submit=partial(self.leave_tap,cell=e.control),
-            )
-        e.control.update()
+    def add_row(self, e):
+        cells = []
+        for i in range(len(self.columnsUI)):
+            cells.append(self.build_cell()) 
+        self.rowsUI.append(ft.DataRow(cells=cells))
+        self.container.content = self.build()
+        self.container.update()
+    
+    def build_cell(self, value=""):
+        return ft.DataCell(
+            ft.TextField(
+                value=value,
+                border=ft.InputBorder.NONE,
+                multiline=True,
+                ),
+            show_edit_icon=True,
+            on_tap=self.to_edit_view,
+        )
         
-    def leave_tap(self, e, cell=ft.Text("")):
-        text = e.control.value
-        cell.content = ft.Text(text)
-        cell.update()
+    def to_edit_view(self, e):
+        url = self.page.views[-1].route + "/edit"
+        inner_feild = ft.TextField(value=e.control.content.value, multiline=True, expand=1)
+        self.page.views.append(ft.View(
+                url,
+                [
+                    ft.OutlinedButton(text="Save", on_click=partial(self.edit_save, out_feild=e.control.content,inner_feild=inner_feild)),
+                    ft.ListView([inner_feild], expand=1),
+                ]
+            )
+        )
+        self.page.go(url)
+        self.page.update()
+        
+    def edit_save(self, e, out_feild, inner_feild):
+        out_feild.value = inner_feild.value
+        self.page.views.pop() and self.page.update()
+        
+    def build(self):
+        return ft.ListView([
+            ft.Row(self.operators),
+            ft.DataTable(
+                rows=self.rowsUI,
+                columns=self.columnsUI,
+                expand=1,
+            )],
+            expand=1,
+        )
+        
 
 @Plug.register('test数据库')
 class KeyValueDatabase(UIPlugin):
@@ -301,6 +303,7 @@ class KeyValueDatabase(UIPlugin):
         search_feild.hint_text = "Enter a table name to fine data"
         search_feild.on_submit = self.search_handler
         search_feild.on_change = None
+        self.kwargs = kwargs
         return ft.Text("Search a Database")
 
     def search_handler(self, e):
@@ -309,5 +312,5 @@ class KeyValueDatabase(UIPlugin):
             return
         table = self.db[key_word]
         self.container.content = Plug.run(
-            plugins=("_tableUI4Database",), data=table.all())
+            plugins=("_tableUI4Database",), data=table.all(), container=self.container,**self.kwargs)
         self.container.update()

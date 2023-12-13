@@ -2,3 +2,51 @@ Started server process [85335]
 Waiting for application startup.
 Application startup complete.
 Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+Started server process [88587]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:51337 - "GET /plugins HTTP/1.1" 200
+Started server process [94128]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:61451 - "GET /plugins HTTP/1.1" 200
+127.0.0.1:61453 - "GET /plugins/d/%E7%AD%BE%E8%AF%81%E7%B1%BB%E5%9E%8B%E6%9F%A5%E8%AF%A2 HTTP/1.1" 200
+Started server process [94187]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:61585 - "GET /plugins HTTP/1.1" 200
+127.0.0.1:61587 - "GET /plugins/d/%E7%AD%BE%E8%AF%81%E7%B1%BB%E5%9E%8B%E6%9F%A5%E8%AF%A2 HTTP/1.1" 200
+127.0.0.1:61591 - "GET /plugins/d/%E6%8F%92%E4%BB%B6%E5%B8%82%E5%9C%BA%E6%9C%8D%E5%8A%A1%E5%99%A8 HTTP/1.1" 200
+Started server process [94257]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:61627 - "GET /plugins HTTP/1.1" 200
+127.0.0.1:61629 - "GET /plugins/d/%E5%A4%A7%E5%86%99%E9%87%91%E9%A2%9D HTTP/1.1" 200
+Started server process [94305]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:61636 - "GET /plugins HTTP/1.1" 200
+127.0.0.1:61638 - "GET /plugins/d/%E5%A4%A7%E5%86%99%E9%87%91%E9%A2%9D HTTP/1.1" 200
+Started server process [94370]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:61670 - "GET /plugins HTTP/1.1" 200
+127.0.0.1:61672 - "GET /plugins/d/%E5%A4%A7%E5%86%99%E9%87%91%E9%A2%9D HTTP/1.1" 200
+Started server process [94458]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:55313 - "GET /plugins HTTP/1.1" 200
+127.0.0.1:55315 - "GET /plugins/d/%E6%98%8E%E7%A0%81%E8%BD%AC%E6%8D%A2 HTTP/1.1" 200
+127.0.0.1:55327 - "GET /plugins/d/%E7%AD%BE%E8%AF%81%E7%B1%BB%E5%9E%8B%E6%9F%A5%E8%AF%A2 HTTP/1.1" 200
+127.0.0.1:55334 - "GET /plugins/d/%E7%AD%BE%E8%AF%81%E7%B1%BB%E5%9E%8B%E6%9F%A5%E8%AF%A2 HTTP/1.1" 200
+Started server process [94632]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)

@@ -42,7 +42,6 @@ class PluginSearchStream(UIPlugin):
     主页搜索插件流
     data: word: the search key word
     """
-
     def process(self, key_word, plugin_onclick, **kwargs):
         return Plug.run(plugins=("_search_plugin", "_plugin_cards", "_flowUI"),
                                data=key_word,
@@ -55,7 +54,6 @@ class MainShowBackground(UIPlugin):
     """
     显示在主页的初始背景
     """
-
     def process(self, data, **kwargs):
         return Plug.run(plugins=("_plugin_search_stream",),
                                data=data,
@@ -67,7 +65,6 @@ class DefaultBackground(UIPlugin):
     """
     默认背景
     """
-
     def process(self, data, **kwargs):
         return ft.Container(content=ft.Icon(
             ft.icons.SETTINGS,
@@ -114,7 +111,9 @@ class IndexPlugin(UIPlugin):
         self.search_feild = ft.TextField(
             hint_text=self.HINT_TEXT,
             prefix_icon=self.ICON,
-            border_radius=40,
+            border_radius=32,
+            scale=ft.Scale(scale_x=1.0, scale_y=0.85),
+            text_size=18,
             on_change=self.search_func
         )
         self.container = ft.Container(Plug.run(plugins=("_plugin_search_stream",),
