@@ -60,3 +60,8 @@ Waiting for application startup.
 Application startup complete.
 Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
 127.0.0.1:52773 - "GET /update HTTP/1.1" 200
+Started server process [537]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:52841 - "GET /plugins HTTP/1.1" 200

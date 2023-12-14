@@ -1,9 +1,5 @@
 from app.plug import *
-import socket
 import json
-from uvicorn.config import Config
-from uvicorn.main import Server
-import asyncio
 import zipfile
 
 @Plug.register('键值对数据库')
@@ -50,64 +46,6 @@ class KeyValueDatabase(UIPlugin):
             plugins=("_dictUI",), data=data, mode="edit")
         self.container.update()
 
-@Plug.register('_server')
-class FastApiServer(Plugin):
-    def __init__(self):
-        self.is_running = True
-
-    def process(self, data, container, page, port=36909, **kwargs):
-        self.host = "0.0.0.0"
-        self.port = port
-        self.container = container 
-        self.page = page
-        self.container.content = self.ui()
-        self.container.update()
-        if hasattr(self, "server"):
-            if(self.is_running):
-                Plug.run(plugins=("_notice",), data="Server has running...", page=page)
-        else:
-            config = Config(app, host=self.host, port=port, loop="asyncio", log_config="assets/config/uvicorn_log.json")
-            self.server = Server(config)
-            self.is_running = True
-            asyncio.run(self.start_server())
-        return self.ui()
-    
-    def ui(self):
-        return ft.Container(ft.ListView(controls=[
-            ft.Text(f"Server run on: {self.get_local_ip()}: {self.port}"),
-            ft.Switch(label="Trun on server",
-                      label_position=ft.LabelPosition.LEFT,
-                      value=self.is_running,
-                      on_change=self.on_change
-                      )
-        ], spacing=10), height=80, width=300, alignment=ft.alignment.center)
-
-    def on_change(self, e):
-        if e.data == "true": 
-            self.is_running = True
-            asyncio.run(self.start_server())
-        else: 
-            self.is_running = False
-            asyncio.run(self.stop_server())
-
-    def get_local_ip(self):
-        try:
-            # 获取本机主机名
-            host_name = socket.gethostname()
-            # 通过主机名获取本机 IP 地址列表
-            ip_list = socket.gethostbyname_ex(host_name)[2]
-            # 从 IP 地址列表中选择非回环地址（127.0.0.1）的地址
-            local_ip = next((ip for ip in ip_list if not ip.startswith("127.")), None)
-            return local_ip
-        except Exception as e:
-            Plug.run(plugins=("_notice",), data=f"Error: {e}", page=self.page)
-
-    async def start_server(self):
-        await self.server.serve()
-
-    async def stop_server(self):
-        await self.server.shutdown()
-
 @Plug.register('数据库查询')
 class KeyValueDatabase(UIPlugin):
     """
@@ -150,3 +88,12 @@ class BuildUpdateFile(Plugin):
                     arcname = os.path.relpath(file_path, build_in_dir)
                     zip_file.write(file_path, arcname)
         return "更新包构建成功!!!"
+
+
+@Plug.register("Linechart")
+class BaseBarChart(UIPlugin):
+
+    def process(self, data:dict, **kwargs):
+        data = dict(apple=[(1, 30), (2, 40), (3, 50), (4, 20), (5, 10)],
+                    bogo=[(1, 15), (2, 25), (3, 40), (4, 10)])
+        return Plug.run(plugins=("_linechart",), data=data, **kwargs)

@@ -1,6 +1,10 @@
 from app.plug import *
 import flet as ft
 import requests
+from uvicorn.config import Config
+import socket
+from uvicorn.main import Server
+import asyncio
 
 @Plug.register('_plugin_cards_list')
 class BuildShowCards(UIPlugin):
@@ -86,3 +90,62 @@ class PluginMarket(UIPlugin):
             with open(ENV['plugin_dir']+os.path.sep+filename, "wb") as f:
                 f.write(resp.content)
         Plug.run(plugins=("重新加载",))
+
+
+@Plug.register('_server')
+class FastApiServer(Plugin):
+    def __init__(self):
+        self.is_running = True
+
+    def process(self, data, container, page, port=36909, **kwargs):
+        self.host = "0.0.0.0"
+        self.port = port
+        self.container = container 
+        self.page = page
+        self.container.content = self.ui()
+        self.container.update()
+        if hasattr(self, "server"):
+            if(self.is_running):
+                Plug.run(plugins=("_notice",), data="Server has running...", page=page)
+        else:
+            config = Config(app, host=self.host, port=port, loop="asyncio", log_config="assets/config/uvicorn_log.json")
+            self.server = Server(config)
+            self.is_running = True
+            asyncio.run(self.start_server())
+        return self.ui()
+    
+    def ui(self):
+        return ft.Container(ft.ListView(controls=[
+            ft.Text(f"Server run on: {self.get_local_ip()}: {self.port}"),
+            ft.Switch(label="Trun on server",
+                      label_position=ft.LabelPosition.LEFT,
+                      value=self.is_running,
+                      on_change=self.on_change
+                      )
+        ], spacing=10), height=80, width=300, alignment=ft.alignment.center)
+
+    def on_change(self, e):
+        if e.data == "true": 
+            self.is_running = True
+            asyncio.run(self.start_server())
+        else: 
+            self.is_running = False
+            asyncio.run(self.stop_server())
+
+    def get_local_ip(self):
+        try:
+            # 获取本机主机名
+            host_name = socket.gethostname()
+            # 通过主机名获取本机 IP 地址列表
+            ip_list = socket.gethostbyname_ex(host_name)[2]
+            # 从 IP 地址列表中选择非回环地址（127.0.0.1）的地址
+            local_ip = next((ip for ip in ip_list if not ip.startswith("127.")), None)
+            return local_ip
+        except Exception as e:
+            Plug.run(plugins=("_notice",), data=f"Error: {e}", page=self.page)
+
+    async def start_server(self):
+        await self.server.serve()
+
+    async def stop_server(self):
+        await self.server.shutdown()
