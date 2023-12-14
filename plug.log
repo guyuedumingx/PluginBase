@@ -2081,3 +2081,10 @@ RuntimeError: File at path assets/update.zip does not exist.
 2023-12-15 00:10:41,662 - INFO - Starting Flet View app...
 2023-12-15 00:10:41,662 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
 2023-12-15 00:10:41,870 - INFO - Session started: 
+2023-12-15 00:12:31,347 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-15 00:12:31,348 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/ZWPkhUuplY
+2023-12-15 00:12:31,348 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/ZWPkhUuplY
+2023-12-15 00:12:31,348 - INFO - Connected to Flet app and handling user sessions...
+2023-12-15 00:12:31,348 - INFO - Starting Flet View app...
+2023-12-15 00:12:31,349 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-15 00:12:31,534 - INFO - Session started: 

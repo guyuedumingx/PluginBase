@@ -4,7 +4,6 @@ from fastapi import HTTPException
 from fastapi.responses import FileResponse
 import zipfile
 
-
 @Plug.register('插件市场服务器')
 class PluginMarketServer(UIPlugin):
     """
