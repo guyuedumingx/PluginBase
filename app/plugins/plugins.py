@@ -69,38 +69,6 @@ class CleanMarkdownItalic(UIPlugin):
                           padding=20)], expand=1, spacing=20)
 
 
-# @Plug.register('_tableUI')
-# class TableUI(UIPlugin):
-#     def process(self, rows: list, columns=[], **kwargs):
-#         rowsUI = []
-#         for row in rows:
-#             cellsUI = [ft.DataCell(ft.Text(value=i),
-#                                    on_tap=self.on_tap
-#                                    ) for i in row]
-#             rowsUI.append(ft.DataRow(cells=cellsUI))
-#         columnsUI = [ft.DataColumn(ft.TextField(
-#             value=col,
-#             border=ft.InputBorder.NONE,
-#             )
-#         ) for col in columns]
-#         return ft.ListView([ft.DataTable(rows=rowsUI, columns=columnsUI, expand=1)], expand=1)
-    
-#     def on_tap(self, e):
-#         text = e.control.content.value
-#         e.control.content = ft.TextField(
-#             value=text,
-#             border=ft.InputBorder.NONE,
-#             on_blur=partial(self.leave_tap,cell=e.control),
-#             on_submit=partial(self.leave_tap,cell=e.control),
-#             )
-#         e.control.update()
-        
-#     def leave_tap(self, e, cell=ft.Text("")):
-#         text = e.control.value
-#         cell.content = ft.Text(text)
-#         cell.update()
-
-
 @Plug.register('测试Table')
 class TestTableUI(UIPlugin):
     def process(self, data, **kwargs):

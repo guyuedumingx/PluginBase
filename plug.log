@@ -1433,3 +1433,363 @@ TypeError: TableUI.process() missing 1 required positional argument: 'container'
 2023-12-13 09:39:00,068 - INFO - Waiting for application startup.
 2023-12-13 09:39:00,068 - INFO - Application startup complete.
 2023-12-13 09:39:00,069 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-13 19:15:27,715 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-13 19:15:27,716 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/roDPUejOwC
+2023-12-13 19:15:27,716 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/roDPUejOwC
+2023-12-13 19:15:27,716 - INFO - Connected to Flet app and handling user sessions...
+2023-12-13 19:15:27,716 - INFO - Starting Flet View app...
+2023-12-13 19:15:27,716 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-13 19:15:27,968 - INFO - Session started: 
+2023-12-13 21:22:22,268 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-13 21:22:22,269 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/BmdmzVyOaE
+2023-12-13 21:22:22,269 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/BmdmzVyOaE
+2023-12-13 21:22:22,269 - INFO - Connected to Flet app and handling user sessions...
+2023-12-13 21:22:22,269 - INFO - Starting Flet View app...
+2023-12-13 21:22:22,269 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-13 21:22:22,525 - INFO - Session started: 
+2023-12-13 21:22:24,908 - ERROR - 'dict_values' object is not subscriptable
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 32, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 42, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_charts.py", line 16, in process
+    to_y=y_axis[i],
+         ~~~~~~^^^
+TypeError: 'dict_values' object is not subscriptable
+2023-12-13 21:22:57,195 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-13 21:22:57,196 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/RXkacecujK
+2023-12-13 21:22:57,196 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/RXkacecujK
+2023-12-13 21:22:57,196 - INFO - Connected to Flet app and handling user sessions...
+2023-12-13 21:22:57,196 - INFO - Starting Flet View app...
+2023-12-13 21:22:57,197 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-13 21:22:57,398 - INFO - Session started: 
+2023-12-13 21:23:25,060 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-13 21:23:25,061 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/DUGmlkEebd
+2023-12-13 21:23:25,062 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/DUGmlkEebd
+2023-12-13 21:23:25,062 - INFO - Connected to Flet app and handling user sessions...
+2023-12-13 21:23:25,062 - INFO - Starting Flet View app...
+2023-12-13 21:23:25,062 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-13 21:23:25,278 - INFO - Session started: 
+2023-12-13 21:25:20,862 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-13 21:25:20,863 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/NPqaijtwqq
+2023-12-13 21:25:20,865 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/NPqaijtwqq
+2023-12-13 21:25:20,865 - INFO - Connected to Flet app and handling user sessions...
+2023-12-13 21:25:20,865 - INFO - Starting Flet View app...
+2023-12-13 21:25:20,865 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-13 21:25:21,096 - INFO - Session started: 
+2023-12-13 21:31:20,061 - ERROR - can only concatenate list (not "int") to list
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 32, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 42, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_charts.py", line 38, in process
+    max_y=max(y_axis+10),
+              ~~~~~~^~~
+TypeError: can only concatenate list (not "int") to list
+2023-12-13 21:31:25,105 - ERROR - can only concatenate list (not "int") to list
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 32, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 42, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_charts.py", line 38, in process
+    max_y=max(y_axis+10),
+              ~~~~~~^~~
+TypeError: can only concatenate list (not "int") to list
+2023-12-13 21:36:57,157 - ERROR - 'str' object has no attribute '_set_attr_internal'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 32, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 42, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_base.py", line 104, in process
+    page.update()
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/page.py", line 289, in update
+    r = self.__update(self)
+        ^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/page.py", line 416, in __update
+    commands, added_controls, removed_controls = self.__prepare_update(*controls)
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/page.py", line 438, in __prepare_update
+    control.build_update_commands(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 384, in build_update_commands
+    ctrl.build_update_commands(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 384, in build_update_commands
+    ctrl.build_update_commands(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 367, in build_update_commands
+    innerCmds = ctrl._build_add_commands(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 451, in _build_add_commands
+    childCmd = control._build_add_commands(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 449, in _build_add_commands
+    children = self._get_children()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/charts/chart_axis.py", line 50, in _get_children
+    self.__title._set_attr_internal("n", "t")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute '_set_attr_internal'
+2023-12-13 21:37:24,058 - ERROR - 'str' object has no attribute '_set_attr_internal'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 32, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 42, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_base.py", line 104, in process
+    page.update()
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/page.py", line 289, in update
+    r = self.__update(self)
+        ^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/page.py", line 416, in __update
+    commands, added_controls, removed_controls = self.__prepare_update(*controls)
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/page.py", line 438, in __prepare_update
+    control.build_update_commands(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 384, in build_update_commands
+    ctrl.build_update_commands(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 384, in build_update_commands
+    ctrl.build_update_commands(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 367, in build_update_commands
+    innerCmds = ctrl._build_add_commands(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 451, in _build_add_commands
+    childCmd = control._build_add_commands(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 449, in _build_add_commands
+    children = self._get_children()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/charts/chart_axis.py", line 50, in _get_children
+    self.__title._set_attr_internal("n", "t")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute '_set_attr_internal'
+2023-12-13 21:38:45,206 - ERROR - 'str' object has no attribute '_set_attr_internal'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 32, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 42, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_base.py", line 104, in process
+    page.update()
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/page.py", line 289, in update
+    r = self.__update(self)
+        ^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/page.py", line 416, in __update
+    commands, added_controls, removed_controls = self.__prepare_update(*controls)
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/page.py", line 438, in __prepare_update
+    control.build_update_commands(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 384, in build_update_commands
+    ctrl.build_update_commands(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 384, in build_update_commands
+    ctrl.build_update_commands(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 367, in build_update_commands
+    innerCmds = ctrl._build_add_commands(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 451, in _build_add_commands
+    childCmd = control._build_add_commands(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 449, in _build_add_commands
+    children = self._get_children()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/charts/chart_axis.py", line 50, in _get_children
+    self.__title._set_attr_internal("n", "t")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute '_set_attr_internal'
+2023-12-13 21:39:43,254 - ERROR - 'str' object has no attribute '_set_attr_internal'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 32, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 42, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_base.py", line 104, in process
+    page.update()
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/page.py", line 289, in update
+    r = self.__update(self)
+        ^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/page.py", line 416, in __update
+    commands, added_controls, removed_controls = self.__prepare_update(*controls)
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/page.py", line 438, in __prepare_update
+    control.build_update_commands(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 384, in build_update_commands
+    ctrl.build_update_commands(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 384, in build_update_commands
+    ctrl.build_update_commands(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 367, in build_update_commands
+    innerCmds = ctrl._build_add_commands(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 451, in _build_add_commands
+    childCmd = control._build_add_commands(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 449, in _build_add_commands
+    children = self._get_children()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/charts/chart_axis.py", line 50, in _get_children
+    self.__title._set_attr_internal("n", "t")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute '_set_attr_internal'
+2023-12-13 23:21:54,503 - ERROR - too many values to unpack (expected 2)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 32, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 42, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_charts.py", line 56, in process
+    labels = [
+             ^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_charts.py", line 69, in <listcomp>
+    for idx, name in list(data.values())]
+        ^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+2023-12-14 00:00:29,766 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-14 00:00:29,767 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/ynofPuTuxJ
+2023-12-14 00:00:29,768 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/ynofPuTuxJ
+2023-12-14 00:00:29,768 - INFO - Connected to Flet app and handling user sessions...
+2023-12-14 00:00:29,769 - INFO - Starting Flet View app...
+2023-12-14 00:00:29,769 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-14 00:00:29,997 - INFO - Session started: 
+2023-12-14 00:01:02,802 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-14 00:01:02,803 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/UvwbsgjlhF
+2023-12-14 00:01:02,803 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/UvwbsgjlhF
+2023-12-14 00:01:02,803 - INFO - Connected to Flet app and handling user sessions...
+2023-12-14 00:01:02,803 - INFO - Starting Flet View app...
+2023-12-14 00:01:02,804 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-14 00:01:03,018 - INFO - Session started: 
+2023-12-14 10:00:17,096 - ERROR - 'method' object has no attribute 'current'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 32, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 42, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//spliter.py", line 11, in process
+    return self.build()
+           ^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//spliter.py", line 14, in build
+    file_picker = ft.FilePicker(self.spliter_pick)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/file_picker.py", line 117, in __init__
+    Control.__init__(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 51, in __init__
+    ref.current = self
+    ^^^^^^^^^^^
+AttributeError: 'method' object has no attribute 'current'
+2023-12-14 10:00:42,764 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-14 10:00:42,765 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/gjqAarnwvS
+2023-12-14 10:00:42,765 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/gjqAarnwvS
+2023-12-14 10:00:42,766 - INFO - Connected to Flet app and handling user sessions...
+2023-12-14 10:00:42,766 - INFO - Starting Flet View app...
+2023-12-14 10:00:42,766 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-14 10:00:42,997 - INFO - Session started: 
+2023-12-14 10:01:06,630 - ERROR - 'method' object has no attribute 'current'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 32, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 42, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//spliter.py", line 11, in process
+    return self.build()
+           ^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//spliter.py", line 14, in build
+    file_picker = ft.FilePicker(self.spliter_pick)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/file_picker.py", line 117, in __init__
+    Control.__init__(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 51, in __init__
+    ref.current = self
+    ^^^^^^^^^^^
+AttributeError: 'method' object has no attribute 'current'
+2023-12-14 10:10:05,614 - ERROR - invalid syntax. Perhaps you forgot a comma? (spliter.py, line 25)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 32, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 42, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 125, in process
+    self._load("", path=data)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 134, in _load
+    self._load(item, full_path)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 138, in _load
+    loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 605, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 1120, in load_module
+  File "<frozen importlib._bootstrap_external>", line 945, in load_module
+  File "<frozen importlib._bootstrap>", line 287, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 621, in _exec
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//spliter.py", line 25
+    ft.Row([
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+2023-12-14 10:16:24,979 - ERROR - 'FileSpliter' object has no attribute 'size_feild'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 32, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 42, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//spliter.py", line 11, in process
+    return self.build()
+           ^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//spliter.py", line 26, in build
+    ft.Text("设置单个文件的大小为", ref=self.size_feild),
+                              ^^^^^^^^^^^^^^^
+AttributeError: 'FileSpliter' object has no attribute 'size_feild'
+2023-12-14 10:37:13,005 - ERROR - Notice.process() missing 1 required positional argument: 'page'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 32, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 42, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Notice.process() missing 1 required positional argument: 'page'
+2023-12-14 10:40:50,643 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-14 10:40:50,643 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/UeyenPmcbZ
+2023-12-14 10:40:50,644 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/UeyenPmcbZ
+2023-12-14 10:40:50,644 - INFO - Connected to Flet app and handling user sessions...
+2023-12-14 10:40:50,644 - INFO - Starting Flet View app...
+2023-12-14 10:40:50,644 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-14 10:40:50,879 - INFO - Session started: 
+2023-12-14 10:50:06,364 - ERROR - 'FileSpliter' object has no attribute 'spliter_feild'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 32, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 42, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//spliter.py", line 12, in process
+    return self.build()
+           ^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//spliter.py", line 15, in build
+    file_picker = ft.FilePicker(on_result=partial(self.spliter_pick, feild=self.spliter_feild))
+                                                                           ^^^^^^^^^^^^^^^^^^
+AttributeError: 'FileSpliter' object has no attribute 'spliter_feild'
