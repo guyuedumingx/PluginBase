@@ -66,7 +66,7 @@ class BaseLineChart(UIPlugin):
                     margin=ft.margin.only(top=10),
                 ),
             )
-        for idx, name in enumerate(list(data.values()))]
+        for idx, name in enumerate(list(data.keys()))]
         series = []
         for name, values in data.items():
             points = [ft.LineChartDataPoint(i[0], i[1]) for i in values]
@@ -92,17 +92,10 @@ class BaseLineChart(UIPlugin):
             expand=True
         )
             
-
-@Plug.register("chart")
-class BaseBarChart(UIPlugin):
-
-    def process(self, data:dict, **kwargs):
-        data = dict(apple=30, bananer=40, perple=50, orange=20, canva=150)
-        return Plug.run(plugins=("_barchart",), data=data, **kwargs)
-
 @Plug.register("Linechart")
 class BaseBarChart(UIPlugin):
 
     def process(self, data:dict, **kwargs):
-        data = dict(apple=[(1, 30), (2, 40), (3, 50), (4, 20), (5, 10)])
+        data = dict(apple=[(1, 30), (2, 40), (3, 50), (4, 20), (5, 10)],
+                    bogo=[(1, 15), (2, 25), (3, 40), (4, 10)])
         return Plug.run(plugins=("_linechart",), data=data, **kwargs)

@@ -6,6 +6,7 @@ class FileSpliter(UIPlugin):
     """
     将大文件切割成小文件传输到内网
     """
+    ICON=ft.icons.FILE_PRESENT_OUTLINED
     def process(self, data, page, **kwargs):
         self.page = page
         self.single_size = 100
@@ -103,7 +104,7 @@ class FileSpliter(UIPlugin):
                 chunk = file.read(chunk_size*1024*1024)
                 if not chunk:
                     Plug.run(plugins=("_notice",), data="分割完成", page=self.page)
-                    break  # 如果没有更多数据，停止循环
+                    break  
                 # 构建输出文件名
                 output_file = f"{os.path.dirname(input_file)+os.path.sep+name}_part{chunk_number}.{suffix}"
                 # 将数据块写入新文件

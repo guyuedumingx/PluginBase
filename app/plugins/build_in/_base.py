@@ -1,5 +1,6 @@
 from app.plug import *
 import shutil
+import requests
 
 @Plug.register('安装插件')
 class InstallPlugin(UIPlugin):
@@ -103,3 +104,27 @@ class BasePluginView(UIPlugin):
         search_feild.focus()
         page.update()
         return plugin_name
+
+@Plug.register("软件更新")
+class UpdatePlugin(Plugin):
+    """
+    将软件更新到最新版本
+    """
+    ICON=ft.icons.UPGRADE_OUTLINED
+    def process(self, data, page, server_addr="127.0.0.1", server_port=36909, **kwargs):
+        self.url = f"http://{server_addr}:{server_port}/update"
+        self.page = page
+        resp = requests.get(self.url)
+        if resp.status_code == 200:
+            # 获取文件名
+            content_disposition = resp.headers.get("Content-Disposition")
+            if content_disposition and "filename" in content_disposition:
+                filename = content_disposition.split("filename=")[1].strip('"')
+            else:
+                filename = "downloaded_plugin.zip"  # 默认文件名
+            with open(filename, "wb") as f:
+                f.write(resp.content)
+            # 解压缩到 app 目录
+            with open(filename, "rb") as zip_file:
+                shutil.unpack_archive(zip_file.name, ENV['plugin_dir']+os.path.sep+"build_in", format="zip") 
+        return "更新完成"

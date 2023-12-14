@@ -1793,3 +1793,150 @@ Traceback (most recent call last):
     file_picker = ft.FilePicker(on_result=partial(self.spliter_pick, feild=self.spliter_feild))
                                                                            ^^^^^^^^^^^^^^^^^^
 AttributeError: 'FileSpliter' object has no attribute 'spliter_feild'
+2023-12-14 11:41:28,256 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-14 11:41:28,257 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/KrBFvtRwbj
+2023-12-14 11:41:28,257 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/KrBFvtRwbj
+2023-12-14 11:41:28,257 - INFO - Connected to Flet app and handling user sessions...
+2023-12-14 11:41:28,257 - INFO - Starting Flet View app...
+2023-12-14 11:41:28,258 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-14 11:41:28,509 - INFO - Session started: 
+2023-12-14 11:46:55,685 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-14 11:46:55,686 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/XSjcdFbouk
+2023-12-14 11:46:55,686 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/XSjcdFbouk
+2023-12-14 11:46:55,686 - INFO - Connected to Flet app and handling user sessions...
+2023-12-14 11:46:55,687 - INFO - Starting Flet View app...
+2023-12-14 11:46:55,687 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-14 11:46:55,930 - INFO - Session started: 
+2023-12-14 11:51:09,757 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-14 11:51:09,758 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/fILcKKcaPA
+2023-12-14 11:51:09,761 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/fILcKKcaPA
+2023-12-14 11:51:09,761 - INFO - Connected to Flet app and handling user sessions...
+2023-12-14 11:51:09,761 - INFO - Starting Flet View app...
+2023-12-14 11:51:09,762 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-14 11:51:10,006 - INFO - Session started: 
+2023-12-14 13:45:57,599 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-14 13:45:57,600 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/NYdEjlvdCw
+2023-12-14 13:45:57,609 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/NYdEjlvdCw
+2023-12-14 13:45:57,609 - INFO - Connected to Flet app and handling user sessions...
+2023-12-14 13:45:57,609 - INFO - Starting Flet View app...
+2023-12-14 13:45:57,609 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-14 13:45:57,826 - INFO - Session started: 
+2023-12-14 13:51:03,040 - ERROR - Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 32, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 42, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//plugin_market.py", line 28, in process
+    self.data = resp.json()
+                ^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-12-14 13:59:22,150 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-14 13:59:22,151 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/nhWROvDSxZ
+2023-12-14 13:59:22,155 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/nhWROvDSxZ
+2023-12-14 13:59:22,155 - INFO - Connected to Flet app and handling user sessions...
+2023-12-14 13:59:22,155 - INFO - Starting Flet View app...
+2023-12-14 13:59:22,155 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-14 13:59:22,378 - INFO - Session started: 
+2023-12-14 14:01:21,012 - INFO - Started server process [98521]
+2023-12-14 14:01:21,013 - INFO - Waiting for application startup.
+2023-12-14 14:01:21,014 - INFO - Application startup complete.
+2023-12-14 14:01:21,014 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-14 14:01:24,828 - INFO - 127.0.0.1:49686 - "GET /plugins HTTP/1.1" 200
+2023-12-14 14:04:41,122 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-14 14:04:41,123 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/cIdGsOthtj
+2023-12-14 14:04:41,125 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/cIdGsOthtj
+2023-12-14 14:04:41,125 - INFO - Connected to Flet app and handling user sessions...
+2023-12-14 14:04:41,125 - INFO - Starting Flet View app...
+2023-12-14 14:04:41,125 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-14 14:04:41,376 - INFO - Session started: 
+2023-12-14 14:09:52,730 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-14 14:09:52,731 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/EEwIKhqzTR
+2023-12-14 14:09:52,731 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/EEwIKhqzTR
+2023-12-14 14:09:52,731 - INFO - Connected to Flet app and handling user sessions...
+2023-12-14 14:09:52,732 - INFO - Starting Flet View app...
+2023-12-14 14:09:52,732 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-14 14:09:52,964 - INFO - Session started: 
+2023-12-14 15:06:15,155 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-14 15:06:15,156 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/oBpomKMKkb
+2023-12-14 15:06:15,157 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/oBpomKMKkb
+2023-12-14 15:06:15,157 - INFO - Connected to Flet app and handling user sessions...
+2023-12-14 15:06:15,157 - INFO - Starting Flet View app...
+2023-12-14 15:06:15,157 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-14 15:06:15,387 - INFO - Session started: 
+2023-12-14 15:14:12,965 - ERROR - Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 32, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 42, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//plugin_market.py", line 28, in process
+    self.data = resp.json()
+                ^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-12-14 23:05:40,722 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-14 23:05:40,723 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/qZXsjKeYtU
+2023-12-14 23:05:40,725 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/qZXsjKeYtU
+2023-12-14 23:05:40,725 - INFO - Connected to Flet app and handling user sessions...
+2023-12-14 23:05:40,725 - INFO - Starting Flet View app...
+2023-12-14 23:05:40,725 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-14 23:05:40,948 - INFO - Session started: 
+2023-12-14 23:32:23,965 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-14 23:32:23,965 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/lRGeMMGRVe
+2023-12-14 23:32:23,966 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/lRGeMMGRVe
+2023-12-14 23:32:23,966 - INFO - Connected to Flet app and handling user sessions...
+2023-12-14 23:32:23,966 - INFO - Starting Flet View app...
+2023-12-14 23:32:23,966 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-14 23:32:24,192 - INFO - Session started: 
+2023-12-14 23:35:15,254 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-14 23:35:15,255 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/gNVXuazqCy
+2023-12-14 23:35:15,255 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/gNVXuazqCy
+2023-12-14 23:35:15,255 - INFO - Connected to Flet app and handling user sessions...
+2023-12-14 23:35:15,255 - INFO - Starting Flet View app...
+2023-12-14 23:35:15,255 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-14 23:35:15,451 - INFO - Session started: 
+2023-12-14 23:35:55,687 - INFO - Started server process [99795]
+2023-12-14 23:35:55,688 - INFO - Waiting for application startup.
+2023-12-14 23:35:55,689 - INFO - Application startup complete.
+2023-12-14 23:35:55,689 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-14 23:36:05,617 - INFO - 127.0.0.1:52773 - "GET /update HTTP/1.1" 200

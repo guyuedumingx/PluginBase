@@ -2,6 +2,10 @@ from app.plug import *
 
 @Plug.register('签证类型查询')
 class SignType(UIPlugin):
+    """
+    查询所有签证类型
+    """
+    ICON=ft.icons.ASSIGNMENT_IND_OUTLINED
     def process(self, data, **kwargs):
         return Plug.run(plugins=("_pluginUI_with_search",),
                  data=self.DATA,

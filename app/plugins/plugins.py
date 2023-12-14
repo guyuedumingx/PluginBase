@@ -69,14 +69,6 @@ class CleanMarkdownItalic(UIPlugin):
                           padding=20)], expand=1, spacing=20)
 
 
-@Plug.register('测试Table')
-class TestTableUI(UIPlugin):
-    def process(self, data, **kwargs):
-        columns = ["姓名", "编号", "内容的"]
-        rows = [[f"森da啦 {i}", str(i), f"内容 {i}"] for i in range(1000)]
-        return Plug.run(plugins=("_tableUI",), data=rows, columns=columns, **kwargs)
-
-
 @Plug.register('_pandas_show')
 class PandasShow(Plugin):
     """
@@ -91,8 +83,12 @@ class PandasShow(Plugin):
                                **kwargs)
 
 
-@Plug.register('加载XLSX')
+@Plug.register('加载EXCEL')
 class LoadXLSX(UIPlugin):
+    """
+    加载EXCEL的XLSX、XLS、XLSM文件
+    """
+    ICON=ft.icons.GRID_ON_OUTLINED
     def process(self, data, page, container, **kwargs):
         def on_dialog_result(e: ft.FilePickerResultEvent):
             if e != None:
@@ -167,13 +163,6 @@ class Knowledge(UIPlugin):
 
     def process(self, data, **kwargs):
         return Plug.run(plugins=("_search_base",), data="knowledge", **kwargs)
-
-
-@Plug.register('User管理')
-class UserBase(UIPlugin):
-    ICON = ft.icons.MANAGE_ACCOUNTS
-    def process(self, data, **kwargs):
-        return Plug.run(plugins=("_search_base",), data="user", ui_template="_dictUI", **kwargs)
 
 
 @Plug.register('_tableUI4Database')
@@ -256,29 +245,3 @@ class TableUI(UIPlugin):
             expand=1,
         )
         
-
-@Plug.register('test数据库')
-class KeyValueDatabase(UIPlugin):
-    """
-    数据库的查询
-    """
-    ICON = ft.icons.DATA_OBJECT
-
-    def process(self, data, search_feild: ft.TextField, container, db, **kwargs):
-        self.search_feild = search_feild
-        self.container = container
-        self.db = db
-        search_feild.hint_text = "Enter a table name to fine data"
-        search_feild.on_submit = self.search_handler
-        search_feild.on_change = None
-        self.kwargs = kwargs
-        return ft.Text("Search a Database")
-
-    def search_handler(self, e):
-        key_word = self.search_feild.value
-        if (key_word == ''):
-            return
-        table = self.db[key_word]
-        self.container.content = Plug.run(
-            plugins=("_tableUI4Database",), data=table.all(), container=self.container,**self.kwargs)
-        self.container.update()
