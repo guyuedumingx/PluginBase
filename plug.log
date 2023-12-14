@@ -1989,3 +1989,10 @@ requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 2023-12-14 23:46:35,195 - INFO - Application startup complete.
 2023-12-14 23:46:35,196 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
 2023-12-14 23:46:37,986 - INFO - 127.0.0.1:52841 - "GET /plugins HTTP/1.1" 200
+2023-12-14 23:52:31,610 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-14 23:52:31,610 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/MvFCFOAKuo
+2023-12-14 23:52:31,611 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/MvFCFOAKuo
+2023-12-14 23:52:31,611 - INFO - Connected to Flet app and handling user sessions...
+2023-12-14 23:52:31,611 - INFO - Starting Flet View app...
+2023-12-14 23:52:31,611 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-14 23:52:31,833 - INFO - Session started: 

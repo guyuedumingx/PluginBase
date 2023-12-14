@@ -1,6 +1,5 @@
 from app.plug import *
 import json
-import zipfile
 
 @Plug.register('键值对数据库')
 class KeyValueDatabase(UIPlugin):
@@ -46,6 +45,7 @@ class KeyValueDatabase(UIPlugin):
             plugins=("_dictUI",), data=data, mode="edit")
         self.container.update()
 
+
 @Plug.register('数据库查询')
 class KeyValueDatabase(UIPlugin):
     """
@@ -72,23 +72,87 @@ class KeyValueDatabase(UIPlugin):
             plugins=("_tableUI4Database",), data=table.all(), container=self.container,**self.kwargs)
         self.container.update()
 
-@Plug.register("构建更新包")
-class BuildUpdateFile(Plugin):
-    """
-    构建用于更新的软件包app/plugins/build_in
-    """
-    ICON=ft.icons.BUILD_CIRCLE_OUTLINED
-    def process(self, data, **kwargs):
-        # 压缩整个 app 目录
-        build_in_dir = ENV['plugin_dir']+os.path.sep+"build_in"
-        with zipfile.ZipFile(f"assets{os.path.sep}update.zip", "w") as zip_file:
-            for foldername, subfolders, filenames in os.walk(build_in_dir):
-                for filename in filenames:
-                    file_path = os.path.join(foldername, filename)
-                    arcname = os.path.relpath(file_path, build_in_dir)
-                    zip_file.write(file_path, arcname)
-        return "更新包构建成功!!!"
 
+@Plug.register('_tableUI4Database')
+class TableUI(UIPlugin):
+    def process(self, data, page, container, **kwargs):
+        self.container = container
+        self.page = page
+        self.rowsUI = []
+        columns = data.keys
+        for row in data:
+            cellsUI = []
+            for i in range(len(columns)):
+                cellsUI.append(self.build_cell(row[columns[i]]))
+            self.rowsUI.append(ft.DataRow(cells=cellsUI))
+        self.columnsUI = [ft.DataColumn(
+            ft.TextField(value=col, border=ft.InputBorder.NONE)) 
+            for col in columns]
+        self.operators = [ft.Container(
+            ft.Text("加一列"),
+            bgcolor=ft.colors.AMBER_400,
+            on_click=self.add_row,
+            ) for i in range(5)]
+        return self.build()
+    
+    def add_column(self, e):
+        self.columnsUI.append(ft.DataColumn(
+            ft.TextField(
+                value=f"Column{len(self.columnsUI)}",
+                border=ft.InputBorder.NONE)))
+        for row in self.rowsUI:
+            row.cells.append(self.build_cell())
+        self.container.content = self.build()
+        self.container.update()
+    
+    def add_row(self, e):
+        cells = []
+        for i in range(len(self.columnsUI)):
+            cells.append(self.build_cell()) 
+        self.rowsUI.append(ft.DataRow(cells=cells))
+        self.container.content = self.build()
+        self.container.update()
+    
+    def build_cell(self, value=""):
+        return ft.DataCell(
+            ft.TextField(
+                value=value,
+                border=ft.InputBorder.NONE,
+                multiline=True,
+                ),
+            show_edit_icon=True,
+            on_tap=self.to_edit_view,
+        )
+        
+    def to_edit_view(self, e):
+        url = self.page.views[-1].route + "/edit"
+        inner_feild = ft.TextField(value=e.control.content.value, multiline=True, expand=1)
+        self.page.views.append(ft.View(
+                url,
+                [
+                    ft.OutlinedButton(text="Save", on_click=partial(self.edit_save, out_feild=e.control.content,inner_feild=inner_feild)),
+                    ft.ListView([inner_feild], expand=1),
+                ]
+            )
+        )
+        self.page.go(url)
+        self.page.update()
+        
+    def edit_save(self, e, out_feild, inner_feild):
+        out_feild.value = inner_feild.value
+        self.page.views.pop() and self.page.update()
+        
+    def build(self):
+        return ft.ListView([
+            ft.Row(self.operators),
+            ft.DataTable(
+                rows=self.rowsUI,
+                columns=self.columnsUI,
+                expand=1,
+            )],
+            expand=1,
+        )
+        
 
 @Plug.register("Linechart")
 class BaseBarChart(UIPlugin):

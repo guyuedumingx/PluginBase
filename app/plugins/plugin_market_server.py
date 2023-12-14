@@ -55,10 +55,31 @@ class PluginMarketServer(UIPlugin):
         
     @app.get("/update")
     def update():
+        filename = f"assets{os.path.sep}update.zip"
         try:
             # 使用 FileResponse 类，将文件名添加到 Content-Disposition 头部
-            filename = f"assets{os.path.sep}update.zip"
             return FileResponse(filename, headers={"Content-Disposition": f'attachment; filename="{filename}"'})
         except FileNotFoundError:
-            raise HTTPException(status_code=404, detail="File not found")
+            Plug.run(plugins=("构建更新包",))
+            try:
+                return FileResponse(filename, headers={"Content-Disposition": f'attachment; filename="{filename}"'})
+            except:
+                raise HTTPException(status_code=404, detail="File not found")
     
+
+@Plug.register("构建更新包")
+class BuildUpdateFile(Plugin):
+    """
+    构建用于更新的软件包app/plugins/build_in
+    """
+    ICON=ft.icons.BUILD_CIRCLE_OUTLINED
+    def process(self, data, **kwargs):
+        # 压缩整个 app 目录
+        build_in_dir = ENV['plugin_dir']+os.path.sep+"build_in"
+        with zipfile.ZipFile(f"assets{os.path.sep}update.zip", "w") as zip_file:
+            for foldername, subfolders, filenames in os.walk(build_in_dir):
+                for filename in filenames:
+                    file_path = os.path.join(foldername, filename)
+                    arcname = os.path.relpath(file_path, build_in_dir)
+                    zip_file.write(file_path, arcname)
+        return "更新包构建成功!!!"
