@@ -26,7 +26,7 @@ class PluginMarket(UIPlugin):
     """
     ICON = ft.icons.EXTENSION_OUTLINED
     def process(self, data, db, page, search_feild, container,
-                server_addr="127.0.0.1", server_port=36909, **kwargs):
+                server_addr=ENV['server_addr'], server_port=ENV['server_port'], **kwargs):
         self.url_prefix = f"http://{server_addr}:{server_port}"
         resp = requests.get(f"{self.url_prefix}/plugins")
         self.data = resp.json()
@@ -97,7 +97,7 @@ class FastApiServer(Plugin):
     def __init__(self):
         self.is_running = True
 
-    def process(self, data, container, page, port=36909, **kwargs):
+    def process(self, data, container, page, port=ENV['server_port'], **kwargs):
         self.host = "0.0.0.0"
         self.port = port
         self.container = container 

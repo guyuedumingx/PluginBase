@@ -75,7 +75,7 @@ class BuildUpdateFile(Plugin):
     ICON=ft.icons.BUILD_CIRCLE_OUTLINED
     def process(self, data, **kwargs):
         # 压缩整个 app 目录
-        build_in_dir = ENV['plugin_dir']+os.path.sep+"build_in"
+        build_in_dir = ENV['update_dir']
         with zipfile.ZipFile(f"assets{os.path.sep}update.zip", "w") as zip_file:
             for foldername, subfolders, filenames in os.walk(build_in_dir):
                 for filename in filenames:

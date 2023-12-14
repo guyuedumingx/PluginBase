@@ -110,8 +110,8 @@ class UpdatePlugin(Plugin):
     """
     将软件更新到最新版本
     """
-    ICON=ft.icons.UPGRADE_OUTLINED
-    def process(self, data, page, server_addr="127.0.0.1", server_port=36909, **kwargs):
+    ICON=ft.icons.ARROW_CIRCLE_UP_ROUNDED
+    def process(self, data, page, server_addr=ENV['server_addr'], server_port=ENV['server_port'], **kwargs):
         self.url = f"http://{server_addr}:{server_port}/update"
         self.page = page
         resp = requests.get(self.url)
@@ -126,5 +126,5 @@ class UpdatePlugin(Plugin):
                 f.write(resp.content)
             # 解压缩到 app 目录
             with open(filename, "rb") as zip_file:
-                shutil.unpack_archive(zip_file.name, ENV['plugin_dir']+os.path.sep+"build_in", format="zip") 
+                shutil.unpack_archive(zip_file.name, ENV['update_dir'], format="zip") 
         return "更新完成"

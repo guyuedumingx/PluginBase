@@ -21,8 +21,10 @@ root_logger.addHandler(console_handler)
 curdir = os.curdir
 plugin_dir = os.sep.join([curdir, "app", "plugins"])
 ENV['plugin_dir'] = os.path.abspath(plugin_dir)
-ENV['update_dir'] = os.path.abspath(os.sep.join([curdir, "app"]))
+ENV['update_dir'] = os.path.abspath(os.sep.join([curdir, "app", "plugins", "build_in"]))
 ENV['app_dir'] = os.path.abspath(curdir)
+ENV['server_addr'] = "127.0.0.1"
+ENV['server_port'] = 36909
 ENV['db_name'] = "plug.db"
 
 # https://dataset.readthedocs.io/en/latest/
