@@ -39,6 +39,7 @@ class InstallPlugin(UIPlugin):
             alignment=ft.alignment.center
         )
 
+
 @Plug.register('环境信息')
 class ENVInformation(UIPlugin):
     """
@@ -53,12 +54,17 @@ class ENVInformation(UIPlugin):
                  key_icon=ft.icons.FIBER_MANUAL_RECORD_OUTLINED,
                  **kwargs) 
 
+
 @Plug.register('_back')
 class Back(Plugin):
-    def process(self, data, page, **kwargs):
-        if(len(page.views) > 1):
-            page.views.pop() and page.update()
-            return super().process(data, page=page, **kwargs)
+    def process(self, data, page, plugin_name, **kwargs):
+        if(len(page.views) == 1):
+            return
+        if(len(page.views) == 2):
+            Plug.get_plugin(plugin_name).on_exit(page=page, data=data, plugin_name=plugin_name, **kwargs)
+        page.views.pop() and page.update()
+        return super().process(data, page=page, **kwargs)
+
 
 @Plug.register('重新加载')
 class PreLoadPlugin(Plugin):
@@ -69,7 +75,7 @@ class PreLoadPlugin(Plugin):
     ICON=ft.icons.REFRESH
     def process(self, data, **kwargs):
         return Plug.run(plugins=("_preload_plugin",),data=ENV['plugin_dir'])
-    
+
 
 @Plug.register('_load_plugin')
 class BasePluginView(UIPlugin):
@@ -94,6 +100,16 @@ class BasePluginView(UIPlugin):
             data=plugin_name
             )
 
+        self.plugin.on_load(
+            page=page,
+            plugin_name=plugin_name,
+            search_feild=search_feild,
+            container=self.container,
+            tips_btn=tips_btn,
+            back_btn = back_btn,
+            data=plugin_name
+            )
+
         # 如果这不是一个带UI的插件，直接把结果用_notice显示出来
         if(not isinstance(plugin, UIPlugin)):
             func(plugins=(plugin_name,"_notice"))
@@ -107,7 +123,7 @@ class BasePluginView(UIPlugin):
                     ft.ResponsiveRow([search_feild, back_btn]),
                     tips_btn,
                     self.container
-                ]
+                ],
             )
         )
         page.go("/"+plugin_name)
@@ -116,6 +132,7 @@ class BasePluginView(UIPlugin):
         search_feild.focus()
         page.update()
         return plugin_name
+
 
 @Plug.register("软件更新")
 class UpdatePlugin(Plugin):

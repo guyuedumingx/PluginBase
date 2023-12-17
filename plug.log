@@ -2783,3 +2783,370 @@ requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 2023-12-17 23:20:44,409 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
 2023-12-17 23:20:46,134 - INFO - Shutting down
 2023-12-17 23:20:46,236 - INFO - Waiting for application shutdown.
+2023-12-17 23:57:48,893 - ERROR - keyword argument repeated: page (_base.py, line 104)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 35, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 47, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 187, in process
+    self._load("", path=data)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 196, in _load
+    self._load(item, full_path)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 196, in _load
+    self._load(item, full_path)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 200, in _load
+    loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 605, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 1120, in load_module
+  File "<frozen importlib._bootstrap_external>", line 945, in load_module
+  File "<frozen importlib._bootstrap>", line 290, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 721, in _load
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_base.py", line 104
+    page=page,
+    ^^^^^^^^^
+SyntaxError: keyword argument repeated: page
+2023-12-17 23:57:48,894 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 23:57:48,894 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/oCojLTfeTa
+2023-12-17 23:57:48,894 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/oCojLTfeTa
+2023-12-17 23:57:48,894 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 23:57:48,894 - INFO - Starting Flet View app...
+2023-12-17 23:57:48,894 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 23:57:49,156 - INFO - Session started: 
+2023-12-17 23:57:49,157 - ERROR - '_index'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 34, in run
+    plugin = icls.PLUGINS[plugin_name]
+             ~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: '_index'
+2023-12-17 23:58:04,059 - ERROR - keyword argument repeated: page (_base.py, line 104)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 35, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 47, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 187, in process
+    self._load("", path=data)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 196, in _load
+    self._load(item, full_path)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 196, in _load
+    self._load(item, full_path)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 200, in _load
+    loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 605, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 1120, in load_module
+  File "<frozen importlib._bootstrap_external>", line 945, in load_module
+  File "<frozen importlib._bootstrap>", line 290, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 721, in _load
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_base.py", line 104
+    page=page,
+    ^^^^^^^^^
+SyntaxError: keyword argument repeated: page
+2023-12-17 23:58:04,059 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 23:58:04,060 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/jILLeyaCAq
+2023-12-17 23:58:04,060 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/jILLeyaCAq
+2023-12-17 23:58:04,060 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 23:58:04,060 - INFO - Starting Flet View app...
+2023-12-17 23:58:04,060 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 23:58:04,319 - INFO - Session started: 
+2023-12-17 23:58:04,319 - ERROR - '_index'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 34, in run
+    plugin = icls.PLUGINS[plugin_name]
+             ~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: '_index'
+2023-12-17 23:59:32,681 - ERROR - keyword argument repeated: page (_base.py, line 104)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 35, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 47, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 187, in process
+    self._load("", path=data)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 196, in _load
+    self._load(item, full_path)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 196, in _load
+    self._load(item, full_path)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 200, in _load
+    loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 605, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 1120, in load_module
+  File "<frozen importlib._bootstrap_external>", line 945, in load_module
+  File "<frozen importlib._bootstrap>", line 290, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 721, in _load
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_base.py", line 104
+    page=page,
+    ^^^^^^^^^
+SyntaxError: keyword argument repeated: page
+2023-12-17 23:59:32,683 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 23:59:32,684 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/pILTBjZBlB
+2023-12-17 23:59:32,685 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/pILTBjZBlB
+2023-12-17 23:59:32,686 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 23:59:32,686 - INFO - Starting Flet View app...
+2023-12-17 23:59:32,686 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 23:59:32,941 - INFO - Session started: 
+2023-12-17 23:59:32,941 - ERROR - '_index'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 34, in run
+    plugin = icls.PLUGINS[plugin_name]
+             ~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: '_index'
+2023-12-18 00:01:31,284 - ERROR - keyword argument repeated: page (_base.py, line 104)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 35, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 47, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 187, in process
+    self._load("", path=data)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 196, in _load
+    self._load(item, full_path)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 196, in _load
+    self._load(item, full_path)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 200, in _load
+    loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 605, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 1120, in load_module
+  File "<frozen importlib._bootstrap_external>", line 945, in load_module
+  File "<frozen importlib._bootstrap>", line 290, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 721, in _load
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_base.py", line 104
+    page=page,
+    ^^^^^^^^^
+SyntaxError: keyword argument repeated: page
+2023-12-18 00:01:31,286 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 00:01:31,287 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/LRWAuWERCf
+2023-12-18 00:01:31,288 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/LRWAuWERCf
+2023-12-18 00:01:31,288 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 00:01:31,288 - INFO - Starting Flet View app...
+2023-12-18 00:01:31,289 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 00:01:31,523 - INFO - Session started: 
+2023-12-18 00:04:41,227 - ERROR - keyword argument repeated: page (_base.py, line 104)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 35, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 47, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 187, in process
+    self._load("", path=data)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 196, in _load
+    self._load(item, full_path)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 196, in _load
+    self._load(item, full_path)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 200, in _load
+    loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 605, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 1120, in load_module
+  File "<frozen importlib._bootstrap_external>", line 945, in load_module
+  File "<frozen importlib._bootstrap>", line 290, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 721, in _load
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_base.py", line 104
+    page=page,
+    ^^^^^^^^^
+SyntaxError: keyword argument repeated: page
+2023-12-18 00:04:41,228 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 00:04:41,228 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/JnGNmdFjyv
+2023-12-18 00:04:41,228 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/JnGNmdFjyv
+2023-12-18 00:04:41,229 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 00:04:41,229 - INFO - Starting Flet View app...
+2023-12-18 00:04:41,229 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 00:04:41,451 - INFO - Session started: 
+2023-12-18 00:04:41,452 - ERROR - '_index'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 34, in run
+    plugin = icls.PLUGINS[plugin_name]
+             ~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: '_index'
+2023-12-18 00:05:38,689 - ERROR - keyword argument repeated: page (_base.py, line 104)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 35, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 47, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 187, in process
+    self._load("", path=data)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 196, in _load
+    self._load(item, full_path)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 196, in _load
+    self._load(item, full_path)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 201, in _load
+    loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 605, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 1120, in load_module
+  File "<frozen importlib._bootstrap_external>", line 945, in load_module
+  File "<frozen importlib._bootstrap>", line 290, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 721, in _load
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_base.py", line 104
+    page=page,
+    ^^^^^^^^^
+SyntaxError: keyword argument repeated: page
+2023-12-18 00:05:38,690 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 00:05:38,691 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/KIYQrarhgF
+2023-12-18 00:05:38,691 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/KIYQrarhgF
+2023-12-18 00:05:38,691 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 00:05:38,691 - INFO - Starting Flet View app...
+2023-12-18 00:05:38,691 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 00:05:38,901 - INFO - Session started: 
+2023-12-18 00:05:38,901 - ERROR - '_index'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 34, in run
+    plugin = icls.PLUGINS[plugin_name]
+             ~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: '_index'
+2023-12-18 00:08:03,860 - ERROR - keyword argument repeated: page (_base.py, line 104)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 36, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 48, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 188, in process
+    self._load("", path=data)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 197, in _load
+    self._load(item, full_path)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 197, in _load
+    self._load(item, full_path)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 201, in _load
+    loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 605, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 1120, in load_module
+  File "<frozen importlib._bootstrap_external>", line 945, in load_module
+  File "<frozen importlib._bootstrap>", line 290, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 721, in _load
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_base.py", line 104
+    page=page,
+    ^^^^^^^^^
+SyntaxError: keyword argument repeated: page
+2023-12-18 00:08:03,861 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 00:08:03,861 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/AAPTTBSlvR
+2023-12-18 00:08:03,861 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/AAPTTBSlvR
+2023-12-18 00:08:03,861 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 00:08:03,861 - INFO - Starting Flet View app...
+2023-12-18 00:08:03,861 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 00:08:04,080 - INFO - Session started: 
+2023-12-18 00:08:04,080 - ERROR - '_index'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 34, in run
+    plugin = icls.PLUGINS[plugin_name]
+             ~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: '_index'
+2023-12-18 00:08:57,749 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 00:08:57,749 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/IApIGHKLeo
+2023-12-18 00:08:57,749 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/IApIGHKLeo
+2023-12-18 00:08:57,749 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 00:08:57,749 - INFO - Starting Flet View app...
+2023-12-18 00:08:57,749 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 00:08:58,023 - INFO - Session started: 
+2023-12-18 00:10:13,222 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 00:10:13,222 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/uzKmcyxmmk
+2023-12-18 00:10:13,223 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/uzKmcyxmmk
+2023-12-18 00:10:13,223 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 00:10:13,223 - INFO - Starting Flet View app...
+2023-12-18 00:10:13,223 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 00:10:13,437 - INFO - Session started: 
+2023-12-18 00:16:32,823 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 00:16:32,824 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/WxQHoJCWzH
+2023-12-18 00:16:32,824 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/WxQHoJCWzH
+2023-12-18 00:16:32,824 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 00:16:32,824 - INFO - Starting Flet View app...
+2023-12-18 00:16:32,825 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 00:16:33,077 - INFO - Session started: 
+2023-12-18 00:18:26,751 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 00:18:26,751 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/PRurCDZbZs
+2023-12-18 00:18:26,752 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/PRurCDZbZs
+2023-12-18 00:18:26,752 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 00:18:26,752 - INFO - Starting Flet View app...
+2023-12-18 00:18:26,752 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 00:18:26,970 - INFO - Session started: 
+2023-12-18 00:22:46,479 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 00:22:46,480 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/NmgXblOwgn
+2023-12-18 00:22:46,480 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/NmgXblOwgn
+2023-12-18 00:22:46,480 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 00:22:46,480 - INFO - Starting Flet View app...
+2023-12-18 00:22:46,481 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 00:22:46,708 - INFO - Session started: 
+2023-12-18 00:23:54,557 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 00:23:54,557 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/RhfUGZkoIk
+2023-12-18 00:23:54,557 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/RhfUGZkoIk
+2023-12-18 00:23:54,557 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 00:23:54,557 - INFO - Starting Flet View app...
+2023-12-18 00:23:54,558 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 00:23:54,787 - INFO - Session started: 
+2023-12-18 00:23:59,542 - ERROR - Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 35, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 47, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_plugin_market.py", line 32, in process
+    self.data = resp.json()
+                ^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)

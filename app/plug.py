@@ -18,8 +18,9 @@ ENV = {
 class Plug(object):
     """
     插件管理器
-    PLUGINS: plugin list
-    ENV: a global environment
+    PLUGINS: plugin list 全局的所有插件都会被统一注册到这里进行管理{plugin_name: plugin()}
+    ENVS: 环境堆栈，每一次到用run函数都会生成一个新栈帧，存储调用过程除data外的所有参数
+    context: 统一上下文，用于植入全局对象到plugins的执行过程中
     """
     PLUGINS = {}
     context = {}
@@ -45,6 +46,11 @@ class Plug(object):
         """
         return plugin.process(data, **kwargs)
 
+    """
+    插件注册入口装饰器，当某个对象使用该装饰器时，表示该对象是一个插件，其中传入的参数表示
+    注册的全局插件名，如果该插件名存在于当前环境中，则对比环境中的插件版本号和需要注册的插件
+    版本号，只有版本号>=当前环境中该插件的版本号才会被重新导入
+    """
     @classmethod
     def register(cls, plugin_name):
         def wrapper(plugin):
@@ -63,22 +69,31 @@ class Plug(object):
         # 实际的版本号比较可能会更加复杂，这里简化为字符串比较
         return int(version1.replace('.', '')) - int(version2.replace('.', ''))
     
+    """
+    注册构建函数，主要用于构建插件注册后续需要使用的关键字列表
+    支持首字母，全拼音，原单词匹配插件
+    """
     @classmethod
     def _build(cls, plugin_name: str, plugin):
         first_letters = "".join(pypinyin.lazy_pinyin(plugin_name, pypinyin.Style.FIRST_LETTER)).lower()
         full_pinyin = "".join(pypinyin.lazy_pinyin(plugin_name)).lower()
         matchs=[plugin_name.lower(), first_letters, full_pinyin]
         plugin.MATCHS = list(set([*matchs, *plugin.MATCHS]))
+        plugin.NAME = plugin_name
         try:
             plugin.SOURCEFILE = inspect.getsourcefile(plugin)
             plugin.SOURCE = inspect.getsourcelines(plugin)[0]
+            plugin.HAS_SOURCE = True
             desc = inspect.getdoc(plugin)
         except:
             plugin.SOURCEFILE = ""
             plugin.SOURCE = ""
+            plugin.HAS_SOURCE = False
             desc = ENV['initial_plugin_subtitle']
         plugin.DESC = ENV['initial_plugin_subtitle'] if desc == None else desc
-        cls.PLUGINS.update({plugin_name:plugin()})
+        plugin_obj = plugin()
+        plugin_obj.on_register(**cls.context)
+        cls.PLUGINS.update({plugin_name: plugin_obj})
     
     @classmethod
     def set_state(cls, **kwargs):
@@ -114,8 +129,42 @@ class Plugin(object):
     VERSION = "1.0.0"
     AUTHORITY = "ALL"
     MATCHS = []
+
     def process(self, data, **kwargs):
         return data
+    
+    """
+    #TODO
+    only run when a plugin be installed
+    """
+    def on_install(self, **kwargs):
+        pass
+    
+    """
+    #TODO
+    only run when a plugin be uninstalled
+    """
+    def on_uninstall(self, **kwargs):
+        pass
+    
+    """
+    only run when a plugin be register
+    """
+    def on_register(self, **kwargs):
+        pass
+    
+    """
+    only run when a plugin be load
+    """
+    def on_load(self, **kwargs):
+        pass
+    
+    """
+    only run when a plugin be exit
+    """
+    def on_exit(self, **kwargs):
+        pass
+
 
 class UIPlugin(Plugin, ft.UserControl):
     """
@@ -132,13 +181,19 @@ class PreLoadPlugin(Plugin):
     """
     Load all modules
     加载插件库中的所有插件
+    file: 指定加载的文件
+    data: 路径，不包含文件名
     """
-    def process(self, data, **kwargs):
+    def process(self, data, file="", **kwargs):
         if not os.path.exists(data):
             os.makedirs(data)
-        self._load("", path=data)
+        self._load(file, path=data)
         return f"LOAD COMPLETE!!!"
     
+    """
+    f: 文件名
+    path: 路径不包含文件名
+    """
     def _load(self, f, path):
         full_path = path+os.sep+f
         if os.path.isdir(full_path):

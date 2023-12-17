@@ -3,7 +3,7 @@ from app.plug import *
 @Plug.register("_plugin_baseUI")
 class PluginBaseUI(Plugin):
     """
-    插件的详情界面
+    插件界面
     """
     def process(self, plugin_name, page, search_onchange=None, **kwargs):
         self.page = page
@@ -13,7 +13,7 @@ class PluginBaseUI(Plugin):
             col={"xs": 2, "sm": 1, "md": 1, "xl": 1},
             alignment=ft.alignment.center,
             height=60,
-            on_click=lambda _: Plug.run(plugins=("_back",), page=page)
+            on_click=lambda _: Plug.run(plugins=("_back",), page=page, plugin_name=plugin_name, **kwargs)
         )
         search_feild = ft.TextField(
             hint_text=plugin_name,
@@ -56,7 +56,7 @@ class TipsViewWithBackButton(UIPlugin):
             opacity=0.5,
             bgcolor=ft.colors.WHITE,
             shape=ft.CircleBorder(),
-            on_click=lambda _: Plug.run(plugins=("_back",), page=page)
+            on_click=lambda _: Plug.run(plugins=("_back",), page=page, plugin_name=data)
             )
         url = page.views[-1].route + "/tips"
         page.views.append(ft.View(
