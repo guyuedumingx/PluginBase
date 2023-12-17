@@ -33,7 +33,7 @@ class Ccurrency(UIPlugin):
 
     def tips(self, e, idx=0):
         if idx != 0:
-            Plug.run(plugins=("_notice",), data=self.INFO[idx], page=self.page)
+            Plug.run(plugins=("_notice",), data=self.INFO[idx].strip(), page=self.page)
 
     def cncurrency(self, value, prefix=False):
         if not isinstance(value, (Decimal, str, int)):
@@ -143,6 +143,6 @@ class Ccurrency(UIPlugin):
         （四）阿拉伯金额数字角位是“0”，而分位不是“0”时，中文大写金额“元”后面应写“零”字。如￥16，409.02，应写成人民币壹万陆仟肆佰零玖元零贰分；又如￥325.04，应写成人民币叁佰贰拾伍元零肆分。
         """,
         """
-二、中文大写金额数字到“元”为止的，在“元”之后，应写“整”（或“正”）字，在“角”之后可以不写“整”（或“正”）字。大写金额数字有“分”的，“分”后面不写“整”（或“正”）字。
+        二、中文大写金额数字到“元”为止的，在“元”之后，应写“整”（或“正”）字，在“角”之后可以不写“整”（或“正”）字。大写金额数字有“分”的，“分”后面不写“整”（或“正”）字。
         """
     ]

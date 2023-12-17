@@ -80,10 +80,10 @@ class BasePluginView(UIPlugin):
     """
     def process(self, plugin_name, page, **kwargs):
         self.plugin_name = plugin_name
-        self.plugin = Plug.getPlugin(plugin_name)
+        self.plugin = Plug.get_plugin(plugin_name)
         self.page = page
         back_btn, search_feild, self.container, tips_btn = Plug.run(plugins=("_plugin_baseUI",),page=page,data=plugin_name)
-        plugin = Plug.getPlugin(plugin_name)
+        plugin = Plug.get_plugin(plugin_name)
         func = partial(
             Plug.run,
             search_feild=search_feild,

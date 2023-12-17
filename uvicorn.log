@@ -134,3 +134,9 @@ Application startup complete.
 Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
 127.0.0.1:58766 - "GET /plugins HTTP/1.1" 200
 127.0.0.1:58768 - "GET /plugins HTTP/1.1" 200
+Started server process [11896]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+Shutting down
+Waiting for application shutdown.

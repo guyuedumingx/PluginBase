@@ -30,7 +30,7 @@ ENV['db_name'] = "plug.db"
 # https://dataset.readthedocs.io/en/latest/
 url = "///".join(["sqlite:", ENV['db_name']])
 db = dataset.connect(url)
-Plug.setState(db=db)
+Plug.set_state(db=db)
 
 Plug.run(plugins=("_preload_plugin",), data=ENV['plugin_dir'])
 

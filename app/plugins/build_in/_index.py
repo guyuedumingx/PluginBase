@@ -57,7 +57,7 @@ class MainShowBackground(UIPlugin):
     def process(self, data, **kwargs):
         return Plug.run(plugins=("_plugin_search_stream",),
                                data=data,
-                               plugin_onclick=Plug.getPlugin("_index").load_plugin)
+                               plugin_onclick=Plug.get_plugin("_index").load_plugin)
 
 
 @Plug.register('_defaultbackground')

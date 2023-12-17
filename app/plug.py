@@ -23,13 +23,16 @@ class Plug(object):
     """
     PLUGINS = {}
     context = {}
+    ENVS = []
 
     @classmethod
     def run(icls, plugins: tuple, data="", **kwargs):
         try:
+            icls.ENVS.append(kwargs)
             for plugin_name in plugins:
                 plugin = icls.PLUGINS[plugin_name]
-                data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+                data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+            icls.ENVS.pop()
             return data
         except Exception as e:
             print(e)
@@ -78,22 +81,32 @@ class Plug(object):
         cls.PLUGINS.update({plugin_name:plugin()})
     
     @classmethod
-    def setState(cls, **kwargs):
+    def set_state(cls, **kwargs):
         cls.context = {**cls.context, **kwargs}
 
     @classmethod
-    def getState(cls, name):
+    def get_state(cls, name):
         return cls.context[name]
         
     @classmethod
-    def getPlugin(cls, plugin_name):
+    def get_plugin(cls, plugin_name):
         return cls.PLUGINS[plugin_name]
     
+    """
+    每次调用Plug.run都会使得ENVS产生新的环境栈帧，如果需要在同一次run的不同plugins
+    之间传递额外的参数，则可以使用add_args函数把需要传递的参数植入ENVS中，后续的plugins
+    执行过程会得到该参数
+    """
     @classmethod
-    def getPluginDetail(cls, plugin_name):
-        db = cls.getState('db')
+    def add_args(cls, args:dict):
+        cls.ENVS[-1].update(args)
+    
+    @classmethod
+    def get_plugin_detail(cls, plugin_name):
+        db = cls.get_state('db')
         table = db.get_table('plugins', primary_id='name')
         return table.find_one(plugin_name)
+
 
 class Plugin(object):
     ICON = ft.icons.SETTINGS

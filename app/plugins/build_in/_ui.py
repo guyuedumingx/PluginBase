@@ -7,7 +7,7 @@ class PluginBaseUI(Plugin):
     """
     def process(self, plugin_name, page, search_onchange=None, **kwargs):
         self.page = page
-        plugin = Plug.getPlugin(plugin_name)
+        plugin = Plug.get_plugin(plugin_name)
         back_btn = ft.Container(
             ft.Icon(name=ft.icons.ARROW_BACK),
             col={"xs": 2, "sm": 1, "md": 1, "xl": 1},
@@ -41,7 +41,7 @@ class PluginBaseUI(Plugin):
     
     def search_feild_onchange(self, e):
         self.page.views.pop() and self.page.update()
-        Plug.getPlugin("_index").search_func(e)
+        Plug.get_plugin("_index").search_func(e)
 
 
 @Plug.register("_tips_backbtn")
