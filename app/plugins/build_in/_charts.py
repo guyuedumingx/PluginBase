@@ -91,4 +91,4 @@ class BaseLineChart(UIPlugin):
             bottom_axis=ft.ChartAxis(labels=labels),
             expand=True
         )
-            
+        

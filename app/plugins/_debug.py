@@ -89,7 +89,7 @@ class TableUI(UIPlugin):
             ft.TextField(value=col, border=ft.InputBorder.NONE)) 
             for col in columns]
         self.operators = [ft.Container(
-            ft.Text("加一列"),
+            ft.Text("各种操作按钮"),
             bgcolor=ft.colors.AMBER_400,
             on_click=self.add_row,
             ) for i in range(5)]

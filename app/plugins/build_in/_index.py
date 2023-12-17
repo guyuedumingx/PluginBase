@@ -123,8 +123,28 @@ class IndexPlugin(UIPlugin):
             self.container
         )
         self.search_feild.focus()
+        self.page.on_keyboard_event = self.keyboard_event
         self.page.update()
         return page
+    
+    def keyboard_event(self, e:ft.KeyboardEvent):
+        pass
+        # keys = set(e.key.lower())
+        # if e.shift:         # shift
+        #     keys.add("shift") 
+        # if e.meta:          # command
+        #     keys.add("meta")        
+        # if e.ctrl:          # control
+        #     keys.add("ctrl")
+        # if e.alt:           # alt/option
+        #     keys.add("alt")
+        # plugin = dict(filter(lambda x: set(x[0].lower().split("+")) == keys, Plug.KEYBOARDS.items()))
+        # if plugin != {}:
+        #     self.search_feild.value = ""
+        #     self.search_feild.update()
+        #     Plug.run(plugins=("_load_plugin",),
+        #             data=list(plugin.values())[0], page=self.page)
+
 
     def load_plugin(self, e):
         plugin_name = e.control.title.value

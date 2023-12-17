@@ -8,12 +8,12 @@ class PluginBaseUI(Plugin):
     def process(self, plugin_name, page, search_onchange=None, **kwargs):
         self.page = page
         plugin = Plug.getPlugin(plugin_name)
-        home_btn = ft.Container(
-            ft.Icon(name=ft.icons.HOME),
+        back_btn = ft.Container(
+            ft.Icon(name=ft.icons.ARROW_BACK),
             col={"xs": 2, "sm": 1, "md": 1, "xl": 1},
             alignment=ft.alignment.center,
             height=60,
-            on_click=lambda _: page.views.pop() and page.update()
+            on_click=lambda _: Plug.run(plugins=("_back",), page=page)
         )
         search_feild = ft.TextField(
             hint_text=plugin_name,
@@ -37,7 +37,7 @@ class PluginBaseUI(Plugin):
                     )
                 )
         container = Plug.run(plugins=("_defaultbackground",))
-        return (home_btn, search_feild, container, tips_btn)
+        return (back_btn, search_feild, container, tips_btn)
     
     def search_feild_onchange(self, e):
         self.page.views.pop() and self.page.update()
@@ -56,7 +56,7 @@ class TipsViewWithBackButton(UIPlugin):
             opacity=0.5,
             bgcolor=ft.colors.WHITE,
             shape=ft.CircleBorder(),
-            on_click=lambda _: page.views.pop() and page.update()
+            on_click=lambda _: Plug.run(plugins=("_back",), page=page)
             )
         url = page.views[-1].route + "/tips"
         page.views.append(ft.View(
@@ -301,8 +301,15 @@ class SearchBase(UIPlugin):
 
     def ui(self, key: str):
         data = {}
-        key = key.lower()
+        try:
+            key = key.lower()
+        except:
+            pass
         for k,v in self.data.items():
-            if key in k.lower() or key in v.lower():
-                data[k] = v
+            try:
+                if key in k.lower() or key in v.lower():
+                    data[k] = v
+            except:
+                if key in str(k) or key in str(v):
+                    data[k] = v
         return Plug.run(plugins=(self.ui_template,), data=data, **self.kwargs)

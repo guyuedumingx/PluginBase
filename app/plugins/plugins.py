@@ -8,7 +8,7 @@ class LoadXLSX(UIPlugin):
     """
     加载EXCEL的XLSX、XLS、XLSM文件
     """
-    ICON=ft.icons.GRID_ON_OUTLINED
+    ICON=ft.icons.GRID_4X4_OUTLINED
     def process(self, data, page, container, **kwargs):
         def on_dialog_result(e: ft.FilePickerResultEvent):
             if e != None:

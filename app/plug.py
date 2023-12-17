@@ -32,6 +32,7 @@ class Plug(object):
                 data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
             return data
         except Exception as e:
+            print(e)
             logging.error(e, exc_info=True)
     
     @classmethod
@@ -48,9 +49,9 @@ class Plug(object):
                 current_version = cls.PLUGINS[plugin_name].VERSION
                 new_version = plugin.VERSION
                 if cls.compare_versions(new_version, current_version) >= 0:
-                    cls.PLUGINS.update({plugin_name:cls._build(plugin_name, plugin)})
+                    cls._build(plugin_name, plugin)
             else:
-                    cls.PLUGINS.update({plugin_name:cls._build(plugin_name, plugin)})
+                    cls._build(plugin_name, plugin)
             return plugin
         return wrapper
     
@@ -74,7 +75,7 @@ class Plug(object):
             plugin.SOURCE = ""
             desc = ENV['initial_plugin_subtitle']
         plugin.DESC = ENV['initial_plugin_subtitle'] if desc == None else desc
-        return plugin()
+        cls.PLUGINS.update({plugin_name:plugin()})
     
     @classmethod
     def setState(cls, **kwargs):

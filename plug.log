@@ -2088,3 +2088,634 @@ RuntimeError: File at path assets/update.zip does not exist.
 2023-12-15 00:12:31,348 - INFO - Starting Flet View app...
 2023-12-15 00:12:31,349 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
 2023-12-15 00:12:31,534 - INFO - Session started: 
+2023-12-15 08:38:21,907 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-15 08:38:21,908 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/VOEYxBDiiY
+2023-12-15 08:38:21,908 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/VOEYxBDiiY
+2023-12-15 08:38:21,908 - INFO - Connected to Flet app and handling user sessions...
+2023-12-15 08:38:21,908 - INFO - Starting Flet View app...
+2023-12-15 08:38:21,908 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-15 08:38:22,161 - INFO - Session started: 
+2023-12-15 09:01:48,492 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-15 09:01:48,493 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/KlgfeXQDpv
+2023-12-15 09:01:48,493 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/KlgfeXQDpv
+2023-12-15 09:01:48,493 - INFO - Connected to Flet app and handling user sessions...
+2023-12-15 09:01:48,493 - INFO - Starting Flet View app...
+2023-12-15 09:01:48,494 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-15 09:01:48,766 - INFO - Session started: 
+2023-12-15 09:02:28,934 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-15 09:02:28,936 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/YOvYExFWwM
+2023-12-15 09:02:28,936 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/YOvYExFWwM
+2023-12-15 09:02:28,936 - INFO - Connected to Flet app and handling user sessions...
+2023-12-15 09:02:28,936 - INFO - Starting Flet View app...
+2023-12-15 09:02:28,937 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-15 09:02:29,154 - INFO - Session started: 
+2023-12-15 09:20:06,713 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-15 09:20:06,714 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/FhjflJiwKS
+2023-12-15 09:20:06,715 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/FhjflJiwKS
+2023-12-15 09:20:06,715 - INFO - Connected to Flet app and handling user sessions...
+2023-12-15 09:20:06,715 - INFO - Starting Flet View app...
+2023-12-15 09:20:06,715 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-15 09:20:06,934 - INFO - Session started: 
+2023-12-16 21:11:59,468 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-16 21:11:59,469 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/UMEZpAiEiK
+2023-12-16 21:11:59,469 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/UMEZpAiEiK
+2023-12-16 21:11:59,469 - INFO - Connected to Flet app and handling user sessions...
+2023-12-16 21:11:59,469 - INFO - Starting Flet View app...
+2023-12-16 21:11:59,469 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-16 21:11:59,759 - INFO - Session started: 
+2023-12-16 22:14:14,222 - INFO - Started server process [6362]
+2023-12-16 22:14:14,223 - INFO - Waiting for application startup.
+2023-12-16 22:14:14,224 - INFO - Application startup complete.
+2023-12-16 22:14:14,224 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-16 22:14:19,064 - INFO - Shutting down
+2023-12-16 22:14:19,166 - INFO - Waiting for application shutdown.
+2023-12-16 22:22:51,621 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-16 22:22:51,622 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/CvvfsxUAxE
+2023-12-16 22:22:51,622 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/CvvfsxUAxE
+2023-12-16 22:22:51,622 - INFO - Connected to Flet app and handling user sessions...
+2023-12-16 22:22:51,622 - INFO - Starting Flet View app...
+2023-12-16 22:22:51,622 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-16 22:22:51,867 - INFO - Session started: 
+2023-12-16 22:24:31,490 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-16 22:24:31,491 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/xiNAyAmLwV
+2023-12-16 22:24:31,492 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/xiNAyAmLwV
+2023-12-16 22:24:31,492 - INFO - Connected to Flet app and handling user sessions...
+2023-12-16 22:24:31,492 - INFO - Starting Flet View app...
+2023-12-16 22:24:31,492 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-16 22:24:31,714 - INFO - Session started: 
+2023-12-16 22:25:10,215 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-16 22:25:10,216 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/QKbylROGPb
+2023-12-16 22:25:10,216 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/QKbylROGPb
+2023-12-16 22:25:10,216 - INFO - Connected to Flet app and handling user sessions...
+2023-12-16 22:25:10,216 - INFO - Starting Flet View app...
+2023-12-16 22:25:10,217 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-16 22:25:10,448 - INFO - Session started: 
+2023-12-16 22:26:19,815 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-16 22:26:19,816 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/ySvIOYrSTz
+2023-12-16 22:26:19,816 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/ySvIOYrSTz
+2023-12-16 22:26:19,816 - INFO - Connected to Flet app and handling user sessions...
+2023-12-16 22:26:19,816 - INFO - Starting Flet View app...
+2023-12-16 22:26:19,816 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-16 22:26:20,032 - INFO - Session started: 
+2023-12-16 22:26:46,585 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-16 22:26:46,586 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/mrDHnFFXTI
+2023-12-16 22:26:46,586 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/mrDHnFFXTI
+2023-12-16 22:26:46,586 - INFO - Connected to Flet app and handling user sessions...
+2023-12-16 22:26:46,586 - INFO - Starting Flet View app...
+2023-12-16 22:26:46,587 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-16 22:26:46,814 - INFO - Session started: 
+2023-12-16 22:32:35,550 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-16 22:32:35,551 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/vCmjzSDpbJ
+2023-12-16 22:32:35,551 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/vCmjzSDpbJ
+2023-12-16 22:32:35,551 - INFO - Connected to Flet app and handling user sessions...
+2023-12-16 22:32:35,551 - INFO - Starting Flet View app...
+2023-12-16 22:32:35,552 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-16 22:32:35,779 - INFO - Session started: 
+2023-12-16 23:34:19,011 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-16 23:34:19,011 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/UxWeuxJAoF
+2023-12-16 23:34:19,011 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/UxWeuxJAoF
+2023-12-16 23:34:19,011 - INFO - Connected to Flet app and handling user sessions...
+2023-12-16 23:34:19,012 - INFO - Starting Flet View app...
+2023-12-16 23:34:19,012 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-16 23:34:19,271 - INFO - Session started: 
+2023-12-16 23:34:25,448 - ERROR - module 'flet' has no attribute 'SortMode'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 32, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 42, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//_debug.py", line 178, in process
+    self.columnsUI = [ft.DataColumn(
+                     ^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//_debug.py", line 180, in <listcomp>
+    sort_mode=ft.SortMode.BOTH,
+              ^^^^^^^^^^^
+AttributeError: module 'flet' has no attribute 'SortMode'
+2023-12-16 23:35:08,962 - ERROR - DataColumn.__init__() got an unexpected keyword argument 'title'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 32, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 42, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//_debug.py", line 178, in process
+    self.columnsUI = [ft.DataColumn(
+                     ^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//_debug.py", line 178, in <listcomp>
+    self.columnsUI = [ft.DataColumn(
+                      ^^^^^^^^^^^^^^
+TypeError: DataColumn.__init__() got an unexpected keyword argument 'title'
+2023-12-16 23:58:08,379 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-16 23:58:08,379 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/kRIobqMylX
+2023-12-16 23:58:08,383 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/kRIobqMylX
+2023-12-16 23:58:08,383 - INFO - Connected to Flet app and handling user sessions...
+2023-12-16 23:58:08,383 - INFO - Starting Flet View app...
+2023-12-16 23:58:08,383 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-16 23:58:08,634 - INFO - Session started: 
+2023-12-16 23:58:10,150 - ERROR - module 'flet' has no attribute 'ChartDataSet'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 32, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 42, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_charts.py", line 107, in process
+    datasets.append(ft.ChartDataSet(
+                    ^^^^^^^^^^^^^^^
+AttributeError: module 'flet' has no attribute 'ChartDataSet'
+2023-12-17 20:23:46,231 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 20:23:46,231 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/rAwCgysJQc
+2023-12-17 20:23:46,232 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/rAwCgysJQc
+2023-12-17 20:23:46,232 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 20:23:46,232 - INFO - Starting Flet View app...
+2023-12-17 20:23:46,232 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 20:23:46,487 - INFO - Session started: 
+2023-12-17 20:31:41,314 - ERROR - unhashable type: 'set'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 34, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 44, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 131, in process
+    self._load("", path=data)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 140, in _load
+    self._load(item, full_path)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 144, in _load
+    loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 605, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 1120, in load_module
+  File "<frozen importlib._bootstrap_external>", line 945, in load_module
+  File "<frozen importlib._bootstrap>", line 290, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 721, in _load
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//expire_time.py", line 4, in <module>
+    @Plug.register('计算签证到期日', keyboard="alt+q")
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in wrapper
+    cls._build(plugin_name, plugin, keyboard)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 83, in _build
+    cls.KEYBOARDS.update({keys:plugin_obj})
+                         ^^^^^^^^^^^^^^^^^
+TypeError: unhashable type: 'set'
+2023-12-17 20:31:41,318 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 20:31:41,319 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/djWLuDnLjG
+2023-12-17 20:31:41,326 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/djWLuDnLjG
+2023-12-17 20:31:41,326 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 20:31:41,326 - INFO - Starting Flet View app...
+2023-12-17 20:31:41,326 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 20:31:41,568 - INFO - Session started: 
+2023-12-17 20:32:10,580 - ERROR - unhashable type: 'set'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 34, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 44, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 131, in process
+    self._load("", path=data)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 140, in _load
+    self._load(item, full_path)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 144, in _load
+    loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 605, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 1120, in load_module
+  File "<frozen importlib._bootstrap_external>", line 945, in load_module
+  File "<frozen importlib._bootstrap>", line 290, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 721, in _load
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//expire_time.py", line 4, in <module>
+    @Plug.register('计算签证到期日', keyboard="alt+q")
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in wrapper
+    cls._build(plugin_name, plugin, keyboard)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 83, in _build
+    cls.KEYBOARDS.update({keys:plugin_obj})
+                         ^^^^^^^^^^^^^^^^^
+TypeError: unhashable type: 'set'
+2023-12-17 20:32:10,581 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 20:32:10,582 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/stqiRftaqY
+2023-12-17 20:32:10,582 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/stqiRftaqY
+2023-12-17 20:32:10,582 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 20:32:10,582 - INFO - Starting Flet View app...
+2023-12-17 20:32:10,582 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 20:32:10,807 - INFO - Session started: 
+2023-12-17 20:32:37,160 - ERROR - unhashable type: 'list'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 34, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 44, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 131, in process
+    self._load("", path=data)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 140, in _load
+    self._load(item, full_path)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 144, in _load
+    loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 605, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 1120, in load_module
+  File "<frozen importlib._bootstrap_external>", line 945, in load_module
+  File "<frozen importlib._bootstrap>", line 290, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 721, in _load
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//expire_time.py", line 4, in <module>
+    @Plug.register('计算签证到期日', keyboard="alt+q")
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in wrapper
+    cls._build(plugin_name, plugin, keyboard)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 83, in _build
+    cls.KEYBOARDS.update({keys:plugin_obj})
+                         ^^^^^^^^^^^^^^^^^
+TypeError: unhashable type: 'list'
+2023-12-17 20:32:37,162 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 20:32:37,163 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/XlQRufZJpO
+2023-12-17 20:32:37,164 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/XlQRufZJpO
+2023-12-17 20:32:37,164 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 20:32:37,164 - INFO - Starting Flet View app...
+2023-12-17 20:32:37,164 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 20:32:37,393 - INFO - Session started: 
+2023-12-17 20:34:04,545 - ERROR - unhashable type: 'set'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 34, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 44, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 131, in process
+    self._load("", path=data)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 140, in _load
+    self._load(item, full_path)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 144, in _load
+    loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 605, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 1120, in load_module
+  File "<frozen importlib._bootstrap_external>", line 945, in load_module
+  File "<frozen importlib._bootstrap>", line 290, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 721, in _load
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//expire_time.py", line 4, in <module>
+    @Plug.register('计算签证到期日', keyboard="alt+q")
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in wrapper
+    cls._build(plugin_name, plugin, keyboard)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 83, in _build
+    cls.KEYBOARDS.update({keys:plugin_obj})
+                         ^^^^^^^^^^^^^^^^^
+TypeError: unhashable type: 'set'
+2023-12-17 20:34:04,547 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 20:34:04,549 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/oBdLnfsKkt
+2023-12-17 20:34:04,550 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/oBdLnfsKkt
+2023-12-17 20:34:04,550 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 20:34:04,550 - INFO - Starting Flet View app...
+2023-12-17 20:34:04,551 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 20:34:04,830 - INFO - Session started: 
+2023-12-17 20:34:43,307 - ERROR - unhashable type: 'set'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 34, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 44, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 131, in process
+    self._load("", path=data)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 140, in _load
+    self._load(item, full_path)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 144, in _load
+    loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 605, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 1120, in load_module
+  File "<frozen importlib._bootstrap_external>", line 945, in load_module
+  File "<frozen importlib._bootstrap>", line 290, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 721, in _load
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//expire_time.py", line 4, in <module>
+    @Plug.register('计算签证到期日', keyboard="alt+q")
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in wrapper
+    cls._build(plugin_name, plugin, keyboard)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 83, in _build
+    cls.KEYBOARDS.update({keys:plugin_obj})
+                         ^^^^^^^^^^^^^^^^^
+TypeError: unhashable type: 'set'
+2023-12-17 20:34:43,308 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 20:34:43,309 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/bSTJVQwjda
+2023-12-17 20:34:43,310 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/bSTJVQwjda
+2023-12-17 20:34:43,310 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 20:34:43,310 - INFO - Starting Flet View app...
+2023-12-17 20:34:43,310 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 20:34:43,523 - INFO - Session started: 
+2023-12-17 20:35:30,043 - ERROR - unhashable type: 'set'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 34, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 44, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 132, in process
+    self._load("", path=data)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 141, in _load
+    self._load(item, full_path)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 145, in _load
+    loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 605, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 1120, in load_module
+  File "<frozen importlib._bootstrap_external>", line 945, in load_module
+  File "<frozen importlib._bootstrap>", line 290, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 721, in _load
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//expire_time.py", line 4, in <module>
+    @Plug.register('计算签证到期日', keyboard="alt+q")
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in wrapper
+    cls._build(plugin_name, plugin, keyboard)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 83, in _build
+    cls.KEYBOARDS.update({keys:plugin_obj})
+                         ^^^^^^^^^^^^^^^^^
+TypeError: unhashable type: 'set'
+2023-12-17 20:35:30,045 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 20:35:30,051 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/mFQQVuGPFu
+2023-12-17 20:35:30,052 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/mFQQVuGPFu
+2023-12-17 20:35:30,054 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 20:35:30,054 - INFO - Starting Flet View app...
+2023-12-17 20:35:30,054 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 20:35:30,297 - INFO - Session started: 
+2023-12-17 20:48:09,861 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 20:48:09,862 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/iQlHwnfAwh
+2023-12-17 20:48:09,863 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/iQlHwnfAwh
+2023-12-17 20:48:09,863 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 20:48:09,863 - INFO - Starting Flet View app...
+2023-12-17 20:48:09,863 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 20:48:10,127 - INFO - Session started: 
+2023-12-17 20:49:17,382 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 20:49:17,383 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/yLlJrudFXz
+2023-12-17 20:49:17,384 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/yLlJrudFXz
+2023-12-17 20:49:17,385 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 20:49:17,385 - INFO - Starting Flet View app...
+2023-12-17 20:49:17,385 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 20:49:17,604 - INFO - Session started: 
+2023-12-17 20:49:50,466 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 20:49:50,467 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/zEAcUPFfPN
+2023-12-17 20:49:50,468 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/zEAcUPFfPN
+2023-12-17 20:49:50,468 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 20:49:50,468 - INFO - Starting Flet View app...
+2023-12-17 20:49:50,468 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 20:49:50,731 - INFO - Session started: 
+2023-12-17 20:52:56,092 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 20:52:56,093 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/moZbCOpjcA
+2023-12-17 20:52:56,094 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/moZbCOpjcA
+2023-12-17 20:52:56,094 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 20:52:56,094 - INFO - Starting Flet View app...
+2023-12-17 20:52:56,094 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 20:52:56,309 - INFO - Session started: 
+2023-12-17 20:57:55,324 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 20:57:55,326 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/dzlfRSyLQE
+2023-12-17 20:57:55,326 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/dzlfRSyLQE
+2023-12-17 20:57:55,326 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 20:57:55,326 - INFO - Starting Flet View app...
+2023-12-17 20:57:55,327 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 20:57:55,570 - INFO - Session started: 
+2023-12-17 21:01:09,521 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 21:01:09,521 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/HbnDhtKzlZ
+2023-12-17 21:01:09,522 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/HbnDhtKzlZ
+2023-12-17 21:01:09,522 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 21:01:09,522 - INFO - Starting Flet View app...
+2023-12-17 21:01:09,522 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 21:01:09,729 - INFO - Session started: 
+2023-12-17 21:02:10,649 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 21:02:10,650 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/POLdFAuQDT
+2023-12-17 21:02:10,650 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/POLdFAuQDT
+2023-12-17 21:02:10,655 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 21:02:10,655 - INFO - Starting Flet View app...
+2023-12-17 21:02:10,655 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 21:02:10,879 - INFO - Session started: 
+2023-12-17 21:09:46,767 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 21:09:46,768 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/DzrQBuEiDn
+2023-12-17 21:09:46,768 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/DzrQBuEiDn
+2023-12-17 21:09:46,768 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 21:09:46,768 - INFO - Starting Flet View app...
+2023-12-17 21:09:46,768 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 21:09:47,040 - INFO - Session started: 
+2023-12-17 21:22:07,122 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 21:22:07,123 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/JoCjIpUnuz
+2023-12-17 21:22:07,124 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/JoCjIpUnuz
+2023-12-17 21:22:07,125 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 21:22:07,125 - INFO - Starting Flet View app...
+2023-12-17 21:22:07,125 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 21:22:07,374 - INFO - Session started: 
+2023-12-17 21:22:12,804 - ERROR - Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 33, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 44, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_plugin_market.py", line 32, in process
+    self.data = resp.json()
+                ^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-12-17 21:25:19,334 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 21:25:19,335 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/TIvQZNnCmh
+2023-12-17 21:25:19,335 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/TIvQZNnCmh
+2023-12-17 21:25:19,335 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 21:25:19,335 - INFO - Starting Flet View app...
+2023-12-17 21:25:19,335 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 21:25:19,576 - INFO - Session started: 
+2023-12-17 21:27:08,857 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 21:27:08,857 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/dVURbmkxCs
+2023-12-17 21:27:08,858 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/dVURbmkxCs
+2023-12-17 21:27:08,858 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 21:27:08,858 - INFO - Starting Flet View app...
+2023-12-17 21:27:08,858 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 21:27:09,085 - INFO - Session started: 
+2023-12-17 21:28:09,656 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 21:28:09,657 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/zaiRFKuKWc
+2023-12-17 21:28:09,657 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/zaiRFKuKWc
+2023-12-17 21:28:09,658 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 21:28:09,658 - INFO - Starting Flet View app...
+2023-12-17 21:28:09,658 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 21:28:09,876 - INFO - Session started: 
+2023-12-17 21:28:58,043 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 21:28:58,044 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/GXoUXsUjJR
+2023-12-17 21:28:58,044 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/GXoUXsUjJR
+2023-12-17 21:28:58,044 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 21:28:58,044 - INFO - Starting Flet View app...
+2023-12-17 21:28:58,045 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 21:28:58,273 - INFO - Session started: 
+2023-12-17 21:29:10,479 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 21:29:10,481 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/tGymLIGQDZ
+2023-12-17 21:29:10,481 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/tGymLIGQDZ
+2023-12-17 21:29:10,481 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 21:29:10,481 - INFO - Starting Flet View app...
+2023-12-17 21:29:10,481 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 21:29:10,708 - INFO - Session started: 
+2023-12-17 21:30:06,692 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 21:30:06,693 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/YftqeiIWcX
+2023-12-17 21:30:06,694 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/YftqeiIWcX
+2023-12-17 21:30:06,694 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 21:30:06,694 - INFO - Starting Flet View app...
+2023-12-17 21:30:06,694 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 21:30:06,915 - INFO - Session started: 
+2023-12-17 21:30:24,186 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 21:30:24,186 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/jGBBnCxmxh
+2023-12-17 21:30:24,187 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/jGBBnCxmxh
+2023-12-17 21:30:24,187 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 21:30:24,187 - INFO - Starting Flet View app...
+2023-12-17 21:30:24,188 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 21:30:24,416 - INFO - Session started: 
+2023-12-17 21:30:34,637 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 21:30:34,638 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/cVkZWJmdMA
+2023-12-17 21:30:34,638 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/cVkZWJmdMA
+2023-12-17 21:30:34,639 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 21:30:34,639 - INFO - Starting Flet View app...
+2023-12-17 21:30:34,639 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 21:30:34,883 - INFO - Session started: 
+2023-12-17 21:31:32,189 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 21:31:32,189 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/oOKqigqzIZ
+2023-12-17 21:31:32,189 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/oOKqigqzIZ
+2023-12-17 21:31:32,189 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 21:31:32,189 - INFO - Starting Flet View app...
+2023-12-17 21:31:32,189 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 21:31:32,455 - INFO - Session started: 
+2023-12-17 21:32:04,949 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 21:32:04,950 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/QVGrLnBuEJ
+2023-12-17 21:32:04,950 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/QVGrLnBuEJ
+2023-12-17 21:32:04,951 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 21:32:04,951 - INFO - Starting Flet View app...
+2023-12-17 21:32:04,951 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 21:32:05,181 - INFO - Session started: 
+2023-12-17 21:36:19,526 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 21:36:19,526 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/msrvcMITAD
+2023-12-17 21:36:19,526 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/msrvcMITAD
+2023-12-17 21:36:19,526 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 21:36:19,526 - INFO - Starting Flet View app...
+2023-12-17 21:36:19,526 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 21:36:19,772 - INFO - Session started: 
+2023-12-17 21:58:55,168 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 21:58:55,168 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/EGoLfwtapp
+2023-12-17 21:58:55,169 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/EGoLfwtapp
+2023-12-17 21:58:55,169 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 21:58:55,169 - INFO - Starting Flet View app...
+2023-12-17 21:58:55,169 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 21:58:55,470 - INFO - Session started: 
+2023-12-17 22:02:48,143 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 22:02:48,144 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/hpYplVNOcK
+2023-12-17 22:02:48,144 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/hpYplVNOcK
+2023-12-17 22:02:48,144 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 22:02:48,144 - INFO - Starting Flet View app...
+2023-12-17 22:02:48,145 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 22:02:48,373 - INFO - Session started: 
+2023-12-17 22:41:52,809 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-17 22:41:52,809 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/dfrlgSKNDY
+2023-12-17 22:41:52,809 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/dfrlgSKNDY
+2023-12-17 22:41:52,809 - INFO - Connected to Flet app and handling user sessions...
+2023-12-17 22:41:52,809 - INFO - Starting Flet View app...
+2023-12-17 22:41:52,810 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-17 22:41:53,078 - INFO - Session started: 
+2023-12-17 22:42:12,277 - ERROR - Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 32, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 43, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_plugin_market.py", line 32, in process
+    self.data = resp.json()
+                ^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-12-17 22:42:20,640 - ERROR - Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 32, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 43, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_plugin_market.py", line 32, in process
+    self.data = resp.json()
+                ^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-12-17 22:42:48,453 - INFO - Started server process [11264]
+2023-12-17 22:42:48,453 - INFO - Waiting for application startup.
+2023-12-17 22:42:48,454 - INFO - Application startup complete.
+2023-12-17 22:42:48,454 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-17 22:42:51,063 - INFO - 127.0.0.1:58766 - "GET /plugins HTTP/1.1" 200
+2023-12-17 22:43:10,487 - INFO - 127.0.0.1:58768 - "GET /plugins HTTP/1.1" 200

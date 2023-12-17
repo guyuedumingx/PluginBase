@@ -2,7 +2,7 @@ from app.plug import *
 import datetime
 
 @Plug.register('计算签证到期日')
-class CleanMarkdownItalic(UIPlugin):
+class CalcQianZheng(UIPlugin):
     """
     计算签证到期日
     """

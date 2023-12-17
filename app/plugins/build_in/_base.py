@@ -47,8 +47,18 @@ class ENVInformation(UIPlugin):
     ICON = ft.icons.MISCELLANEOUS_SERVICES
 
     def process(self, data, **kwargs):
-        return Plug.run(plugins=("_dictUI",), data=ENV, mode="show", **kwargs)
+        return Plug.run(plugins=("_pluginUI_with_search",),
+                 data=ENV,
+                 ui_template="_dictUI",
+                 key_icon=ft.icons.FIBER_MANUAL_RECORD_OUTLINED,
+                 **kwargs) 
 
+@Plug.register('_back')
+class Back(Plugin):
+    def process(self, data, page, **kwargs):
+        if(len(page.views) > 1):
+            page.views.pop() and page.update()
+            return super().process(data, page=page, **kwargs)
 
 @Plug.register('重新加载')
 class PreLoadPlugin(Plugin):
@@ -72,7 +82,7 @@ class BasePluginView(UIPlugin):
         self.plugin_name = plugin_name
         self.plugin = Plug.getPlugin(plugin_name)
         self.page = page
-        home_btn, search_feild, self.container, tips_btn = Plug.run(plugins=("_plugin_baseUI",),page=page,data=plugin_name)
+        back_btn, search_feild, self.container, tips_btn = Plug.run(plugins=("_plugin_baseUI",),page=page,data=plugin_name)
         plugin = Plug.getPlugin(plugin_name)
         func = partial(
             Plug.run,
@@ -80,8 +90,10 @@ class BasePluginView(UIPlugin):
             page=page,
             container=self.container,
             tips_btn=tips_btn,
+            back_btn = back_btn,
             data=plugin_name
             )
+
         # 如果这不是一个带UI的插件，直接把结果用_notice显示出来
         if(not isinstance(plugin, UIPlugin)):
             func(plugins=(plugin_name,"_notice"))
@@ -92,7 +104,7 @@ class BasePluginView(UIPlugin):
             ft.View(
                 "/" + plugin_name,
                 [
-                    ft.ResponsiveRow([search_feild, home_btn]),
+                    ft.ResponsiveRow([search_feild, back_btn]),
                     tips_btn,
                     self.container
                 ]

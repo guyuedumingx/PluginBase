@@ -4,7 +4,7 @@ from app.plug import *
 @Plug.register('明码转换')
 class CodeTrans(UIPlugin):
     """
-    把四位数字的中文商用电码转换为中文
+    将中文商用电码转换为中文
 
     1. 可以直接在搜索框输入电码
     2. 支持多电码同时转义, 用**空格**分割不同电码
@@ -16,7 +16,7 @@ class CodeTrans(UIPlugin):
         self.db = db
         self.container = container
         search_feild.on_change = self.on_change
-        search_feild.hint_text = "Enter code"
+        search_feild.hint_text = "输入电码"
 
     def on_change(self, e):
         code_list = e.data.split(" ")
