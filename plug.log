@@ -3150,3 +3150,613 @@ Traceback (most recent call last):
   File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 975, in json
     raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
 requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-12-18 08:50:41,906 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 08:50:41,907 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/hYGKqNJBmM
+2023-12-18 08:50:41,907 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/hYGKqNJBmM
+2023-12-18 08:50:41,907 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 08:50:41,907 - INFO - Starting Flet View app...
+2023-12-18 08:50:41,907 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 08:50:42,139 - INFO - Session started: 
+2023-12-18 19:54:15,543 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 19:54:15,545 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/VYHAcNismV
+2023-12-18 19:54:15,546 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/VYHAcNismV
+2023-12-18 19:54:15,546 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 19:54:15,546 - INFO - Starting Flet View app...
+2023-12-18 19:54:15,546 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 19:54:15,839 - INFO - Session started: 
+2023-12-18 19:54:26,492 - ERROR - [Errno 2] No such file or directory: 'SO.BLOD0010.txt'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 35, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 47, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//load_day_data.py", line 8, in process
+    self.load_file("SO.BLOD0010.txt", db)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//load_day_data.py", line 34, in load_file
+    with open(file, encoding="gbk", mode="r") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'SO.BLOD0010.txt'
+2023-12-18 19:55:08,965 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 19:55:08,966 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/WmyokIckuD
+2023-12-18 19:55:08,966 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/WmyokIckuD
+2023-12-18 19:55:08,966 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 19:55:08,967 - INFO - Starting Flet View app...
+2023-12-18 19:55:08,967 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 19:55:09,205 - INFO - Session started: 
+2023-12-18 19:55:12,468 - ERROR - 'gbk' codec can't decode byte 0x88 in position 116: illegal multibyte sequence
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 35, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 47, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//load_day_data.py", line 8, in process
+    self.load_file("SO.BLOD0010.txt", db)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//load_day_data.py", line 35, in load_file
+    line = f.readline()
+           ^^^^^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0x88 in position 116: illegal multibyte sequence
+2023-12-18 19:55:39,995 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 19:55:39,996 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/esgEUvYcOs
+2023-12-18 19:55:39,996 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/esgEUvYcOs
+2023-12-18 19:55:39,996 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 19:55:39,997 - INFO - Starting Flet View app...
+2023-12-18 19:55:39,997 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 19:55:40,225 - INFO - Session started: 
+2023-12-18 19:56:44,237 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 19:56:44,238 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/HGixfYJOyz
+2023-12-18 19:56:44,239 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/HGixfYJOyz
+2023-12-18 19:56:44,239 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 19:56:44,239 - INFO - Starting Flet View app...
+2023-12-18 19:56:44,239 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 19:56:44,458 - INFO - Session started: 
+2023-12-18 19:58:43,700 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 19:58:43,701 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/sKzNxhxaoh
+2023-12-18 19:58:43,701 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/sKzNxhxaoh
+2023-12-18 19:58:43,701 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 19:58:43,701 - INFO - Starting Flet View app...
+2023-12-18 19:58:43,702 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 19:58:43,921 - INFO - Session started: 
+2023-12-18 20:00:13,270 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 20:00:13,271 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/SerHVKWhbW
+2023-12-18 20:00:13,271 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/SerHVKWhbW
+2023-12-18 20:00:13,271 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 20:00:13,271 - INFO - Starting Flet View app...
+2023-12-18 20:00:13,271 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 20:00:13,504 - INFO - Session started: 
+2023-12-18 20:00:15,584 - INFO - Context impl SQLiteImpl.
+2023-12-18 20:00:15,585 - INFO - Will assume non-transactional DDL.
+2023-12-18 20:00:15,587 - INFO - Context impl SQLiteImpl.
+2023-12-18 20:00:15,587 - INFO - Will assume non-transactional DDL.
+2023-12-18 20:00:15,588 - INFO - Context impl SQLiteImpl.
+2023-12-18 20:00:15,588 - INFO - Will assume non-transactional DDL.
+2023-12-18 20:00:15,589 - INFO - Context impl SQLiteImpl.
+2023-12-18 20:00:15,589 - INFO - Will assume non-transactional DDL.
+2023-12-18 20:00:15,590 - INFO - Context impl SQLiteImpl.
+2023-12-18 20:00:15,590 - INFO - Will assume non-transactional DDL.
+2023-12-18 20:00:15,591 - INFO - Context impl SQLiteImpl.
+2023-12-18 20:00:15,591 - INFO - Will assume non-transactional DDL.
+2023-12-18 20:00:15,591 - INFO - Context impl SQLiteImpl.
+2023-12-18 20:00:15,591 - INFO - Will assume non-transactional DDL.
+2023-12-18 20:00:15,592 - INFO - Context impl SQLiteImpl.
+2023-12-18 20:00:15,592 - INFO - Will assume non-transactional DDL.
+2023-12-18 20:00:15,593 - INFO - Context impl SQLiteImpl.
+2023-12-18 20:00:15,593 - INFO - Will assume non-transactional DDL.
+2023-12-18 20:00:15,593 - INFO - Context impl SQLiteImpl.
+2023-12-18 20:00:15,593 - INFO - Will assume non-transactional DDL.
+2023-12-18 20:00:15,594 - INFO - Context impl SQLiteImpl.
+2023-12-18 20:00:15,594 - INFO - Will assume non-transactional DDL.
+2023-12-18 20:00:15,594 - INFO - Context impl SQLiteImpl.
+2023-12-18 20:00:15,595 - INFO - Will assume non-transactional DDL.
+2023-12-18 20:00:15,595 - INFO - Context impl SQLiteImpl.
+2023-12-18 20:00:15,595 - INFO - Will assume non-transactional DDL.
+2023-12-18 20:00:15,596 - INFO - Context impl SQLiteImpl.
+2023-12-18 20:00:15,596 - INFO - Will assume non-transactional DDL.
+2023-12-18 20:00:15,596 - INFO - Context impl SQLiteImpl.
+2023-12-18 20:00:15,597 - INFO - Will assume non-transactional DDL.
+2023-12-18 20:00:15,599 - INFO - Context impl SQLiteImpl.
+2023-12-18 20:00:15,599 - INFO - Will assume non-transactional DDL.
+2023-12-18 20:00:15,599 - INFO - Context impl SQLiteImpl.
+2023-12-18 20:00:15,599 - INFO - Will assume non-transactional DDL.
+2023-12-18 20:00:15,600 - INFO - Context impl SQLiteImpl.
+2023-12-18 20:00:15,600 - INFO - Will assume non-transactional DDL.
+2023-12-18 20:00:15,601 - INFO - Context impl SQLiteImpl.
+2023-12-18 20:00:15,601 - INFO - Will assume non-transactional DDL.
+2023-12-18 20:00:15,601 - INFO - Context impl SQLiteImpl.
+2023-12-18 20:00:15,601 - INFO - Will assume non-transactional DDL.
+2023-12-18 20:00:15,606 - ERROR - (sqlite3.IntegrityError) datatype mismatch
+[SQL: INSERT INTO data ("远程授权流水号", "经办机构", "授权组", "授权人员", "经办柜员", "交易码", "交易开始", "授权提交", "开始授权", "结束授权", "交易完成", "在线开始", "在线结束", "授权状态", "授权类型", "拒绝", "VIP", "处理状态", "补录", "渠道标识", "日期") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('23121500000017543906', '00411', '1471', '5934475', '7917091', '037232', '10:48:53', '10:49:38', '10:49:41', '10:49:52', '10:49:58', '', '', '已批准', '远程授权', '', '否', '已提交', '否', 'BancsLink系统', '2023/12/15')]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: datatype mismatch
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 35, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 47, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//load_day_data.py", line 13, in process
+    table.insert(info)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/dataset/table.py", line 119, in insert
+    res = self.db.executable.execute(self.table.insert(row))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1385, in execute
+    return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) datatype mismatch
+[SQL: INSERT INTO data ("远程授权流水号", "经办机构", "授权组", "授权人员", "经办柜员", "交易码", "交易开始", "授权提交", "开始授权", "结束授权", "交易完成", "在线开始", "在线结束", "授权状态", "授权类型", "拒绝", "VIP", "处理状态", "补录", "渠道标识", "日期") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('23121500000017543906', '00411', '1471', '5934475', '7917091', '037232', '10:48:53', '10:49:38', '10:49:41', '10:49:52', '10:49:58', '', '', '已批准', '远程授权', '', '否', '已提交', '否', 'BancsLink系统', '2023/12/15')]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-12-18 20:01:07,507 - ERROR - (sqlite3.IntegrityError) datatype mismatch
+[SQL: INSERT INTO data ("远程授权流水号", "经办机构", "授权组", "授权人员", "经办柜员", "交易码", "交易开始", "授权提交", "开始授权", "结束授权", "交易完成", "在线开始", "在线结束", "授权状态", "授权类型", "拒绝", "VIP", "处理状态", "补录", "渠道标识", "日期") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('23121500000017543906', '00411', '1471', '5934475', '7917091', '037232', '10:48:53', '10:49:38', '10:49:41', '10:49:52', '10:49:58', '', '', '已批准', '远程授权', '', '否', '已提交', '否', 'BancsLink系统', '2023/12/15')]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: datatype mismatch
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 35, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 47, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//load_day_data.py", line 13, in process
+    table.insert(info)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/dataset/table.py", line 119, in insert
+    res = self.db.executable.execute(self.table.insert(row))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1385, in execute
+    return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) datatype mismatch
+[SQL: INSERT INTO data ("远程授权流水号", "经办机构", "授权组", "授权人员", "经办柜员", "交易码", "交易开始", "授权提交", "开始授权", "结束授权", "交易完成", "在线开始", "在线结束", "授权状态", "授权类型", "拒绝", "VIP", "处理状态", "补录", "渠道标识", "日期") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('23121500000017543906', '00411', '1471', '5934475', '7917091', '037232', '10:48:53', '10:49:38', '10:49:41', '10:49:52', '10:49:58', '', '', '已批准', '远程授权', '', '否', '已提交', '否', 'BancsLink系统', '2023/12/15')]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-12-18 20:05:17,386 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 20:05:17,386 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/iZfqluXxCE
+2023-12-18 20:05:17,386 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/iZfqluXxCE
+2023-12-18 20:05:17,387 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 20:05:17,387 - INFO - Starting Flet View app...
+2023-12-18 20:05:17,387 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 20:05:17,670 - INFO - Session started: 
+2023-12-18 20:05:20,011 - ERROR - (sqlite3.IntegrityError) datatype mismatch
+[SQL: INSERT INTO data ("远程授权流水号", "经办机构", "授权组", "授权人员", "经办柜员", "交易码", "交易开始", "授权提交", "开始授权", "结束授权", "交易完成", "在线开始", "在线结束", "授权状态", "授权类型", "拒绝", "VIP", "处理状态", "补录", "渠道标识", "日期") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('23121500000017543906', '00411', '1471', '5934475', '7917091', '037232', '10:48:53', '10:49:38', '10:49:41', '10:49:52', '10:49:58', '', '', '已批准', '远程授权', '', '否', '已提交', '否', 'BancsLink系统', '2023/12/15')]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: datatype mismatch
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 35, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 47, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//load_day_data.py", line 13, in process
+    table.insert(info)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/dataset/table.py", line 119, in insert
+    res = self.db.executable.execute(self.table.insert(row))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1385, in execute
+    return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) datatype mismatch
+[SQL: INSERT INTO data ("远程授权流水号", "经办机构", "授权组", "授权人员", "经办柜员", "交易码", "交易开始", "授权提交", "开始授权", "结束授权", "交易完成", "在线开始", "在线结束", "授权状态", "授权类型", "拒绝", "VIP", "处理状态", "补录", "渠道标识", "日期") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('23121500000017543906', '00411', '1471', '5934475', '7917091', '037232', '10:48:53', '10:49:38', '10:49:41', '10:49:52', '10:49:58', '', '', '已批准', '远程授权', '', '否', '已提交', '否', 'BancsLink系统', '2023/12/15')]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-12-18 20:07:10,654 - ERROR - (sqlite3.IntegrityError) datatype mismatch
+[SQL: INSERT INTO data ("远程授权流水号", "经办机构", "授权组", "授权人员", "经办柜员", "交易码", "交易开始", "授权提交", "开始授权", "结束授权", "交易完成", "在线开始", "在线结束", "授权状态", "授权类型", "拒绝", "VIP", "处理状态", "补录", "渠道标识", "日期") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('23121500000017543906', '00411', '1471', '5934475', '7917091', '037232', '10:48:53', '10:49:38', '10:49:41', '10:49:52', '10:49:58', '', '', '已批准', '远程授权', '', '否', '已提交', '否', 'BancsLink系统', '2023/12/15')]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: datatype mismatch
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 35, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 47, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//load_day_data.py", line 13, in process
+    table.insert(info)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/dataset/table.py", line 119, in insert
+    res = self.db.executable.execute(self.table.insert(row))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1385, in execute
+    return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) datatype mismatch
+[SQL: INSERT INTO data ("远程授权流水号", "经办机构", "授权组", "授权人员", "经办柜员", "交易码", "交易开始", "授权提交", "开始授权", "结束授权", "交易完成", "在线开始", "在线结束", "授权状态", "授权类型", "拒绝", "VIP", "处理状态", "补录", "渠道标识", "日期") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('23121500000017543906', '00411', '1471', '5934475', '7917091', '037232', '10:48:53', '10:49:38', '10:49:41', '10:49:52', '10:49:58', '', '', '已批准', '远程授权', '', '否', '已提交', '否', 'BancsLink系统', '2023/12/15')]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-12-18 20:08:35,783 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 20:08:35,784 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/mnKurAgRcb
+2023-12-18 20:08:35,784 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/mnKurAgRcb
+2023-12-18 20:08:35,784 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 20:08:35,785 - INFO - Starting Flet View app...
+2023-12-18 20:08:35,785 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 20:08:36,028 - INFO - Session started: 
+2023-12-18 20:11:09,059 - ERROR - (sqlite3.IntegrityError) datatype mismatch
+[SQL: INSERT INTO data ("远程授权流水号", "经办机构", "授权组", "授权人员", "经办柜员", "交易码", "交易开始", "授权提交", "开始授权", "结束授权", "交易完成", "在线开始", "在线结束", "授权状态", "授权类型", "拒绝", "VIP", "处理状态", "补录", "渠道标识", "日期") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('23121500000017543906', '00411', '1471', '5934475', '7917091', '037232', '10:48:53', '10:49:38', '10:49:41', '10:49:52', '10:49:58', '', '', '已批准', '远程授权', '', '否', '已提交', '否', 'BancsLink系统', '2023/12/15')]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: datatype mismatch
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 35, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 47, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//load_day_data.py", line 13, in process
+    table.insert(info)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/dataset/table.py", line 119, in insert
+    res = self.db.executable.execute(self.table.insert(row))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1385, in execute
+    return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) datatype mismatch
+[SQL: INSERT INTO data ("远程授权流水号", "经办机构", "授权组", "授权人员", "经办柜员", "交易码", "交易开始", "授权提交", "开始授权", "结束授权", "交易完成", "在线开始", "在线结束", "授权状态", "授权类型", "拒绝", "VIP", "处理状态", "补录", "渠道标识", "日期") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('23121500000017543906', '00411', '1471', '5934475', '7917091', '037232', '10:48:53', '10:49:38', '10:49:41', '10:49:52', '10:49:58', '', '', '已批准', '远程授权', '', '否', '已提交', '否', 'BancsLink系统', '2023/12/15')]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-12-18 20:11:31,045 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 20:11:31,045 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/wfoFIYkQfd
+2023-12-18 20:11:31,046 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/wfoFIYkQfd
+2023-12-18 20:11:31,046 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 20:11:31,046 - INFO - Starting Flet View app...
+2023-12-18 20:11:31,047 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 20:11:31,276 - INFO - Session started: 
+2023-12-18 20:20:23,399 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 20:20:23,400 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/FPGrLoNXED
+2023-12-18 20:20:23,400 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/FPGrLoNXED
+2023-12-18 20:20:23,400 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 20:20:23,400 - INFO - Starting Flet View app...
+2023-12-18 20:20:23,400 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 20:20:23,665 - INFO - Session started: 
+2023-12-18 20:20:26,781 - ERROR - Text-based primary_type support is dropped, use db.types.
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 35, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 47, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//load_day_data.py", line 10, in process
+    table = db.get_table("data", primary_id="远程授权流水号", primary_type="text")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/dataset/database.py", line 286, in get_table
+    return self.create_table(
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/dataset/database.py", line 234, in create_table
+    assert not isinstance(
+AssertionError: Text-based primary_type support is dropped, use db.types.
+2023-12-18 20:21:12,991 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 20:21:12,992 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/StygvAVEZs
+2023-12-18 20:21:12,998 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/StygvAVEZs
+2023-12-18 20:21:12,999 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 20:21:12,999 - INFO - Starting Flet View app...
+2023-12-18 20:21:12,999 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 20:21:13,227 - INFO - Session started: 
+2023-12-18 20:28:03,921 - ERROR - (sqlite3.IntegrityError) UNIQUE constraint failed: data.远程授权流水号
+[SQL: INSERT INTO data ("远程授权流水号", "经办机构", "授权组", "授权人员", "经办柜员", "交易码", "交易开始", "授权提交", "开始授权", "结束授权", "交易完成", "在线开始", "在线结束", "授权状态", "授权类型", "拒绝", "VIP", "处理状态", "补录", "渠道标识", "日期") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('23121500000017543906', '00411', '1471', '5934475', '7917091', '037232', '10:48:53', '10:49:38', '10:49:41', '10:49:52', '10:49:58', '', '', '已批准', '远程授权', '', '否', '已提交', '否', 'BancsLink系统', '2023/12/15')]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: data.远程授权流水号
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 35, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 47, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//load_day_data.py", line 13, in process
+    table.insert(info)
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/dataset/table.py", line 119, in insert
+    res = self.db.executable.execute(self.table.insert(row))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1385, in execute
+    return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: data.远程授权流水号
+[SQL: INSERT INTO data ("远程授权流水号", "经办机构", "授权组", "授权人员", "经办柜员", "交易码", "交易开始", "授权提交", "开始授权", "结束授权", "交易完成", "在线开始", "在线结束", "授权状态", "授权类型", "拒绝", "VIP", "处理状态", "补录", "渠道标识", "日期") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('23121500000017543906', '00411', '1471', '5934475', '7917091', '037232', '10:48:53', '10:49:38', '10:49:41', '10:49:52', '10:49:58', '', '', '已批准', '远程授权', '', '否', '已提交', '否', 'BancsLink系统', '2023/12/15')]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-12-18 20:40:55,590 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 20:40:55,591 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/fWfxgSQInz
+2023-12-18 20:40:55,599 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/fWfxgSQInz
+2023-12-18 20:40:55,600 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 20:40:55,600 - INFO - Starting Flet View app...
+2023-12-18 20:40:55,600 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 20:40:55,840 - INFO - Session started: 
+2023-12-18 20:43:43,159 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 20:43:43,160 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/SQSsjvzbAj
+2023-12-18 20:43:43,160 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/SQSsjvzbAj
+2023-12-18 20:43:43,160 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 20:43:43,160 - INFO - Starting Flet View app...
+2023-12-18 20:43:43,161 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 20:43:43,403 - INFO - Session started: 
+2023-12-18 21:24:58,263 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 21:24:58,264 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/MiCtOrurWr
+2023-12-18 21:24:58,264 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/MiCtOrurWr
+2023-12-18 21:24:58,264 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 21:24:58,265 - INFO - Starting Flet View app...
+2023-12-18 21:24:58,265 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 21:24:58,547 - INFO - Session started: 
+2023-12-18 21:31:12,576 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 21:31:12,576 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/RQpxweNomQ
+2023-12-18 21:31:12,577 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/RQpxweNomQ
+2023-12-18 21:31:12,577 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 21:31:12,577 - INFO - Starting Flet View app...
+2023-12-18 21:31:12,577 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 21:31:12,852 - INFO - Session started: 
+2023-12-18 21:33:11,133 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 21:33:11,134 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/zBdDMNdgqK
+2023-12-18 21:33:11,134 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/zBdDMNdgqK
+2023-12-18 21:33:11,134 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 21:33:11,134 - INFO - Starting Flet View app...
+2023-12-18 21:33:11,134 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 21:33:11,363 - INFO - Session started: 
+2023-12-18 21:33:16,930 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 21:33:16,930 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/hZnZUSYsUa
+2023-12-18 21:33:16,931 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/hZnZUSYsUa
+2023-12-18 21:33:16,931 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 21:33:16,931 - INFO - Starting Flet View app...
+2023-12-18 21:33:16,931 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 21:33:17,164 - INFO - Session started: 
+2023-12-18 21:34:34,645 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 21:34:34,646 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/fKoduiBtrH
+2023-12-18 21:34:34,646 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/fKoduiBtrH
+2023-12-18 21:34:34,646 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 21:34:34,646 - INFO - Starting Flet View app...
+2023-12-18 21:34:34,647 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 21:34:34,886 - INFO - Session started: 
+2023-12-18 21:35:45,896 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 21:35:45,897 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/gThSdrKeuT
+2023-12-18 21:35:45,899 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/gThSdrKeuT
+2023-12-18 21:35:45,899 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 21:35:45,899 - INFO - Starting Flet View app...
+2023-12-18 21:35:45,899 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 21:35:46,154 - INFO - Session started: 
+2023-12-18 21:42:06,601 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 21:42:06,602 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/rwWpBbbCCa
+2023-12-18 21:42:06,603 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/rwWpBbbCCa
+2023-12-18 21:42:06,603 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 21:42:06,603 - INFO - Starting Flet View app...
+2023-12-18 21:42:06,604 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 21:42:06,852 - INFO - Session started: 
+2023-12-18 21:43:40,297 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 21:43:40,297 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/DxzJBGrFjU
+2023-12-18 21:43:40,298 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/DxzJBGrFjU
+2023-12-18 21:43:40,298 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 21:43:40,298 - INFO - Starting Flet View app...
+2023-12-18 21:43:40,298 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 21:43:40,531 - INFO - Session started: 
+2023-12-18 21:44:32,797 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 21:44:32,797 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/HZugVgmnny
+2023-12-18 21:44:32,800 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/HZugVgmnny
+2023-12-18 21:44:32,800 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 21:44:32,800 - INFO - Starting Flet View app...
+2023-12-18 21:44:32,800 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 21:44:33,027 - INFO - Session started: 
+2023-12-18 21:46:42,813 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 21:46:42,813 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/FaXeWNlnyq
+2023-12-18 21:46:42,814 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/FaXeWNlnyq
+2023-12-18 21:46:42,814 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 21:46:42,814 - INFO - Starting Flet View app...
+2023-12-18 21:46:42,814 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 21:46:43,025 - INFO - Session started: 
+2023-12-18 21:48:04,803 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 21:48:04,804 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/TDuCHUcfiX
+2023-12-18 21:48:04,804 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/TDuCHUcfiX
+2023-12-18 21:48:04,804 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 21:48:04,804 - INFO - Starting Flet View app...
+2023-12-18 21:48:04,804 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 21:48:05,030 - INFO - Session started: 
+2023-12-18 21:58:59,774 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 21:58:59,774 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/TlqkIMcgvU
+2023-12-18 21:58:59,775 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/TlqkIMcgvU
+2023-12-18 21:58:59,775 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 21:58:59,775 - INFO - Starting Flet View app...
+2023-12-18 21:58:59,775 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 21:59:00,051 - INFO - Session started: 
+2023-12-18 21:59:57,813 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 21:59:57,814 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/eErRMmjshA
+2023-12-18 21:59:57,815 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/eErRMmjshA
+2023-12-18 21:59:57,815 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 21:59:57,815 - INFO - Starting Flet View app...
+2023-12-18 21:59:57,815 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 21:59:58,040 - INFO - Session started: 
+2023-12-18 22:00:07,138 - ERROR - '_load_day_data'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 34, in run
+    plugin = icls.PLUGINS[plugin_name]
+             ~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: '_load_day_data'
+2023-12-18 22:00:56,962 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 22:00:56,962 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/JvJnDNYasL
+2023-12-18 22:00:56,963 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/JvJnDNYasL
+2023-12-18 22:00:56,963 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 22:00:56,964 - INFO - Starting Flet View app...
+2023-12-18 22:00:56,964 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 22:00:57,183 - INFO - Session started: 
+2023-12-18 22:03:04,807 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 22:03:04,808 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/ykCVMQKDhE
+2023-12-18 22:03:04,811 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/ykCVMQKDhE
+2023-12-18 22:03:04,812 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 22:03:04,812 - INFO - Starting Flet View app...
+2023-12-18 22:03:04,812 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 22:03:05,053 - INFO - Session started: 
+2023-12-18 22:03:57,690 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 22:03:57,690 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/RPVrpqELUD
+2023-12-18 22:03:57,691 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/RPVrpqELUD
+2023-12-18 22:03:57,691 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 22:03:57,691 - INFO - Starting Flet View app...
+2023-12-18 22:03:57,691 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 22:03:57,913 - INFO - Session started: 
+2023-12-18 22:08:47,977 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 22:08:47,977 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/QxFGTptfZT
+2023-12-18 22:08:47,982 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/QxFGTptfZT
+2023-12-18 22:08:47,982 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 22:08:47,982 - INFO - Starting Flet View app...
+2023-12-18 22:08:47,982 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 22:08:48,219 - INFO - Session started: 
+2023-12-18 22:15:13,754 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 22:15:13,754 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/WHwqUDyZVj
+2023-12-18 22:15:13,755 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/WHwqUDyZVj
+2023-12-18 22:15:13,755 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 22:15:13,755 - INFO - Starting Flet View app...
+2023-12-18 22:15:13,756 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 22:15:13,998 - INFO - Session started: 
+2023-12-18 22:17:18,793 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-18 22:17:18,793 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/ISVzyJoxnx
+2023-12-18 22:17:18,794 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/ISVzyJoxnx
+2023-12-18 22:17:18,794 - INFO - Connected to Flet app and handling user sessions...
+2023-12-18 22:17:18,794 - INFO - Starting Flet View app...
+2023-12-18 22:17:18,794 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-18 22:17:19,037 - INFO - Session started: 
