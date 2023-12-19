@@ -7,14 +7,16 @@ class SearchPlugin(Plugin):
     """
     data: word: the search key word
     """
-    def process(self, word, show_build_in=False, **kwargs):
+    def process(self, word, show_build_in=False, show_no_source=True, **kwargs):
         plugins = Plug.PLUGINS
-        func = partial(self.match_rules, word=word, show_build_in=show_build_in)
+        func = partial(self.match_rules, word=word, show_build_in=show_build_in, show_no_source=show_no_source)
         return dict(filter(lambda x: func(x=x), plugins.items()))
 
-    def match_rules(self, word, x, show_build_in=False):
+    def match_rules(self, word, x, show_build_in=False, show_no_source=True):
         name, plug = x[0], x[1]
         if (not show_build_in and name.startswith("_")):
+            return False
+        if not show_no_source and not plug.HAS_SOURCE:
             return False
         matchs = plug.MATCHS
         for item in matchs:

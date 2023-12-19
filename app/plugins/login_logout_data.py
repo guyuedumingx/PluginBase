@@ -2,38 +2,53 @@ import re
 import zipfile
 from app.plug import *
 
-@Plug.register("存入日流水信息")
+@Plug.register("存入登入登出信息-0070")
 class LoadDayData(UIPlugin):
     """
-    导入某日流水信息到数据库
+    导入某日的日流水信息到数据库
     """
     ICON = ft.icons.BLINDS_SHARP
-    def process(self, data, db, page, **kwargs):
+    def process(self, data, db, page, container, **kwargs):
         datas = []
         columns = []
-
+        errs = []
         def on_dialog_result(e: ft.FilePickerResultEvent):
             if e != None:
                 try:
                     f = e.files[0].path
                     if (f.endswith(".txt")):
                         with open(f, mode="r", encoding='gbk') as file:
-                            columns, datas = Plug.run(plugins=("_load_day_data",), data=file, has_decode=True)
+                            columns, datas, errs = Plug.run(plugins=("_load_login_logout_data",), data=file, has_decode=True)
                     elif (f.endswith(".zip")):
                         with zipfile.ZipFile(f, 'r') as zip_file:
                             file_list = zip_file.namelist()
                             for file in file_list:
                                 with zip_file.open(file, mode="r") as file:
-                                    columns, datas = Plug.run(plugins=("_load_day_data",), data=file, has_decode=False)
+                                    columns, datas, errs = Plug.run(plugins=("_load_login_logout_data",), data=file, has_decode=False)
                     else:
                         Plug.run(plugins=("_notice",), data=f"请选择txt、zip文件", page=page, **kwargs)
                         return
 
-                    table = db.get_table("data", primary_id="远程授权流水号", primary_type=db.types.text)
-                    for line in datas:
+                    if len(errs) > 0:
+                        with open("errs.txt", encoding='utf-8', mode='w') as err_f:
+                            for line in errs:
+                                err_f.write(" ".join(line) + "\n")
+                    
+                    table = db.get_table("login_logout_data")
+                    text = ft.Text("加载中...")
+                    pb = ft.ProgressBar(width=400)
+                    container.content = ft.Column([text, pb])
+                    container.update()
+                    for idx, line in enumerate(datas):
                         info = dict(zip(columns, line))
                         try:
                             table.insert(info)
+                            pbt = (idx+1) / len(datas)
+                            text.value = str(pbt)
+                            pb.value = pbt
+                            text.update()
+                            pb.update()
+                            container.update()
                         except Exception as err:
                             Plug.run(plugins=("_notice",), data=err, page=page)
 
@@ -51,9 +66,9 @@ class LoadDayData(UIPlugin):
                     size=250, color=ft.colors.GREY_400),
             on_click=lambda _: file_picker.pick_files()),
             alignment=ft.alignment.center)
-    
 
-@Plug.register("_load_day_data")
+
+@Plug.register("_load_login_logout_data")
 class LoadDayDataMethod(UIPlugin):
     """
     data是一个文件句柄
@@ -81,6 +96,7 @@ class LoadDayDataMethod(UIPlugin):
     def load_file(self, f, has_decode=True):
         datas = []
         keys = []
+        errs = []
         line = f.readline() if has_decode else f.readline().decode('gbk')
         while line != "":
             if line.startswith("1"):
@@ -94,15 +110,13 @@ class LoadDayDataMethod(UIPlugin):
                 info = f.readline() if has_decode else f.readline().decode('gbk')
                 while not (info.startswith("1") or info == " " or info == ""):
                     lst = re.split(r'\s+', info.strip())
-                    head = lst[0:6]
-                    tail = lst[-4:]
-                    mid = self.mid_handler(lst[6:-4])
-                    info = [*head, *mid, *tail, *subtitleline[3].split("/")]
-                    if len(info) != 23:
-                        print(info)
-                    datas.append(info)
+                    info = [*lst, *subtitleline[3].split("/")]
+                    if len(info) != 10:
+                        errs.append(info)
+                    else:
+                        datas.append(info)
                     info = f.readline() if has_decode else f.readline().decode('gbk')
                 line = info
                 continue
             line = f.readline() if has_decode else f.readline().decode('gbk')
-        return (keys, datas)
+        return (keys, datas, errs)

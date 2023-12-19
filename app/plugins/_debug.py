@@ -1,7 +1,7 @@
 from app.plug import *
 import json
 
-@Plug.register('键值对数据库')
+# @Plug.register('键值对数据库')
 class KeyValueDatabase(UIPlugin):
     """
     全局内置数据库的查询
@@ -46,7 +46,7 @@ class KeyValueDatabase(UIPlugin):
         self.container.update()
 
 
-@Plug.register('数据库查询')
+# @Plug.register('数据库查询')
 class KeyValueDatabase(UIPlugin):
     """
     数据库的查询
@@ -154,7 +154,7 @@ class TableUI(UIPlugin):
         )
         
 
-@Plug.register("Linechart")
+# @Plug.register("Linechart")
 class BaseBarChart(UIPlugin):
 
     def process(self, data:dict, **kwargs):

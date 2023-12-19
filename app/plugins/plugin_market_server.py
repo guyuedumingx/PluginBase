@@ -30,7 +30,7 @@ class PluginMarketServer(UIPlugin):
     
     @app.get("/plugins/s/{name}")
     def find_plugin_by_name(name :str):
-        plugins_dict = Plug.run(plugins=("_search_plugin",), data=name)
+        plugins_dict = Plug.run(plugins=("_search_plugin",), data=name, show_no_source=False)
         res = {}
         for name, plugin in plugins_dict.items():
             res[name] = (dict(
@@ -73,7 +73,7 @@ class BuildUpdateFile(Plugin):
     """
     ICON=ft.icons.BUILD_CIRCLE_OUTLINED
     def process(self, data, **kwargs):
-        # 压缩整个 app 目录
+        # 压缩整个 build_in 目录
         build_in_dir = ENV['update_dir']
         with zipfile.ZipFile(f"assets{os.path.sep}update.zip", "w") as zip_file:
             for foldername, subfolders, filenames in os.walk(build_in_dir):
@@ -82,3 +82,21 @@ class BuildUpdateFile(Plugin):
                     arcname = os.path.relpath(file_path, build_in_dir)
                     zip_file.write(file_path, arcname)
         return "更新包构建成功!!!"
+
+
+@Plug.register("构建插件包")
+class BuildUpdateFile(Plugin):
+    """
+    构建插件包app/plugins
+    """
+    ICON=ft.icons.BUILD_CIRCLE_OUTLINED
+    def process(self, data, **kwargs):
+        build_in_dir = ENV['plugin_dir']
+        with zipfile.ZipFile(f"assets{os.path.sep}plugins.zip", "w") as zip_file:
+            for foldername, subfolders, filenames in os.walk(build_in_dir):
+                for filename in filenames:
+                    file_path = os.path.join(foldername, filename)
+                    arcname = os.path.relpath(file_path, build_in_dir)
+                    zip_file.write(file_path, arcname)
+        return "插件包构建成功!!!"
+
