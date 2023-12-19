@@ -51,9 +51,15 @@ class ENVInformation(UIPlugin):
         return Plug.run(plugins=("_pluginUI_with_search",),
                  data=ENV,
                  ui_template="_dictUI",
+                 mode="edit",
                  key_icon=ft.icons.FIBER_MANUAL_RECORD_OUTLINED,
+                 save_handler = self.save_handler,
                  **kwargs) 
-
+    
+    def save_handler(self, data):
+        with open(ENV['config_file'], "w") as f:
+            f.write(json.dumps(data, ensure_ascii=False))
+    
 
 @Plug.register('_back')
 class Back(Plugin):

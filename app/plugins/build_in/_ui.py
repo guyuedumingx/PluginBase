@@ -192,9 +192,10 @@ class DictUI(UIPlugin):
     mode: show edit
     multiline: enable multiline turn into textarea
     """
-    def process(self, data: dict, mode='show', multiline=True, key_icon=ft.icons.FIBER_MANUAL_RECORD_OUTLINED,**kwargs):
+    def process(self, data: dict, mode='show', multiline=True, cell_on_change=lambda x:x, key_icon=ft.icons.FIBER_MANUAL_RECORD_OUTLINED,**kwargs):
         def on_change(e):
             data[e.control.hint_text] = e.data
+            cell_on_change(e)
         return ft.ListView([ft.ResponsiveRow(
             controls=[
                 ft.ListTile(leading=ft.Icon(key_icon), title=ft.Text(
@@ -283,33 +284,40 @@ class SearchBase(UIPlugin):
 @Plug.register('_pluginUI_with_search')
 class SearchBase(UIPlugin):
     """
-    带搜索的插件
+    带搜索和保存按钮的插件
+    save_handler: 保存操作
     """
     ICON = ft.icons.BOOKMARKS_OUTLINED
-    def process(self, data: dict, search_feild, page, container, tips_btn, ui_template="_markdown_tocUI", **kwargs):
+    def process(self, data: dict, search_feild, container, tips_btn, mode="show", save_handler=lambda x:x, ui_template="_markdown_tocUI", **kwargs):
         self.container = container
         search_feild.on_change = self.on_change
         self.table_name = data
         self.ui_template = ui_template
         self.data = data
+        self.mode = mode
+        if mode == "edit":
+            tips_btn.icon = ft.icons.SAVE
+            tips_btn.on_click = lambda x: save_handler(data)
         self.kwargs = kwargs
-        return self.ui("")
-    
+        return self.ui("") 
+
     def on_change(self, e):
         self.container.content = self.ui(e.data)
         self.container.update()
 
     def ui(self, key: str):
-        data = {}
-        try:
-            key = key.lower()
-        except:
-            pass
+        self.curdata = {}
         for k,v in self.data.items():
             try:
-                if key in k.lower() or key in v.lower():
-                    data[k] = v
+                if key.lower() in str(k).lower() or key.lower() in str(v).lower():
+                    self.curdata[k] = v
             except:
                 if key in str(k) or key in str(v):
-                    data[k] = v
-        return Plug.run(plugins=(self.ui_template,), data=data, **self.kwargs)
+                    self.curdata[k] = v
+        return Plug.run(plugins=(self.ui_template,), data=self.curdata, mode=self.mode, cell_on_change=self.cell_on_change, **self.kwargs)
+    
+    def cell_on_change(self, e):
+        if self.mode == "edit":
+            self.data.update(self.curdata)
+        else:
+            pass

@@ -1,6 +1,8 @@
 import flet as ft
+import dataset
 import pypinyin 
 import inspect
+import json
 from fastapi import FastAPI
 import logging
 import os
@@ -175,6 +177,17 @@ class UIPlugin(Plugin, ft.UserControl):
     def process(self, data, **kwargs):
         return ft.Text(data)
 
+
+@Plug.register("_load_config")
+class LoadConfig(Plugin):
+    def process(self, data, **kwargs):
+        with open(data, "r") as f:
+            config = json.loads(f.read())
+            ENV.update(config)
+        db = dataset.connect(ENV['db_url'])
+        Plug.set_state(db=db)
+        return ENV['plugin_dir']
+            
 
 @Plug.register('_preload_plugin')
 class PreLoadPlugin(Plugin):

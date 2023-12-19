@@ -16,3 +16,7 @@ value: {
     install_time: time 
 }
 ```
+
+```sql
+select "核准人员姓名", "核准人员" AS "柜员号"  from login_logout_data group by "核准人员";
+```
