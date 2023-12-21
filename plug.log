@@ -4644,3 +4644,150 @@ TypeError: SearchBase.process() missing 1 required positional argument: 'tips_bt
 2023-12-20 00:51:26,084 - INFO - Starting Flet View app...
 2023-12-20 00:51:26,084 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
 2023-12-20 00:51:26,309 - INFO - Session started: 
+2023-12-20 22:39:18,604 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-20 22:39:18,605 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/HTdMRyoyGp
+2023-12-20 22:39:18,605 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/HTdMRyoyGp
+2023-12-20 22:39:18,605 - INFO - Connected to Flet app and handling user sessions...
+2023-12-20 22:39:18,605 - INFO - Starting Flet View app...
+2023-12-20 22:39:18,605 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-20 22:39:18,878 - INFO - Session started: 
+2023-12-21 21:42:31,808 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-21 21:42:31,809 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/hkdKivKVHL
+2023-12-21 21:42:31,809 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/hkdKivKVHL
+2023-12-21 21:42:31,809 - INFO - Connected to Flet app and handling user sessions...
+2023-12-21 21:42:31,809 - INFO - Starting Flet View app...
+2023-12-21 21:42:31,809 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-21 21:42:32,809 - INFO - Session started: 
+2023-12-21 21:42:33,155 - ERROR - 'URL' object has no attribute 'decode'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 37, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 49, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//preload.py", line 15, in process
+    db = dataset.connect(engine.url)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/dataset/__init__.py", line 54, in connect
+    return Database(
+           ^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/dataset/database.py", line 39, in __init__
+    parsed_url = urlparse(url)
+                 ^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/parse.py", line 394, in urlparse
+    url, scheme, _coerce_result = _coerce_args(url, scheme)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/parse.py", line 133, in _coerce_args
+    return _decode_args(args) + (_encode_result,)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/parse.py", line 117, in _decode_args
+    return tuple(x.decode(encoding, errors) if x else '' for x in args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/parse.py", line 117, in <genexpr>
+    return tuple(x.decode(encoding, errors) if x else '' for x in args)
+                 ^^^^^^^^
+AttributeError: 'URL' object has no attribute 'decode'
+2023-12-21 21:43:12,770 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-21 21:43:12,770 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/tObVtsaNfG
+2023-12-21 21:43:12,770 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/tObVtsaNfG
+2023-12-21 21:43:12,771 - INFO - Connected to Flet app and handling user sessions...
+2023-12-21 21:43:12,771 - INFO - Starting Flet View app...
+2023-12-21 21:43:12,771 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-21 21:43:12,996 - INFO - Session started: 
+2023-12-21 21:43:13,008 - ERROR - 'URL' object has no attribute 'decode'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 37, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 49, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//preload.py", line 16, in process
+    db = dataset.connect(engine.url)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/dataset/__init__.py", line 54, in connect
+    return Database(
+           ^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/dataset/database.py", line 39, in __init__
+    parsed_url = urlparse(url)
+                 ^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/parse.py", line 394, in urlparse
+    url, scheme, _coerce_result = _coerce_args(url, scheme)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/parse.py", line 133, in _coerce_args
+    return _decode_args(args) + (_encode_result,)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/parse.py", line 117, in _decode_args
+    return tuple(x.decode(encoding, errors) if x else '' for x in args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/parse.py", line 117, in <genexpr>
+    return tuple(x.decode(encoding, errors) if x else '' for x in args)
+                 ^^^^^^^^
+AttributeError: 'URL' object has no attribute 'decode'
+2023-12-21 21:43:49,835 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-21 21:43:49,836 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/rvzSBykFCd
+2023-12-21 21:43:49,836 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/rvzSBykFCd
+2023-12-21 21:43:49,836 - INFO - Connected to Flet app and handling user sessions...
+2023-12-21 21:43:49,836 - INFO - Starting Flet View app...
+2023-12-21 21:43:49,836 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-21 21:43:50,061 - INFO - Session started: 
+2023-12-21 21:49:48,940 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-21 21:49:48,941 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/idlWknoVWw
+2023-12-21 21:49:48,941 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/idlWknoVWw
+2023-12-21 21:49:48,941 - INFO - Connected to Flet app and handling user sessions...
+2023-12-21 21:49:48,941 - INFO - Starting Flet View app...
+2023-12-21 21:49:48,941 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-21 21:49:49,179 - INFO - Session started: 
+2023-12-21 21:52:30,339 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-21 21:52:30,339 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/khXnJrRjoI
+2023-12-21 21:52:30,340 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/khXnJrRjoI
+2023-12-21 21:52:30,340 - INFO - Connected to Flet app and handling user sessions...
+2023-12-21 21:52:30,340 - INFO - Starting Flet View app...
+2023-12-21 21:52:30,340 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-21 21:52:30,598 - INFO - Session started: 
+2023-12-21 21:52:38,438 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-21 21:52:38,439 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/EmldaXwwom
+2023-12-21 21:52:38,439 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/EmldaXwwom
+2023-12-21 21:52:38,439 - INFO - Connected to Flet app and handling user sessions...
+2023-12-21 21:52:38,440 - INFO - Starting Flet View app...
+2023-12-21 21:52:38,440 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-21 21:52:38,663 - INFO - Session started: 
+2023-12-21 22:01:30,453 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-21 22:01:30,454 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/DLSUYkkIUY
+2023-12-21 22:01:30,454 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/DLSUYkkIUY
+2023-12-21 22:01:30,454 - INFO - Connected to Flet app and handling user sessions...
+2023-12-21 22:01:30,455 - INFO - Starting Flet View app...
+2023-12-21 22:01:30,455 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-21 22:01:30,680 - INFO - Session started: 
+2023-12-21 22:01:40,497 - ERROR - DPI-1047: Cannot locate a 64-bit Oracle Client library: "dlopen(libclntsh.dylib, 0x0001): tried: 'libclntsh.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibclntsh.dylib' (no such file), '/opt/homebrew/lib/libclntsh.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libclntsh.dylib' (no such file), '/usr/lib/libclntsh.dylib' (no such file, not in dyld cache), 'libclntsh.dylib' (no such file)". See https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html for help
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 37, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 49, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//preload.py", line 20, in process
+    connection = cx_Oracle.connect(f"{username}/{password}@{hostname}:{port}")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cx_Oracle.DatabaseError: DPI-1047: Cannot locate a 64-bit Oracle Client library: "dlopen(libclntsh.dylib, 0x0001): tried: 'libclntsh.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibclntsh.dylib' (no such file), '/opt/homebrew/lib/libclntsh.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libclntsh.dylib' (no such file), '/usr/lib/libclntsh.dylib' (no such file, not in dyld cache), 'libclntsh.dylib' (no such file)". See https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html for help
+2023-12-21 22:05:36,394 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-21 22:05:36,395 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/drZYtGNDem
+2023-12-21 22:05:36,395 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/drZYtGNDem
+2023-12-21 22:05:36,395 - INFO - Connected to Flet app and handling user sessions...
+2023-12-21 22:05:36,395 - INFO - Starting Flet View app...
+2023-12-21 22:05:36,396 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-21 22:05:36,612 - INFO - Session started: 
+2023-12-21 22:05:36,620 - ERROR - DPI-1047: Cannot locate a 64-bit Oracle Client library: "dlopen(libclntsh.dylib, 0x0001): tried: 'libclntsh.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibclntsh.dylib' (no such file), '/opt/homebrew/lib/libclntsh.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libclntsh.dylib' (no such file), '/usr/lib/libclntsh.dylib' (no such file, not in dyld cache), 'libclntsh.dylib' (no such file)". See https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html for help
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 37, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 49, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//preload.py", line 20, in process
+    connection = cx_Oracle.connect(f"{username}/{password}@{hostname}:{port}")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cx_Oracle.DatabaseError: DPI-1047: Cannot locate a 64-bit Oracle Client library: "dlopen(libclntsh.dylib, 0x0001): tried: 'libclntsh.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibclntsh.dylib' (no such file), '/opt/homebrew/lib/libclntsh.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libclntsh.dylib' (no such file), '/usr/lib/libclntsh.dylib' (no such file, not in dyld cache), 'libclntsh.dylib' (no such file)". See https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html for help

@@ -2,6 +2,7 @@ from app.plug import *
 import flet as ft
 from functools import partial
 
+
 @Plug.register('_search_plugin')
 class SearchPlugin(Plugin):
     """
@@ -127,6 +128,7 @@ class IndexPlugin(UIPlugin):
         self.search_feild.focus()
         self.page.on_keyboard_event = self.keyboard_event
         self.page.update()
+        Plug.run(plugins=("_on_load_index_success",), page=self.page)
         return page
     
     def keyboard_event(self, e:ft.KeyboardEvent):
@@ -162,3 +164,9 @@ class IndexPlugin(UIPlugin):
         self.search_feild.focus()
         self.page.update()
         return True
+
+
+@Plug.register("_on_load_index_success")
+class OnLoadIndexSuccess(Plugin):
+    def process(self, data, **kwargs):
+        return super().process(data, **kwargs)
