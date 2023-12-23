@@ -30,6 +30,12 @@ class Plug(object):
 
     @classmethod
     def run(icls, plugins: tuple, data="", **kwargs):
+        """
+        调用插件的方法
+        plugins 是一个元组
+        data: 只用来传输数据
+        其他任何元素都使用对应的名称来传
+        """
         try:
             icls.ENVS.append(kwargs)
             for plugin_name in plugins:
@@ -48,13 +54,13 @@ class Plug(object):
         """
         return plugin.process(data, **kwargs)
 
-    """
-    插件注册入口装饰器，当某个对象使用该装饰器时，表示该对象是一个插件，其中传入的参数表示
-    注册的全局插件名，如果该插件名存在于当前环境中，则对比环境中的插件版本号和需要注册的插件
-    版本号，只有版本号>=当前环境中该插件的版本号才会被重新导入
-    """
     @classmethod
     def register(cls, plugin_name):
+        """
+        插件注册入口装饰器，当某个对象使用该装饰器时，表示该对象是一个插件，其中传入的参数表示
+        注册的全局插件名，如果该插件名存在于当前环境中，则对比环境中的插件版本号和需要注册的插件
+        版本号，只有版本号>=当前环境中该插件的版本号才会被重新导入
+        """
         def wrapper(plugin):
             if plugin_name in cls.PLUGINS:
                 current_version = cls.PLUGINS[plugin_name].VERSION
@@ -71,12 +77,12 @@ class Plug(object):
         # 实际的版本号比较可能会更加复杂，这里简化为字符串比较
         return int(version1.replace('.', '')) - int(version2.replace('.', ''))
     
-    """
-    注册构建函数，主要用于构建插件注册后续需要使用的关键字列表
-    支持首字母，全拼音，原单词匹配插件
-    """
     @classmethod
     def _build(cls, plugin_name: str, plugin):
+        """
+        注册构建函数，主要用于构建插件注册后续需要使用的关键字列表
+        支持首字母，全拼音，原单词匹配插件
+        """
         first_letters = "".join(pypinyin.lazy_pinyin(plugin_name, pypinyin.Style.FIRST_LETTER)).lower()
         full_pinyin = "".join(pypinyin.lazy_pinyin(plugin_name)).lower()
         matchs=[plugin_name.lower(), first_letters, full_pinyin]
@@ -109,13 +115,13 @@ class Plug(object):
     def get_plugin(cls, plugin_name):
         return cls.PLUGINS[plugin_name]
     
-    """
-    每次调用Plug.run都会使得ENVS产生新的环境栈帧，如果需要在同一次run的不同plugins
-    之间传递额外的参数，则可以使用add_args函数把需要传递的参数植入ENVS中，后续的plugins
-    执行过程会得到该参数
-    """
     @classmethod
     def add_args(cls, args:dict):
+        """
+        每次调用Plug.run都会使得ENVS产生新的环境栈帧，如果需要在同一次run的不同plugins
+        之间传递额外的参数，则可以使用add_args函数把需要传递的参数植入ENVS中，后续的plugins
+        执行过程会得到该参数
+        """
         cls.ENVS[-1].update(args)
     
     @classmethod
@@ -135,36 +141,36 @@ class Plugin(object):
     def process(self, data, **kwargs):
         return data
     
-    """
-    #TODO
-    only run when a plugin be installed
-    """
     def on_install(self, **kwargs):
+        """
+        #TODO
+        only run when a plugin be installed
+        """
         pass
     
-    """
-    #TODO
-    only run when a plugin be uninstalled
-    """
     def on_uninstall(self, **kwargs):
+        """
+        #TODO
+        only run when a plugin be uninstalled
+        """
         pass
     
-    """
-    only run when a plugin be register
-    """
     def on_register(self, **kwargs):
+        """
+        only run when a plugin be register
+        """
         pass
     
-    """
-    only run when a plugin be load
-    """
     def on_load(self, **kwargs):
+        """
+        only run when a plugin be load
+        """
         pass
     
-    """
-    only run when a plugin be exit
-    """
     def on_exit(self, **kwargs):
+        """
+        only run when a plugin be exit
+        """
         pass
 
 
@@ -197,17 +203,17 @@ class PreLoadPlugin(Plugin):
     file: 指定加载的文件
     data: 路径，不包含文件名
     """
-    def process(self, data, file="", **kwargs):
-        if not os.path.exists(data):
-            os.makedirs(data)
-        self._load(file, path=data)
+    def process(self, path, file="", **kwargs):
+        if not os.path.exists(path):
+            os.makedirs(path)
+        self._load(file, path)
         return f"LOAD COMPLETE!!!"
     
-    """
-    f: 文件名
-    path: 路径不包含文件名
-    """
     def _load(self, f, path):
+        """
+        f: 文件名
+        path: 路径不包含文件名
+        """
         full_path = path+os.sep+f
         if os.path.isdir(full_path):
             files = os.listdir(full_path)

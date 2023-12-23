@@ -49,4 +49,4 @@ class Knowledge(UIPlugin):
     ICON = ft.icons.AUTO_STORIES
 
     def process(self, data, **kwargs):
-        return Plug.run(plugins=("_search_base",), data="knowledge", **kwargs)
+        return Plug.run(plugins=("_local_knowledge_base",), data="knowledge", **kwargs)

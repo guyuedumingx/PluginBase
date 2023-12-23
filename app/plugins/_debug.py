@@ -154,10 +154,10 @@ class TableUI(UIPlugin):
         )
         
 
-# @Plug.register("Linechart")
+@Plug.register("Linechart")
 class BaseBarChart(UIPlugin):
 
     def process(self, data:dict, **kwargs):
         data = dict(apple=[(1, 30), (2, 40), (3, 50), (4, 20), (5, 10)],
                     bogo=[(1, 15), (2, 25), (3, 40), (4, 10)])
-        return Plug.run(plugins=("_linechart",), data=data, **kwargs)
+        return Plug.run(plugins=("_piechart",), data=data, **kwargs)

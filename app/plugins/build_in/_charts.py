@@ -43,52 +43,68 @@ class BaseBarChart(UIPlugin):
             expand=True,
             )
 
-
 @Plug.register("_linechart")
-class BaseLineChart(UIPlugin):
-    """
-    data: {
-        line1: [(0.5, 1), (1, 2)],
-        line2: ...
-    }
-    """
-    def process(self, data:dict, **kwargs):
-        labels = [
-            ft.ChartAxisLabel(
-                value=idx+1,
-                label=ft.Container(
-                    ft.Text(
-                        name,
-                        size=16,
-                        weight=ft.FontWeight.BOLD,
-                        color=ft.colors.with_opacity(0.5, ft.colors.ON_SURFACE),
-                    ),
-                    margin=ft.margin.only(top=10),
-                ),
-            )
-        for idx, name in enumerate(list(data.keys()))]
-        series = []
-        for name, values in data.items():
-            points = [ft.LineChartDataPoint(i[0], i[1]) for i in values]
-            series.append(
-                ft.LineChartData(
-                    data_points=points,
-                    stroke_width=5,
-                    color=ft.colors.CYAN,
-                    curved=True,
-                    stroke_cap_round=True,
-                )
-            )
-        return ft.LineChart(
-            data_series=series,
-            border=ft.border.all(3, ft.colors.with_opacity(0.2, ft.colors.ON_SURFACE)),
-            horizontal_grid_lines=ft.ChartGridLines(
-                interval=1, color=ft.colors.with_opacity(0.2, ft.colors.ON_SURFACE), width=1
-            ),
-            vertical_grid_lines=ft.ChartGridLines(
-                interval=1, color=ft.colors.with_opacity(0.2, ft.colors.ON_SURFACE), width=1
-            ),
-            bottom_axis=ft.ChartAxis(labels=labels),
-            expand=True
+class LineChartPlugin(UIPlugin):
+    def process(self, data: dict, title='Line Chart', **kwargs):
+        x_axis = list(data.keys())
+        y_axis = list(data.values())
+        line = ft.Line(
+            x_axis=x_axis,
+            y_axis=y_axis,
+            **kwargs
         )
+        # 创建并返回折线图对象
+        return ft.LineChart(
+            title=title,
+            lines=[line]
+        )
+
+
+# @Plug.register("_linechart")
+# class BaseLineChart(UIPlugin):
+#     """
+#     data: {
+#         line1: [(0.5, 1), (1, 2)],
+#         line2: ...
+#     }
+#     """
+#     def process(self, data:dict, **kwargs):
+#         labels = [
+#             ft.ChartAxisLabel(
+#                 value=idx+1,
+#                 label=ft.Container(
+#                     ft.Text(
+#                         name,
+#                         size=16,
+#                         weight=ft.FontWeight.BOLD,
+#                         color=ft.colors.with_opacity(0.5, ft.colors.ON_SURFACE),
+#                     ),
+#                     margin=ft.margin.only(top=10),
+#                 ),
+#             )
+#         for idx, name in enumerate(list(data.keys()))]
+#         series = []
+#         for name, values in data.items():
+#             points = [ft.LineChartDataPoint(i[0], i[1]) for i in values]
+#             series.append(
+#                 ft.LineChartData(
+#                     data_points=points,
+#                     stroke_width=5,
+#                     color=ft.colors.CYAN,
+#                     curved=True,
+#                     stroke_cap_round=True,
+#                 )
+#             )
+#         return ft.LineChart(
+#             data_series=series,
+#             border=ft.border.all(3, ft.colors.with_opacity(0.2, ft.colors.ON_SURFACE)),
+#             horizontal_grid_lines=ft.ChartGridLines(
+#                 interval=1, color=ft.colors.with_opacity(0.2, ft.colors.ON_SURFACE), width=1
+#             ),
+#             vertical_grid_lines=ft.ChartGridLines(
+#                 interval=1, color=ft.colors.with_opacity(0.2, ft.colors.ON_SURFACE), width=1
+#             ),
+#             bottom_axis=ft.ChartAxis(labels=labels),
+#             expand=True
+#         )
         

@@ -24,6 +24,7 @@ class PluginBaseUI(Plugin):
             text_size=18,
             on_change= search_onchange if search_onchange!=None else self.search_feild_onchange
         )
+        process_bar = ft.ProgressBar(visible=False,value=2) 
         tips_btn = ft.FloatingActionButton(icon=ft.icons.TIPS_AND_UPDATES,
                 scale=0.7,
                 opacity=0.5,
@@ -37,7 +38,7 @@ class PluginBaseUI(Plugin):
                     )
                 )
         container = Plug.run(plugins=("_defaultbackground",))
-        return (back_btn, search_feild, container, tips_btn)
+        return (back_btn, search_feild, process_bar, container, tips_btn)
     
     def search_feild_onchange(self, e):
         self.page.views.pop() and self.page.update()
@@ -247,14 +248,14 @@ class MarkdownTocUI(UIPlugin):
         return Plug.run(("_tocUI",), data, **kwargs)
 
 
-@Plug.register('_search_base')
+@Plug.register('_local_knowledge_base')
 class SearchBase(UIPlugin):
     """
     基础知识库样式
     """
     ICON = ft.icons.BOOKMARKS_OUTLINED
 
-    def process(self, data: dict, db, search_feild, page, container, tips_btn, ui_template="_markdown_tocUI", **kwargs):
+    def process(self, data, db, search_feild, page, container, tips_btn, ui_template="_markdown_tocUI", **kwargs):
         self.db = db
         self.container = container
         search_feild.on_change = self.on_change

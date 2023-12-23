@@ -140,3 +140,40 @@ Application startup complete.
 Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
 Shutting down
 Waiting for application shutdown.
+Started server process [39405]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+Started server process [39487]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+Started server process [39543]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+Started server process [39580]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+Started server process [39652]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+Started server process [39718]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:64109 - "GET /plugins HTTP/1.1" 200
+127.0.0.1:64111 - "GET /plugins/d/%E6%95%B0%E6%8D%AE%E5%BA%93 HTTP/1.1" 200
+Started server process [39793]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:64227 - "GET /plugins HTTP/1.1" 200
+127.0.0.1:64229 - "GET /plugins/d/%E5%8A%A0%E8%BD%BDEXCEL HTTP/1.1" 200
+Started server process [2212]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:49481 - "GET /plugins HTTP/1.1" 200

@@ -26,8 +26,7 @@ class InstallPlugin(UIPlugin):
                     Plug.run(
                         plugins=("_preload_plugin", "_notice"), data=plugin_dir, page=page, **kwargs)
                 except Exception as e:
-                    Plug.run(plugins=("_notice",),
-                                    data=e, page=page, **kwargs)
+                    Plug.run(plugins=("_notice",), data=e, page=page, **kwargs)
 
         file_picker = ft.FilePicker(on_result=on_dialog_result)
         page.overlay.append(file_picker)
@@ -57,6 +56,9 @@ class ENVInformation(UIPlugin):
                  **kwargs) 
     
     def save_handler(self, data):
+        """
+        保存函数
+        """
         with open(ENV['config_file'], "w") as f:
             f.write(json.dumps(data, ensure_ascii=False))
     
@@ -79,8 +81,10 @@ class PreLoadPlugin(Plugin):
     加载插件库中的所有插件
     """
     ICON=ft.icons.REFRESH
-    def process(self, data, **kwargs):
+    def process(self, data, page: ft.Page, **kwargs):
         return Plug.run(plugins=("_preload_plugin",),data=ENV['plugin_dir'])
+        # page.controls = []
+        # return Plug.run(plugins=("_index",), data=page)
 
 
 @Plug.register('_load_plugin')
@@ -94,7 +98,7 @@ class BasePluginView(UIPlugin):
         self.plugin_name = plugin_name
         self.plugin = Plug.get_plugin(plugin_name)
         self.page = page
-        back_btn, search_feild, self.container, tips_btn = Plug.run(plugins=("_plugin_baseUI",),page=page,data=plugin_name)
+        back_btn, search_feild, process_bar, self.container, tips_btn = Plug.run(plugins=("_plugin_baseUI",),page=page,data=plugin_name)
         plugin = Plug.get_plugin(plugin_name)
         func = partial(
             Plug.run,
@@ -102,6 +106,7 @@ class BasePluginView(UIPlugin):
             page=page,
             container=self.container,
             tips_btn=tips_btn,
+            process_bar=process_bar,
             back_btn = back_btn,
             data=plugin_name
             )
@@ -127,15 +132,18 @@ class BasePluginView(UIPlugin):
                 "/" + plugin_name,
                 [
                     ft.ResponsiveRow([search_feild, back_btn]),
+                    process_bar,
                     tips_btn,
                     self.container
                 ],
             )
         )
         page.go("/"+plugin_name)
+        process_bar.visible = True
         page.update()
         self.container.content = func(plugins=(plugin_name,)) 
         search_feild.focus()
+        process_bar.visible = False
         page.update()
         return plugin_name
 

@@ -1,6 +1,6 @@
 {
     "initial_plugin_subtitle": "THIS IS A USEFUL PLUGIN",
-    "server_addr": "127.0.1.1",
+    "server_addr": "localhost",
     "server_port": "36909",
     "db_url": "sqlite:///plug.db",
     "config_file": "config.json"
