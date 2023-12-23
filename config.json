@@ -1,1 +1,7 @@
-{"initial_plugin_subtitle": "THIS IS A USEFUL PLUGIN", "plugin_dir": "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins", "update_dir": "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins/build_in", "app_dir": "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base", "server_addr": "127.0.1.1", "server_port": "36909", "db_url": "sqlite:///plug.db", "config_file": "config.json"}
+{
+    "initial_plugin_subtitle": "THIS IS A USEFUL PLUGIN",
+    "server_addr": "localhost",
+    "server_port": "36909",
+    "db_url": "sqlite:///plug.db",
+    "config_file": "config.json"
+}

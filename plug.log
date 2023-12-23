@@ -4791,3 +4791,476 @@ Traceback (most recent call last):
     connection = cx_Oracle.connect(f"{username}/{password}@{hostname}:{port}")
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 cx_Oracle.DatabaseError: DPI-1047: Cannot locate a 64-bit Oracle Client library: "dlopen(libclntsh.dylib, 0x0001): tried: 'libclntsh.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibclntsh.dylib' (no such file), '/opt/homebrew/lib/libclntsh.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/lib/libclntsh.dylib' (no such file), '/usr/lib/libclntsh.dylib' (no such file, not in dyld cache), 'libclntsh.dylib' (no such file)". See https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html for help
+2023-12-23 12:21:04,241 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-23 12:21:04,242 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/dWQDNrkbGb
+2023-12-23 12:21:04,242 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/dWQDNrkbGb
+2023-12-23 12:21:04,242 - INFO - Connected to Flet app and handling user sessions...
+2023-12-23 12:21:04,242 - INFO - Starting Flet View app...
+2023-12-23 12:21:04,243 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-23 12:21:04,739 - INFO - Session started: 
+2023-12-23 12:21:04,740 - ERROR - IndexPlugin.process() got multiple values for argument 'page'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: IndexPlugin.process() got multiple values for argument 'page'
+2023-12-23 12:22:29,051 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-23 12:22:29,052 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/ENHsPDMnLv
+2023-12-23 12:22:29,052 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/ENHsPDMnLv
+2023-12-23 12:22:29,052 - INFO - Connected to Flet app and handling user sessions...
+2023-12-23 12:22:29,052 - INFO - Starting Flet View app...
+2023-12-23 12:22:29,052 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-23 12:22:29,311 - INFO - Session started: 
+2023-12-23 12:29:14,160 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-23 12:29:14,160 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/WcpQbgWIlE
+2023-12-23 12:29:14,161 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/WcpQbgWIlE
+2023-12-23 12:29:14,161 - INFO - Connected to Flet app and handling user sessions...
+2023-12-23 12:29:14,161 - INFO - Starting Flet View app...
+2023-12-23 12:29:14,161 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-23 12:29:14,416 - INFO - Session started: 
+2023-12-23 12:29:30,147 - ERROR - Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_plugin_market.py", line 32, in process
+    self.data = resp.json()
+                ^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-12-23 12:29:30,152 - ERROR - Control must be added to the page first.
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_base.py", line 140, in process
+    search_feild.focus()
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/textfield.py", line 307, in focus
+    self.update()
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 270, in update
+    assert self.__page, "Control must be added to the page first."
+AssertionError: Control must be added to the page first.
+2023-12-23 12:29:30,387 - INFO - Started server process [39405]
+2023-12-23 12:29:30,388 - INFO - Waiting for application startup.
+2023-12-23 12:29:30,388 - INFO - Application startup complete.
+2023-12-23 12:29:30,389 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-23 12:29:38,296 - ERROR - Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_plugin_market.py", line 32, in process
+    self.data = resp.json()
+                ^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-12-23 12:29:38,297 - ERROR - Control must be added to the page first.
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_base.py", line 140, in process
+    search_feild.focus()
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/textfield.py", line 307, in focus
+    self.update()
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 270, in update
+    assert self.__page, "Control must be added to the page first."
+AssertionError: Control must be added to the page first.
+2023-12-23 12:29:46,558 - ERROR - Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_plugin_market.py", line 32, in process
+    self.data = resp.json()
+                ^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-12-23 12:32:19,510 - ERROR - Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_plugin_market.py", line 32, in process
+    self.data = resp.json()
+                ^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-12-23 12:32:19,511 - ERROR - Control must be added to the page first.
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_base.py", line 140, in process
+    search_feild.focus()
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/textfield.py", line 307, in focus
+    self.update()
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 270, in update
+    assert self.__page, "Control must be added to the page first."
+AssertionError: Control must be added to the page first.
+2023-12-23 12:32:45,089 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-23 12:32:45,090 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/PMGzlhjBLW
+2023-12-23 12:32:45,090 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/PMGzlhjBLW
+2023-12-23 12:32:45,090 - INFO - Connected to Flet app and handling user sessions...
+2023-12-23 12:32:45,090 - INFO - Starting Flet View app...
+2023-12-23 12:32:45,090 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-23 12:32:45,320 - INFO - Session started: 
+2023-12-23 12:32:48,137 - INFO - Started server process [39487]
+2023-12-23 12:32:48,138 - INFO - Waiting for application startup.
+2023-12-23 12:32:48,138 - INFO - Application startup complete.
+2023-12-23 12:32:48,139 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-23 12:32:55,816 - ERROR - Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_plugin_market.py", line 32, in process
+    self.data = resp.json()
+                ^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/requests/models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-12-23 12:34:53,281 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-23 12:34:53,282 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/GJowUZlUET
+2023-12-23 12:34:53,282 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/GJowUZlUET
+2023-12-23 12:34:53,282 - INFO - Connected to Flet app and handling user sessions...
+2023-12-23 12:34:53,282 - INFO - Starting Flet View app...
+2023-12-23 12:34:53,282 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-23 12:34:53,514 - INFO - Session started: 
+2023-12-23 12:35:08,174 - INFO - Started server process [39543]
+2023-12-23 12:35:08,175 - INFO - Waiting for application startup.
+2023-12-23 12:35:08,175 - INFO - Application startup complete.
+2023-12-23 12:35:08,176 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-23 12:35:53,492 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-23 12:35:53,492 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/IwMiaPlkPq
+2023-12-23 12:35:53,492 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/IwMiaPlkPq
+2023-12-23 12:35:53,492 - INFO - Connected to Flet app and handling user sessions...
+2023-12-23 12:35:53,492 - INFO - Starting Flet View app...
+2023-12-23 12:35:53,492 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-23 12:35:53,717 - INFO - Session started: 
+2023-12-23 12:36:00,524 - ERROR - Control must be added to the page first.
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_base.py", line 140, in process
+    search_feild.focus()
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/textfield.py", line 307, in focus
+    self.update()
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 270, in update
+    assert self.__page, "Control must be added to the page first."
+AssertionError: Control must be added to the page first.
+2023-12-23 12:36:16,263 - INFO - Started server process [39580]
+2023-12-23 12:36:16,263 - INFO - Waiting for application startup.
+2023-12-23 12:36:16,264 - INFO - Application startup complete.
+2023-12-23 12:36:16,264 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-23 12:37:34,608 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-23 12:37:34,609 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/eTtBBBlfAk
+2023-12-23 12:37:34,609 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/eTtBBBlfAk
+2023-12-23 12:37:34,609 - INFO - Connected to Flet app and handling user sessions...
+2023-12-23 12:37:34,610 - INFO - Starting Flet View app...
+2023-12-23 12:37:34,610 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-23 12:37:34,866 - INFO - Session started: 
+2023-12-23 12:37:38,246 - INFO - Started server process [39652]
+2023-12-23 12:37:38,247 - INFO - Waiting for application startup.
+2023-12-23 12:37:38,248 - INFO - Application startup complete.
+2023-12-23 12:37:38,249 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-23 12:38:55,329 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-23 12:38:55,330 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/KCpUpRUbIg
+2023-12-23 12:38:55,331 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/KCpUpRUbIg
+2023-12-23 12:38:55,331 - INFO - Connected to Flet app and handling user sessions...
+2023-12-23 12:38:55,331 - INFO - Starting Flet View app...
+2023-12-23 12:38:55,331 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-23 12:38:55,564 - INFO - Session started: 
+2023-12-23 12:38:58,318 - INFO - Started server process [39718]
+2023-12-23 12:38:58,319 - INFO - Waiting for application startup.
+2023-12-23 12:38:58,319 - INFO - Application startup complete.
+2023-12-23 12:38:58,320 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-23 12:39:05,893 - INFO - 127.0.0.1:64109 - "GET /plugins HTTP/1.1" 200
+2023-12-23 12:39:19,607 - INFO - 127.0.0.1:64111 - "GET /plugins/d/%E6%95%B0%E6%8D%AE%E5%BA%93 HTTP/1.1" 200
+2023-12-23 12:41:17,475 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-23 12:41:17,475 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/feERHoODhY
+2023-12-23 12:41:17,475 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/feERHoODhY
+2023-12-23 12:41:17,475 - INFO - Connected to Flet app and handling user sessions...
+2023-12-23 12:41:17,476 - INFO - Starting Flet View app...
+2023-12-23 12:41:17,476 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-23 12:41:17,691 - INFO - Session started: 
+2023-12-23 12:41:25,395 - INFO - Started server process [39793]
+2023-12-23 12:41:25,395 - INFO - Waiting for application startup.
+2023-12-23 12:41:25,396 - INFO - Application startup complete.
+2023-12-23 12:41:25,396 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-23 12:41:28,431 - INFO - 127.0.0.1:64227 - "GET /plugins HTTP/1.1" 200
+2023-12-23 12:41:35,794 - INFO - 127.0.0.1:64229 - "GET /plugins/d/%E5%8A%A0%E8%BD%BDEXCEL HTTP/1.1" 200
+2023-12-23 12:51:18,334 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-23 12:51:18,335 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/cjitDfRyzH
+2023-12-23 12:51:18,335 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/cjitDfRyzH
+2023-12-23 12:51:18,335 - INFO - Connected to Flet app and handling user sessions...
+2023-12-23 12:51:18,335 - INFO - Starting Flet View app...
+2023-12-23 12:51:18,335 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-23 12:51:18,610 - INFO - Session started: 
+2023-12-23 13:56:04,239 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-23 13:56:04,240 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/ESUhhjQyBB
+2023-12-23 13:56:04,240 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/ESUhhjQyBB
+2023-12-23 13:56:04,240 - INFO - Connected to Flet app and handling user sessions...
+2023-12-23 13:56:04,240 - INFO - Starting Flet View app...
+2023-12-23 13:56:04,240 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-23 13:56:04,516 - INFO - Session started: 
+2023-12-23 13:56:05,918 - ERROR - module 'flet' has no attribute 'PieSlice'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_charts.py", line 115, in process
+    slices = [ft.PieSlice(label=label, value=value) for label, value in data.items()]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_charts.py", line 115, in <listcomp>
+    slices = [ft.PieSlice(label=label, value=value) for label, value in data.items()]
+              ^^^^^^^^^^^
+AttributeError: module 'flet' has no attribute 'PieSlice'
+2023-12-23 14:29:43,659 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-23 14:29:43,660 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/ojYMJVOgWN
+2023-12-23 14:29:43,660 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/ojYMJVOgWN
+2023-12-23 14:29:43,660 - INFO - Connected to Flet app and handling user sessions...
+2023-12-23 14:29:43,660 - INFO - Starting Flet View app...
+2023-12-23 14:29:43,660 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-23 14:29:44,024 - INFO - Session started: 
+2023-12-23 15:40:26,205 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-23 15:40:26,205 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/XoQVtESJdf
+2023-12-23 15:40:26,206 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/XoQVtESJdf
+2023-12-23 15:40:26,206 - INFO - Connected to Flet app and handling user sessions...
+2023-12-23 15:40:26,206 - INFO - Starting Flet View app...
+2023-12-23 15:40:26,206 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-23 15:40:26,437 - INFO - Session started: 
+2023-12-23 15:40:28,517 - ERROR - name 'res' is not defined
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_base.py", line 87, in process
+    return res
+           ^^^
+NameError: name 'res' is not defined
+2023-12-23 15:41:44,051 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-23 15:41:44,052 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/FjshKQnhBH
+2023-12-23 15:41:44,052 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/FjshKQnhBH
+2023-12-23 15:41:44,052 - INFO - Connected to Flet app and handling user sessions...
+2023-12-23 15:41:44,052 - INFO - Starting Flet View app...
+2023-12-23 15:41:44,052 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-23 15:41:44,282 - INFO - Session started: 
+2023-12-23 15:41:46,306 - ERROR - property 'views' of 'Page' object has no setter
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_base.py", line 86, in process
+    page.views = []
+    ^^^^^^^^^^
+AttributeError: property 'views' of 'Page' object has no setter
+2023-12-23 15:46:22,148 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-23 15:46:22,149 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/plGePInChV
+2023-12-23 15:46:22,149 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/plGePInChV
+2023-12-23 15:46:22,149 - INFO - Connected to Flet app and handling user sessions...
+2023-12-23 15:46:22,150 - INFO - Starting Flet View app...
+2023-12-23 15:46:22,150 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-23 15:46:22,404 - INFO - Session started: 
+2023-12-23 15:46:23,868 - ERROR - Control must be added to the page first.
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_index.py", line 128, in process
+    self.search_feild.focus()
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/textfield.py", line 307, in focus
+    self.update()
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 270, in update
+    assert self.__page, "Control must be added to the page first."
+AssertionError: Control must be added to the page first.
+2023-12-23 15:46:23,870 - ERROR - Notice.process() missing 1 required positional argument: 'page'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Notice.process() missing 1 required positional argument: 'page'
+2023-12-23 15:47:08,368 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-23 15:47:08,369 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/CrHjZRZNFP
+2023-12-23 15:47:08,369 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/CrHjZRZNFP
+2023-12-23 15:47:08,369 - INFO - Connected to Flet app and handling user sessions...
+2023-12-23 15:47:08,369 - INFO - Starting Flet View app...
+2023-12-23 15:47:08,369 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-23 15:47:08,581 - INFO - Session started: 
+2023-12-23 15:47:10,141 - ERROR - IndexPlugin.process() got multiple values for argument 'page'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: IndexPlugin.process() got multiple values for argument 'page'
+2023-12-23 15:47:32,261 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-23 15:47:32,261 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/yraZLvRrRJ
+2023-12-23 15:47:32,262 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/yraZLvRrRJ
+2023-12-23 15:47:32,262 - INFO - Connected to Flet app and handling user sessions...
+2023-12-23 15:47:32,262 - INFO - Starting Flet View app...
+2023-12-23 15:47:32,262 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-23 15:47:32,481 - INFO - Session started: 
+2023-12-23 15:47:34,101 - ERROR - Control must be added to the page first.
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plugins//build_in/_index.py", line 128, in process
+    self.search_feild.focus()
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/textfield.py", line 307, in focus
+    self.update()
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/venv/lib/python3.11/site-packages/flet_core/control.py", line 270, in update
+    assert self.__page, "Control must be added to the page first."
+AssertionError: Control must be added to the page first.
+2023-12-23 15:47:34,102 - ERROR - Notice.process() missing 1 required positional argument: 'page'
+Traceback (most recent call last):
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yohoyes/projects/pythons/plugins-learn/plugin-base/app/plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Notice.process() missing 1 required positional argument: 'page'
+2023-12-23 15:48:02,706 - INFO - Assets path configured: /Users/yohoyes/projects/pythons/plugins-learn/plugin-base/assets
+2023-12-23 15:48:02,706 - INFO - Starting up UDS server on /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/PeAMTFxbfc
+2023-12-23 15:48:02,707 - INFO - App URL: /var/folders/83/ppd8pjs94l7910j149k3h8kh0000gn/T/PeAMTFxbfc
+2023-12-23 15:48:02,707 - INFO - Connected to Flet app and handling user sessions...
+2023-12-23 15:48:02,707 - INFO - Starting Flet View app...
+2023-12-23 15:48:02,707 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
+2023-12-23 15:48:02,936 - INFO - Session started: 

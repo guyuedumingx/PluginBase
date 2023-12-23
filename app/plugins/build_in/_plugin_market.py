@@ -29,11 +29,14 @@ class PluginMarket(UIPlugin):
                 server_addr=ENV['server_addr'], server_port=ENV['server_port'], **kwargs):
         self.url_prefix = f"http://{server_addr}:{server_port}"
         resp = requests.get(f"{self.url_prefix}/plugins")
-        self.data = resp.json()
-        self.page = page
-        self.container = container
-        search_feild.on_change = self.search_feild_on_change
-        return self.main_ui()
+        if resp.status_code == 200:
+            self.data = resp.json()
+            self.page = page
+            self.container = container
+            search_feild.on_change = self.search_feild_on_change
+            return self.main_ui()
+        else:
+            return ft.Text("服务器连接失败")
         
     def search_feild_on_change(self, e):
         resp = requests.get(f"{self.url_prefix}/plugins/s/{e.data}")
@@ -85,11 +88,11 @@ class PluginMarket(UIPlugin):
             content_disposition = resp.headers.get("Content-Disposition")
             if content_disposition and "filename" in content_disposition:
                 filename = content_disposition.split("filename=")[1].strip('"')
+                with open(ENV['plugin_dir']+os.path.sep+filename, "wb") as f:
+                    f.write(resp.content)
+                Plug.run(plugins=("_notice","重新加载",), data="安装成功", page=self.page)
             else:
-                filename = "downloaded_plugin.py"  # 默认文件名
-            with open(ENV['plugin_dir']+os.path.sep+filename, "wb") as f:
-                f.write(resp.content)
-        Plug.run(plugins=("重新加载",))
+                Plug.run(plugins=("_notice","重新加载",), data="安装失败，请联系管理员", page=self.page)
 
 
 @Plug.register('_server')

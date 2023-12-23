@@ -168,5 +168,8 @@ class IndexPlugin(UIPlugin):
 
 @Plug.register("_on_load_index_success")
 class OnLoadIndexSuccess(Plugin):
+    """
+    主页面加载成功后调用这个插件
+    """
     def process(self, data, **kwargs):
         return super().process(data, **kwargs)
