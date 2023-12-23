@@ -24,7 +24,7 @@ class PluginBaseUI(Plugin):
             text_size=18,
             on_change= search_onchange if search_onchange!=None else self.search_feild_onchange
         )
-        process_bar = ft.ProgressBar(visible=False) 
+        process_bar = ft.ProgressBar(visible=False,value=2) 
         tips_btn = ft.FloatingActionButton(icon=ft.icons.TIPS_AND_UPDATES,
                 scale=0.7,
                 opacity=0.5,

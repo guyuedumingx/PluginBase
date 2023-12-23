@@ -172,3 +172,8 @@ Application startup complete.
 Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
 127.0.0.1:64227 - "GET /plugins HTTP/1.1" 200
 127.0.0.1:64229 - "GET /plugins/d/%E5%8A%A0%E8%BD%BDEXCEL HTTP/1.1" 200
+Started server process [2212]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:49481 - "GET /plugins HTTP/1.1" 200

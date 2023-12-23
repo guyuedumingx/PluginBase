@@ -139,9 +139,11 @@ class BasePluginView(UIPlugin):
             )
         )
         page.go("/"+plugin_name)
+        process_bar.visible = True
         page.update()
         self.container.content = func(plugins=(plugin_name,)) 
         search_feild.focus()
+        process_bar.visible = False
         page.update()
         return plugin_name
 
