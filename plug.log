@@ -4644,3 +4644,22 @@ TypeError: SearchBase.process() missing 1 required positional argument: 'tips_bt
 2023-12-20 00:51:26,084 - INFO - Starting Flet View app...
 2023-12-20 00:51:26,084 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
 2023-12-20 00:51:26,309 - INFO - Session started: 
+2023-12-21 22:47:48,383 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-21 22:47:48,385 - INFO - Starting up TCP server on ('localhost', 64488)
+2023-12-21 22:47:48,390 - INFO - App URL: tcp://localhost:64488
+2023-12-21 22:47:48,390 - INFO - Connected to Flet app and handling user sessions...
+2023-12-21 22:47:48,390 - INFO - Starting Flet View app...
+2023-12-21 22:47:48,392 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-21 22:47:48,904 - INFO - Session started: 
+2023-12-21 22:47:48,906 - ERROR - '_index'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 36, in run
+    plugin = icls.PLUGINS[plugin_name]
+KeyError: '_index'
+2023-12-21 22:48:13,757 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-21 22:48:13,758 - INFO - Starting up TCP server on ('localhost', 64492)
+2023-12-21 22:48:13,763 - INFO - App URL: tcp://localhost:64492
+2023-12-21 22:48:13,763 - INFO - Connected to Flet app and handling user sessions...
+2023-12-21 22:48:13,763 - INFO - Starting Flet View app...
+2023-12-21 22:48:13,765 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-21 22:48:13,942 - INFO - Session started: 
