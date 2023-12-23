@@ -106,10 +106,15 @@ class IndexPlugin(UIPlugin):
         # 页面的宽高字体
         page.window_height = 600
         page.window_width = 800 
+        page.title = "插件工具箱"
         page.fonts = {
             "LXGWWenKai-Regular": "fonts/LXGWWenKai-Regular.ttf",
         }
-        page.theme = ft.Theme(font_family="LXGWWenKai-Regular")
+
+        theme_color = "blue"
+        if '主题颜色' in ENV:
+            theme_color = ENV['主题颜色']
+        page.theme = ft.Theme(font_family="LXGWWenKai-Regular", color_scheme_seed=theme_color)
         self.page = page
         self.search_feild = ft.TextField(
             hint_text=self.HINT_TEXT,
@@ -119,10 +124,33 @@ class IndexPlugin(UIPlugin):
             text_size=18,
             on_change=self.search_func
         )
+        self.avatar = ft.Stack(
+            [
+                ft.CircleAvatar(
+                    # foreground_image_url="https://avatars.githubusercontent.com/u/5041459?s=88&v=4"
+                    content=ft.Icon(ft.icons.SPORTS_VOLLEYBALL_OUTLINED),
+                    bgcolor=ft.colors.with_opacity(0.5, ft.colors.GREY_50),
+                ),
+                ft.Container(
+                    content=ft.CircleAvatar(bgcolor=ft.colors.YELLOW, radius=5),
+                    alignment=ft.alignment.bottom_left,
+                ),
+            ],
+            width=40,
+            height=40,
+            scale=1.2
+        )
         self.container = ft.Container(Plug.run(plugins=("_plugin_search_stream",),
                                                       plugin_onclick=self.load_plugin), expand=1)
         self.page.add(
-            ft.ResponsiveRow([ft.Container(self.search_feild, padding=5,)]),
+            ft.ResponsiveRow([
+                ft.Container(self.search_feild, padding=5,col={"xs":11}),
+                ft.Container(
+                    self.avatar,
+                    on_click=lambda x: Plug.run(plugins=("_load_plugin",), data="_person_info", page=self.page),
+                    col={"xs":1}
+                )],
+                vertical_alignment=ft.CrossAxisAlignment.CENTER),
             self.container
         )
         self.search_feild.focus()

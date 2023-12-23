@@ -125,3 +125,441 @@ sqlalchemy.exc.DatabaseError: (cx_Oracle.DatabaseError) ORA-12505: TNS:listener 
 2023-12-23 23:45:36,219 - INFO - Starting Flet View app...
 2023-12-23 23:45:36,221 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
 2023-12-23 23:45:36,403 - INFO - Session started: 
+2023-12-23 23:56:58,975 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-23 23:56:58,976 - INFO - Starting up TCP server on ('localhost', 63867)
+2023-12-23 23:56:58,980 - INFO - App URL: tcp://localhost:63867
+2023-12-23 23:56:58,980 - INFO - Connected to Flet app and handling user sessions...
+2023-12-23 23:56:58,980 - INFO - Starting Flet View app...
+2023-12-23 23:56:58,982 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-23 23:56:59,173 - INFO - Session started: 
+2023-12-24 00:08:46,801 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:08:46,802 - INFO - Starting up TCP server on ('localhost', 64330)
+2023-12-24 00:08:46,806 - INFO - App URL: tcp://localhost:64330
+2023-12-24 00:08:46,807 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:08:46,807 - INFO - Starting Flet View app...
+2023-12-24 00:08:46,809 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:08:46,980 - INFO - Session started: 
+2023-12-24 00:09:44,635 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:09:44,636 - INFO - Starting up TCP server on ('localhost', 64357)
+2023-12-24 00:09:44,641 - INFO - App URL: tcp://localhost:64357
+2023-12-24 00:09:44,641 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:09:44,641 - INFO - Starting Flet View app...
+2023-12-24 00:09:44,643 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:09:44,848 - INFO - Session started: 
+2023-12-24 00:10:23,476 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:10:23,477 - INFO - Starting up TCP server on ('localhost', 64384)
+2023-12-24 00:10:23,482 - INFO - App URL: tcp://localhost:64384
+2023-12-24 00:10:23,482 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:10:23,482 - INFO - Starting Flet View app...
+2023-12-24 00:10:23,484 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:10:23,644 - INFO - Session started: 
+2023-12-24 00:10:52,978 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:10:52,979 - INFO - Starting up TCP server on ('localhost', 64403)
+2023-12-24 00:10:52,983 - INFO - App URL: tcp://localhost:64403
+2023-12-24 00:10:52,983 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:10:52,984 - INFO - Starting Flet View app...
+2023-12-24 00:10:52,985 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:10:53,150 - INFO - Session started: 
+2023-12-24 00:13:27,944 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:13:27,945 - INFO - Starting up TCP server on ('localhost', 64484)
+2023-12-24 00:13:27,949 - INFO - App URL: tcp://localhost:64484
+2023-12-24 00:13:27,950 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:13:27,950 - INFO - Starting Flet View app...
+2023-12-24 00:13:27,952 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:13:28,122 - INFO - Session started: 
+2023-12-24 00:14:01,502 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:14:01,503 - INFO - Starting up TCP server on ('localhost', 64493)
+2023-12-24 00:14:01,508 - INFO - App URL: tcp://localhost:64493
+2023-12-24 00:14:01,508 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:14:01,509 - INFO - Starting Flet View app...
+2023-12-24 00:14:01,510 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:14:01,672 - INFO - Session started: 
+2023-12-24 00:14:18,806 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:14:18,807 - INFO - Starting up TCP server on ('localhost', 64509)
+2023-12-24 00:14:18,811 - INFO - App URL: tcp://localhost:64509
+2023-12-24 00:14:18,811 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:14:18,812 - INFO - Starting Flet View app...
+2023-12-24 00:14:18,813 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:14:18,967 - INFO - Session started: 
+2023-12-24 00:14:32,219 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:14:32,220 - INFO - Starting up TCP server on ('localhost', 64517)
+2023-12-24 00:14:32,224 - INFO - App URL: tcp://localhost:64517
+2023-12-24 00:14:32,224 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:14:32,225 - INFO - Starting Flet View app...
+2023-12-24 00:14:32,226 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:14:32,393 - INFO - Session started: 
+2023-12-24 00:15:09,007 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:15:09,008 - INFO - Starting up TCP server on ('localhost', 64542)
+2023-12-24 00:15:09,013 - INFO - App URL: tcp://localhost:64542
+2023-12-24 00:15:09,013 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:15:09,013 - INFO - Starting Flet View app...
+2023-12-24 00:15:09,015 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:15:09,188 - INFO - Session started: 
+2023-12-24 00:15:09,196 - ERROR - __init__() got an unexpected keyword argument 'padding'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 122, in process
+    self.avatar = ft.Stack(
+TypeError: __init__() got an unexpected keyword argument 'padding'
+2023-12-24 00:15:58,575 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:15:58,576 - INFO - Starting up TCP server on ('localhost', 64564)
+2023-12-24 00:15:58,581 - INFO - App URL: tcp://localhost:64564
+2023-12-24 00:15:58,581 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:15:58,581 - INFO - Starting Flet View app...
+2023-12-24 00:15:58,583 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:15:58,764 - INFO - Session started: 
+2023-12-24 00:16:24,469 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:16:24,470 - INFO - Starting up TCP server on ('localhost', 64584)
+2023-12-24 00:16:24,474 - INFO - App URL: tcp://localhost:64584
+2023-12-24 00:16:24,475 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:16:24,475 - INFO - Starting Flet View app...
+2023-12-24 00:16:24,477 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:16:24,635 - INFO - Session started: 
+2023-12-24 00:16:45,089 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:16:45,090 - INFO - Starting up TCP server on ('localhost', 64597)
+2023-12-24 00:16:45,094 - INFO - App URL: tcp://localhost:64597
+2023-12-24 00:16:45,095 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:16:45,095 - INFO - Starting Flet View app...
+2023-12-24 00:16:45,097 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:16:45,261 - INFO - Session started: 
+2023-12-24 00:21:36,666 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:21:36,667 - INFO - Starting up TCP server on ('localhost', 64859)
+2023-12-24 00:21:36,672 - INFO - App URL: tcp://localhost:64859
+2023-12-24 00:21:36,672 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:21:36,673 - INFO - Starting Flet View app...
+2023-12-24 00:21:36,675 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:21:36,850 - INFO - Session started: 
+2023-12-24 00:22:07,073 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:22:07,073 - INFO - Starting up TCP server on ('localhost', 64869)
+2023-12-24 00:22:07,078 - INFO - App URL: tcp://localhost:64869
+2023-12-24 00:22:07,078 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:22:07,079 - INFO - Starting Flet View app...
+2023-12-24 00:22:07,080 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:22:07,333 - INFO - Session started: 
+2023-12-24 00:22:07,334 - ERROR - module 'flet' has no attribute 'ICon'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 126, in process
+    icon=ft.ICon(ft.icons.SPORTS_VOLLEYBALL)
+AttributeError: module 'flet' has no attribute 'ICon'
+2023-12-24 00:22:19,497 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:22:19,498 - INFO - Starting up TCP server on ('localhost', 64884)
+2023-12-24 00:22:19,503 - INFO - App URL: tcp://localhost:64884
+2023-12-24 00:22:19,503 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:22:19,503 - INFO - Starting Flet View app...
+2023-12-24 00:22:19,504 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:22:19,669 - INFO - Session started: 
+2023-12-24 00:22:45,887 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:22:45,888 - INFO - Starting up TCP server on ('localhost', 64894)
+2023-12-24 00:22:45,892 - INFO - App URL: tcp://localhost:64894
+2023-12-24 00:22:45,892 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:22:45,893 - INFO - Starting Flet View app...
+2023-12-24 00:22:45,894 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:22:46,162 - INFO - Session started: 
+2023-12-24 00:23:59,340 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:23:59,341 - INFO - Starting up TCP server on ('localhost', 64932)
+2023-12-24 00:23:59,345 - INFO - App URL: tcp://localhost:64932
+2023-12-24 00:23:59,345 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:23:59,345 - INFO - Starting Flet View app...
+2023-12-24 00:23:59,347 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:23:59,515 - INFO - Session started: 
+2023-12-24 00:24:12,856 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:24:12,857 - INFO - Starting up TCP server on ('localhost', 64937)
+2023-12-24 00:24:12,861 - INFO - App URL: tcp://localhost:64937
+2023-12-24 00:24:12,861 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:24:12,862 - INFO - Starting Flet View app...
+2023-12-24 00:24:12,863 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:24:13,023 - INFO - Session started: 
+2023-12-24 00:24:29,348 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:24:29,349 - INFO - Starting up TCP server on ('localhost', 64953)
+2023-12-24 00:24:29,354 - INFO - App URL: tcp://localhost:64953
+2023-12-24 00:24:29,354 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:24:29,354 - INFO - Starting Flet View app...
+2023-12-24 00:24:29,355 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:24:29,527 - INFO - Session started: 
+2023-12-24 00:24:45,782 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:24:45,783 - INFO - Starting up TCP server on ('localhost', 64958)
+2023-12-24 00:24:45,787 - INFO - App URL: tcp://localhost:64958
+2023-12-24 00:24:45,787 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:24:45,787 - INFO - Starting Flet View app...
+2023-12-24 00:24:45,789 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:24:46,039 - INFO - Session started: 
+2023-12-24 00:25:02,544 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:25:02,544 - INFO - Starting up TCP server on ('localhost', 64966)
+2023-12-24 00:25:02,548 - INFO - App URL: tcp://localhost:64966
+2023-12-24 00:25:02,549 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:25:02,549 - INFO - Starting Flet View app...
+2023-12-24 00:25:02,551 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:25:02,710 - INFO - Session started: 
+2023-12-24 00:25:41,810 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:25:41,811 - INFO - Starting up TCP server on ('localhost', 64985)
+2023-12-24 00:25:41,815 - INFO - App URL: tcp://localhost:64985
+2023-12-24 00:25:41,815 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:25:41,815 - INFO - Starting Flet View app...
+2023-12-24 00:25:41,817 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:25:41,983 - INFO - Session started: 
+2023-12-24 00:25:51,337 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:25:51,338 - INFO - Starting up TCP server on ('localhost', 64990)
+2023-12-24 00:25:51,343 - INFO - App URL: tcp://localhost:64990
+2023-12-24 00:25:51,343 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:25:51,343 - INFO - Starting Flet View app...
+2023-12-24 00:25:51,345 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:25:51,613 - INFO - Session started: 
+2023-12-24 00:27:18,919 - ERROR - invalid syntax (_index.py, line 128)
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plug.py", line 209, in process
+    self._load(file, path)
+  File "E:\npython\PluginBase\app\plug.py", line 222, in _load
+    self._load(item, full_path)
+  File "E:\npython\PluginBase\app\plug.py", line 222, in _load
+    self._load(item, full_path)
+  File "E:\npython\PluginBase\app\plug.py", line 226, in _load
+    loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 529, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 1029, in load_module
+  File "<frozen importlib._bootstrap_external>", line 854, in load_module
+  File "<frozen importlib._bootstrap>", line 274, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 128
+    on_click=lambda x: Plug.run(plugins=("_load_plugin",), data="环境信息", page=self.page)
+    ^
+SyntaxError: invalid syntax
+2023-12-24 00:27:18,923 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:27:18,923 - INFO - Starting up TCP server on ('localhost', 65021)
+2023-12-24 00:27:18,928 - INFO - App URL: tcp://localhost:65021
+2023-12-24 00:27:18,928 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:27:18,928 - INFO - Starting Flet View app...
+2023-12-24 00:27:18,930 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:27:19,209 - INFO - Session started: 
+2023-12-24 00:27:19,209 - ERROR - '_index'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 42, in run
+    plugin = icls.PLUGINS[plugin_name]
+KeyError: '_index'
+2023-12-24 00:27:29,739 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:27:29,740 - INFO - Starting up TCP server on ('localhost', 65032)
+2023-12-24 00:27:29,745 - INFO - App URL: tcp://localhost:65032
+2023-12-24 00:27:29,745 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:27:29,745 - INFO - Starting Flet View app...
+2023-12-24 00:27:29,747 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:27:30,015 - INFO - Session started: 
+2023-12-24 00:27:30,017 - ERROR - __init__() got an unexpected keyword argument 'on_click'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 124, in process
+    ft.CircleAvatar(
+TypeError: __init__() got an unexpected keyword argument 'on_click'
+2023-12-24 00:28:17,766 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:28:17,766 - INFO - Starting up TCP server on ('localhost', 65043)
+2023-12-24 00:28:17,771 - INFO - App URL: tcp://localhost:65043
+2023-12-24 00:28:17,771 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:28:17,772 - INFO - Starting Flet View app...
+2023-12-24 00:28:17,773 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:28:18,045 - INFO - Session started: 
+2023-12-24 00:29:01,925 - ERROR - invalid syntax (_index.py, line 146)
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plug.py", line 209, in process
+    self._load(file, path)
+  File "E:\npython\PluginBase\app\plug.py", line 222, in _load
+    self._load(item, full_path)
+  File "E:\npython\PluginBase\app\plug.py", line 222, in _load
+    self._load(item, full_path)
+  File "E:\npython\PluginBase\app\plug.py", line 226, in _load
+    loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 529, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 1029, in load_module
+  File "<frozen importlib._bootstrap_external>", line 854, in load_module
+  File "<frozen importlib._bootstrap>", line 274, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 146
+    ), col={"xs":1}],
+          ^
+SyntaxError: invalid syntax
+2023-12-24 00:29:01,929 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:29:01,930 - INFO - Starting up TCP server on ('localhost', 65059)
+2023-12-24 00:29:01,934 - INFO - App URL: tcp://localhost:65059
+2023-12-24 00:29:01,934 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:29:01,934 - INFO - Starting Flet View app...
+2023-12-24 00:29:01,936 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:29:02,091 - INFO - Session started: 
+2023-12-24 00:29:02,094 - ERROR - '_index'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 42, in run
+    plugin = icls.PLUGINS[plugin_name]
+KeyError: '_index'
+2023-12-24 00:29:40,623 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:29:40,623 - INFO - Starting up TCP server on ('localhost', 65087)
+2023-12-24 00:29:40,628 - INFO - App URL: tcp://localhost:65087
+2023-12-24 00:29:40,628 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:29:40,628 - INFO - Starting Flet View app...
+2023-12-24 00:29:40,630 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:29:40,798 - INFO - Session started: 
+2023-12-24 00:30:28,913 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:30:28,914 - INFO - Starting up TCP server on ('localhost', 65125)
+2023-12-24 00:30:28,918 - INFO - App URL: tcp://localhost:65125
+2023-12-24 00:30:28,918 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:30:28,919 - INFO - Starting Flet View app...
+2023-12-24 00:30:28,920 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:30:29,077 - INFO - Session started: 
+2023-12-24 00:42:25,105 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:42:25,106 - INFO - Starting up TCP server on ('localhost', 65514)
+2023-12-24 00:42:25,110 - INFO - App URL: tcp://localhost:65514
+2023-12-24 00:42:25,111 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:42:25,111 - INFO - Starting Flet View app...
+2023-12-24 00:42:25,112 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:42:25,273 - INFO - Session started: 
+2023-12-24 00:45:26,323 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:45:26,324 - INFO - Starting up TCP server on ('localhost', 49198)
+2023-12-24 00:45:26,329 - INFO - App URL: tcp://localhost:49198
+2023-12-24 00:45:26,329 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:45:26,329 - INFO - Starting Flet View app...
+2023-12-24 00:45:26,331 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:45:26,499 - INFO - Session started: 
+2023-12-24 00:46:52,584 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:46:52,585 - INFO - Starting up TCP server on ('localhost', 49249)
+2023-12-24 00:46:52,589 - INFO - App URL: tcp://localhost:49249
+2023-12-24 00:46:52,590 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:46:52,590 - INFO - Starting Flet View app...
+2023-12-24 00:46:52,592 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:46:52,765 - INFO - Session started: 
+2023-12-24 00:51:16,965 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:51:16,966 - INFO - Starting up TCP server on ('localhost', 49418)
+2023-12-24 00:51:16,970 - INFO - App URL: tcp://localhost:49418
+2023-12-24 00:51:16,970 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:51:16,971 - INFO - Starting Flet View app...
+2023-12-24 00:51:16,972 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:51:17,263 - INFO - Session started: 
+2023-12-24 00:53:32,220 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:53:32,221 - INFO - Starting up TCP server on ('localhost', 49469)
+2023-12-24 00:53:32,225 - INFO - App URL: tcp://localhost:49469
+2023-12-24 00:53:32,225 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:53:32,226 - INFO - Starting Flet View app...
+2023-12-24 00:53:32,227 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:53:32,404 - INFO - Session started: 
+2023-12-24 00:54:07,447 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:54:07,447 - INFO - Starting up TCP server on ('localhost', 49483)
+2023-12-24 00:54:07,451 - INFO - App URL: tcp://localhost:49483
+2023-12-24 00:54:07,452 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:54:07,452 - INFO - Starting Flet View app...
+2023-12-24 00:54:07,454 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:54:07,618 - INFO - Session started: 
+2023-12-24 00:54:59,587 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:54:59,588 - INFO - Starting up TCP server on ('localhost', 49500)
+2023-12-24 00:54:59,592 - INFO - App URL: tcp://localhost:49500
+2023-12-24 00:54:59,592 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:54:59,592 - INFO - Starting Flet View app...
+2023-12-24 00:54:59,594 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:54:59,753 - INFO - Session started: 
+2023-12-24 00:56:46,101 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:56:46,102 - INFO - Starting up TCP server on ('localhost', 49540)
+2023-12-24 00:56:46,106 - INFO - App URL: tcp://localhost:49540
+2023-12-24 00:56:46,106 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:56:46,107 - INFO - Starting Flet View app...
+2023-12-24 00:56:46,108 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:56:46,265 - INFO - Session started: 
+2023-12-24 00:57:59,407 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 00:57:59,408 - INFO - Starting up TCP server on ('localhost', 49564)
+2023-12-24 00:57:59,412 - INFO - App URL: tcp://localhost:49564
+2023-12-24 00:57:59,412 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 00:57:59,413 - INFO - Starting Flet View app...
+2023-12-24 00:57:59,414 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 00:57:59,571 - INFO - Session started: 
+2023-12-24 01:02:11,315 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 01:02:11,315 - INFO - Starting up TCP server on ('localhost', 49993)
+2023-12-24 01:02:11,320 - INFO - App URL: tcp://localhost:49993
+2023-12-24 01:02:11,320 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 01:02:11,321 - INFO - Starting Flet View app...
+2023-12-24 01:02:11,322 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 01:02:11,585 - INFO - Session started: 
+2023-12-24 01:02:11,587 - ERROR - '主题颜色'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 113, in process
+    page.theme = ft.Theme(font_family="LXGWWenKai-Regular", color_scheme_seed=ENV['主题颜色'])
+KeyError: '主题颜色'
+2023-12-24 01:02:30,514 - ERROR - 'gbk' codec can't decode byte 0xa2 in position 88: illegal multibyte sequence
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plug.py", line 191, in process
+    config = json.loads(f.read())
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xa2 in position 88: illegal multibyte sequence
+2023-12-24 01:02:30,515 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 01:02:30,516 - INFO - Starting up TCP server on ('localhost', 50066)
+2023-12-24 01:02:30,520 - INFO - App URL: tcp://localhost:50066
+2023-12-24 01:02:30,521 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 01:02:30,521 - INFO - Starting Flet View app...
+2023-12-24 01:02:30,522 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 01:02:30,698 - INFO - Session started: 
+2023-12-24 01:02:30,699 - ERROR - '_index'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 42, in run
+    plugin = icls.PLUGINS[plugin_name]
+KeyError: '_index'
+2023-12-24 01:04:16,828 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 01:04:16,829 - INFO - Starting up TCP server on ('localhost', 50125)
+2023-12-24 01:04:16,833 - INFO - App URL: tcp://localhost:50125
+2023-12-24 01:04:16,834 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 01:04:16,834 - INFO - Starting Flet View app...
+2023-12-24 01:04:16,835 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 01:04:16,995 - INFO - Session started: 
+2023-12-24 01:08:51,369 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 01:08:51,370 - INFO - Starting up TCP server on ('localhost', 51911)
+2023-12-24 01:08:51,375 - INFO - App URL: tcp://localhost:51911
+2023-12-24 01:08:51,375 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 01:08:51,375 - INFO - Starting Flet View app...
+2023-12-24 01:08:51,377 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 01:08:51,586 - INFO - Session started: 
+2023-12-24 01:09:04,464 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 01:09:04,465 - INFO - Starting up TCP server on ('localhost', 51937)
+2023-12-24 01:09:04,469 - INFO - App URL: tcp://localhost:51937
+2023-12-24 01:09:04,469 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 01:09:04,470 - INFO - Starting Flet View app...
+2023-12-24 01:09:04,471 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 01:09:04,632 - INFO - Session started: 
+2023-12-24 01:09:18,282 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 01:09:18,283 - INFO - Starting up TCP server on ('localhost', 51950)
+2023-12-24 01:09:18,287 - INFO - App URL: tcp://localhost:51950
+2023-12-24 01:09:18,287 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 01:09:18,287 - INFO - Starting Flet View app...
+2023-12-24 01:09:18,289 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 01:09:18,458 - INFO - Session started: 
+2023-12-24 01:09:36,019 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 01:09:36,020 - INFO - Starting up TCP server on ('localhost', 51955)
+2023-12-24 01:09:36,024 - INFO - App URL: tcp://localhost:51955
+2023-12-24 01:09:36,024 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 01:09:36,025 - INFO - Starting Flet View app...
+2023-12-24 01:09:36,026 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 01:09:36,293 - INFO - Session started: 

@@ -59,8 +59,54 @@ class ENVInformation(UIPlugin):
         """
         保存函数
         """
-        with open(ENV['config_file'], "w") as f:
+        ENV.update(data)
+        with open(ENV['config_file'], "w", encoding="gbk") as f:
             f.write(json.dumps(data, ensure_ascii=False))
+    
+
+@Plug.register('_person_info')
+class PersonInformation(UIPlugin):
+    """
+    查看的所有信息
+    """
+    ICON = ft.icons.MISCELLANEOUS_SERVICES
+
+    def process(self, data, page, **kwargs):
+        self.page = page
+        name = "YOHOYES"
+        ehr = ""
+        avatar = ""
+        theme_color = "blue"
+        if "姓名" in ENV:
+            name = ENV['姓名']
+        if "EHR" in ENV:
+            ehr = ENV['EHR']
+        if "头像" in ENV:
+            avatar = ENV['头像']
+        if "主题颜色" in ENV:
+            theme_color = ENV['主题颜色']
+        self.data = {
+            "姓名": name,
+            "EHR": ehr,
+            "头像": avatar,
+            "主题颜色": theme_color
+        }
+        return Plug.run(plugins=("_pluginUI_with_search",),
+                 data=self.data,
+                 ui_template="_dictUI",
+                 mode="edit",
+                 key_icon=ft.icons.FIBER_MANUAL_RECORD_OUTLINED,
+                 save_handler = self.save_handler,
+                 **kwargs) 
+    
+    def save_handler(self, data):
+        """
+        保存函数
+        """
+        ENV.update(data)
+        with open(ENV['config_file'], "w", encoding="gbk") as f:
+            f.write(json.dumps(ENV, ensure_ascii=False))
+        Plug.run(plugins=("_notice",), data="保存成功", page=self.page)
     
 
 @Plug.register('_back')

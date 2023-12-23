@@ -1,7 +1,1 @@
-{
-    "initial_plugin_subtitle": "THIS IS A USEFUL PLUGIN",
-    "server_addr": "localhost",
-    "server_port": "36909",
-    "db_url": "sqlite:///plug.db",
-    "config_file": "config.json"
-}
+{"initial_plugin_subtitle": "THIS IS A USEFUL PLUGIN", "plugin_dir": "E:\\npython\\PluginBase\\app\\plugins", "update_dir": "E:\\npython\\PluginBase\\app\\plugins\\build_in", "app_dir": "E:\\npython\\PluginBase", "server_addr": "127.0.0.1", "server_port": 36909, "db_url": "sqlite:///plug.db", "config_file": "config.json", "ï¿½ï¿½ï¿½ï¿½": "YOHOYES", "EHR": "1584979", "Í·ï¿½ï¿½": "", "ÐÕÃû": "YOHOYES", "Í·Ïñ": "", "Ö÷ÌâÑÕÉ«": "green"}
