@@ -43,6 +43,7 @@ class SQLQueryPlugin(UIPlugin):
         self.auto_clear_button = ft.OutlinedButton(text="自动清空", on_click=self.auto_clear_mode)
         self.auto_clear_button.icon = ft.icons.CHECK_CIRCLE_OUTLINE if self.auto_clear else None
         self.show_tables_button = ft.OutlinedButton(text="表", on_click=self.show_tables)
+        self.toggle_remote_local_button = ft.OutlinedButton(text="远程", on_click=self.toggle_remote_local)
 
         return ft.Column([
             ft.Row([query_button,
@@ -51,10 +52,21 @@ class SQLQueryPlugin(UIPlugin):
                     self.auto_clear_button,
                     self.table_button,
                     self.header_button,
-                    self.show_tables_button
+                    self.show_tables_button,
+                    self.toggle_remote_local_button
                     ]),
             ft.ListView([self.result_view], expand=1)
         ])
+    
+    def toggle_remote_local(self, e):
+        if self.db == Plug.get_state("db"):
+            self.db = Plug.get_state("remote_db")
+            self.toggle_remote_local_button.text = "本地"
+        else:
+            self.db = Plug.get_state("db")
+            self.toggle_remote_local_button.text = "远程"
+        self.toggle_remote_local_button.update()
+
         
     def execute_query(self, e):
         query = self.sql_input.value

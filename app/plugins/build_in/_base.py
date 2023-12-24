@@ -60,7 +60,7 @@ class ENVInformation(UIPlugin):
         保存函数
         """
         ENV.update(data)
-        with open(ENV['config_file'], "w", encoding="gbk") as f:
+        with open(ENV['config_file'], "w") as f:
             f.write(json.dumps(data, ensure_ascii=False))
     
 
@@ -104,7 +104,7 @@ class PersonInformation(UIPlugin):
         保存函数
         """
         ENV.update(data)
-        with open(ENV['config_file'], "w", encoding="gbk") as f:
+        with open(ENV['config_file'], "w") as f:
             f.write(json.dumps(ENV, ensure_ascii=False))
         Plug.run(plugins=("_notice",), data="保存成功", page=self.page)
     

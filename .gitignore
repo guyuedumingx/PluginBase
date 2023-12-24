@@ -8,3 +8,5 @@ packages/
 *.exe
 run
 *.zip
+config.json
+*.log
