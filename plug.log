@@ -1098,3 +1098,2306 @@ AttributeError: 'int' object has no attribute 'value'
 2023-12-24 10:39:26,180 - INFO - Starting Flet View app...
 2023-12-24 10:39:26,180 - INFO - Flet View found in: /Users/yohoyes/.flet/bin/flet-0.14.0
 2023-12-24 10:39:26,384 - INFO - Session started: 
+2023-12-24 10:59:54,169 - ERROR - 'gbk' codec can't decode byte 0xa2 in position 479: illegal multibyte sequence
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plug.py", line 191, in process
+    config = json.loads(f.read())
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xa2 in position 479: illegal multibyte sequence
+2023-12-24 10:59:54,170 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 10:59:54,171 - INFO - Starting up TCP server on ('localhost', 55101)
+2023-12-24 10:59:54,175 - INFO - App URL: tcp://localhost:55101
+2023-12-24 10:59:54,176 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 10:59:54,176 - INFO - Starting Flet View app...
+2023-12-24 10:59:54,178 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 10:59:54,381 - INFO - Session started: 
+2023-12-24 10:59:54,387 - ERROR - '_index'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 42, in run
+    plugin = icls.PLUGINS[plugin_name]
+KeyError: '_index'
+2023-12-24 11:00:47,559 - ERROR - 'gbk' codec can't decode byte 0xa2 in position 270: illegal multibyte sequence
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plug.py", line 191, in process
+    config = json.loads(f.read())
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xa2 in position 270: illegal multibyte sequence
+2023-12-24 11:00:47,560 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 11:00:47,561 - INFO - Starting up TCP server on ('localhost', 55157)
+2023-12-24 11:00:47,566 - INFO - App URL: tcp://localhost:55157
+2023-12-24 11:00:47,566 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 11:00:47,566 - INFO - Starting Flet View app...
+2023-12-24 11:00:47,568 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 11:00:47,771 - INFO - Session started: 
+2023-12-24 11:00:47,774 - ERROR - '_index'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 42, in run
+    plugin = icls.PLUGINS[plugin_name]
+KeyError: '_index'
+2023-12-24 11:03:29,944 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 11:03:29,944 - INFO - Starting up TCP server on ('localhost', 55330)
+2023-12-24 11:03:29,948 - INFO - App URL: tcp://localhost:55330
+2023-12-24 11:03:29,948 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 11:03:29,949 - INFO - Starting Flet View app...
+2023-12-24 11:03:29,950 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 11:03:30,128 - INFO - Session started: 
+2023-12-24 11:05:09,486 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 11:05:09,487 - INFO - Starting up TCP server on ('localhost', 55471)
+2023-12-24 11:05:09,491 - INFO - App URL: tcp://localhost:55471
+2023-12-24 11:05:09,491 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 11:05:09,492 - INFO - Starting Flet View app...
+2023-12-24 11:05:09,493 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 11:05:09,761 - INFO - Session started: 
+2023-12-24 11:05:26,279 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 11:05:26,279 - INFO - Starting up TCP server on ('localhost', 55479)
+2023-12-24 11:05:26,284 - INFO - App URL: tcp://localhost:55479
+2023-12-24 11:05:26,284 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 11:05:26,285 - INFO - Starting Flet View app...
+2023-12-24 11:05:26,286 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 11:05:26,459 - INFO - Session started: 
+2023-12-24 11:06:03,067 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 11:06:03,068 - INFO - Starting up TCP server on ('localhost', 55492)
+2023-12-24 11:06:03,073 - INFO - App URL: tcp://localhost:55492
+2023-12-24 11:06:03,073 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 11:06:03,074 - INFO - Starting Flet View app...
+2023-12-24 11:06:03,075 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 11:06:03,344 - INFO - Session started: 
+2023-12-24 11:52:15,657 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 11:52:15,658 - INFO - Starting up TCP server on ('localhost', 57390)
+2023-12-24 11:52:15,662 - INFO - App URL: tcp://localhost:57390
+2023-12-24 11:52:15,663 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 11:52:15,663 - INFO - Starting Flet View app...
+2023-12-24 11:52:15,665 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 11:52:15,838 - INFO - Session started: 
+2023-12-24 11:52:21,595 - INFO - Started server process [21776]
+2023-12-24 11:52:21,596 - INFO - Waiting for application startup.
+2023-12-24 11:52:21,597 - INFO - Application startup complete.
+2023-12-24 11:52:21,598 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 11:52:40,386 - INFO - 127.0.0.1:57443 - "GET / HTTP/1.1" 404
+2023-12-24 11:52:44,827 - INFO - 127.0.0.1:57443 - "GET /docs HTTP/1.1" 200
+2023-12-24 11:52:46,443 - INFO - 127.0.0.1:57443 - "GET /openapi.json HTTP/1.1" 200
+2023-12-24 11:53:04,634 - INFO - 127.0.0.1:57444 - "POST /login/0492555 HTTP/1.1" 200
+2023-12-24 12:02:09,571 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 12:02:09,572 - INFO - Starting up TCP server on ('localhost', 57956)
+2023-12-24 12:02:09,577 - INFO - App URL: tcp://localhost:57956
+2023-12-24 12:02:09,578 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 12:02:09,578 - INFO - Starting Flet View app...
+2023-12-24 12:02:09,579 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 12:02:09,791 - INFO - Session started: 
+2023-12-24 12:02:14,211 - INFO - Started server process [9296]
+2023-12-24 12:02:14,212 - INFO - Waiting for application startup.
+2023-12-24 12:02:14,212 - INFO - Application startup complete.
+2023-12-24 12:02:14,213 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 12:02:20,616 - INFO - 127.0.0.1:57970 - "GET /docs HTTP/1.1" 200
+2023-12-24 12:02:20,967 - INFO - 127.0.0.1:57970 - "GET /openapi.json HTTP/1.1" 200
+2023-12-24 12:02:59,810 - INFO - 127.0.0.1:57971 - "POST /login?item=%7B%22ehr%22%3A%200492555%2C%20%22ip%22%3A%20%22112.112.13.4%22%7D HTTP/1.1" 500
+2023-12-24 12:02:59,811 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "E:\npython\PluginBase\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\applications.py", line 1106, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\routing.py", line 193, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "E:\npython\PluginBase\venv\lib\site-packages\anyio\to_thread.py", line 33, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(
+  File "E:\npython\PluginBase\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 877, in run_sync_in_worker_thread
+    return await future
+  File "E:\npython\PluginBase\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 807, in run
+    result = context.run(func, *args)
+  File "E:\npython\PluginBase\app\plugins\\plugin_market_server.py", line 72, in login
+    ehr = item['ehr']
+TypeError: string indices must be integers
+2023-12-24 12:03:17,095 - INFO - 127.0.0.1:57972 - "POST /login?item=%7B%22ehr%22%3A%20%220492555%22%2C%20%22ip%22%3A%20%22112.112.13.4%22%7D HTTP/1.1" 500
+2023-12-24 12:03:17,096 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "E:\npython\PluginBase\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\applications.py", line 1106, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\routing.py", line 193, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "E:\npython\PluginBase\venv\lib\site-packages\anyio\to_thread.py", line 33, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(
+  File "E:\npython\PluginBase\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 877, in run_sync_in_worker_thread
+    return await future
+  File "E:\npython\PluginBase\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 807, in run
+    result = context.run(func, *args)
+  File "E:\npython\PluginBase\app\plugins\\plugin_market_server.py", line 72, in login
+    ehr = item['ehr']
+TypeError: string indices must be integers
+2023-12-24 12:03:48,453 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 12:03:48,455 - INFO - Starting up TCP server on ('localhost', 58033)
+2023-12-24 12:03:48,460 - INFO - App URL: tcp://localhost:58033
+2023-12-24 12:03:48,461 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 12:03:48,462 - INFO - Starting Flet View app...
+2023-12-24 12:03:48,464 - INFO - Flet View found in: e:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 12:03:48,634 - INFO - Session started: 
+2023-12-24 12:03:51,363 - INFO - Started server process [24016]
+2023-12-24 12:03:51,364 - INFO - Waiting for application startup.
+2023-12-24 12:03:51,366 - INFO - Application startup complete.
+2023-12-24 12:03:51,367 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 12:03:56,304 - INFO - 127.0.0.1:58044 - "GET /docs HTTP/1.1" 200
+2023-12-24 12:03:56,819 - INFO - 127.0.0.1:58044 - "GET /openapi.json HTTP/1.1" 200
+2023-12-24 12:05:10,779 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 12:05:10,781 - INFO - Starting up TCP server on ('localhost', 58096)
+2023-12-24 12:05:10,789 - INFO - App URL: tcp://localhost:58096
+2023-12-24 12:05:10,790 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 12:05:10,790 - INFO - Starting Flet View app...
+2023-12-24 12:05:10,794 - INFO - Flet View found in: e:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 12:05:11,033 - INFO - Session started: 
+2023-12-24 12:05:13,353 - INFO - Started server process [16512]
+2023-12-24 12:05:13,354 - INFO - Waiting for application startup.
+2023-12-24 12:05:13,356 - INFO - Application startup complete.
+2023-12-24 12:05:13,357 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 12:05:21,764 - INFO - 127.0.0.1:58105 - "POST /login?item=%7B%22ehr%22%20%3A%20%2212%22%2C%20%22ip%22%3A%20%22test%22%7D HTTP/1.1" 200
+2023-12-24 12:06:17,760 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 12:06:17,761 - INFO - Starting up TCP server on ('localhost', 58130)
+2023-12-24 12:06:17,766 - INFO - App URL: tcp://localhost:58130
+2023-12-24 12:06:17,767 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 12:06:17,767 - INFO - Starting Flet View app...
+2023-12-24 12:06:17,768 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 12:06:17,940 - INFO - Session started: 
+2023-12-24 12:06:21,712 - INFO - Started server process [18696]
+2023-12-24 12:06:21,713 - INFO - Waiting for application startup.
+2023-12-24 12:06:21,713 - INFO - Application startup complete.
+2023-12-24 12:06:21,714 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 12:06:27,910 - INFO - 127.0.0.1:58144 - "GET /docs HTTP/1.1" 200
+2023-12-24 12:06:28,340 - INFO - 127.0.0.1:58144 - "GET /openapi.json HTTP/1.1" 200
+2023-12-24 12:06:32,854 - INFO - 127.0.0.1:58144 - "POST /login?item=%7B%22ehr%22%20%3A%20%2212%22%2C%20%22ip%22%3A%20%22test%22%7D HTTP/1.1" 200
+2023-12-24 12:06:35,771 - INFO - 127.0.0.1:58144 - "POST /login?item=%7B%22ehr%22%20%3A%20%221223%22%2C%20%22ip%22%3A%20%22test%22%7D HTTP/1.1" 200
+2023-12-24 12:06:38,162 - INFO - 127.0.0.1:58144 - "POST /login?item=%7B%22ehr%22%20%3A%20%221222453%22%2C%20%22ip%22%3A%20%22test%22%7D HTTP/1.1" 200
+2023-12-24 12:06:46,371 - INFO - 127.0.0.1:58145 - "GET /onlines HTTP/1.1" 200
+2023-12-24 12:07:07,129 - INFO - 127.0.0.1:58146 - "POST /logout/12 HTTP/1.1" 200
+2023-12-24 12:07:12,003 - INFO - 127.0.0.1:58146 - "GET /onlines HTTP/1.1" 200
+2023-12-24 12:07:18,823 - INFO - 127.0.0.1:58177 - "POST /logout/12345 HTTP/1.1" 200
+2023-12-24 12:07:26,684 - INFO - 127.0.0.1:58178 - "GET /onlines HTTP/1.1" 200
+2023-12-24 12:07:27,998 - INFO - 127.0.0.1:58178 - "GET /onlines HTTP/1.1" 200
+2023-12-24 12:07:28,728 - INFO - 127.0.0.1:58178 - "GET /onlines HTTP/1.1" 200
+2023-12-24 12:29:15,611 - INFO - 127.0.0.1:58659 - "GET /update HTTP/1.1" 500
+2023-12-24 12:29:15,614 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\responses.py", line 335, in __call__
+    stat_result = await anyio.to_thread.run_sync(os.stat, self.path)
+  File "E:\npython\PluginBase\venv\lib\site-packages\anyio\to_thread.py", line 33, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(
+  File "E:\npython\PluginBase\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 877, in run_sync_in_worker_thread
+    return await future
+  File "E:\npython\PluginBase\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 807, in run
+    result = context.run(func, *args)
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。: 'assets\\update.zip'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "E:\npython\PluginBase\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\applications.py", line 1106, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\routing.py", line 69, in app
+    await response(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\responses.py", line 338, in __call__
+    raise RuntimeError(f"File at path {self.path} does not exist.")
+RuntimeError: File at path assets\update.zip does not exist.
+2023-12-24 12:38:16,490 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 12:38:16,491 - INFO - Starting up TCP server on ('localhost', 58918)
+2023-12-24 12:38:16,495 - INFO - App URL: tcp://localhost:58918
+2023-12-24 12:38:16,495 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 12:38:16,496 - INFO - Starting Flet View app...
+2023-12-24 12:38:16,497 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 12:38:16,835 - INFO - Session started: 
+2023-12-24 12:39:00,935 - INFO - Started server process [25100]
+2023-12-24 12:39:00,935 - INFO - Waiting for application startup.
+2023-12-24 12:39:00,936 - INFO - Application startup complete.
+2023-12-24 12:39:00,937 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 12:39:11,966 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 12:39:11,967 - INFO - Starting up TCP server on ('localhost', 58952)
+2023-12-24 12:39:11,971 - INFO - App URL: tcp://localhost:58952
+2023-12-24 12:39:11,971 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 12:39:11,972 - INFO - Starting Flet View app...
+2023-12-24 12:39:11,973 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 12:39:12,155 - INFO - Session started: 
+2023-12-24 12:40:08,652 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 12:40:08,654 - INFO - Starting up TCP server on ('localhost', 58962)
+2023-12-24 12:40:08,658 - INFO - App URL: tcp://localhost:58962
+2023-12-24 12:40:08,658 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 12:40:08,658 - INFO - Starting Flet View app...
+2023-12-24 12:40:08,660 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 12:40:08,840 - INFO - Session started: 
+2023-12-24 12:40:44,096 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 12:40:44,097 - INFO - Starting up TCP server on ('localhost', 58978)
+2023-12-24 12:40:44,101 - INFO - App URL: tcp://localhost:58978
+2023-12-24 12:40:44,101 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 12:40:44,101 - INFO - Starting Flet View app...
+2023-12-24 12:40:44,103 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 12:40:44,280 - INFO - Session started: 
+2023-12-24 12:40:44,337 - ERROR - 'ehr'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 164, in process
+    self.login(state=self.state)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 168, in login
+    ehr = ENV['ehr']
+KeyError: 'ehr'
+2023-12-24 12:41:06,381 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 12:41:06,381 - INFO - Starting up TCP server on ('localhost', 58986)
+2023-12-24 12:41:06,386 - INFO - App URL: tcp://localhost:58986
+2023-12-24 12:41:06,386 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 12:41:06,386 - INFO - Starting Flet View app...
+2023-12-24 12:41:06,387 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 12:41:06,562 - INFO - Session started: 
+2023-12-24 12:41:06,608 - ERROR - 'port'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 164, in process
+    self.login(state=self.state)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 169, in login
+    resp = requests.post(f"http://{ENV['server_addr']:{ENV['port']}/login}", data=dict(ehr=ehr, ip="localhost"))
+KeyError: 'port'
+2023-12-24 12:41:32,095 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 12:41:32,097 - INFO - Starting up TCP server on ('localhost', 59001)
+2023-12-24 12:41:32,101 - INFO - App URL: tcp://localhost:59001
+2023-12-24 12:41:32,101 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 12:41:32,102 - INFO - Starting Flet View app...
+2023-12-24 12:41:32,103 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 12:41:32,264 - INFO - Session started: 
+2023-12-24 12:41:32,319 - ERROR - Invalid format specifier
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 164, in process
+    self.login(state=self.state)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 169, in login
+    resp = requests.post(f"http://{ENV['server_addr']:{ENV['server_port']}/login}", data=dict(ehr=ehr, ip="localhost"))
+ValueError: Invalid format specifier
+2023-12-24 12:42:12,314 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 12:42:12,315 - INFO - Starting up TCP server on ('localhost', 59013)
+2023-12-24 12:42:12,320 - INFO - App URL: tcp://localhost:59013
+2023-12-24 12:42:12,320 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 12:42:12,321 - INFO - Starting Flet View app...
+2023-12-24 12:42:12,322 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 12:42:12,608 - INFO - Session started: 
+2023-12-24 12:42:14,699 - ERROR - HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001BBEC0B31C0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "F:\python\lib\http\client.py", line 1274, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\python\lib\http\client.py", line 1034, in _send_output
+    self.send(msg)
+  File "F:\python\lib\http\client.py", line 974, in send
+    self.connect()
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001BBEC0B31C0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001BBEC0B31C0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 164, in process
+    self.login(state=self.state)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 169, in login
+    resp = requests.post(f"http://{ENV['server_addr']}:{ENV['server_port']}/login", data=dict(ehr=ehr, ip="localhost"))
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001BBEC0B31C0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2023-12-24 12:42:21,845 - INFO - Started server process [1324]
+2023-12-24 12:42:21,846 - INFO - Waiting for application startup.
+2023-12-24 12:42:21,846 - INFO - Application startup complete.
+2023-12-24 12:42:21,847 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 12:42:30,526 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 12:42:30,526 - INFO - Starting up TCP server on ('localhost', 59031)
+2023-12-24 12:42:30,530 - INFO - App URL: tcp://localhost:59031
+2023-12-24 12:42:30,530 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 12:42:30,531 - INFO - Starting Flet View app...
+2023-12-24 12:42:30,532 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 12:42:30,702 - INFO - Session started: 
+2023-12-24 12:42:30,765 - INFO - 127.0.0.1:59033 - "POST /login HTTP/1.1" 422
+2023-12-24 12:43:21,563 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 12:43:21,565 - INFO - Starting up TCP server on ('localhost', 59068)
+2023-12-24 12:43:21,572 - INFO - App URL: tcp://localhost:59068
+2023-12-24 12:43:21,573 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 12:43:21,573 - INFO - Starting Flet View app...
+2023-12-24 12:43:21,575 - INFO - Flet View found in: e:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 12:43:21,761 - INFO - Session started: 
+2023-12-24 12:43:21,869 - INFO - 127.0.0.1:59071 - "POST /login HTTP/1.1" 422
+2023-12-24 12:44:21,214 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 12:44:21,215 - INFO - Starting up TCP server on ('localhost', 59097)
+2023-12-24 12:44:21,221 - INFO - App URL: tcp://localhost:59097
+2023-12-24 12:44:21,222 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 12:44:21,223 - INFO - Starting Flet View app...
+2023-12-24 12:44:21,225 - INFO - Flet View found in: e:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 12:44:21,406 - INFO - Session started: 
+2023-12-24 12:44:21,507 - INFO - 127.0.0.1:59099 - "POST /login HTTP/1.1" 422
+2023-12-24 12:50:54,738 - INFO - 127.0.0.1:59401 - "GET /docs HTTP/1.1" 200
+2023-12-24 12:50:55,060 - INFO - 127.0.0.1:59401 - "GET /openapi.json HTTP/1.1" 200
+2023-12-24 12:53:16,590 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 12:53:16,591 - INFO - Starting up TCP server on ('localhost', 59863)
+2023-12-24 12:53:16,597 - INFO - App URL: tcp://localhost:59863
+2023-12-24 12:53:16,598 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 12:53:16,598 - INFO - Starting Flet View app...
+2023-12-24 12:53:16,601 - INFO - Flet View found in: e:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 12:53:16,886 - INFO - Session started: 
+2023-12-24 12:53:19,023 - ERROR - HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E40BCA91C0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+Traceback (most recent call last):
+  File "e:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+  File "e:\npython\PluginBase\venv\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "e:\npython\PluginBase\venv\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "e:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "e:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "F:\python\lib\http\client.py", line 1274, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\python\lib\http\client.py", line 1034, in _send_output
+    self.send(msg)
+  File "F:\python\lib\http\client.py", line 974, in send
+    self.connect()
+  File "e:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+  File "e:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001E40BCA91C0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\npython\PluginBase\venv\lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "e:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "e:\npython\PluginBase\venv\lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E40BCA91C0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 164, in process
+    self.login(state=self.state)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 169, in login
+    resp = requests.post(f"http://{ENV['server_addr']}:{ENV['server_port']}/login", data=dict(ehr=ehr, ip="localhost"),json=dict(ehr=ehr, ip="localhost"))
+  File "e:\npython\PluginBase\venv\lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "e:\npython\PluginBase\venv\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "e:\npython\PluginBase\venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "e:\npython\PluginBase\venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "e:\npython\PluginBase\venv\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E40BCA91C0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2023-12-24 12:54:50,700 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 12:54:50,701 - INFO - Starting up TCP server on ('localhost', 59909)
+2023-12-24 12:54:50,705 - INFO - App URL: tcp://localhost:59909
+2023-12-24 12:54:50,705 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 12:54:50,706 - INFO - Starting Flet View app...
+2023-12-24 12:54:50,707 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 12:54:50,886 - INFO - Session started: 
+2023-12-24 12:54:52,988 - ERROR - HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F3E08C2160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "F:\python\lib\http\client.py", line 1274, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\python\lib\http\client.py", line 1034, in _send_output
+    self.send(msg)
+  File "F:\python\lib\http\client.py", line 974, in send
+    self.connect()
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001F3E08C2160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F3E08C2160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 164, in process
+    self.login(state=self.state)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 169, in login
+    resp = requests.post(f"http://{ENV['server_addr']}:{ENV['server_port']}/login", data=dict(ehr=ehr, ip="localhost"))
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F3E08C2160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2023-12-24 12:54:53,216 - INFO - Started server process [24368]
+2023-12-24 12:54:53,217 - INFO - Waiting for application startup.
+2023-12-24 12:54:53,218 - INFO - Application startup complete.
+2023-12-24 12:54:53,218 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 12:55:08,897 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 12:55:08,898 - INFO - Starting up TCP server on ('localhost', 59917)
+2023-12-24 12:55:08,903 - INFO - App URL: tcp://localhost:59917
+2023-12-24 12:55:08,904 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 12:55:08,904 - INFO - Starting Flet View app...
+2023-12-24 12:55:08,905 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 12:55:09,079 - INFO - Session started: 
+2023-12-24 12:55:09,114 - INFO - 127.0.0.1:59919 - "POST /login HTTP/1.1" 422
+2023-12-24 12:55:59,554 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 12:55:59,554 - INFO - Starting up TCP server on ('localhost', 59952)
+2023-12-24 12:55:59,558 - INFO - App URL: tcp://localhost:59952
+2023-12-24 12:55:59,558 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 12:55:59,559 - INFO - Starting Flet View app...
+2023-12-24 12:55:59,560 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 12:55:59,714 - INFO - Session started: 
+2023-12-24 12:56:01,781 - ERROR - HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002014E5D2160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "F:\python\lib\http\client.py", line 1274, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\python\lib\http\client.py", line 1034, in _send_output
+    self.send(msg)
+  File "F:\python\lib\http\client.py", line 974, in send
+    self.connect()
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000002014E5D2160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002014E5D2160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 164, in process
+    self.login(state=self.state)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 170, in login
+    resp = requests.post(f"http://{ENV['server_addr']}:{ENV['server_port']}/login", data=data, json=data)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002014E5D2160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2023-12-24 12:56:08,104 - INFO - Started server process [23956]
+2023-12-24 12:56:08,105 - INFO - Waiting for application startup.
+2023-12-24 12:56:08,105 - INFO - Application startup complete.
+2023-12-24 12:56:08,106 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 12:56:18,974 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 12:56:18,975 - INFO - Starting up TCP server on ('localhost', 59960)
+2023-12-24 12:56:18,979 - INFO - App URL: tcp://localhost:59960
+2023-12-24 12:56:18,980 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 12:56:18,980 - INFO - Starting Flet View app...
+2023-12-24 12:56:18,982 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 12:56:19,163 - INFO - Session started: 
+2023-12-24 12:56:19,215 - INFO - 127.0.0.1:59962 - "POST /login HTTP/1.1" 422
+2023-12-24 12:57:13,764 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 12:57:13,766 - INFO - Starting up TCP server on ('localhost', 60002)
+2023-12-24 12:57:13,772 - INFO - App URL: tcp://localhost:60002
+2023-12-24 12:57:13,773 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 12:57:13,773 - INFO - Starting Flet View app...
+2023-12-24 12:57:13,776 - INFO - Flet View found in: e:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 12:57:14,052 - INFO - Session started: 
+2023-12-24 12:57:16,177 - ERROR - HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F52B3D3400>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+Traceback (most recent call last):
+  File "e:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+  File "e:\npython\PluginBase\venv\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "e:\npython\PluginBase\venv\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "e:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "e:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "F:\python\lib\http\client.py", line 1274, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\python\lib\http\client.py", line 1034, in _send_output
+    self.send(msg)
+  File "F:\python\lib\http\client.py", line 974, in send
+    self.connect()
+  File "e:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+  File "e:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001F52B3D3400>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\npython\PluginBase\venv\lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "e:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "e:\npython\PluginBase\venv\lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F52B3D3400>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 164, in process
+    self.login(state=self.state)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 170, in login
+    resp = requests.post(f"http://{ENV['server_addr']}:{ENV['server_port']}/login", data=data, json=data)
+  File "e:\npython\PluginBase\venv\lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "e:\npython\PluginBase\venv\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "e:\npython\PluginBase\venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "e:\npython\PluginBase\venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "e:\npython\PluginBase\venv\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F52B3D3400>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2023-12-24 12:57:18,354 - INFO - Started server process [2188]
+2023-12-24 12:57:18,355 - INFO - Waiting for application startup.
+2023-12-24 12:57:18,357 - INFO - Application startup complete.
+2023-12-24 12:57:18,358 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 12:57:25,993 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 12:57:25,994 - INFO - Starting up TCP server on ('localhost', 60012)
+2023-12-24 12:57:25,998 - INFO - App URL: tcp://localhost:60012
+2023-12-24 12:57:25,998 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 12:57:25,998 - INFO - Starting Flet View app...
+2023-12-24 12:57:26,000 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 12:57:26,163 - INFO - Session started: 
+2023-12-24 12:57:26,216 - INFO - 127.0.0.1:60014 - "POST /login HTTP/1.1" 422
+2023-12-24 12:58:21,310 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 12:58:21,310 - INFO - Starting up TCP server on ('localhost', 60097)
+2023-12-24 12:58:21,314 - INFO - App URL: tcp://localhost:60097
+2023-12-24 12:58:21,315 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 12:58:21,315 - INFO - Starting Flet View app...
+2023-12-24 12:58:21,316 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 12:58:21,473 - INFO - Session started: 
+2023-12-24 12:58:23,553 - ERROR - HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023714542160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "F:\python\lib\http\client.py", line 1274, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\python\lib\http\client.py", line 1034, in _send_output
+    self.send(msg)
+  File "F:\python\lib\http\client.py", line 974, in send
+    self.connect()
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000023714542160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023714542160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 164, in process
+    self.login(state=self.state)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 170, in login
+    resp = requests.post(f"http://{ENV['server_addr']}:{ENV['server_port']}/login", data=data, json=data)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023714542160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2023-12-24 12:58:23,706 - INFO - Started server process [15720]
+2023-12-24 12:58:23,707 - INFO - Waiting for application startup.
+2023-12-24 12:58:23,708 - INFO - Application startup complete.
+2023-12-24 12:58:23,708 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 12:58:59,914 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 12:58:59,916 - INFO - Starting up TCP server on ('localhost', 60126)
+2023-12-24 12:58:59,922 - INFO - App URL: tcp://localhost:60126
+2023-12-24 12:58:59,922 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 12:58:59,922 - INFO - Starting Flet View app...
+2023-12-24 12:58:59,925 - INFO - Flet View found in: e:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 12:59:00,139 - INFO - Session started: 
+2023-12-24 12:59:00,282 - INFO - 127.0.0.1:60128 - "POST /login HTTP/1.1" 422
+2023-12-24 13:00:55,482 - INFO - 127.0.0.1:60243 - "GET /docs HTTP/1.1" 200
+2023-12-24 13:00:55,808 - INFO - 127.0.0.1:60243 - "GET /openapi.json HTTP/1.1" 200
+2023-12-24 13:01:09,803 - INFO - 127.0.0.1:60244 - "POST /login?ehr=0492555&ip=asfa HTTP/1.1" 200
+2023-12-24 13:05:02,289 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 13:05:02,290 - INFO - Starting up TCP server on ('localhost', 60477)
+2023-12-24 13:05:02,295 - INFO - App URL: tcp://localhost:60477
+2023-12-24 13:05:02,295 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 13:05:02,296 - INFO - Starting Flet View app...
+2023-12-24 13:05:02,297 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 13:05:02,501 - INFO - Session started: 
+2023-12-24 13:05:04,579 - ERROR - HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000225D8BB7160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "F:\python\lib\http\client.py", line 1274, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\python\lib\http\client.py", line 1034, in _send_output
+    self.send(msg)
+  File "F:\python\lib\http\client.py", line 974, in send
+    self.connect()
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000225D8BB7160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000225D8BB7160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 164, in process
+    self.login(state=self.state)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 170, in login
+    resp = requests.post(f"http://{ENV['server_addr']}:{ENV['server_port']}/login", data=data, json=data)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000225D8BB7160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2023-12-24 13:05:04,769 - INFO - Started server process [25572]
+2023-12-24 13:05:04,770 - INFO - Waiting for application startup.
+2023-12-24 13:05:04,770 - INFO - Application startup complete.
+2023-12-24 13:05:04,771 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 13:05:09,337 - INFO - 127.0.0.1:60488 - "GET /docs HTTP/1.1" 200
+2023-12-24 13:05:09,574 - INFO - 127.0.0.1:60488 - "GET /openapi.json HTTP/1.1" 200
+2023-12-24 13:05:27,554 - INFO - 127.0.0.1:60489 - "POST /login HTTP/1.1" 200
+2023-12-24 13:05:37,333 - INFO - 127.0.0.1:60490 - "GET /onlines HTTP/1.1" 200
+2023-12-24 13:05:56,736 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 13:05:56,737 - INFO - Starting up TCP server on ('localhost', 60506)
+2023-12-24 13:05:56,742 - INFO - App URL: tcp://localhost:60506
+2023-12-24 13:05:56,742 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 13:05:56,742 - INFO - Starting Flet View app...
+2023-12-24 13:05:56,744 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 13:05:57,020 - INFO - Session started: 
+2023-12-24 13:05:57,073 - INFO - 127.0.0.1:60508 - "POST /login HTTP/1.1" 422
+2023-12-24 13:06:38,809 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 13:06:38,810 - INFO - Starting up TCP server on ('localhost', 60527)
+2023-12-24 13:06:38,815 - INFO - App URL: tcp://localhost:60527
+2023-12-24 13:06:38,815 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 13:06:38,816 - INFO - Starting Flet View app...
+2023-12-24 13:06:38,817 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 13:06:38,967 - INFO - Session started: 
+2023-12-24 13:06:39,019 - INFO - 127.0.0.1:60529 - "POST /login HTTP/1.1" 422
+2023-12-24 13:07:25,267 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 13:07:25,269 - INFO - Starting up TCP server on ('localhost', 60579)
+2023-12-24 13:07:25,275 - INFO - App URL: tcp://localhost:60579
+2023-12-24 13:07:25,276 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 13:07:25,276 - INFO - Starting Flet View app...
+2023-12-24 13:07:25,279 - INFO - Flet View found in: e:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 13:07:25,459 - INFO - Session started: 
+2023-12-24 13:07:25,563 - INFO - 127.0.0.1:60581 - "POST /login HTTP/1.1" 422
+2023-12-24 13:08:16,650 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 13:08:16,652 - INFO - Starting up TCP server on ('localhost', 60617)
+2023-12-24 13:08:16,658 - INFO - App URL: tcp://localhost:60617
+2023-12-24 13:08:16,658 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 13:08:16,659 - INFO - Starting Flet View app...
+2023-12-24 13:08:16,662 - INFO - Flet View found in: e:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 13:08:16,952 - INFO - Session started: 
+2023-12-24 13:08:17,067 - INFO - 127.0.0.1:60619 - "POST /login HTTP/1.1" 200
+2023-12-24 13:08:40,011 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 13:08:40,011 - INFO - Starting up TCP server on ('localhost', 60637)
+2023-12-24 13:08:40,015 - INFO - App URL: tcp://localhost:60637
+2023-12-24 13:08:40,016 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 13:08:40,016 - INFO - Starting Flet View app...
+2023-12-24 13:08:40,018 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 13:08:40,294 - INFO - Session started: 
+2023-12-24 13:08:40,335 - INFO - 127.0.0.1:60639 - "POST /login HTTP/1.1" 200
+2023-12-24 13:08:46,748 - INFO - Shutting down
+2023-12-24 13:08:46,857 - INFO - Waiting for application shutdown.
+2023-12-24 13:08:53,798 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 13:08:53,799 - INFO - Starting up TCP server on ('localhost', 60644)
+2023-12-24 13:08:53,803 - INFO - App URL: tcp://localhost:60644
+2023-12-24 13:08:53,804 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 13:08:53,804 - INFO - Starting Flet View app...
+2023-12-24 13:08:53,806 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 13:08:53,965 - INFO - Session started: 
+2023-12-24 13:08:56,024 - ERROR - HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015833FD6160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "F:\python\lib\http\client.py", line 1274, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\python\lib\http\client.py", line 1034, in _send_output
+    self.send(msg)
+  File "F:\python\lib\http\client.py", line 974, in send
+    self.connect()
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000015833FD6160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015833FD6160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 164, in process
+    self.login(state=self.state)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 170, in login
+    resp = requests.post(f"http://{ENV['server_addr']}:{ENV['server_port']}/login", data=json.dumps(data))
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015833FD6160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2023-12-24 13:09:49,294 - INFO - Started server process [25572]
+2023-12-24 13:09:49,294 - INFO - Waiting for application startup.
+2023-12-24 13:09:49,295 - INFO - Application startup complete.
+2023-12-24 13:09:49,295 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 13:09:50,132 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 13:09:50,132 - INFO - Starting up TCP server on ('localhost', 60667)
+2023-12-24 13:09:50,137 - INFO - App URL: tcp://localhost:60667
+2023-12-24 13:09:50,137 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 13:09:50,137 - INFO - Starting Flet View app...
+2023-12-24 13:09:50,139 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 13:09:50,302 - INFO - Session started: 
+2023-12-24 13:09:50,362 - INFO - 127.0.0.1:60669 - "POST /login HTTP/1.1" 200
+2023-12-24 13:09:54,309 - INFO - Shutting down
+2023-12-24 13:09:54,414 - INFO - Waiting for application shutdown.
+2023-12-24 13:09:58,785 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 13:09:58,786 - INFO - Starting up TCP server on ('localhost', 60674)
+2023-12-24 13:09:58,790 - INFO - App URL: tcp://localhost:60674
+2023-12-24 13:09:58,791 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 13:09:58,791 - INFO - Starting Flet View app...
+2023-12-24 13:09:58,792 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 13:09:58,950 - INFO - Session started: 
+2023-12-24 13:10:01,029 - ERROR - HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B020116160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "F:\python\lib\http\client.py", line 1274, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\python\lib\http\client.py", line 1034, in _send_output
+    self.send(msg)
+  File "F:\python\lib\http\client.py", line 974, in send
+    self.connect()
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000002B020116160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "E:\npython\PluginBase\venv\lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B020116160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 164, in process
+    self.login(state=self.state)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_index.py", line 170, in login
+    resp = requests.post(f"http://{ENV['server_addr']}:{ENV['server_port']}/login", data=json.dumps(data))
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "E:\npython\PluginBase\venv\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=36909): Max retries exceeded with url: /login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B020116160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2023-12-24 13:10:24,230 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 13:10:24,231 - INFO - Starting up TCP server on ('localhost', 60688)
+2023-12-24 13:10:24,236 - INFO - App URL: tcp://localhost:60688
+2023-12-24 13:10:24,237 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 13:10:24,237 - INFO - Starting Flet View app...
+2023-12-24 13:10:24,239 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 13:10:24,522 - INFO - Session started: 
+2023-12-24 13:10:30,643 - INFO - Started server process [25572]
+2023-12-24 13:10:30,644 - INFO - Waiting for application startup.
+2023-12-24 13:10:30,644 - INFO - Application startup complete.
+2023-12-24 13:10:30,645 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 13:10:36,762 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 13:10:36,763 - INFO - Starting up TCP server on ('localhost', 60698)
+2023-12-24 13:10:36,767 - INFO - App URL: tcp://localhost:60698
+2023-12-24 13:10:36,767 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 13:10:36,768 - INFO - Starting Flet View app...
+2023-12-24 13:10:36,769 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 13:10:36,931 - INFO - Session started: 
+2023-12-24 13:10:36,981 - INFO - 127.0.0.1:60700 - "POST /login HTTP/1.1" 200
+2023-12-24 13:12:59,309 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 13:12:59,310 - INFO - Starting up TCP server on ('localhost', 60741)
+2023-12-24 13:12:59,314 - INFO - App URL: tcp://localhost:60741
+2023-12-24 13:12:59,314 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 13:12:59,314 - INFO - Starting Flet View app...
+2023-12-24 13:12:59,316 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 13:12:59,480 - INFO - Session started: 
+2023-12-24 13:13:03,078 - INFO - Started server process [8460]
+2023-12-24 13:13:03,079 - INFO - Waiting for application startup.
+2023-12-24 13:13:03,079 - INFO - Application startup complete.
+2023-12-24 13:13:03,080 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 13:13:24,753 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 13:13:24,753 - INFO - Starting up TCP server on ('localhost', 60765)
+2023-12-24 13:13:24,757 - INFO - App URL: tcp://localhost:60765
+2023-12-24 13:13:24,758 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 13:13:24,758 - INFO - Starting Flet View app...
+2023-12-24 13:13:24,760 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 13:13:24,924 - INFO - Session started: 
+2023-12-24 13:13:24,987 - INFO - 127.0.0.1:60767 - "POST /login HTTP/1.1" 200
+2023-12-24 13:13:30,773 - INFO - 127.0.0.1:60769 - "GET /plugins HTTP/1.1" 200
+2023-12-24 13:14:20,883 - INFO - 127.0.0.1:60798 - "GET /docs HTTP/1.1" 200
+2023-12-24 13:14:21,091 - INFO - 127.0.0.1:60798 - "GET /openapi.json HTTP/1.1" 200
+2023-12-24 13:14:28,993 - INFO - 127.0.0.1:60799 - "GET /onlines HTTP/1.1" 200
+2023-12-24 13:14:41,128 - INFO - 127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+2023-12-24 13:14:42,330 - INFO - 127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+2023-12-24 13:14:42,808 - INFO - 127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+2023-12-24 13:14:43,195 - INFO - 127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+2023-12-24 13:14:43,591 - INFO - 127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+2023-12-24 13:14:43,999 - INFO - 127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+2023-12-24 13:14:44,365 - INFO - 127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+2023-12-24 13:14:44,762 - INFO - 127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+2023-12-24 13:14:45,180 - INFO - 127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+2023-12-24 13:14:45,516 - INFO - 127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+2023-12-24 13:14:45,880 - INFO - 127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+2023-12-24 13:14:46,214 - INFO - 127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+2023-12-24 13:14:46,556 - INFO - 127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+2023-12-24 13:15:09,466 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 13:15:09,467 - INFO - Starting up TCP server on ('localhost', 60822)
+2023-12-24 13:15:09,472 - INFO - App URL: tcp://localhost:60822
+2023-12-24 13:15:09,472 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 13:15:09,473 - INFO - Starting Flet View app...
+2023-12-24 13:15:09,474 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 13:15:09,653 - INFO - Session started: 
+2023-12-24 13:15:09,722 - INFO - 127.0.0.1:60824 - "POST /login HTTP/1.1" 200
+2023-12-24 13:15:15,531 - INFO - 127.0.0.1:60828 - "GET /onlines HTTP/1.1" 200
+2023-12-24 13:15:16,387 - INFO - 127.0.0.1:60828 - "GET /onlines HTTP/1.1" 200
+2023-12-24 13:15:24,201 - INFO - 127.0.0.1:60829 - "GET /onlines HTTP/1.1" 200
+2023-12-24 13:15:24,887 - INFO - 127.0.0.1:60829 - "GET /onlines HTTP/1.1" 200
+2023-12-24 13:15:25,276 - INFO - 127.0.0.1:60829 - "GET /onlines HTTP/1.1" 200
+2023-12-24 13:15:41,011 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 13:15:41,012 - INFO - Starting up TCP server on ('localhost', 60855)
+2023-12-24 13:15:41,016 - INFO - App URL: tcp://localhost:60855
+2023-12-24 13:15:41,017 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 13:15:41,017 - INFO - Starting Flet View app...
+2023-12-24 13:15:41,018 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 13:15:41,203 - INFO - Session started: 
+2023-12-24 13:15:41,304 - INFO - 127.0.0.1:60857 - "POST /login HTTP/1.1" 200
+2023-12-24 13:16:11,675 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 13:16:11,676 - INFO - Starting up TCP server on ('localhost', 60871)
+2023-12-24 13:16:11,680 - INFO - App URL: tcp://localhost:60871
+2023-12-24 13:16:11,681 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 13:16:11,681 - INFO - Starting Flet View app...
+2023-12-24 13:16:11,682 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 13:16:11,956 - INFO - Session started: 
+2023-12-24 13:16:12,016 - INFO - 127.0.0.1:60873 - "POST /login HTTP/1.1" 200
+2023-12-24 13:17:27,955 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 13:17:27,956 - INFO - Starting up TCP server on ('localhost', 60935)
+2023-12-24 13:17:27,960 - INFO - App URL: tcp://localhost:60935
+2023-12-24 13:17:27,961 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 13:17:27,961 - INFO - Starting Flet View app...
+2023-12-24 13:17:27,963 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 13:17:28,139 - INFO - Session started: 
+2023-12-24 13:17:28,204 - INFO - 127.0.0.1:60937 - "POST /login HTTP/1.1" 200
+2023-12-24 13:17:39,548 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 13:17:39,549 - INFO - Starting up TCP server on ('localhost', 60964)
+2023-12-24 13:17:39,555 - INFO - App URL: tcp://localhost:60964
+2023-12-24 13:17:39,556 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 13:17:39,556 - INFO - Starting Flet View app...
+2023-12-24 13:17:39,558 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 13:17:39,754 - INFO - Session started: 
+2023-12-24 13:17:39,816 - INFO - 127.0.0.1:60966 - "POST /login HTTP/1.1" 200
+2023-12-24 13:18:46,789 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 13:18:46,790 - INFO - Starting up TCP server on ('localhost', 61032)
+2023-12-24 13:18:46,797 - INFO - App URL: tcp://localhost:61032
+2023-12-24 13:18:46,798 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 13:18:46,798 - INFO - Starting Flet View app...
+2023-12-24 13:18:46,801 - INFO - Flet View found in: e:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 13:18:47,020 - INFO - Session started: 
+2023-12-24 13:18:47,152 - INFO - 127.0.0.1:61034 - "POST /login HTTP/1.1" 200
+2023-12-24 13:19:42,441 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 13:19:42,442 - INFO - Starting up TCP server on ('localhost', 61075)
+2023-12-24 13:19:42,446 - INFO - App URL: tcp://localhost:61075
+2023-12-24 13:19:42,446 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 13:19:42,446 - INFO - Starting Flet View app...
+2023-12-24 13:19:42,448 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 13:19:42,604 - INFO - Session started: 
+2023-12-24 13:19:42,644 - INFO - 127.0.0.1:61077 - "POST /login HTTP/1.1" 200
+2023-12-24 13:19:45,769 - INFO - 127.0.0.1:61078 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 13:19:47,114 - INFO - 127.0.0.1:61079 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 13:19:47,121 - INFO - 127.0.0.1:61080 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 13:19:47,135 - INFO - 127.0.0.1:61081 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 13:20:05,024 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 13:20:05,025 - INFO - Starting up TCP server on ('localhost', 61088)
+2023-12-24 13:20:05,029 - INFO - App URL: tcp://localhost:61088
+2023-12-24 13:20:05,029 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 13:20:05,030 - INFO - Starting Flet View app...
+2023-12-24 13:20:05,031 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 13:20:05,314 - INFO - Session started: 
+2023-12-24 13:20:05,401 - INFO - 127.0.0.1:61090 - "POST /login HTTP/1.1" 200
+2023-12-24 13:20:06,842 - INFO - 127.0.0.1:61091 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 13:20:10,099 - INFO - 127.0.0.1:61093 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 13:20:10,101 - INFO - 127.0.0.1:61094 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 13:20:10,144 - INFO - 127.0.0.1:61095 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 13:20:25,759 - INFO - 127.0.0.1:61101 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 13:20:25,776 - INFO - 127.0.0.1:61102 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 13:20:26,520 - INFO - 127.0.0.1:61103 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 13:20:38,960 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 13:20:38,961 - INFO - Starting up TCP server on ('localhost', 61114)
+2023-12-24 13:20:38,965 - INFO - App URL: tcp://localhost:61114
+2023-12-24 13:20:38,965 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 13:20:38,965 - INFO - Starting Flet View app...
+2023-12-24 13:20:38,967 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 13:20:39,132 - INFO - Session started: 
+2023-12-24 13:20:39,208 - INFO - 127.0.0.1:61116 - "POST /login HTTP/1.1" 200
+2023-12-24 13:20:40,496 - INFO - 127.0.0.1:61117 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 13:20:42,567 - INFO - 127.0.0.1:61118 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 13:20:44,592 - INFO - 127.0.0.1:61119 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 13:20:45,803 - INFO - 127.0.0.1:61121 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 13:22:44,525 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 13:22:44,526 - INFO - Starting up TCP server on ('localhost', 61162)
+2023-12-24 13:22:44,530 - INFO - App URL: tcp://localhost:61162
+2023-12-24 13:22:44,530 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 13:22:44,531 - INFO - Starting Flet View app...
+2023-12-24 13:22:44,532 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 13:22:44,791 - INFO - Session started: 
+2023-12-24 13:22:44,835 - INFO - 127.0.0.1:61164 - "POST /login HTTP/1.1" 200
+2023-12-24 13:22:46,949 - INFO - 127.0.0.1:61165 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 13:22:48,811 - INFO - 127.0.0.1:61167 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 13:22:48,813 - INFO - 127.0.0.1:61168 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 13:22:48,841 - INFO - 127.0.0.1:61169 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 13:23:00,780 - INFO - 127.0.0.1:61171 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 13:23:00,821 - INFO - 127.0.0.1:61172 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 13:23:05,917 - INFO - 127.0.0.1:61181 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 13:23:19,259 - INFO - 127.0.0.1:61185 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 13:23:20,696 - INFO - 127.0.0.1:61186 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 15:03:42,793 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 15:03:42,794 - INFO - Starting up TCP server on ('localhost', 63768)
+2023-12-24 15:03:42,798 - INFO - App URL: tcp://localhost:63768
+2023-12-24 15:03:42,799 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 15:03:42,799 - INFO - Starting Flet View app...
+2023-12-24 15:03:42,800 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 15:03:42,982 - INFO - Session started: 
+2023-12-24 15:03:43,031 - INFO - 127.0.0.1:63770 - "POST /login HTTP/1.1" 200
+2023-12-24 15:03:43,066 - INFO - Started server process [10808]
+2023-12-24 15:03:43,067 - INFO - Waiting for application startup.
+2023-12-24 15:03:43,068 - INFO - Application startup complete.
+2023-12-24 15:03:43,070 - ERROR - [Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+2023-12-24 15:03:43,072 - INFO - Waiting for application shutdown.
+2023-12-24 15:03:43,073 - INFO - Application shutdown complete.
+2023-12-24 15:03:48,339 - ERROR - 'PluginMarketServer' object has no attribute 'get_local_ip'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\plugin_market_server.py", line 29, in process
+    self.container.content = self.ui()
+  File "E:\npython\PluginBase\app\plugins\\plugin_market_server.py", line 36, in ui
+    ft.Text(f"Server run on: {self.get_local_ip()}: {self.port}"),
+AttributeError: 'PluginMarketServer' object has no attribute 'get_local_ip'
+2023-12-24 15:04:39,715 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 15:04:39,715 - INFO - Starting up TCP server on ('localhost', 63806)
+2023-12-24 15:04:39,720 - INFO - App URL: tcp://localhost:63806
+2023-12-24 15:04:39,720 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 15:04:39,721 - INFO - Starting Flet View app...
+2023-12-24 15:04:39,722 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 15:04:39,922 - INFO - Session started: 
+2023-12-24 15:04:39,966 - INFO - 127.0.0.1:63808 - "POST /login HTTP/1.1" 200
+2023-12-24 15:04:39,999 - INFO - Started server process [20788]
+2023-12-24 15:04:39,999 - INFO - Waiting for application startup.
+2023-12-24 15:04:40,000 - INFO - Application startup complete.
+2023-12-24 15:04:40,001 - ERROR - [Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+2023-12-24 15:04:40,001 - INFO - Waiting for application shutdown.
+2023-12-24 15:04:40,002 - INFO - Application shutdown complete.
+2023-12-24 15:04:42,665 - ERROR - 'PluginMarketServer' object has no attribute 'port'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\plugin_market_server.py", line 30, in process
+    self.container.content = self.ui()
+  File "E:\npython\PluginBase\app\plugins\\plugin_market_server.py", line 37, in ui
+    ft.Text(f"Server run on: {self.get_local_ip()}: {self.port}"),
+AttributeError: 'PluginMarketServer' object has no attribute 'port'
+2023-12-24 15:10:03,334 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 15:10:03,335 - INFO - Starting up TCP server on ('localhost', 63938)
+2023-12-24 15:10:03,339 - INFO - App URL: tcp://localhost:63938
+2023-12-24 15:10:03,340 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 15:10:03,340 - INFO - Starting Flet View app...
+2023-12-24 15:10:03,341 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 15:10:03,612 - INFO - Session started: 
+2023-12-24 15:10:03,664 - INFO - 127.0.0.1:63940 - "POST /login HTTP/1.1" 200
+2023-12-24 15:10:03,704 - INFO - Started server process [28532]
+2023-12-24 15:10:03,705 - INFO - Waiting for application startup.
+2023-12-24 15:10:03,706 - INFO - Application startup complete.
+2023-12-24 15:10:03,707 - ERROR - [Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+2023-12-24 15:10:03,708 - INFO - Waiting for application shutdown.
+2023-12-24 15:10:03,710 - INFO - Application shutdown complete.
+2023-12-24 15:10:06,634 - ERROR - 'PluginMarketServer' object has no attribute 'port'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\plugin_market_server.py", line 30, in process
+    self.container.content = self.ui()
+  File "E:\npython\PluginBase\app\plugins\\plugin_market_server.py", line 39, in ui
+    ft.Text(f"Server run on: {self.get_local_ip()}: {self.port}"),
+AttributeError: 'PluginMarketServer' object has no attribute 'port'
+2023-12-24 22:16:52,532 - INFO - 127.0.0.1:60286 - "GET /plugins HTTP/1.1" 200
+2023-12-24 22:17:00,243 - INFO - 127.0.0.1:60291 - "GET /plugins HTTP/1.1" 200
+2023-12-24 22:24:27,897 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 22:24:27,897 - INFO - Starting up TCP server on ('localhost', 60488)
+2023-12-24 22:24:27,902 - INFO - App URL: tcp://localhost:60488
+2023-12-24 22:24:27,902 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 22:24:27,902 - INFO - Starting Flet View app...
+2023-12-24 22:24:27,904 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 22:24:28,119 - INFO - Session started: 
+2023-12-24 22:24:28,174 - INFO - 127.0.0.1:60490 - "POST /login HTTP/1.1" 200
+2023-12-24 22:24:28,226 - INFO - Started server process [15716]
+2023-12-24 22:24:28,227 - INFO - Waiting for application startup.
+2023-12-24 22:24:28,228 - INFO - Application startup complete.
+2023-12-24 22:24:28,228 - ERROR - [Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+2023-12-24 22:24:28,229 - INFO - Waiting for application shutdown.
+2023-12-24 22:24:28,230 - INFO - Application shutdown complete.
+2023-12-24 22:24:31,321 - INFO - 127.0.0.1:60493 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:24:39,870 - INFO - 127.0.0.1:60502 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:24:45,315 - INFO - 127.0.0.1:60504 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:24:45,340 - INFO - 127.0.0.1:60505 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:24:45,356 - INFO - 127.0.0.1:60506 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:25:07,680 - INFO - Shutting down
+2023-12-24 22:25:07,789 - INFO - Waiting for application shutdown.
+2023-12-24 22:25:07,939 - INFO - Started server process [8460]
+2023-12-24 22:25:07,940 - INFO - Waiting for application startup.
+2023-12-24 22:25:07,941 - INFO - Application startup complete.
+2023-12-24 22:25:07,943 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 22:25:08,682 - INFO - Shutting down
+2023-12-24 22:25:08,788 - INFO - Waiting for application shutdown.
+2023-12-24 22:25:13,839 - ERROR - 'PluginMarketServer' object has no attribute 'port'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\plugin_market_server.py", line 30, in process
+    self.container.content = self.ui()
+  File "E:\npython\PluginBase\app\plugins\\plugin_market_server.py", line 39, in ui
+    ft.Text(f"Server run on: {self.get_local_ip()}: {self.port}"),
+AttributeError: 'PluginMarketServer' object has no attribute 'port'
+2023-12-24 22:25:23,005 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 22:25:23,006 - INFO - Starting up TCP server on ('localhost', 60530)
+2023-12-24 22:25:23,010 - INFO - App URL: tcp://localhost:60530
+2023-12-24 22:25:23,011 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 22:25:23,011 - INFO - Starting Flet View app...
+2023-12-24 22:25:23,013 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 22:25:23,174 - INFO - Session started: 
+2023-12-24 22:25:25,057 - ERROR - 'PluginMarketServer' object has no attribute 'port'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\plugin_market_server.py", line 30, in process
+    self.container.content = self.ui()
+  File "E:\npython\PluginBase\app\plugins\\plugin_market_server.py", line 39, in ui
+    ft.Text(f"Server run on: {self.get_local_ip()}: {self.port}"),
+AttributeError: 'PluginMarketServer' object has no attribute 'port'
+2023-12-24 22:25:25,270 - INFO - Started server process [19612]
+2023-12-24 22:25:25,271 - INFO - Waiting for application startup.
+2023-12-24 22:25:25,272 - INFO - Application startup complete.
+2023-12-24 22:25:25,272 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 22:27:42,997 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 22:27:42,998 - INFO - Starting up TCP server on ('localhost', 60569)
+2023-12-24 22:27:43,002 - INFO - App URL: tcp://localhost:60569
+2023-12-24 22:27:43,002 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 22:27:43,003 - INFO - Starting Flet View app...
+2023-12-24 22:27:43,004 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 22:27:43,172 - INFO - Session started: 
+2023-12-24 22:27:44,958 - ERROR - 'PluginMarketServer' object has no attribute 'port'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\plugin_market_server.py", line 32, in process
+    self.container.content = self.ui()
+  File "E:\npython\PluginBase\app\plugins\\plugin_market_server.py", line 54, in ui
+    ft.Text(f"Server run on: {self.get_local_ip()}: {self.port}"),
+AttributeError: 'PluginMarketServer' object has no attribute 'port'
+2023-12-24 22:27:45,299 - INFO - Started server process [27652]
+2023-12-24 22:27:45,300 - INFO - Waiting for application startup.
+2023-12-24 22:27:45,300 - INFO - Application startup complete.
+2023-12-24 22:27:45,301 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 22:27:47,282 - INFO - 127.0.0.1:60575 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:27:54,160 - INFO - 127.0.0.1:60587 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:27:57,086 - ERROR - 'PluginMarketServer' object has no attribute 'port'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\plugin_market_server.py", line 32, in process
+    self.container.content = self.ui()
+  File "E:\npython\PluginBase\app\plugins\\plugin_market_server.py", line 54, in ui
+    ft.Text(f"Server run on: {self.get_local_ip()}: {self.port}"),
+AttributeError: 'PluginMarketServer' object has no attribute 'port'
+2023-12-24 22:28:05,316 - INFO - 127.0.0.1:60597 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:29:48,197 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 22:29:48,197 - INFO - Starting up TCP server on ('localhost', 60652)
+2023-12-24 22:29:48,201 - INFO - App URL: tcp://localhost:60652
+2023-12-24 22:29:48,202 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 22:29:48,202 - INFO - Starting Flet View app...
+2023-12-24 22:29:48,203 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 22:29:48,367 - INFO - Session started: 
+2023-12-24 22:29:50,491 - INFO - Started server process [4288]
+2023-12-24 22:29:50,492 - INFO - Waiting for application startup.
+2023-12-24 22:29:50,493 - INFO - Application startup complete.
+2023-12-24 22:29:50,494 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 22:29:51,770 - INFO - Started server process [4288]
+2023-12-24 22:29:51,771 - INFO - Waiting for application startup.
+2023-12-24 22:29:51,771 - INFO - Application startup complete.
+2023-12-24 22:29:51,772 - ERROR - [Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+2023-12-24 22:29:51,772 - INFO - Waiting for application shutdown.
+2023-12-24 22:29:51,773 - INFO - Application shutdown complete.
+2023-12-24 22:30:11,958 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 22:30:11,959 - INFO - Starting up TCP server on ('localhost', 60667)
+2023-12-24 22:30:11,963 - INFO - App URL: tcp://localhost:60667
+2023-12-24 22:30:11,963 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 22:30:11,964 - INFO - Starting Flet View app...
+2023-12-24 22:30:11,965 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 22:30:12,202 - INFO - Session started: 
+2023-12-24 22:30:14,307 - INFO - Started server process [20528]
+2023-12-24 22:30:14,308 - INFO - Waiting for application startup.
+2023-12-24 22:30:14,308 - INFO - Application startup complete.
+2023-12-24 22:30:14,309 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 22:30:19,976 - INFO - Started server process [20528]
+2023-12-24 22:30:19,977 - INFO - Waiting for application startup.
+2023-12-24 22:30:19,978 - INFO - Application startup complete.
+2023-12-24 22:30:19,978 - ERROR - [Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+2023-12-24 22:30:19,978 - INFO - Waiting for application shutdown.
+2023-12-24 22:30:19,980 - INFO - Application shutdown complete.
+2023-12-24 22:30:22,031 - INFO - Shutting down
+2023-12-24 22:30:22,991 - INFO - Started server process [20528]
+2023-12-24 22:30:22,991 - INFO - Waiting for application startup.
+2023-12-24 22:30:22,992 - INFO - Application startup complete.
+2023-12-24 22:30:22,993 - ERROR - [Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+2023-12-24 22:30:22,993 - INFO - Waiting for application shutdown.
+2023-12-24 22:30:22,994 - INFO - Application shutdown complete.
+2023-12-24 22:30:23,624 - INFO - Shutting down
+2023-12-24 22:30:29,105 - INFO - Started server process [20528]
+2023-12-24 22:30:29,105 - INFO - Waiting for application startup.
+2023-12-24 22:30:29,105 - INFO - Application startup complete.
+2023-12-24 22:30:29,106 - ERROR - [Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+2023-12-24 22:30:29,106 - INFO - Waiting for application shutdown.
+2023-12-24 22:30:29,106 - INFO - Application shutdown complete.
+2023-12-24 22:30:34,144 - INFO - Shutting down
+2023-12-24 22:30:37,142 - INFO - 127.0.0.1:60701 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:31:20,038 - INFO - 127.0.0.1:60768 - "GET /docs HTTP/1.1" 200
+2023-12-24 22:31:20,444 - INFO - 127.0.0.1:60768 - "GET /openapi.json HTTP/1.1" 200
+2023-12-24 22:31:22,117 - INFO - 127.0.0.1:60778 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:31:24,267 - INFO - 127.0.0.1:60782 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:31:25,195 - INFO - 127.0.0.1:60784 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:31:25,299 - INFO - 127.0.0.1:60768 - "GET /docs HTTP/1.1" 200
+2023-12-24 22:31:25,521 - INFO - 127.0.0.1:60768 - "GET /openapi.json HTTP/1.1" 200
+2023-12-24 22:31:26,665 - INFO - 127.0.0.1:60787 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:31:28,919 - INFO - Started server process [20528]
+2023-12-24 22:31:28,920 - INFO - Waiting for application startup.
+2023-12-24 22:31:28,921 - INFO - Application startup complete.
+2023-12-24 22:31:28,921 - ERROR - [Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+2023-12-24 22:31:28,922 - INFO - Waiting for application shutdown.
+2023-12-24 22:31:28,922 - INFO - Application shutdown complete.
+2023-12-24 22:31:29,916 - INFO - 127.0.0.1:60791 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:31:29,920 - INFO - 127.0.0.1:60792 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:31:29,939 - INFO - 127.0.0.1:60793 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:31:30,734 - INFO - 127.0.0.1:60769 - "GET /docs HTTP/1.1" 200
+2023-12-24 22:31:31,029 - INFO - 127.0.0.1:60769 - "GET /openapi.json HTTP/1.1" 200
+2023-12-24 22:31:32,834 - INFO - 127.0.0.1:60795 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:31:32,845 - INFO - 127.0.0.1:60796 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:31:34,023 - INFO - Shutting down
+2023-12-24 22:31:34,991 - INFO - 127.0.0.1:60801 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:31:35,100 - INFO - 127.0.0.1:60769 - "GET /docs HTTP/1.1" 200
+2023-12-24 22:31:35,344 - INFO - 127.0.0.1:60769 - "GET /openapi.json HTTP/1.1" 200
+2023-12-24 22:31:37,666 - INFO - 127.0.0.1:60769 - "GET /docs HTTP/1.1" 200
+2023-12-24 22:31:37,860 - INFO - 127.0.0.1:60769 - "GET /openapi.json HTTP/1.1" 200
+2023-12-24 22:31:39,364 - INFO - 127.0.0.1:60802 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:32:34,745 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 22:32:34,745 - INFO - Starting up TCP server on ('localhost', 60849)
+2023-12-24 22:32:34,750 - INFO - App URL: tcp://localhost:60849
+2023-12-24 22:32:34,750 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 22:32:34,751 - INFO - Starting Flet View app...
+2023-12-24 22:32:34,752 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 22:32:34,922 - INFO - Session started: 
+2023-12-24 22:32:37,019 - INFO - Started server process [26888]
+2023-12-24 22:32:37,020 - INFO - Waiting for application startup.
+2023-12-24 22:32:37,020 - INFO - Application startup complete.
+2023-12-24 22:32:37,021 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 22:32:41,927 - INFO - Started server process [26888]
+2023-12-24 22:32:41,927 - INFO - Waiting for application startup.
+2023-12-24 22:32:41,928 - INFO - Application startup complete.
+2023-12-24 22:32:41,929 - ERROR - [Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+2023-12-24 22:32:41,929 - INFO - Waiting for application shutdown.
+2023-12-24 22:32:41,930 - INFO - Application shutdown complete.
+2023-12-24 22:32:49,824 - INFO - Shutting down
+2023-12-24 22:32:54,429 - INFO - 127.0.0.1:60864 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:32:54,438 - INFO - 127.0.0.1:60865 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:32:54,466 - INFO - 127.0.0.1:60866 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:34:12,502 - INFO - 127.0.0.1:60897 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:34:12,524 - INFO - 127.0.0.1:60898 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:34:14,900 - INFO - 127.0.0.1:60899 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:34:17,849 - INFO - 127.0.0.1:60901 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:34:18,964 - INFO - 127.0.0.1:60902 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:34:20,327 - INFO - 127.0.0.1:60903 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:34:36,082 - INFO - 127.0.0.1:60913 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:38:05,165 - INFO - 127.0.0.1:61413 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:38:05,175 - INFO - 127.0.0.1:61414 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:38:05,201 - INFO - 127.0.0.1:61415 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:39:40,421 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 22:39:40,422 - INFO - Starting up TCP server on ('localhost', 61456)
+2023-12-24 22:39:40,427 - INFO - App URL: tcp://localhost:61456
+2023-12-24 22:39:40,427 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 22:39:40,427 - INFO - Starting Flet View app...
+2023-12-24 22:39:40,429 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 22:39:40,595 - INFO - Session started: 
+2023-12-24 22:39:42,676 - INFO - Started server process [9860]
+2023-12-24 22:39:42,677 - INFO - Waiting for application startup.
+2023-12-24 22:39:42,678 - INFO - Application startup complete.
+2023-12-24 22:39:42,678 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 22:39:46,570 - INFO - 127.0.0.1:61462 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:40:47,161 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 22:40:47,162 - INFO - Starting up TCP server on ('localhost', 61481)
+2023-12-24 22:40:47,165 - INFO - App URL: tcp://localhost:61481
+2023-12-24 22:40:47,165 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 22:40:47,165 - INFO - Starting Flet View app...
+2023-12-24 22:40:47,167 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 22:40:47,361 - INFO - Session started: 
+2023-12-24 22:40:49,468 - INFO - Started server process [17328]
+2023-12-24 22:40:49,469 - INFO - Waiting for application startup.
+2023-12-24 22:40:49,469 - INFO - Application startup complete.
+2023-12-24 22:40:49,470 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-24 22:40:52,511 - INFO - Started server process [17328]
+2023-12-24 22:40:52,511 - INFO - Waiting for application startup.
+2023-12-24 22:40:52,512 - INFO - Application startup complete.
+2023-12-24 22:40:52,512 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 22:40:55,221 - INFO - Shutting down
+2023-12-24 22:40:55,331 - INFO - Waiting for application shutdown.
+2023-12-24 22:41:18,166 - INFO - Started server process [17328]
+2023-12-24 22:41:18,166 - INFO - Waiting for application startup.
+2023-12-24 22:41:18,167 - INFO - Application startup complete.
+2023-12-24 22:41:18,167 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 22:41:18,219 - INFO - 127.0.0.1:61546 - "GET /docs HTTP/1.1" 200
+2023-12-24 22:41:18,564 - INFO - 127.0.0.1:61546 - "GET /openapi.json HTTP/1.1" 200
+2023-12-24 22:41:18,659 - INFO - 127.0.0.1:61540 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:41:19,161 - INFO - 127.0.0.1:61553 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:41:20,215 - INFO - 127.0.0.1:61576 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:41:20,308 - INFO - 127.0.0.1:61546 - "GET /docs HTTP/1.1" 200
+2023-12-24 22:41:20,537 - INFO - 127.0.0.1:61546 - "GET /openapi.json HTTP/1.1" 200
+2023-12-24 22:41:21,484 - INFO - 127.0.0.1:61579 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:41:23,891 - INFO - 127.0.0.1:61585 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:41:23,894 - INFO - 127.0.0.1:61586 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:41:23,911 - INFO - 127.0.0.1:61587 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:41:58,568 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 22:41:58,568 - INFO - Starting up TCP server on ('localhost', 61624)
+2023-12-24 22:41:58,572 - INFO - App URL: tcp://localhost:61624
+2023-12-24 22:41:58,572 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 22:41:58,573 - INFO - Starting Flet View app...
+2023-12-24 22:41:58,574 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 22:41:58,747 - INFO - Session started: 
+2023-12-24 22:42:00,686 - INFO - Started server process [9632]
+2023-12-24 22:42:00,686 - INFO - Waiting for application startup.
+2023-12-24 22:42:00,687 - INFO - Application startup complete.
+2023-12-24 22:42:00,688 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 22:42:00,878 - INFO - 127.0.0.1:61626 - "POST /login HTTP/1.1" 200
+2023-12-24 22:42:00,885 - INFO - Started server process [9632]
+2023-12-24 22:42:00,886 - INFO - Waiting for application startup.
+2023-12-24 22:42:00,886 - INFO - Application startup complete.
+2023-12-24 22:42:00,887 - ERROR - [Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+2023-12-24 22:42:00,887 - INFO - Waiting for application shutdown.
+2023-12-24 22:42:00,887 - INFO - Application shutdown complete.
+2023-12-24 22:42:03,485 - INFO - Shutting down
+2023-12-24 22:42:03,595 - INFO - Waiting for application shutdown.
+2023-12-24 22:42:04,429 - INFO - Started server process [9632]
+2023-12-24 22:42:04,429 - INFO - Waiting for application startup.
+2023-12-24 22:42:04,430 - INFO - Application startup complete.
+2023-12-24 22:42:04,431 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 22:42:05,397 - INFO - Shutting down
+2023-12-24 22:42:05,511 - INFO - Waiting for application shutdown.
+2023-12-24 22:42:05,998 - INFO - Started server process [9632]
+2023-12-24 22:42:05,999 - INFO - Waiting for application startup.
+2023-12-24 22:42:05,999 - INFO - Application startup complete.
+2023-12-24 22:42:06,000 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 22:42:06,670 - INFO - Shutting down
+2023-12-24 22:42:06,779 - INFO - Waiting for application shutdown.
+2023-12-24 22:42:16,472 - INFO - Started server process [9632]
+2023-12-24 22:42:16,472 - INFO - Waiting for application startup.
+2023-12-24 22:42:16,473 - INFO - Application startup complete.
+2023-12-24 22:42:16,473 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 22:42:20,706 - INFO - 127.0.0.1:61665 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:42:25,843 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 22:42:25,843 - INFO - Starting up TCP server on ('localhost', 61668)
+2023-12-24 22:42:25,848 - INFO - App URL: tcp://localhost:61668
+2023-12-24 22:42:25,848 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 22:42:25,848 - INFO - Starting Flet View app...
+2023-12-24 22:42:25,850 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 22:42:26,038 - INFO - Session started: 
+2023-12-24 22:42:26,113 - INFO - 127.0.0.1:61670 - "POST /login HTTP/1.1" 200
+2023-12-24 22:42:26,156 - INFO - Started server process [27652]
+2023-12-24 22:42:26,158 - INFO - Waiting for application startup.
+2023-12-24 22:42:26,158 - INFO - Application startup complete.
+2023-12-24 22:42:26,159 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-24 22:42:27,945 - INFO - 127.0.0.1:61674 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:42:28,049 - INFO - 127.0.0.1:61675 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:42:28,966 - ERROR - 'str' object has no attribute '_set_attr_internal'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_base.py", line 193, in process
+    page.update()
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\page.py", line 289, in update
+    r = self.__update(self)
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\page.py", line 416, in __update
+    commands, added_controls, removed_controls = self.__prepare_update(*controls)
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\page.py", line 438, in __prepare_update
+    control.build_update_commands(
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\control.py", line 384, in build_update_commands
+    ctrl.build_update_commands(
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\control.py", line 384, in build_update_commands
+    ctrl.build_update_commands(
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\control.py", line 319, in build_update_commands
+    current_children = self._get_children()
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\container.py", line 214, in _get_children
+    self.__content._set_attr_internal("n", "content")
+AttributeError: 'str' object has no attribute '_set_attr_internal'
+2023-12-24 22:42:30,967 - INFO - 127.0.0.1:61676 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:42:31,050 - INFO - 127.0.0.1:61677 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:42:32,617 - INFO - 127.0.0.1:61678 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:42:37,645 - INFO - 127.0.0.1:61686 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:42:38,286 - INFO - Shutting down
+2023-12-24 22:42:38,399 - INFO - Waiting for application shutdown.
+2023-12-24 22:42:47,738 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 22:42:47,739 - INFO - Starting up TCP server on ('localhost', 61694)
+2023-12-24 22:42:47,744 - INFO - App URL: tcp://localhost:61694
+2023-12-24 22:42:47,744 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 22:42:47,745 - INFO - Starting Flet View app...
+2023-12-24 22:42:47,746 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 22:42:47,941 - INFO - Session started: 
+2023-12-24 22:42:50,061 - INFO - Started server process [17848]
+2023-12-24 22:42:50,061 - INFO - Waiting for application startup.
+2023-12-24 22:42:50,062 - INFO - Application startup complete.
+2023-12-24 22:42:50,062 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-24 22:44:43,709 - ERROR - 'str' object has no attribute '_set_attr_internal'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_base.py", line 119, in process
+    page.views.pop() and page.update()
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\page.py", line 289, in update
+    r = self.__update(self)
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\page.py", line 416, in __update
+    commands, added_controls, removed_controls = self.__prepare_update(*controls)
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\page.py", line 438, in __prepare_update
+    control.build_update_commands(
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\control.py", line 357, in build_update_commands
+    self._remove_control_recursively(index, ctrl)
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\control.py", line 420, in _remove_control_recursively
+    removed_controls.extend(self._remove_control_recursively(index, child))
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\control.py", line 419, in _remove_control_recursively
+    for child in control._get_children():
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\container.py", line 214, in _get_children
+    self.__content._set_attr_internal("n", "content")
+AttributeError: 'str' object has no attribute '_set_attr_internal'
+2023-12-24 22:44:52,671 - INFO - Started server process [9632]
+2023-12-24 22:44:52,672 - INFO - Waiting for application startup.
+2023-12-24 22:44:52,672 - INFO - Application startup complete.
+2023-12-24 22:44:52,673 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 22:44:52,981 - INFO - 127.0.0.1:61755 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 22:44:55,597 - INFO - Shutting down
+2023-12-24 22:44:55,710 - INFO - Waiting for application shutdown.
+2023-12-24 23:06:01,740 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 23:06:01,741 - INFO - Starting up TCP server on ('localhost', 62491)
+2023-12-24 23:06:01,745 - INFO - App URL: tcp://localhost:62491
+2023-12-24 23:06:01,745 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 23:06:01,746 - INFO - Starting Flet View app...
+2023-12-24 23:06:01,747 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 23:06:01,967 - INFO - Session started: 
+2023-12-24 23:06:03,684 - INFO - Started server process [18660]
+2023-12-24 23:06:03,685 - INFO - Waiting for application startup.
+2023-12-24 23:06:03,685 - INFO - Application startup complete.
+2023-12-24 23:06:03,686 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 23:06:04,082 - INFO - 127.0.0.1:62493 - "POST /login HTTP/1.1" 200
+2023-12-24 23:06:04,087 - INFO - Started server process [18660]
+2023-12-24 23:06:04,088 - INFO - Waiting for application startup.
+2023-12-24 23:06:04,088 - INFO - Application startup complete.
+2023-12-24 23:06:04,089 - ERROR - [Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+2023-12-24 23:06:04,090 - INFO - Waiting for application shutdown.
+2023-12-24 23:06:04,091 - INFO - Application shutdown complete.
+2023-12-24 23:06:06,172 - ERROR - 'str' object has no attribute '_set_attr_internal'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_base.py", line 193, in process
+    page.update()
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\page.py", line 289, in update
+    r = self.__update(self)
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\page.py", line 416, in __update
+    commands, added_controls, removed_controls = self.__prepare_update(*controls)
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\page.py", line 438, in __prepare_update
+    control.build_update_commands(
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\control.py", line 384, in build_update_commands
+    ctrl.build_update_commands(
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\control.py", line 384, in build_update_commands
+    ctrl.build_update_commands(
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\control.py", line 319, in build_update_commands
+    current_children = self._get_children()
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\container.py", line 214, in _get_children
+    self.__content._set_attr_internal("n", "content")
+AttributeError: 'str' object has no attribute '_set_attr_internal'
+2023-12-24 23:06:06,898 - INFO - Shutting down
+2023-12-24 23:06:07,008 - INFO - Waiting for application shutdown.
+2023-12-24 23:06:07,994 - ERROR - 'str' object has no attribute '_set_attr_internal'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_base.py", line 119, in process
+    page.views.pop() and page.update()
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\page.py", line 289, in update
+    r = self.__update(self)
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\page.py", line 416, in __update
+    commands, added_controls, removed_controls = self.__prepare_update(*controls)
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\page.py", line 438, in __prepare_update
+    control.build_update_commands(
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\control.py", line 357, in build_update_commands
+    self._remove_control_recursively(index, ctrl)
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\control.py", line 420, in _remove_control_recursively
+    removed_controls.extend(self._remove_control_recursively(index, child))
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\control.py", line 419, in _remove_control_recursively
+    for child in control._get_children():
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\container.py", line 214, in _get_children
+    self.__content._set_attr_internal("n", "content")
+AttributeError: 'str' object has no attribute '_set_attr_internal'
+2023-12-24 23:06:11,936 - INFO - Started server process [18660]
+2023-12-24 23:06:11,937 - INFO - Waiting for application startup.
+2023-12-24 23:06:11,937 - INFO - Application startup complete.
+2023-12-24 23:06:11,938 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 23:06:13,853 - INFO - 127.0.0.1:62503 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+2023-12-24 23:06:16,753 - INFO - Shutting down
+2023-12-24 23:06:16,867 - INFO - Waiting for application shutdown.
+2023-12-24 23:11:13,693 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 23:11:13,694 - INFO - Starting up TCP server on ('localhost', 62622)
+2023-12-24 23:11:13,699 - INFO - App URL: tcp://localhost:62622
+2023-12-24 23:11:13,699 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 23:11:13,699 - INFO - Starting Flet View app...
+2023-12-24 23:11:13,701 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 23:11:13,868 - INFO - Session started: 
+2023-12-24 23:11:15,936 - INFO - Started server process [25760]
+2023-12-24 23:11:15,937 - INFO - Waiting for application startup.
+2023-12-24 23:11:15,937 - INFO - Application startup complete.
+2023-12-24 23:11:15,938 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 23:11:15,962 - INFO - 127.0.0.1:62624 - "POST /login HTTP/1.1" 200
+2023-12-24 23:11:15,969 - INFO - Started server process [25760]
+2023-12-24 23:11:15,970 - INFO - Waiting for application startup.
+2023-12-24 23:11:15,971 - INFO - Application startup complete.
+2023-12-24 23:11:15,972 - ERROR - [Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+2023-12-24 23:11:15,972 - INFO - Waiting for application shutdown.
+2023-12-24 23:11:15,973 - INFO - Application shutdown complete.
+2023-12-24 23:11:17,039 - INFO - Shutting down
+2023-12-24 23:11:17,152 - INFO - Waiting for application shutdown.
+2023-12-24 23:11:21,720 - INFO - Started server process [25760]
+2023-12-24 23:11:21,720 - INFO - Waiting for application startup.
+2023-12-24 23:11:21,721 - INFO - Application startup complete.
+2023-12-24 23:11:21,721 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 23:11:23,342 - ERROR - 'str' object has no attribute '_set_attr_internal'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_base.py", line 193, in process
+    page.update()
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\page.py", line 289, in update
+    r = self.__update(self)
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\page.py", line 416, in __update
+    commands, added_controls, removed_controls = self.__prepare_update(*controls)
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\page.py", line 438, in __prepare_update
+    control.build_update_commands(
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\control.py", line 384, in build_update_commands
+    ctrl.build_update_commands(
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\control.py", line 384, in build_update_commands
+    ctrl.build_update_commands(
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\control.py", line 319, in build_update_commands
+    current_children = self._get_children()
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\container.py", line 214, in _get_children
+    self.__content._set_attr_internal("n", "content")
+AttributeError: 'str' object has no attribute '_set_attr_internal'
+2023-12-24 23:11:23,937 - INFO - Shutting down
+2023-12-24 23:11:24,053 - INFO - Waiting for application shutdown.
+2023-12-24 23:11:24,545 - ERROR - 'str' object has no attribute '_set_attr_internal'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_base.py", line 119, in process
+    page.views.pop() and page.update()
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\page.py", line 289, in update
+    r = self.__update(self)
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\page.py", line 416, in __update
+    commands, added_controls, removed_controls = self.__prepare_update(*controls)
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\page.py", line 438, in __prepare_update
+    control.build_update_commands(
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\control.py", line 357, in build_update_commands
+    self._remove_control_recursively(index, ctrl)
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\control.py", line 420, in _remove_control_recursively
+    removed_controls.extend(self._remove_control_recursively(index, child))
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\control.py", line 419, in _remove_control_recursively
+    for child in control._get_children():
+  File "E:\npython\PluginBase\venv\lib\site-packages\flet_core\container.py", line 214, in _get_children
+    self.__content._set_attr_internal("n", "content")
+AttributeError: 'str' object has no attribute '_set_attr_internal'
+2023-12-24 23:11:45,286 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 23:11:45,288 - INFO - Starting up TCP server on ('localhost', 62650)
+2023-12-24 23:11:45,292 - INFO - App URL: tcp://localhost:62650
+2023-12-24 23:11:45,292 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 23:11:45,293 - INFO - Starting Flet View app...
+2023-12-24 23:11:45,294 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 23:11:45,465 - INFO - Session started: 
+2023-12-24 23:11:47,207 - INFO - Started server process [12800]
+2023-12-24 23:11:47,207 - INFO - Waiting for application startup.
+2023-12-24 23:11:47,208 - INFO - Application startup complete.
+2023-12-24 23:11:47,209 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 23:11:47,565 - INFO - 127.0.0.1:62652 - "POST /login HTTP/1.1" 200
+2023-12-24 23:11:47,571 - INFO - Started server process [12800]
+2023-12-24 23:11:47,571 - INFO - Waiting for application startup.
+2023-12-24 23:11:47,572 - INFO - Application startup complete.
+2023-12-24 23:11:47,572 - ERROR - [Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+2023-12-24 23:11:47,573 - INFO - Waiting for application shutdown.
+2023-12-24 23:11:47,573 - INFO - Application shutdown complete.
+2023-12-24 23:11:50,080 - INFO - Shutting down
+2023-12-24 23:11:50,192 - INFO - Waiting for application shutdown.
+2023-12-24 23:11:53,680 - INFO - Started server process [12800]
+2023-12-24 23:11:53,681 - INFO - Waiting for application startup.
+2023-12-24 23:11:53,681 - INFO - Application startup complete.
+2023-12-24 23:11:53,683 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 23:11:56,008 - INFO - Shutting down
+2023-12-24 23:11:56,116 - INFO - Waiting for application shutdown.
+2023-12-24 23:13:13,957 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 23:13:13,958 - INFO - Starting up TCP server on ('localhost', 62690)
+2023-12-24 23:13:13,963 - INFO - App URL: tcp://localhost:62690
+2023-12-24 23:13:13,963 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 23:13:13,963 - INFO - Starting Flet View app...
+2023-12-24 23:13:13,964 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 23:13:14,129 - INFO - Session started: 
+2023-12-24 23:13:16,222 - INFO - Started server process [11084]
+2023-12-24 23:13:16,223 - INFO - Waiting for application startup.
+2023-12-24 23:13:16,223 - INFO - Application startup complete.
+2023-12-24 23:13:16,224 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-24 23:16:56,415 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 23:16:56,416 - INFO - Starting up TCP server on ('localhost', 62806)
+2023-12-24 23:16:56,420 - INFO - App URL: tcp://localhost:62806
+2023-12-24 23:16:56,420 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 23:16:56,421 - INFO - Starting Flet View app...
+2023-12-24 23:16:56,422 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 23:16:56,590 - INFO - Session started: 
+2023-12-24 23:16:57,718 - ERROR - 'assets'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_base.py", line 94, in process
+    avatar = ft.Image(src=f"{ENV['assets']}/BOC.png")
+KeyError: 'assets'
+2023-12-24 23:16:58,685 - INFO - Started server process [25076]
+2023-12-24 23:16:58,686 - INFO - Waiting for application startup.
+2023-12-24 23:16:58,687 - INFO - Application startup complete.
+2023-12-24 23:16:58,688 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 23:17:13,219 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 23:17:13,219 - INFO - Starting up TCP server on ('localhost', 62820)
+2023-12-24 23:17:13,224 - INFO - App URL: tcp://localhost:62820
+2023-12-24 23:17:13,224 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 23:17:13,224 - INFO - Starting Flet View app...
+2023-12-24 23:17:13,225 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 23:17:13,391 - INFO - Session started: 
+2023-12-24 23:17:15,483 - INFO - Started server process [20980]
+2023-12-24 23:17:15,484 - INFO - Waiting for application startup.
+2023-12-24 23:17:15,484 - INFO - Application startup complete.
+2023-12-24 23:17:15,485 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-24 23:21:48,203 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 23:21:48,204 - INFO - Starting up TCP server on ('localhost', 63012)
+2023-12-24 23:21:48,209 - INFO - App URL: tcp://localhost:63012
+2023-12-24 23:21:48,209 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 23:21:48,210 - INFO - Starting Flet View app...
+2023-12-24 23:21:48,211 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 23:21:48,383 - INFO - Session started: 
+2023-12-24 23:21:50,500 - INFO - Started server process [25764]
+2023-12-24 23:21:50,500 - INFO - Waiting for application startup.
+2023-12-24 23:21:50,501 - INFO - Application startup complete.
+2023-12-24 23:21:50,502 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-24 23:22:17,254 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 23:22:17,255 - INFO - Starting up TCP server on ('localhost', 63039)
+2023-12-24 23:22:17,259 - INFO - App URL: tcp://localhost:63039
+2023-12-24 23:22:17,260 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 23:22:17,260 - INFO - Starting Flet View app...
+2023-12-24 23:22:17,262 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 23:22:17,544 - INFO - Session started: 
+2023-12-24 23:22:19,659 - INFO - Started server process [3860]
+2023-12-24 23:22:19,660 - INFO - Waiting for application startup.
+2023-12-24 23:22:19,661 - INFO - Application startup complete.
+2023-12-24 23:22:19,662 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-24 23:22:28,097 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 23:22:28,098 - INFO - Starting up TCP server on ('localhost', 63046)
+2023-12-24 23:22:28,103 - INFO - App URL: tcp://localhost:63046
+2023-12-24 23:22:28,103 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 23:22:28,104 - INFO - Starting Flet View app...
+2023-12-24 23:22:28,105 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 23:22:28,296 - INFO - Session started: 
+2023-12-24 23:22:30,420 - INFO - Started server process [25804]
+2023-12-24 23:22:30,421 - INFO - Waiting for application startup.
+2023-12-24 23:22:30,422 - INFO - Application startup complete.
+2023-12-24 23:22:30,423 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-24 23:23:06,004 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 23:23:06,005 - INFO - Starting up TCP server on ('localhost', 63064)
+2023-12-24 23:23:06,009 - INFO - App URL: tcp://localhost:63064
+2023-12-24 23:23:06,009 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 23:23:06,010 - INFO - Starting Flet View app...
+2023-12-24 23:23:06,011 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 23:23:06,196 - INFO - Session started: 
+2023-12-24 23:23:08,305 - INFO - Started server process [25364]
+2023-12-24 23:23:08,306 - INFO - Waiting for application startup.
+2023-12-24 23:23:08,306 - INFO - Application startup complete.
+2023-12-24 23:23:08,307 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-24 23:28:16,048 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 23:28:16,049 - INFO - Starting up TCP server on ('localhost', 63296)
+2023-12-24 23:28:16,053 - INFO - App URL: tcp://localhost:63296
+2023-12-24 23:28:16,053 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 23:28:16,054 - INFO - Starting Flet View app...
+2023-12-24 23:28:16,055 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 23:28:16,319 - INFO - Session started: 
+2023-12-24 23:28:18,415 - INFO - Started server process [12972]
+2023-12-24 23:28:18,416 - INFO - Waiting for application startup.
+2023-12-24 23:28:18,416 - INFO - Application startup complete.
+2023-12-24 23:28:18,417 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-24 23:28:42,227 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 23:28:42,228 - INFO - Starting up TCP server on ('localhost', 63316)
+2023-12-24 23:28:42,231 - INFO - App URL: tcp://localhost:63316
+2023-12-24 23:28:42,232 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 23:28:42,232 - INFO - Starting Flet View app...
+2023-12-24 23:28:42,233 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 23:28:42,411 - INFO - Session started: 
+2023-12-24 23:28:44,527 - INFO - Started server process [25692]
+2023-12-24 23:28:44,528 - INFO - Waiting for application startup.
+2023-12-24 23:28:44,529 - INFO - Application startup complete.
+2023-12-24 23:28:44,530 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-24 23:37:29,625 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 23:37:29,626 - INFO - Starting up TCP server on ('localhost', 63567)
+2023-12-24 23:37:29,631 - INFO - App URL: tcp://localhost:63567
+2023-12-24 23:37:29,631 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 23:37:29,632 - INFO - Starting Flet View app...
+2023-12-24 23:37:29,633 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 23:37:29,914 - INFO - Session started: 
+2023-12-24 23:37:32,015 - INFO - Started server process [5540]
+2023-12-24 23:37:32,015 - INFO - Waiting for application startup.
+2023-12-24 23:37:32,016 - INFO - Application startup complete.
+2023-12-24 23:37:32,017 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-24 23:38:04,831 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 23:38:04,831 - INFO - Starting up TCP server on ('localhost', 63577)
+2023-12-24 23:38:04,836 - INFO - App URL: tcp://localhost:63577
+2023-12-24 23:38:04,836 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 23:38:04,836 - INFO - Starting Flet View app...
+2023-12-24 23:38:04,838 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 23:38:04,995 - INFO - Session started: 
+2023-12-24 23:38:07,109 - INFO - Started server process [20248]
+2023-12-24 23:38:07,110 - INFO - Waiting for application startup.
+2023-12-24 23:38:07,111 - INFO - Application startup complete.
+2023-12-24 23:38:07,112 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-24 23:38:52,279 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 23:38:52,280 - INFO - Starting up TCP server on ('localhost', 63599)
+2023-12-24 23:38:52,285 - INFO - App URL: tcp://localhost:63599
+2023-12-24 23:38:52,285 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 23:38:52,286 - INFO - Starting Flet View app...
+2023-12-24 23:38:52,287 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 23:38:52,452 - INFO - Session started: 
+2023-12-24 23:38:54,568 - INFO - Started server process [21984]
+2023-12-24 23:38:54,569 - INFO - Waiting for application startup.
+2023-12-24 23:38:54,569 - INFO - Application startup complete.
+2023-12-24 23:38:54,570 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-24 23:39:22,991 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 23:39:22,992 - INFO - Starting up TCP server on ('localhost', 63608)
+2023-12-24 23:39:22,996 - INFO - App URL: tcp://localhost:63608
+2023-12-24 23:39:22,996 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 23:39:22,997 - INFO - Starting Flet View app...
+2023-12-24 23:39:22,998 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 23:39:23,163 - INFO - Session started: 
+2023-12-24 23:39:25,263 - INFO - Started server process [8552]
+2023-12-24 23:39:25,264 - INFO - Waiting for application startup.
+2023-12-24 23:39:25,265 - INFO - Application startup complete.
+2023-12-24 23:39:25,266 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-24 23:47:48,719 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 23:47:48,719 - INFO - Starting up TCP server on ('localhost', 63895)
+2023-12-24 23:47:48,724 - INFO - App URL: tcp://localhost:63895
+2023-12-24 23:47:48,724 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 23:47:48,724 - INFO - Starting Flet View app...
+2023-12-24 23:47:48,726 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 23:47:48,909 - INFO - Session started: 
+2023-12-24 23:47:50,287 - ERROR - unsupported operand type(s) for ** or pow(): 'Container' and 'dict'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_base.py", line 96, in process
+    return self.ui(avatar)
+  File "E:\npython\PluginBase\app\plugins\\build_in\_base.py", line 107, in ui
+    container=self.container
+TypeError: unsupported operand type(s) for ** or pow(): 'Container' and 'dict'
+2023-12-24 23:47:51,013 - INFO - Started server process [26684]
+2023-12-24 23:47:51,014 - INFO - Waiting for application startup.
+2023-12-24 23:47:51,014 - INFO - Application startup complete.
+2023-12-24 23:47:51,015 - INFO - Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+2023-12-24 23:55:26,913 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 23:55:26,914 - INFO - Starting up TCP server on ('localhost', 64055)
+2023-12-24 23:55:26,918 - INFO - App URL: tcp://localhost:64055
+2023-12-24 23:55:26,918 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 23:55:26,919 - INFO - Starting Flet View app...
+2023-12-24 23:55:26,920 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 23:55:27,111 - INFO - Session started: 
+2023-12-24 23:55:29,238 - INFO - Started server process [13288]
+2023-12-24 23:55:29,239 - INFO - Waiting for application startup.
+2023-12-24 23:55:29,240 - INFO - Application startup complete.
+2023-12-24 23:55:29,240 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-24 23:55:31,664 - ERROR - process() missing 1 required positional argument: 'page'
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\app\plug.py", line 43, in run
+    data = icls._run_plugin(plugin, data, **{**icls.context, **icls.ENVS[-1]})
+  File "E:\npython\PluginBase\app\plug.py", line 55, in _run_plugin
+    return plugin.process(data, **kwargs)
+TypeError: process() missing 1 required positional argument: 'page'
+2023-12-24 23:55:49,437 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 23:55:49,438 - INFO - Starting up TCP server on ('localhost', 64076)
+2023-12-24 23:55:49,442 - INFO - App URL: tcp://localhost:64076
+2023-12-24 23:55:49,442 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 23:55:49,443 - INFO - Starting Flet View app...
+2023-12-24 23:55:49,444 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 23:55:49,710 - INFO - Session started: 
+2023-12-24 23:55:51,807 - INFO - Started server process [18440]
+2023-12-24 23:55:51,807 - INFO - Waiting for application startup.
+2023-12-24 23:55:51,808 - INFO - Application startup complete.
+2023-12-24 23:55:51,809 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-24 23:56:19,463 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 23:56:19,464 - INFO - Starting up TCP server on ('localhost', 64105)
+2023-12-24 23:56:19,468 - INFO - App URL: tcp://localhost:64105
+2023-12-24 23:56:19,468 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 23:56:19,469 - INFO - Starting Flet View app...
+2023-12-24 23:56:19,470 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 23:56:19,628 - INFO - Session started: 
+2023-12-24 23:56:21,724 - INFO - Started server process [22500]
+2023-12-24 23:56:21,725 - INFO - Waiting for application startup.
+2023-12-24 23:56:21,725 - INFO - Application startup complete.
+2023-12-24 23:56:21,726 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-24 23:56:44,661 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-24 23:56:44,662 - INFO - Starting up TCP server on ('localhost', 64115)
+2023-12-24 23:56:44,666 - INFO - App URL: tcp://localhost:64115
+2023-12-24 23:56:44,667 - INFO - Connected to Flet app and handling user sessions...
+2023-12-24 23:56:44,667 - INFO - Starting Flet View app...
+2023-12-24 23:56:44,669 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-24 23:56:44,828 - INFO - Session started: 
+2023-12-24 23:56:46,931 - INFO - Started server process [18140]
+2023-12-24 23:56:46,932 - INFO - Waiting for application startup.
+2023-12-24 23:56:46,932 - INFO - Application startup complete.
+2023-12-24 23:56:46,933 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-25 00:00:15,022 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-25 00:00:15,023 - INFO - Starting up TCP server on ('localhost', 64267)
+2023-12-25 00:00:15,027 - INFO - App URL: tcp://localhost:64267
+2023-12-25 00:00:15,027 - INFO - Connected to Flet app and handling user sessions...
+2023-12-25 00:00:15,028 - INFO - Starting Flet View app...
+2023-12-25 00:00:15,029 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-25 00:00:15,215 - INFO - Session started: 
+2023-12-25 00:00:17,341 - INFO - Started server process [8260]
+2023-12-25 00:00:17,342 - INFO - Waiting for application startup.
+2023-12-25 00:00:17,343 - INFO - Application startup complete.
+2023-12-25 00:00:17,343 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-25 00:00:33,351 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-25 00:00:33,352 - INFO - Starting up TCP server on ('localhost', 64288)
+2023-12-25 00:00:33,358 - INFO - App URL: tcp://localhost:64288
+2023-12-25 00:00:33,358 - INFO - Connected to Flet app and handling user sessions...
+2023-12-25 00:00:33,358 - INFO - Starting Flet View app...
+2023-12-25 00:00:33,359 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-25 00:00:33,528 - INFO - Session started: 
+2023-12-25 00:00:35,634 - INFO - Started server process [5896]
+2023-12-25 00:00:35,635 - INFO - Waiting for application startup.
+2023-12-25 00:00:35,636 - INFO - Application startup complete.
+2023-12-25 00:00:35,636 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-25 00:02:54,679 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-25 00:02:54,679 - INFO - Starting up TCP server on ('localhost', 64396)
+2023-12-25 00:02:54,683 - INFO - App URL: tcp://localhost:64396
+2023-12-25 00:02:54,684 - INFO - Connected to Flet app and handling user sessions...
+2023-12-25 00:02:54,684 - INFO - Starting Flet View app...
+2023-12-25 00:02:54,686 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-25 00:02:54,958 - INFO - Session started: 
+2023-12-25 00:02:57,047 - INFO - Started server process [21732]
+2023-12-25 00:02:57,048 - INFO - Waiting for application startup.
+2023-12-25 00:02:57,048 - INFO - Application startup complete.
+2023-12-25 00:02:57,050 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-25 00:03:31,667 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-25 00:03:31,668 - INFO - Starting up TCP server on ('localhost', 64431)
+2023-12-25 00:03:31,672 - INFO - App URL: tcp://localhost:64431
+2023-12-25 00:03:31,672 - INFO - Connected to Flet app and handling user sessions...
+2023-12-25 00:03:31,672 - INFO - Starting Flet View app...
+2023-12-25 00:03:31,674 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-25 00:03:31,836 - INFO - Session started: 
+2023-12-25 00:03:33,944 - INFO - Started server process [25116]
+2023-12-25 00:03:33,945 - INFO - Waiting for application startup.
+2023-12-25 00:03:33,945 - INFO - Application startup complete.
+2023-12-25 00:03:33,946 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-25 00:05:36,648 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-25 00:05:36,648 - INFO - Starting up TCP server on ('localhost', 64506)
+2023-12-25 00:05:36,652 - INFO - App URL: tcp://localhost:64506
+2023-12-25 00:05:36,653 - INFO - Connected to Flet app and handling user sessions...
+2023-12-25 00:05:36,653 - INFO - Starting Flet View app...
+2023-12-25 00:05:36,655 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-25 00:05:36,827 - INFO - Session started: 
+2023-12-25 00:05:38,922 - INFO - Started server process [20704]
+2023-12-25 00:05:38,923 - INFO - Waiting for application startup.
+2023-12-25 00:05:38,923 - INFO - Application startup complete.
+2023-12-25 00:05:38,924 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-25 00:06:28,834 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-25 00:06:28,834 - INFO - Starting up TCP server on ('localhost', 64525)
+2023-12-25 00:06:28,839 - INFO - App URL: tcp://localhost:64525
+2023-12-25 00:06:28,839 - INFO - Connected to Flet app and handling user sessions...
+2023-12-25 00:06:28,840 - INFO - Starting Flet View app...
+2023-12-25 00:06:28,841 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-25 00:06:29,012 - INFO - Session started: 
+2023-12-25 00:06:31,119 - INFO - Started server process [26120]
+2023-12-25 00:06:31,119 - INFO - Waiting for application startup.
+2023-12-25 00:06:31,120 - INFO - Application startup complete.
+2023-12-25 00:06:31,121 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-25 00:07:00,959 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-25 00:07:00,960 - INFO - Starting up TCP server on ('localhost', 64535)
+2023-12-25 00:07:00,964 - INFO - App URL: tcp://localhost:64535
+2023-12-25 00:07:00,964 - INFO - Connected to Flet app and handling user sessions...
+2023-12-25 00:07:00,965 - INFO - Starting Flet View app...
+2023-12-25 00:07:00,966 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-25 00:07:01,140 - INFO - Session started: 
+2023-12-25 00:07:03,241 - INFO - Started server process [24976]
+2023-12-25 00:07:03,241 - INFO - Waiting for application startup.
+2023-12-25 00:07:03,242 - INFO - Application startup complete.
+2023-12-25 00:07:03,243 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-25 00:08:10,944 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-25 00:08:10,945 - INFO - Starting up TCP server on ('localhost', 64565)
+2023-12-25 00:08:10,950 - INFO - App URL: tcp://localhost:64565
+2023-12-25 00:08:10,950 - INFO - Connected to Flet app and handling user sessions...
+2023-12-25 00:08:10,951 - INFO - Starting Flet View app...
+2023-12-25 00:08:10,953 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-25 00:08:11,177 - INFO - Session started: 
+2023-12-25 00:08:13,287 - INFO - Started server process [26380]
+2023-12-25 00:08:13,288 - INFO - Waiting for application startup.
+2023-12-25 00:08:13,288 - INFO - Application startup complete.
+2023-12-25 00:08:13,289 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-25 00:08:37,781 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-25 00:08:37,782 - INFO - Starting up TCP server on ('localhost', 64584)
+2023-12-25 00:08:37,786 - INFO - App URL: tcp://localhost:64584
+2023-12-25 00:08:37,787 - INFO - Connected to Flet app and handling user sessions...
+2023-12-25 00:08:37,787 - INFO - Starting Flet View app...
+2023-12-25 00:08:37,789 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-25 00:08:37,960 - INFO - Session started: 
+2023-12-25 00:08:40,097 - INFO - Started server process [26576]
+2023-12-25 00:08:40,098 - INFO - Waiting for application startup.
+2023-12-25 00:08:40,099 - INFO - Application startup complete.
+2023-12-25 00:08:40,100 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-25 00:08:55,554 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-25 00:08:55,555 - INFO - Starting up TCP server on ('localhost', 64593)
+2023-12-25 00:08:55,559 - INFO - App URL: tcp://localhost:64593
+2023-12-25 00:08:55,559 - INFO - Connected to Flet app and handling user sessions...
+2023-12-25 00:08:55,560 - INFO - Starting Flet View app...
+2023-12-25 00:08:55,561 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-25 00:08:55,726 - INFO - Session started: 
+2023-12-25 00:08:57,814 - INFO - Started server process [14076]
+2023-12-25 00:08:57,815 - INFO - Waiting for application startup.
+2023-12-25 00:08:57,815 - INFO - Application startup complete.
+2023-12-25 00:08:57,816 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-25 00:10:24,535 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-25 00:10:24,536 - INFO - Starting up TCP server on ('localhost', 64614)
+2023-12-25 00:10:24,540 - INFO - App URL: tcp://localhost:64614
+2023-12-25 00:10:24,540 - INFO - Connected to Flet app and handling user sessions...
+2023-12-25 00:10:24,541 - INFO - Starting Flet View app...
+2023-12-25 00:10:24,542 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-25 00:10:24,711 - INFO - Session started: 
+2023-12-25 00:10:26,827 - INFO - Started server process [25680]
+2023-12-25 00:10:26,827 - INFO - Waiting for application startup.
+2023-12-25 00:10:26,828 - INFO - Application startup complete.
+2023-12-25 00:10:26,830 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-25 00:11:00,850 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-25 00:11:00,851 - INFO - Starting up TCP server on ('localhost', 64637)
+2023-12-25 00:11:00,855 - INFO - App URL: tcp://localhost:64637
+2023-12-25 00:11:00,855 - INFO - Connected to Flet app and handling user sessions...
+2023-12-25 00:11:00,856 - INFO - Starting Flet View app...
+2023-12-25 00:11:00,857 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-25 00:11:01,028 - INFO - Session started: 
+2023-12-25 00:11:03,124 - INFO - Started server process [25520]
+2023-12-25 00:11:03,125 - INFO - Waiting for application startup.
+2023-12-25 00:11:03,125 - INFO - Application startup complete.
+2023-12-25 00:11:03,126 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-25 00:11:57,482 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-25 00:11:57,484 - INFO - Starting up TCP server on ('localhost', 64667)
+2023-12-25 00:11:57,488 - INFO - App URL: tcp://localhost:64667
+2023-12-25 00:11:57,488 - INFO - Connected to Flet app and handling user sessions...
+2023-12-25 00:11:57,489 - INFO - Starting Flet View app...
+2023-12-25 00:11:57,490 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-25 00:11:57,664 - INFO - Session started: 
+2023-12-25 00:11:59,761 - INFO - Started server process [23408]
+2023-12-25 00:11:59,762 - INFO - Waiting for application startup.
+2023-12-25 00:11:59,762 - INFO - Application startup complete.
+2023-12-25 00:11:59,763 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+2023-12-25 00:12:56,058 - INFO - Assets path configured: E:\npython\PluginBase\assets
+2023-12-25 00:12:56,059 - INFO - Starting up TCP server on ('localhost', 64697)
+2023-12-25 00:12:56,064 - INFO - App URL: tcp://localhost:64697
+2023-12-25 00:12:56,064 - INFO - Connected to Flet app and handling user sessions...
+2023-12-25 00:12:56,065 - INFO - Starting Flet View app...
+2023-12-25 00:12:56,066 - INFO - Flet View found in: E:\npython\PluginBase\venv\lib\site-packages\flet\bin\flet\flet.exe
+2023-12-25 00:12:56,251 - INFO - Session started: 
+2023-12-25 00:12:58,384 - INFO - Started server process [19044]
+2023-12-25 00:12:58,384 - INFO - Waiting for application startup.
+2023-12-25 00:12:58,385 - INFO - Application startup complete.
+2023-12-25 00:12:58,386 - INFO - Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)

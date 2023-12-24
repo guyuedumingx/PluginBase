@@ -42,4 +42,5 @@ coll = COLLECT(
     upx=True,
     upx_exclude=[],
     name='run',
+    icons="assets/icons/BOC.png"
 )

@@ -21,6 +21,7 @@ plugin_dir = os.sep.join([curdir, "app", "plugins"])
 ENV['plugin_dir'] = os.path.abspath(plugin_dir)
 ENV['update_dir'] = os.path.abspath(os.sep.join([curdir, "app", "plugins", "build_in"]))
 ENV['app_dir'] = os.path.abspath(curdir)
+ENV['assets_dir'] = os.path.abspath(os.sep.join([curdir, "assets"]))
 
 ENV['server_addr'] = "127.0.0.1"
 ENV['server_port'] = 36909

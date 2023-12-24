@@ -2,6 +2,7 @@ from app.plug import *
 import pandas as pd
 from openpyxl import Workbook
 from openpyxl.styles import Alignment
+import socket
 
 @Plug.register('_pandas_show')
 class PandasShow(Plugin):
@@ -24,7 +25,10 @@ class ChooseFile(UIPlugin):
     def process(self, data, page, **kwargs):
         def on_dialog_result(e: ft.FilePickerResultEvent):
             if e != None:
-                data(e.files[0].path)
+                try:
+                    data(e.files[0].path)
+                except:
+                    pass
 
         file_picker = ft.FilePicker(on_result=on_dialog_result)
         page.overlay.append(file_picker)
@@ -80,3 +84,22 @@ class ToExcel(Plugin):
 
         # 保存工作簿
         wb.save(data)
+
+
+@Plug.register("_get_local_ip")
+class GetLocalIp(Plugin):
+    def process(self, data, **kwargs):
+        return self.get_local_ip()
+
+    def get_local_ip(self):
+        try:
+            # 获取本机主机名
+            host_name = socket.gethostname()
+            # 通过主机名获取本机 IP 地址列表
+            ip_list = socket.gethostbyname_ex(host_name)[2]
+            # 从 IP 地址列表中选择非回环地址（127.0.0.1）的地址
+            local_ip = next((ip for ip in ip_list if not ip.startswith("127.")), None)
+            return local_ip
+        except Exception as e:
+            logging.error(e)
+            return ""

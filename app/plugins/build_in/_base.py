@@ -60,9 +60,15 @@ class ENVInformation(UIPlugin):
         保存函数
         """
         ENV.update(data)
-        with open(ENV['config_file'], "w") as f:
+        with open(ENV['config_file'], "w", encoding='utf-8') as f:
             f.write(json.dumps(data, ensure_ascii=False))
     
+@Plug.register("_env_save")
+class ENVSave(Plugin):
+    def process(self, data, **kwargs):
+        with open(ENV['config_file'], "w", encoding='utf-8') as f:
+            f.write(json.dumps(data, ensure_ascii=False))
+        return "Success"
 
 @Plug.register('_person_info')
 class PersonInformation(UIPlugin):
@@ -71,12 +77,14 @@ class PersonInformation(UIPlugin):
     """
     ICON = ft.icons.MISCELLANEOUS_SERVICES
 
-    def process(self, data, page, **kwargs):
+    def process(self, data, page, container, **kwargs):
         self.page = page
+        self.container = container
         name = "YOHOYES"
         ehr = ""
-        avatar = ""
+        avatar = "assets/icons/BOC.svg"
         theme_color = "blue"
+        self.kwargs = kwargs
         if "姓名" in ENV:
             name = ENV['姓名']
         if "EHR" in ENV:
@@ -91,20 +99,42 @@ class PersonInformation(UIPlugin):
             "头像": avatar,
             "主题颜色": theme_color
         }
-        return Plug.run(plugins=("_pluginUI_with_search",),
+        return self.ui(avatar)
+
+    def ui(self, avatar):
+        avatar_ui = ft.Container(ft.CircleAvatar(
+                content=ft.Image(src=avatar,
+                                 border_radius=50,
+                                 fit=ft.ImageFit.CONTAIN,),
+                width=100,
+                height=100,
+                bgcolor=ft.colors.with_opacity(0.5, ft.colors.GREY_50),
+                ), on_click=self.choose_avatar)
+        lst_ui = Plug.run(plugins=("_pluginUI_with_search",),
                  data=self.data,
                  ui_template="_dictUI",
                  mode="edit",
                  key_icon=ft.icons.FIBER_MANUAL_RECORD_OUTLINED,
                  save_handler = self.save_handler,
-                 **kwargs) 
+                 page=self.page,
+                 container=self.container,
+                 **self.kwargs) 
+        return ft.ListView([avatar_ui, lst_ui], expand=1, spacing=10)
+    
+    def choose_avatar(self, e):
+        def chosen(path):
+            ENV['头像'] = path
+            self.container.content = self.ui(path)
+            self.container.update()
+            Plug.run(plugins=("_env_save",), data=ENV)
+        Plug.run(plugins=("_choose_file",), data=chosen, page=self.page)
     
     def save_handler(self, data):
         """
         保存函数
         """
         ENV.update(data)
-        with open(ENV['config_file'], "w") as f:
+        with open(ENV['config_file'], "w", encoding='utf-8') as f:
             f.write(json.dumps(ENV, ensure_ascii=False))
         Plug.run(plugins=("_notice",), data="保存成功", page=self.page)
     

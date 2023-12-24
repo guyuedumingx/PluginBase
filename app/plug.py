@@ -187,7 +187,7 @@ class UIPlugin(Plugin, ft.UserControl):
 @Plug.register("_load_config")
 class LoadConfig(Plugin):
     def process(self, data, **kwargs):
-        with open(data, "r") as f:
+        with open(data, "r", encoding='utf-8') as f:
             config = json.loads(f.read())
             ENV.update(config)
         db = dataset.connect(ENV['db_url'])

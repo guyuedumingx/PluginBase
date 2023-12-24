@@ -1,6 +1,7 @@
 from app.plug import *
 import flet as ft
 from functools import partial
+import requests
 
 
 @Plug.register('_search_plugin')
@@ -124,15 +125,17 @@ class IndexPlugin(UIPlugin):
             text_size=18,
             on_change=self.search_func
         )
+        self.state = ft.CircleAvatar(bgcolor=ft.colors.YELLOW, radius=5)
+        image_src = ENV['头像'] if "头像" in ENV else "assets/icons/BOC.svg"
         self.avatar = ft.Stack(
             [
                 ft.CircleAvatar(
                     # foreground_image_url="https://avatars.githubusercontent.com/u/5041459?s=88&v=4"
-                    content=ft.Icon(ft.icons.SPORTS_VOLLEYBALL_OUTLINED),
+                    content=ft.Image(src=image_src, width=30, height=30, fit=ft.ImageFit.CONTAIN),
                     bgcolor=ft.colors.with_opacity(0.5, ft.colors.GREY_50),
                 ),
                 ft.Container(
-                    content=ft.CircleAvatar(bgcolor=ft.colors.YELLOW, radius=5),
+                    content=self.state,
                     alignment=ft.alignment.bottom_left,
                 ),
             ],
@@ -157,8 +160,16 @@ class IndexPlugin(UIPlugin):
         self.page.on_keyboard_event = self.keyboard_event
         self.page.update()
         Plug.run(plugins=("_on_load_index_success",), page=self.page)
+        self.login_and_start_server(state=self.state)
         return page
     
+    def login_and_start_server(self, state):
+        Plug.run(plugins=("_login","_server"), state=state, page=self.page, port=36908, host="0.0.0.0")
+    
+    def logout(self, e: ft.ControlEvent):
+        ehr = ENV['EHR']
+        requests.post(f"http://{ENV['server_addr']}:{ENV['server_port']}/logout?ehr={ehr}")
+
     def keyboard_event(self, e:ft.KeyboardEvent):
         pass
         # keys = set(e.key.lower())
@@ -176,7 +187,6 @@ class IndexPlugin(UIPlugin):
         #     self.search_feild.update()
         #     Plug.run(plugins=("_load_plugin",),
         #             data=list(plugin.values())[0], page=self.page)
-
 
     def load_plugin(self, e):
         plugin_name = e.control.title.value

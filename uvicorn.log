@@ -177,3 +177,713 @@ Waiting for application startup.
 Application startup complete.
 Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
 127.0.0.1:49481 - "GET /plugins HTTP/1.1" 200
+Started server process [21776]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:57443 - "GET / HTTP/1.1" 404
+127.0.0.1:57443 - "GET /docs HTTP/1.1" 200
+127.0.0.1:57443 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:57444 - "POST /login/0492555 HTTP/1.1" 200
+Started server process [9296]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:57970 - "GET /docs HTTP/1.1" 200
+127.0.0.1:57970 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:57971 - "POST /login?item=%7B%22ehr%22%3A%200492555%2C%20%22ip%22%3A%20%22112.112.13.4%22%7D HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "E:\npython\PluginBase\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\applications.py", line 1106, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\routing.py", line 193, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "E:\npython\PluginBase\venv\lib\site-packages\anyio\to_thread.py", line 33, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(
+  File "E:\npython\PluginBase\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 877, in run_sync_in_worker_thread
+    return await future
+  File "E:\npython\PluginBase\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 807, in run
+    result = context.run(func, *args)
+  File "E:\npython\PluginBase\app\plugins\\plugin_market_server.py", line 72, in login
+    ehr = item['ehr']
+TypeError: string indices must be integers
+127.0.0.1:57972 - "POST /login?item=%7B%22ehr%22%3A%20%220492555%22%2C%20%22ip%22%3A%20%22112.112.13.4%22%7D HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "E:\npython\PluginBase\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\applications.py", line 1106, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\routing.py", line 193, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "E:\npython\PluginBase\venv\lib\site-packages\anyio\to_thread.py", line 33, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(
+  File "E:\npython\PluginBase\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 877, in run_sync_in_worker_thread
+    return await future
+  File "E:\npython\PluginBase\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 807, in run
+    result = context.run(func, *args)
+  File "E:\npython\PluginBase\app\plugins\\plugin_market_server.py", line 72, in login
+    ehr = item['ehr']
+TypeError: string indices must be integers
+Started server process [24016]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:58044 - "GET /docs HTTP/1.1" 200
+127.0.0.1:58044 - "GET /openapi.json HTTP/1.1" 200
+Started server process [16512]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:58105 - "POST /login?item=%7B%22ehr%22%20%3A%20%2212%22%2C%20%22ip%22%3A%20%22test%22%7D HTTP/1.1" 200
+Started server process [18696]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:58144 - "GET /docs HTTP/1.1" 200
+127.0.0.1:58144 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:58144 - "POST /login?item=%7B%22ehr%22%20%3A%20%2212%22%2C%20%22ip%22%3A%20%22test%22%7D HTTP/1.1" 200
+127.0.0.1:58144 - "POST /login?item=%7B%22ehr%22%20%3A%20%221223%22%2C%20%22ip%22%3A%20%22test%22%7D HTTP/1.1" 200
+127.0.0.1:58144 - "POST /login?item=%7B%22ehr%22%20%3A%20%221222453%22%2C%20%22ip%22%3A%20%22test%22%7D HTTP/1.1" 200
+127.0.0.1:58145 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:58146 - "POST /logout/12 HTTP/1.1" 200
+127.0.0.1:58146 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:58177 - "POST /logout/12345 HTTP/1.1" 200
+127.0.0.1:58178 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:58178 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:58178 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:58659 - "GET /update HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\responses.py", line 335, in __call__
+    stat_result = await anyio.to_thread.run_sync(os.stat, self.path)
+  File "E:\npython\PluginBase\venv\lib\site-packages\anyio\to_thread.py", line 33, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(
+  File "E:\npython\PluginBase\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 877, in run_sync_in_worker_thread
+    return await future
+  File "E:\npython\PluginBase\venv\lib\site-packages\anyio\_backends\_asyncio.py", line 807, in run
+    result = context.run(func, *args)
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。: 'assets\\update.zip'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\npython\PluginBase\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "E:\npython\PluginBase\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\applications.py", line 1106, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "E:\npython\PluginBase\venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\routing.py", line 69, in app
+    await response(scope, receive, send)
+  File "E:\npython\PluginBase\venv\lib\site-packages\starlette\responses.py", line 338, in __call__
+    raise RuntimeError(f"File at path {self.path} does not exist.")
+RuntimeError: File at path assets\update.zip does not exist.
+Started server process [25100]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+Started server process [1324]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:59033 - "POST /login HTTP/1.1" 422
+127.0.0.1:59071 - "POST /login HTTP/1.1" 422
+127.0.0.1:59099 - "POST /login HTTP/1.1" 422
+127.0.0.1:59401 - "GET /docs HTTP/1.1" 200
+127.0.0.1:59401 - "GET /openapi.json HTTP/1.1" 200
+Started server process [24368]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:59919 - "POST /login HTTP/1.1" 422
+Started server process [23956]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:59962 - "POST /login HTTP/1.1" 422
+Started server process [2188]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:60014 - "POST /login HTTP/1.1" 422
+Started server process [15720]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:60128 - "POST /login HTTP/1.1" 422
+127.0.0.1:60243 - "GET /docs HTTP/1.1" 200
+127.0.0.1:60243 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:60244 - "POST /login?ehr=0492555&ip=asfa HTTP/1.1" 200
+Started server process [25572]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:60488 - "GET /docs HTTP/1.1" 200
+127.0.0.1:60488 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:60489 - "POST /login HTTP/1.1" 200
+127.0.0.1:60490 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:60508 - "POST /login HTTP/1.1" 422
+127.0.0.1:60529 - "POST /login HTTP/1.1" 422
+127.0.0.1:60581 - "POST /login HTTP/1.1" 422
+127.0.0.1:60619 - "POST /login HTTP/1.1" 200
+127.0.0.1:60639 - "POST /login HTTP/1.1" 200
+Shutting down
+Waiting for application shutdown.
+Started server process [25572]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:60669 - "POST /login HTTP/1.1" 200
+Shutting down
+Waiting for application shutdown.
+Started server process [25572]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:60700 - "POST /login HTTP/1.1" 200
+Started server process [8460]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:60767 - "POST /login HTTP/1.1" 200
+127.0.0.1:60769 - "GET /plugins HTTP/1.1" 200
+127.0.0.1:60798 - "GET /docs HTTP/1.1" 200
+127.0.0.1:60798 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:60799 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:60800 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:60824 - "POST /login HTTP/1.1" 200
+127.0.0.1:60828 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:60828 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:60829 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:60829 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:60829 - "GET /onlines HTTP/1.1" 200
+127.0.0.1:60857 - "POST /login HTTP/1.1" 200
+127.0.0.1:60873 - "POST /login HTTP/1.1" 200
+127.0.0.1:60937 - "POST /login HTTP/1.1" 200
+127.0.0.1:60966 - "POST /login HTTP/1.1" 200
+127.0.0.1:61034 - "POST /login HTTP/1.1" 200
+127.0.0.1:61077 - "POST /login HTTP/1.1" 200
+127.0.0.1:61078 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61079 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61080 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61081 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61090 - "POST /login HTTP/1.1" 200
+127.0.0.1:61091 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61093 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61094 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61095 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61101 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61102 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61103 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61116 - "POST /login HTTP/1.1" 200
+127.0.0.1:61117 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61118 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61119 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61121 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61164 - "POST /login HTTP/1.1" 200
+127.0.0.1:61165 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61167 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61168 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61169 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61171 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61172 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61181 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61185 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61186 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:63770 - "POST /login HTTP/1.1" 200
+Started server process [10808]
+Waiting for application startup.
+Application startup complete.
+[Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Waiting for application shutdown.
+Application shutdown complete.
+127.0.0.1:63808 - "POST /login HTTP/1.1" 200
+Started server process [20788]
+Waiting for application startup.
+Application startup complete.
+[Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Waiting for application shutdown.
+Application shutdown complete.
+127.0.0.1:63940 - "POST /login HTTP/1.1" 200
+Started server process [28532]
+Waiting for application startup.
+Application startup complete.
+[Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Waiting for application shutdown.
+Application shutdown complete.
+127.0.0.1:60286 - "GET /plugins HTTP/1.1" 200
+127.0.0.1:60291 - "GET /plugins HTTP/1.1" 200
+127.0.0.1:60490 - "POST /login HTTP/1.1" 200
+Started server process [15716]
+Waiting for application startup.
+Application startup complete.
+[Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Waiting for application shutdown.
+Application shutdown complete.
+127.0.0.1:60493 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60502 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60504 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60505 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60506 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+Shutting down
+Waiting for application shutdown.
+Started server process [8460]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+Shutting down
+Waiting for application shutdown.
+Started server process [19612]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+Started server process [27652]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:60575 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60587 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60597 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+Started server process [4288]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+Started server process [4288]
+Waiting for application startup.
+Application startup complete.
+[Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Waiting for application shutdown.
+Application shutdown complete.
+Started server process [20528]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+Started server process [20528]
+Waiting for application startup.
+Application startup complete.
+[Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Waiting for application shutdown.
+Application shutdown complete.
+Shutting down
+Started server process [20528]
+Waiting for application startup.
+Application startup complete.
+[Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Waiting for application shutdown.
+Application shutdown complete.
+Shutting down
+Started server process [20528]
+Waiting for application startup.
+Application startup complete.
+[Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Waiting for application shutdown.
+Application shutdown complete.
+Shutting down
+127.0.0.1:60701 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60768 - "GET /docs HTTP/1.1" 200
+127.0.0.1:60768 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:60778 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60782 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60784 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60768 - "GET /docs HTTP/1.1" 200
+127.0.0.1:60768 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:60787 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+Started server process [20528]
+Waiting for application startup.
+Application startup complete.
+[Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Waiting for application shutdown.
+Application shutdown complete.
+127.0.0.1:60791 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60792 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60793 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60769 - "GET /docs HTTP/1.1" 200
+127.0.0.1:60769 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:60795 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60796 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+Shutting down
+127.0.0.1:60801 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60769 - "GET /docs HTTP/1.1" 200
+127.0.0.1:60769 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:60769 - "GET /docs HTTP/1.1" 200
+127.0.0.1:60769 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:60802 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+Started server process [26888]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+Started server process [26888]
+Waiting for application startup.
+Application startup complete.
+[Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Waiting for application shutdown.
+Application shutdown complete.
+Shutting down
+127.0.0.1:60864 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60865 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60866 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60897 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60898 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60899 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60901 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60902 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60903 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:60913 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61413 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61414 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61415 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+Started server process [9860]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:61462 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+Started server process [17328]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [17328]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+Shutting down
+Waiting for application shutdown.
+Started server process [17328]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:61546 - "GET /docs HTTP/1.1" 200
+127.0.0.1:61546 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:61540 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61553 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61576 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61546 - "GET /docs HTTP/1.1" 200
+127.0.0.1:61546 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:61579 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61585 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61586 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61587 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+Started server process [9632]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:61626 - "POST /login HTTP/1.1" 200
+Started server process [9632]
+Waiting for application startup.
+Application startup complete.
+[Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Waiting for application shutdown.
+Application shutdown complete.
+Shutting down
+Waiting for application shutdown.
+Started server process [9632]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+Shutting down
+Waiting for application shutdown.
+Started server process [9632]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+Shutting down
+Waiting for application shutdown.
+Started server process [9632]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:61665 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61670 - "POST /login HTTP/1.1" 200
+Started server process [27652]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+127.0.0.1:61674 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61675 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61676 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61677 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61678 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+127.0.0.1:61686 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+Shutting down
+Waiting for application shutdown.
+Started server process [17848]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [9632]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:61755 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+Shutting down
+Waiting for application shutdown.
+Started server process [18660]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:62493 - "POST /login HTTP/1.1" 200
+Started server process [18660]
+Waiting for application startup.
+Application startup complete.
+[Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Waiting for application shutdown.
+Application shutdown complete.
+Shutting down
+Waiting for application shutdown.
+Started server process [18660]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:62503 - "POST /logout?ehr=0492555 HTTP/1.1" 404
+Shutting down
+Waiting for application shutdown.
+Started server process [25760]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:62624 - "POST /login HTTP/1.1" 200
+Started server process [25760]
+Waiting for application startup.
+Application startup complete.
+[Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Waiting for application shutdown.
+Application shutdown complete.
+Shutting down
+Waiting for application shutdown.
+Started server process [25760]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+Shutting down
+Waiting for application shutdown.
+Started server process [12800]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+127.0.0.1:62652 - "POST /login HTTP/1.1" 200
+Started server process [12800]
+Waiting for application startup.
+Application startup complete.
+[Errno 10048] error while attempting to bind on address ('0.0.0.0', 36909): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Waiting for application shutdown.
+Application shutdown complete.
+Shutting down
+Waiting for application shutdown.
+Started server process [12800]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+Shutting down
+Waiting for application shutdown.
+Started server process [11084]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [25076]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+Started server process [20980]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [25764]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [3860]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [25804]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [25364]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [12972]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [25692]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [5540]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [20248]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [21984]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [8552]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [26684]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36909 (Press CTRL+C to quit)
+Started server process [13288]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [18440]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [22500]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [18140]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [8260]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [5896]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [21732]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [25116]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [20704]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [26120]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [24976]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [26380]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [26576]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [14076]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [25680]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [25520]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [23408]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
+Started server process [19044]
+Waiting for application startup.
+Application startup complete.
+Uvicorn running on http://0.0.0.0:36908 (Press CTRL+C to quit)
